@@ -1,0 +1,178 @@
+<?php 
+$ip=NULL;
+
+$siteSima=substr($_SERVER['REMOTE_ADDR'],0,3);
+$siteFinanciero=substr($_SERVER['REMOTE_ADDR'],0,3);
+
+switch ($siteSima) {
+    case "10.":
+        $ip="10.2.1.201";
+
+        break;
+
+    
+
+    default:
+        $ip="www.sshlc.org"; 
+        break;
+}
+
+
+switch ($siteFinanciero) {
+    case "10.":
+        $ipF="10.2.1.8:8080";
+
+        break;
+
+    default:
+        $ipF="www.sshlc.org"; 
+        break;
+    
+    
+}
+
+switch ($siteFitnes) {
+    case "10.":
+        $ipF="www.sshlc.org/gm";
+
+        break;
+
+
+        default:
+        $ipF="www.sshlc.org"; 
+        break;
+    
+}
+
+$siteSima=$ip;
+$siteFinanciero=$ipF;
+?>
+
+
+
+
+
+</head>
+<br>
+<br>
+  <body>
+<div id="divContainer">
+    
+      
+    
+    <table   class="formatHTML5">
+      <tr>
+
+        <td id="content" valign="top">
+          <div class="ex_site">
+            <a href="http://hospitallacarlota.com/" TARGET="_blank"
+            onfocus=" this.blur()"><img height="80" src="./images/admin.jpg"
+            width="80"></a>
+            <h5>
+              <font color="198BD8">  <b>Admin Hospitalaria</b></font>
+            </h5>
+          </div>
+          
+            <div class="ex_site">
+            <a href="http://10.2.1.201/sima/index.php" TARGET="_blank"
+            onfocus=" this.blur()"><img height="80" src="./images/admisiones.jpeg" width="80"></a>
+            <h5>
+                 <font color="198BD8">  <b>Admisiones</b></font>
+            </h5>
+          </div>
+            
+          <div class="ex_site">
+            <a href="https://www.google.com/a/lacarlota.um.edu.mx/ServiceLogin?service=cl&passive=1209600&continue=http://www.google.com/calendar/hosted/lacarlota.um.edu.mx/render&followup=http://www.google.com/calendar/hosted/lacarlota.um.edu.mx/render" target="_blank"
+            onfocus=" this.blur()">
+                <img height="80" src="./images/archivo.jpeg" width="80"></a>
+            <h5>
+              <font color="198BD8">  <b>Archivo</b></font>
+            </h5>
+          </div>         
+            
+            
+            
+            
+          <div class="ex_site">
+            <a href="http://www.sshlc.org/financiero/login.jsp" target="_blank"
+            onfocus=" this.blur()"><img height="80" src="./images/beneficencia.jpeg" width="80"/></a>
+            <h5>
+              <font color="198BD8">  <b>Beneficencia</b></font>
+            </h5>
+          </div>
+            
+          <div class="ex_site">
+            <a href="/gm/" target="_blank"
+            onfocus=" this.blur()"><img height="80" src="./images/farmacia.jpeg" width="80"></a>
+            <h5>
+              <font color="198BD8">  <b>Farmacia</b></font>
+            </h5>
+          </div>            
+            
+          <div class="ex_site">
+            <a href="/sima/desbloquear" target="_blank"
+            onfocus=" this.blur()"><img height="80" src="./images/inventarios.jpeg"           width="80"></a>
+            <h5>
+              <font color="198BD8">  <b>Inventarios</b></font>
+            </h5>
+          </div>
+          
+           <div class="ex_site">
+            <a href="http://fx.facturaxion.com/facturaxion/facturizate.swf?rfc=HCA9912144N9" target="_blank"
+            onfocus=" this.blur()"><img height="126" src="images/facte.png"           width="150"></a>
+            <h5>
+              <font color="198BD8">  <b>Factura Electronica</b></font>
+            </h5>
+          </div>
+          
+          
+         <div class="ex_site">
+            <a href="https://fx.facturaxion.com/facturaxion/fx.html" target="_blank"
+            onfocus=" this.blur()"><img height="126" src="images/facturaManual.gif"           width="150"></a>
+            <h5>
+              <font color="198BD8">  <b>Factura Electronica Manual</b></font>
+            </h5>
+          </div>  
+
+         <div class="ex_site">
+            <a href="https://www.facebook.com/pages/Hospital-La-Carlota-SC/234883129859471" target="_blank"
+            onfocus=" this.blur()"><img height="126" src="images/facethumb.png"           width="150"></a>
+            <h5>
+              <font color="198BD8">  <b>Facebook HLC</b></font>
+            </h5>
+          </div>
+            
+            
+         <div class="ex_site">
+            <a href="/sima/admin/agendaTelefonica.html" target="_blank"
+            onfocus=" this.blur()"><img height="126" src="images/kcall.png"           width="150"></a>
+            <h5>
+              <font color="198BD8">  <b>Agenda Telefonica HLC</b></font>
+            </h5>
+          </div>            
+          
+          
+        
+          <h3>&nbsp;</h3>
+          </p>
+        </td>
+      </tr>
+
+    </table>
+    
+<div id="divContainer">
+<table border="1">
+<tr>
+<td>row 1, cell 1</td>
+<td>row 1, cell 2</td>
+</tr>
+<tr>
+<td>row 2, cell 1</td>
+<td>row 2, cell 2</td>
+</tr>
+</table> 
+    
+    
+    
+</div>
+</div>
