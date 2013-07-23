@@ -141,8 +141,8 @@ while(($row4=$dataReader4->read())!==false) {
             
            
 
-$connection=Yii::app()->db;   // assuming you have configured a "db" connection
-$entidad='01';
+//$connection=Yii::app()->db;   // assuming you have configured a "db" connection
+//$entidad='01';
 $sql4="SELECT *
 FROM `extensionmodules`
 WHERE 

@@ -260,14 +260,19 @@ Ver
 		$(function(){
 			window.prettyPrint && prettyPrint();
 			$('#dp1').datepicker({
-				format: 'mm-dd-yyyy'
+				format: 'yyyy-mm-dd'
 			});
-			$('#dp2').datepicker();
-			$('#dp3').datepicker();
-			$('#dp3').datepicker();
-			$('#dpYears').datepicker();
-			$('#dpMonths').datepicker();
-			
+			//$('#dp2').datepicker();
+			//$('#dp3').datepicker();
+			//$('#dp3').datepicker();
+			//$('#dpYears').datepicker();
+			//$('#dpMonths').datepicker();
+			$('#dp2').datepicker({
+				format: 'yyyy-mm-dd'
+			});
+                        
+                        
+                        
 			
 			var startDate = new Date(2012,1,20);
 			var endDate = new Date(2012,1,25);
