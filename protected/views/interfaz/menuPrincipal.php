@@ -168,6 +168,7 @@ document.getElementById(id).style.background ="";
                       <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Preferencias <b class="caret"></b></a>
                         <ul class="dropdown-menu">
+                          <li><a href="index.php?r=modulosGenerales/catModulos">Modulos</a></li>
                           <li><a href="#">Usuarios</a></li>
                           
                         </ul>

@@ -2928,3 +2928,1112 @@ REQUEST_URI=/projectsima/index.php?r=/administracion/ajustarCuentas
 HTTP_REFERER=http://localhost/projectsima/index.php?r=/administracion
 ---
 >>>>>>> afd4963de215d94d85a7c05dfa47541f5ab7e122
+2013/07/25 07:55:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "inicio".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('inicio')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('inicio')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('administracion/...')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/projectsima/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/projectsima/index.php?r=administracion/inicio
+---
+2013/07/25 07:55:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:55:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:56:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:56:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:56:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:56:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:56:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:56:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:56:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:56:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:56:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:56:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:56:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:56:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:56:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:56:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:56:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:56:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:56:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:56:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:56:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:56:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:56:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 07:58:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "logout".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('logout')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('logout')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('/administracion...')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/projectsima/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/projectsima/index.php?r=/administracion/logout
+---
+2013/07/25 08:01:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/inicio')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/inicio
+---
+2013/07/25 08:01:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "/interfaz/inicio".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('/interfaz/inici...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=/interfaz/inicio
+---
+2013/07/25 08:01:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "inicio".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('inicio')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('inicio')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/inicio')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/projectsima/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/projectsima/index.php?r=site/inicio
+---
+2013/07/25 08:01:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "site".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('site')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('site')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('administracion/...')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/projectsima/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/projectsima/index.php?r=administracion/site
+---
+2013/07/25 08:01:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "site".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('site')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('site')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('administracion/...')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/projectsima/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/projectsima/index.php?r=administracion/site
+---
+2013/07/25 09:53:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "ventasxVolumen".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('ventasxVolumen')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('ventasxVolumen')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('/administracion...')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/projectsima/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/projectsima/index.php?r=/administracion/ventasxVolumen
+HTTP_REFERER=http://localhost/projectsima/index.php?r=/administracion
+---
+2013/07/25 11:57:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "/interfaz/modulos".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('/interfaz/modul...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=/interfaz/modulos
+HTTP_REFERER=http://localhost/projectsima/index.php
+---
+2013/07/25 11:57:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "/interfaz/modulos".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('/interfaz/modul...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=/interfaz/modulos
+HTTP_REFERER=http://localhost/projectsima/index.php
+---
+2013/07/25 11:58:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "/interfaz/catModulos".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('/interfaz/catMo...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=/interfaz/catModulos
+HTTP_REFERER=http://localhost/projectsima/index.php
+---
+2013/07/25 11:59:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "/interfaz/catModulos".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('/interfaz/catMo...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=/interfaz/catModulos
+HTTP_REFERER=http://localhost/projectsima/index.php
+---
+2013/07/25 12:00:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "/interfaz/catModulos".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('/interfaz/catMo...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=/interfaz/catModulos
+HTTP_REFERER=http://localhost/projectsima/index.php
+---
+2013/07/25 12:01:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "/interfaz/catModulos".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('/interfaz/catMo...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=/interfaz/catModulos
+HTTP_REFERER=http://localhost/projectsima/index.php
+---
+2013/07/25 12:01:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/catModulos".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/catMod...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/catModulos
+---
+2013/07/25 12:01:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "/interfaz/catModulos".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('/interfaz/catMo...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=/interfaz/catModulos
+---
+2013/07/25 12:02:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "/interfaz/catModulos".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('/interfaz/catMo...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=/interfaz/catModulos
+---
+2013/07/25 12:02:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "/interfaz/catModulos".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('/interfaz/catMo...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=/interfaz/catModulos
+---
+2013/07/25 12:02:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "/interfaz/catModulos".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('/interfaz/catMo...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=/interfaz/catModulos
+---
+2013/07/25 12:04:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interfaz/catModulos".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interfaz/catMod...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=interfaz/catModulos
+---
+2013/07/25 12:04:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "/interfaz/catModulos".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('/interfaz/catMo...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=/interfaz/catModulos
+HTTP_REFERER=http://localhost/projectsima/index.php
+---
+2013/07/25 12:17:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "/interfaz/catModulos".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('/interfaz/catMo...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=/interfaz/catModulos
+HTTP_REFERER=http://localhost/projectsima/index.php
+---
+2013/07/25 12:17:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "/interfaz/catModulos".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('/interfaz/catMo...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=/interfaz/catModulos
+HTTP_REFERER=http://localhost/projectsima/index.php
+---
+2013/07/25 12:18:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "/interfaz/catModulos".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('/interfaz/catMo...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=/interfaz/catModulos
+HTTP_REFERER=http://localhost/projectsima/index.php
+---
+2013/07/25 12:19:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "modulosGenerales".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales
+---
+2013/07/25 12:19:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "modulosGenerales".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales
+---
+2013/07/25 12:19:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "modulosGenerales".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales
+---
+2013/07/25 12:19:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "modulosGenerales/index".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/index
+---
+2013/07/25 12:21:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('index')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/projectsima/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/index
+---
+2013/07/25 12:26:45 [error] [php] require(menuAdministracion.php): failed to open stream: No such file or directory (/var/www/projectsima/protected/views/modulosGenerales/catModulos.php:24)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): ModulosGeneralesController->renderInternal()
+#1 /var/www/yii/framework/web/CController.php(869): ModulosGeneralesController->renderFile()
+#2 /var/www/yii/framework/web/CController.php(782): ModulosGeneralesController->renderPartial()
+#3 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(9): ModulosGeneralesController->render()
+#4 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actioncatModulos()
+#5 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /var/www/yii/framework/web/CController.php(286): ModulosGeneralesController->runAction()
+#7 /var/www/yii/framework/web/CController.php(265): ModulosGeneralesController->runActionWithFilters()
+#8 /var/www/yii/framework/web/CWebApplication.php(282): ModulosGeneralesController->run()
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/catModulos
+in /var/www/projectsima/protected/views/modulosGenerales/catModulos.php (24)
+in /var/www/projectsima/protected/views/modulosGenerales/catModulos.php (24)
+in /var/www/projectsima/protected/controllers/ModulosGeneralesController.php (9)
+2013/07/25 12:40:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "catModulos".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('catModulos')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('catModulos')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/catModulos')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/projectsima/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/projectsima/index.php?r=site/catModulos
+---

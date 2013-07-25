@@ -6,7 +6,6 @@ $this->pageTitle=Yii::app()->name . ' - Ajustar Cuentas';
 $this->breadcrumbs=array(
 	'ajustarCuentas',
 );
-$entidad='01';
 ?>
 <?php require("menuAdministracion.php");?>
 

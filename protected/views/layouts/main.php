@@ -95,7 +95,7 @@
             <div  class="nav-collapse collapse" >
             <ul class="nav pull-right">
                 <li id="fat-menu" class="dropdown">
-             <a href="#" id="drop3"><img height="20" src="./images/salir.jpeg" width="20"></a>
+             <a href="index.php?r=site/logout" id="drop3"><img height="20" src="./images/salir.jpeg" width="20"></a>
                 </li>
             </ul>
             </div>    
@@ -156,20 +156,14 @@
 
 
 $fecha1=date("Y-m-d");
-
-
-
 $users=Usuarios::model()->findByAttributes(array('usuario'=>Yii::app()->user->name));
 $entidad=$users>entidad;
 $usuario=Yii::app()->user->name;
 
 
 
-if(Yii::app()->user->name==null or Yii::app()->user->name=='Guest'){
-             
-              
-               //$this->redirect(array('site/logout')); 
-            }
+         
+         
 ?>        
     
     
