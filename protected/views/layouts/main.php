@@ -162,6 +162,14 @@ $fecha1=date("Y-m-d");
 $users=Usuarios::model()->findByAttributes(array('usuario'=>Yii::app()->user->name));
 $entidad=$users>entidad;
 $usuario=Yii::app()->user->name;
+
+
+
+if(Yii::app()->user->name==null or Yii::app()->user->name=='Guest'){
+             
+              
+               //$this->redirect(array('site/logout')); 
+            }
 ?>        
     
     
