@@ -130,7 +130,7 @@
           </div>
             <?php }?>
             
-            
+          
             
           
         </div>
@@ -151,12 +151,22 @@
             
                 
                   
-          <?php //require("./protected/views/interfaz/menuPrincipal.php");?>        
-    
-    
-    
-    
+<?php 
+#####variables para exportar
 
+
+$fecha1=date("Y-m-d");
+
+
+
+$users=Usuarios::model()->findByAttributes(array('usuario'=>Yii::app()->user->name));
+$entidad=$users>entidad;
+$usuario=Yii::app()->user->name;
+?>        
+    
+    
+    
+    
 
 
 
