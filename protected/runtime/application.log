@@ -2593,3 +2593,307 @@ Stack trace:
 REQUEST_URI=/projectsima/index.php?r=site/login
 HTTP_REFERER=http://localhost/projectsima/index.php?r=site/login
 ---
+2013/07/24 20:31:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2003] Can't connect to MySQL server on 'www.sshlc.org' (4)' in /var/www/yii/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /var/www/yii/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /var/www/yii/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /var/www/yii/framework/base/CModule.php(387): CDbConnection->init()
+#3 /var/www/yii/framework/base/CApplication.php(438): CModule->getComponent('db')
+#4 /var/www/yii/framework/db/ar/CActiveRecord.php(623): CApplication->getDb()
+#5 /var/www/yii/framework/db/ar/CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 /var/www/yii/framework/db/ar/CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Usuarios))
+#7 /var/www/projectsima/protected/models/Usuarios.php(37): CActiveRecord::model('Usuarios')
+#8 /var/www/projectsima/protected/components/UserIdentity.php(28): Usuarios::model()
+#9 /var/www/projectsima/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#10 /var/www/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 /var/www/yii/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 /var/www/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 /var/www/projectsima/protected/controllers/SiteController.php(94): CModel->validate()
+#14 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#15 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#16 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#17 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#19 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#20 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#21 /var/www/projectsima/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/projectsima/index.php?r=site/login
+HTTP_REFERER=http://localhost/projectsima/index.php?r=site/login
+---
+2013/07/24 20:40:55 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sima.extensionmodules' doesn't exist. The SQL statement executed was: SELECT *
+FROM `extensionmodules`
+WHERE 
+entidad='01'
+    and
+mainmodulename = 'ADMINISTRACION'
+AND mainmodule = 'REPORTES'
+ORDER BY name ASC
+
+.
+in /var/www/projectsima/protected/views/administracion/index.php (81)
+in /var/www/projectsima/protected/controllers/AdministracionController.php (7)
+in /var/www/projectsima/index.php (13)
+2013/07/24 20:40:55 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sima.extensionmodules' doesn't exist. The SQL statement executed was: SELECT *
+FROM `extensionmodules`
+WHERE 
+entidad='01'
+    and
+mainmodulename = 'ADMINISTRACION'
+AND mainmodule = 'REPORTES'
+ORDER BY name ASC
+
+' in /var/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /var/www/yii/framework/db/CDbCommand.php(376): CDbCommand->queryInternal('', 0, Array)
+#1 /var/www/projectsima/protected/views/administracion/index.php(81): CDbCommand->query()
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', NULL, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', NULL, true)
+#5 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#6 /var/www/projectsima/protected/controllers/AdministracionController.php(7): CController->render('index')
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): AdministracionController->actionIndex()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('/administracion')
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/projectsima/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/projectsima/index.php?r=/administracion
+HTTP_REFERER=http://localhost/projectsima/index.php
+---
+2013/07/24 20:53:10 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sima.extensionmodules' doesn't exist. The SQL statement executed was: SELECT *
+FROM `extensionmodules`
+WHERE 
+entidad='01'
+    and
+mainmodulename = 'ADMINISTRACION'
+AND mainmodule = 'REPORTES'
+ORDER BY name ASC
+
+.
+in /var/www/projectsima/protected/views/administracion/index.php (81)
+in /var/www/projectsima/protected/controllers/AdministracionController.php (7)
+in /var/www/projectsima/index.php (13)
+2013/07/24 20:53:10 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sima.extensionmodules' doesn't exist. The SQL statement executed was: SELECT *
+FROM `extensionmodules`
+WHERE 
+entidad='01'
+    and
+mainmodulename = 'ADMINISTRACION'
+AND mainmodule = 'REPORTES'
+ORDER BY name ASC
+
+' in /var/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /var/www/yii/framework/db/CDbCommand.php(376): CDbCommand->queryInternal('', 0, Array)
+#1 /var/www/projectsima/protected/views/administracion/index.php(81): CDbCommand->query()
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', NULL, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', NULL, true)
+#5 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#6 /var/www/projectsima/protected/controllers/AdministracionController.php(7): CController->render('index')
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): AdministracionController->actionIndex()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('administracion/')
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/projectsima/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/projectsima/index.php?r=administracion/
+---
+2013/07/24 20:55:56 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sima.extensionmodules' doesn't exist. The SQL statement executed was: SELECT *
+FROM `extensionmodules`
+WHERE 
+entidad='01'
+    and
+mainmodulename = 'ADMINISTRACION'
+AND mainmodule = 'REPORTES'
+ORDER BY name ASC
+
+.
+in /var/www/projectsima/protected/views/administracion/index.php (81)
+in /var/www/projectsima/protected/controllers/AdministracionController.php (7)
+in /var/www/projectsima/index.php (13)
+2013/07/24 20:55:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sima.extensionmodules' doesn't exist. The SQL statement executed was: SELECT *
+FROM `extensionmodules`
+WHERE 
+entidad='01'
+    and
+mainmodulename = 'ADMINISTRACION'
+AND mainmodule = 'REPORTES'
+ORDER BY name ASC
+
+' in /var/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /var/www/yii/framework/db/CDbCommand.php(376): CDbCommand->queryInternal('', 0, Array)
+#1 /var/www/projectsima/protected/views/administracion/index.php(81): CDbCommand->query()
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', NULL, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', NULL, true)
+#5 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#6 /var/www/projectsima/protected/controllers/AdministracionController.php(7): CController->render('index')
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): AdministracionController->actionIndex()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('/administracion')
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/projectsima/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/projectsima/index.php?r=/administracion
+HTTP_REFERER=http://localhost/projectsima/index.php
+---
+2013/07/24 20:56:46 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sima.extensionmodules' doesn't exist. The SQL statement executed was: SELECT *
+FROM `extensionmodules`
+WHERE 
+entidad='01'
+    and
+mainmodulename = 'ADMINISTRACION'
+AND mainmodule = 'REPORTES'
+ORDER BY name ASC
+
+.
+in /var/www/projectsima/protected/views/administracion/index.php (81)
+in /var/www/projectsima/protected/controllers/AdministracionController.php (7)
+in /var/www/projectsima/index.php (13)
+2013/07/24 20:56:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sima.extensionmodules' doesn't exist. The SQL statement executed was: SELECT *
+FROM `extensionmodules`
+WHERE 
+entidad='01'
+    and
+mainmodulename = 'ADMINISTRACION'
+AND mainmodule = 'REPORTES'
+ORDER BY name ASC
+
+' in /var/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /var/www/yii/framework/db/CDbCommand.php(376): CDbCommand->queryInternal('', 0, Array)
+#1 /var/www/projectsima/protected/views/administracion/index.php(81): CDbCommand->query()
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', NULL, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', NULL, true)
+#5 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#6 /var/www/projectsima/protected/controllers/AdministracionController.php(7): CController->render('index')
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): AdministracionController->actionIndex()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('/administracion')
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/projectsima/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/projectsima/index.php?r=/administracion
+HTTP_REFERER=http://localhost/projectsima/index.php
+---
+2013/07/24 21:13:36 [error] [php] Cannot modify header information - headers already sent by (output started at /var/www/projectsima/protected/controllers/AdministracionController.php:12) (/var/www/yii/framework/web/CHttpRequest.php:789)
+Stack trace:
+#0 /var/www/projectsima/protected/controllers/AdministracionController.php(13): AdministracionController->redirect()
+#1 /var/www/yii/framework/web/actions/CInlineAction.php(49): AdministracionController->actionIndex()
+#2 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/yii/framework/web/CController.php(286): AdministracionController->runAction()
+#4 /var/www/yii/framework/web/CController.php(265): AdministracionController->runActionWithFilters()
+#5 /var/www/yii/framework/web/CWebApplication.php(282): AdministracionController->run()
+#6 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=/administracion
+in /var/www/projectsima/protected/controllers/AdministracionController.php (13)
+in /var/www/projectsima/index.php (13)
+2013/07/24 21:13:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('login')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('administracion/...')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/projectsima/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/projectsima/index.php?r=administracion/login&id=
+---
+2013/07/24 21:15:50 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sima.historialCuentas' doesn't exist. The SQL statement executed was: SELECT *
+FROM
+historialCuentas 
+WHERE 
+entidad='01'
+and
+(fechaCargo>='' and fechaCargo<='')
+group by folioVenta
+ORDER BY folioVenta ASC.
+in /var/www/projectsima/protected/views/administracion/ajustarCuentas.php (102)
+in /var/www/projectsima/protected/controllers/AdministracionController.php (18)
+in /var/www/projectsima/index.php (13)
+2013/07/24 21:15:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sima.historialCuentas' doesn't exist. The SQL statement executed was: SELECT *
+FROM
+historialCuentas 
+WHERE 
+entidad='01'
+and
+(fechaCargo>='' and fechaCargo<='')
+group by folioVenta
+ORDER BY folioVenta ASC' in /var/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /var/www/yii/framework/db/CDbCommand.php(376): CDbCommand->queryInternal('', 0, Array)
+#1 /var/www/projectsima/protected/views/administracion/ajustarCuentas.php(102): CDbCommand->query()
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', NULL, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', NULL, true)
+#5 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('ajustarCuentas', NULL, true)
+#6 /var/www/projectsima/protected/controllers/AdministracionController.php(18): CController->render('ajustarCuentas')
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): AdministracionController->actionAjustarCuentas()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('ajustarCuentas')
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('administracion/...')
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/projectsima/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/projectsima/index.php?r=administracion/ajustarCuentas
+---
+2013/07/24 21:19:30 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sima.historialCuentas' doesn't exist. The SQL statement executed was: SELECT *
+FROM
+historialCuentas 
+WHERE 
+entidad='01'
+and
+(fechaCargo>='' and fechaCargo<='')
+group by folioVenta
+ORDER BY folioVenta ASC.
+in /var/www/projectsima/protected/views/administracion/ajustarCuentas.php (102)
+in /var/www/projectsima/protected/controllers/AdministracionController.php (21)
+in /var/www/projectsima/index.php (13)
+2013/07/24 21:19:30 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sima.historialCuentas' doesn't exist. The SQL statement executed was: SELECT *
+FROM
+historialCuentas 
+WHERE 
+entidad='01'
+and
+(fechaCargo>='' and fechaCargo<='')
+group by folioVenta
+ORDER BY folioVenta ASC' in /var/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /var/www/yii/framework/db/CDbCommand.php(376): CDbCommand->queryInternal('', 0, Array)
+#1 /var/www/projectsima/protected/views/administracion/ajustarCuentas.php(102): CDbCommand->query()
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', NULL, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', NULL, true)
+#5 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('ajustarCuentas', NULL, true)
+#6 /var/www/projectsima/protected/controllers/AdministracionController.php(21): CController->render('ajustarCuentas')
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): AdministracionController->actionAjustarCuentas()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('ajustarCuentas')
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('/administracion...')
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/projectsima/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/projectsima/index.php?r=/administracion/ajustarCuentas
+HTTP_REFERER=http://localhost/projectsima/index.php?r=/administracion
+---
