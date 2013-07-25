@@ -4037,3 +4037,1252 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/projectsima/index.php?r=site/catModulos
 ---
+2013/07/25 12:58:37 [error] [php] get_class() expects parameter 1 to be object, string given (/var/www/yii/framework/web/helpers/CHtml.php:2220)
+Stack trace:
+#0 /var/www/yii/framework/web/widgets/CActiveForm.php(562): activeLabelEx()
+#1 /var/www/projectsima/protected/views/modulosGenerales/catModulos.php(41): CActiveForm->labelEx()
+#2 /var/www/yii/framework/web/CBaseController.php(126): require()
+#3 /var/www/yii/framework/web/CBaseController.php(95): ModulosGeneralesController->renderInternal()
+#4 /var/www/yii/framework/web/CController.php(869): ModulosGeneralesController->renderFile()
+#5 /var/www/yii/framework/web/CController.php(782): ModulosGeneralesController->renderPartial()
+#6 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(9): ModulosGeneralesController->render()
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actioncatModulos()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /var/www/yii/framework/web/CController.php(286): ModulosGeneralesController->runAction()
+#10 /var/www/yii/framework/web/CController.php(265): ModulosGeneralesController->runActionWithFilters()
+#11 /var/www/yii/framework/web/CWebApplication.php(282): ModulosGeneralesController->run()
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/catModulos
+in /var/www/projectsima/protected/views/modulosGenerales/catModulos.php (41)
+in /var/www/projectsima/protected/controllers/ModulosGeneralesController.php (9)
+in /var/www/projectsima/index.php (13)
+2013/07/25 13:01:00 [error] [php] get_class() expects parameter 1 to be object, string given (/var/www/yii/framework/web/helpers/CHtml.php:2220)
+Stack trace:
+#0 /var/www/yii/framework/web/widgets/CActiveForm.php(562): activeLabelEx()
+#1 /var/www/projectsima/protected/views/modulosGenerales/catModulos.php(41): CActiveForm->labelEx()
+#2 /var/www/yii/framework/web/CBaseController.php(126): require()
+#3 /var/www/yii/framework/web/CBaseController.php(95): ModulosGeneralesController->renderInternal()
+#4 /var/www/yii/framework/web/CController.php(869): ModulosGeneralesController->renderFile()
+#5 /var/www/yii/framework/web/CController.php(782): ModulosGeneralesController->renderPartial()
+#6 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(10): ModulosGeneralesController->render()
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actioncatModulos()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /var/www/yii/framework/web/CController.php(286): ModulosGeneralesController->runAction()
+#10 /var/www/yii/framework/web/CController.php(265): ModulosGeneralesController->runActionWithFilters()
+#11 /var/www/yii/framework/web/CWebApplication.php(282): ModulosGeneralesController->run()
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/catModulos
+in /var/www/projectsima/protected/views/modulosGenerales/catModulos.php (41)
+in /var/www/projectsima/protected/controllers/ModulosGeneralesController.php (10)
+in /var/www/projectsima/index.php (13)
+2013/07/25 13:01:01 [error] [php] get_class() expects parameter 1 to be object, string given (/var/www/yii/framework/web/helpers/CHtml.php:2220)
+Stack trace:
+#0 /var/www/yii/framework/web/widgets/CActiveForm.php(562): activeLabelEx()
+#1 /var/www/projectsima/protected/views/modulosGenerales/catModulos.php(41): CActiveForm->labelEx()
+#2 /var/www/yii/framework/web/CBaseController.php(126): require()
+#3 /var/www/yii/framework/web/CBaseController.php(95): ModulosGeneralesController->renderInternal()
+#4 /var/www/yii/framework/web/CController.php(869): ModulosGeneralesController->renderFile()
+#5 /var/www/yii/framework/web/CController.php(782): ModulosGeneralesController->renderPartial()
+#6 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(10): ModulosGeneralesController->render()
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actioncatModulos()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /var/www/yii/framework/web/CController.php(286): ModulosGeneralesController->runAction()
+#10 /var/www/yii/framework/web/CController.php(265): ModulosGeneralesController->runActionWithFilters()
+#11 /var/www/yii/framework/web/CWebApplication.php(282): ModulosGeneralesController->run()
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/catModulos
+in /var/www/projectsima/protected/views/modulosGenerales/catModulos.php (41)
+in /var/www/projectsima/protected/controllers/ModulosGeneralesController.php (10)
+in /var/www/projectsima/index.php (13)
+2013/07/25 13:01:14 [error] [php] get_class() expects parameter 1 to be object, string given (/var/www/yii/framework/web/helpers/CHtml.php:2220)
+Stack trace:
+#0 /var/www/yii/framework/web/widgets/CActiveForm.php(562): activeLabelEx()
+#1 /var/www/projectsima/protected/views/modulosGenerales/catModulos.php(41): CActiveForm->labelEx()
+#2 /var/www/yii/framework/web/CBaseController.php(126): require()
+#3 /var/www/yii/framework/web/CBaseController.php(95): ModulosGeneralesController->renderInternal()
+#4 /var/www/yii/framework/web/CController.php(869): ModulosGeneralesController->renderFile()
+#5 /var/www/yii/framework/web/CController.php(782): ModulosGeneralesController->renderPartial()
+#6 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(10): ModulosGeneralesController->render()
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actioncatModulos()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /var/www/yii/framework/web/CController.php(286): ModulosGeneralesController->runAction()
+#10 /var/www/yii/framework/web/CController.php(265): ModulosGeneralesController->runActionWithFilters()
+#11 /var/www/yii/framework/web/CWebApplication.php(282): ModulosGeneralesController->run()
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/catModulos
+in /var/www/projectsima/protected/views/modulosGenerales/catModulos.php (41)
+in /var/www/projectsima/protected/controllers/ModulosGeneralesController.php (10)
+in /var/www/projectsima/index.php (13)
+2013/07/25 13:02:16 [error] [php] get_class() expects parameter 1 to be object, string given (/var/www/yii/framework/web/helpers/CHtml.php:2220)
+Stack trace:
+#0 /var/www/yii/framework/web/widgets/CActiveForm.php(562): activeLabelEx()
+#1 /var/www/projectsima/protected/views/modulosGenerales/catModulos.php(41): CActiveForm->labelEx()
+#2 /var/www/yii/framework/web/CBaseController.php(126): require()
+#3 /var/www/yii/framework/web/CBaseController.php(95): ModulosGeneralesController->renderInternal()
+#4 /var/www/yii/framework/web/CController.php(869): ModulosGeneralesController->renderFile()
+#5 /var/www/yii/framework/web/CController.php(782): ModulosGeneralesController->renderPartial()
+#6 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(10): ModulosGeneralesController->render()
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actioncatModulos()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /var/www/yii/framework/web/CController.php(286): ModulosGeneralesController->runAction()
+#10 /var/www/yii/framework/web/CController.php(265): ModulosGeneralesController->runActionWithFilters()
+#11 /var/www/yii/framework/web/CWebApplication.php(282): ModulosGeneralesController->run()
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/catModulos
+in /var/www/projectsima/protected/views/modulosGenerales/catModulos.php (41)
+in /var/www/projectsima/protected/controllers/ModulosGeneralesController.php (10)
+in /var/www/projectsima/index.php (13)
+2013/07/25 14:22:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "usersmodulosgenerales"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersmodulosgen...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=usersmodulosgenerales
+---
+2013/07/25 14:25:25 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=UsersModulosGenerales
+---
+2013/07/25 14:25:34 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=UsersModulosGenerales
+---
+2013/07/25 14:25:41 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in /var/www/yii/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('update')
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('UsersModulosGen...')
+#10 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /var/www/projectsima/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/projectsima/index.php?r=UsersModulosGenerales/update
+---
+2013/07/25 14:26:00 [error] [php] get_class() expects parameter 1 to be object, string given (/var/www/yii/framework/web/helpers/CHtml.php:2220)
+Stack trace:
+#0 /var/www/yii/framework/web/widgets/CActiveForm.php(562): activeLabelEx()
+#1 /var/www/projectsima/protected/views/modulosGenerales/catModulos.php(41): CActiveForm->labelEx()
+#2 /var/www/yii/framework/web/CBaseController.php(126): require()
+#3 /var/www/yii/framework/web/CBaseController.php(95): ModulosGeneralesController->renderInternal()
+#4 /var/www/yii/framework/web/CController.php(869): ModulosGeneralesController->renderFile()
+#5 /var/www/yii/framework/web/CController.php(782): ModulosGeneralesController->renderPartial()
+#6 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(10): ModulosGeneralesController->render()
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actioncatModulos()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /var/www/yii/framework/web/CController.php(286): ModulosGeneralesController->runAction()
+#10 /var/www/yii/framework/web/CController.php(265): ModulosGeneralesController->runActionWithFilters()
+#11 /var/www/yii/framework/web/CWebApplication.php(282): ModulosGeneralesController->run()
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/catModulos
+in /var/www/projectsima/protected/views/modulosGenerales/catModulos.php (41)
+in /var/www/projectsima/protected/controllers/ModulosGeneralesController.php (10)
+in /var/www/projectsima/index.php (13)
+2013/07/25 14:26:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "index" solicitada.' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/projectsima/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales
+---
+2013/07/25 14:27:00 [error] [php] get_class() expects parameter 1 to be object, string given (/var/www/yii/framework/web/helpers/CHtml.php:2220)
+Stack trace:
+#0 /var/www/yii/framework/web/widgets/CActiveForm.php(562): activeLabelEx()
+#1 /var/www/projectsima/protected/views/modulosGenerales/catModulos.php(41): CActiveForm->labelEx()
+#2 /var/www/yii/framework/web/CBaseController.php(126): require()
+#3 /var/www/yii/framework/web/CBaseController.php(95): ModulosGeneralesController->renderInternal()
+#4 /var/www/yii/framework/web/CController.php(869): ModulosGeneralesController->renderFile()
+#5 /var/www/yii/framework/web/CController.php(782): ModulosGeneralesController->renderPartial()
+#6 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(10): ModulosGeneralesController->render()
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actioncatModulos()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /var/www/yii/framework/web/CController.php(286): ModulosGeneralesController->runAction()
+#10 /var/www/yii/framework/web/CController.php(265): ModulosGeneralesController->runActionWithFilters()
+#11 /var/www/yii/framework/web/CWebApplication.php(282): ModulosGeneralesController->run()
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/catModulos
+in /var/www/projectsima/protected/views/modulosGenerales/catModulos.php (41)
+in /var/www/projectsima/protected/controllers/ModulosGeneralesController.php (10)
+in /var/www/projectsima/index.php (13)
+2013/07/25 14:29:07 [error] [php] get_class() expects parameter 1 to be object, string given (/var/www/yii/framework/web/helpers/CHtml.php:2220)
+Stack trace:
+#0 /var/www/yii/framework/web/widgets/CActiveForm.php(562): activeLabelEx()
+#1 /var/www/projectsima/protected/views/modulosGenerales/catModulos.php(41): CActiveForm->labelEx()
+#2 /var/www/yii/framework/web/CBaseController.php(126): require()
+#3 /var/www/yii/framework/web/CBaseController.php(95): ModulosGeneralesController->renderInternal()
+#4 /var/www/yii/framework/web/CController.php(869): ModulosGeneralesController->renderFile()
+#5 /var/www/yii/framework/web/CController.php(782): ModulosGeneralesController->renderPartial()
+#6 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(10): ModulosGeneralesController->render()
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actioncatModulos()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /var/www/yii/framework/web/CController.php(286): ModulosGeneralesController->runAction()
+#10 /var/www/yii/framework/web/CController.php(265): ModulosGeneralesController->runActionWithFilters()
+#11 /var/www/yii/framework/web/CWebApplication.php(282): ModulosGeneralesController->run()
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/catModulos
+in /var/www/projectsima/protected/views/modulosGenerales/catModulos.php (41)
+in /var/www/projectsima/protected/controllers/ModulosGeneralesController.php (10)
+in /var/www/projectsima/index.php (13)
+2013/07/25 14:34:35 [error] [php] include(Estado.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:421)
+Stack trace:
+#0 /var/www/projectsima/protected/views/modulosGenerales/catModulos.php(31): spl_autoload_call()
+#1 /var/www/yii/framework/web/CBaseController.php(126): require()
+#2 /var/www/yii/framework/web/CBaseController.php(95): ModulosGeneralesController->renderInternal()
+#3 /var/www/yii/framework/web/CController.php(869): ModulosGeneralesController->renderFile()
+#4 /var/www/yii/framework/web/CController.php(782): ModulosGeneralesController->renderPartial()
+#5 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(10): ModulosGeneralesController->render()
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actioncatModulos()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /var/www/yii/framework/web/CController.php(286): ModulosGeneralesController->runAction()
+#9 /var/www/yii/framework/web/CController.php(265): ModulosGeneralesController->runActionWithFilters()
+#10 /var/www/yii/framework/web/CWebApplication.php(282): ModulosGeneralesController->run()
+#11 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/catModulos
+in /var/www/projectsima/protected/views/modulosGenerales/catModulos.php (31)
+in /var/www/projectsima/protected/controllers/ModulosGeneralesController.php (10)
+in /var/www/projectsima/index.php (13)
+2013/07/25 14:34:36 [error] [php] include(Estado.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:421)
+Stack trace:
+#0 /var/www/projectsima/protected/views/modulosGenerales/catModulos.php(31): spl_autoload_call()
+#1 /var/www/yii/framework/web/CBaseController.php(126): require()
+#2 /var/www/yii/framework/web/CBaseController.php(95): ModulosGeneralesController->renderInternal()
+#3 /var/www/yii/framework/web/CController.php(869): ModulosGeneralesController->renderFile()
+#4 /var/www/yii/framework/web/CController.php(782): ModulosGeneralesController->renderPartial()
+#5 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(10): ModulosGeneralesController->render()
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actioncatModulos()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /var/www/yii/framework/web/CController.php(286): ModulosGeneralesController->runAction()
+#9 /var/www/yii/framework/web/CController.php(265): ModulosGeneralesController->runActionWithFilters()
+#10 /var/www/yii/framework/web/CWebApplication.php(282): ModulosGeneralesController->run()
+#11 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/catModulos
+in /var/www/projectsima/protected/views/modulosGenerales/catModulos.php (31)
+in /var/www/projectsima/protected/controllers/ModulosGeneralesController.php (10)
+in /var/www/projectsima/index.php (13)
+2013/07/25 14:34:36 [error] [php] include(Estado.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:421)
+Stack trace:
+#0 /var/www/projectsima/protected/views/modulosGenerales/catModulos.php(31): spl_autoload_call()
+#1 /var/www/yii/framework/web/CBaseController.php(126): require()
+#2 /var/www/yii/framework/web/CBaseController.php(95): ModulosGeneralesController->renderInternal()
+#3 /var/www/yii/framework/web/CController.php(869): ModulosGeneralesController->renderFile()
+#4 /var/www/yii/framework/web/CController.php(782): ModulosGeneralesController->renderPartial()
+#5 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(10): ModulosGeneralesController->render()
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actioncatModulos()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /var/www/yii/framework/web/CController.php(286): ModulosGeneralesController->runAction()
+#9 /var/www/yii/framework/web/CController.php(265): ModulosGeneralesController->runActionWithFilters()
+#10 /var/www/yii/framework/web/CWebApplication.php(282): ModulosGeneralesController->run()
+#11 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/catModulos
+in /var/www/projectsima/protected/views/modulosGenerales/catModulos.php (31)
+in /var/www/projectsima/protected/controllers/ModulosGeneralesController.php (10)
+in /var/www/projectsima/index.php (13)
+2013/07/25 14:35:20 [error] [php] include(Estado.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:421)
+Stack trace:
+#0 /var/www/projectsima/protected/views/modulosGenerales/catModulos.php(31): spl_autoload_call()
+#1 /var/www/yii/framework/web/CBaseController.php(126): require()
+#2 /var/www/yii/framework/web/CBaseController.php(95): ModulosGeneralesController->renderInternal()
+#3 /var/www/yii/framework/web/CController.php(869): ModulosGeneralesController->renderFile()
+#4 /var/www/yii/framework/web/CController.php(782): ModulosGeneralesController->renderPartial()
+#5 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(10): ModulosGeneralesController->render()
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actioncatModulos()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /var/www/yii/framework/web/CController.php(286): ModulosGeneralesController->runAction()
+#9 /var/www/yii/framework/web/CController.php(265): ModulosGeneralesController->runActionWithFilters()
+#10 /var/www/yii/framework/web/CWebApplication.php(282): ModulosGeneralesController->run()
+#11 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/catModulos
+in /var/www/projectsima/protected/views/modulosGenerales/catModulos.php (31)
+in /var/www/projectsima/protected/controllers/ModulosGeneralesController.php (10)
+in /var/www/projectsima/index.php (13)
+2013/07/25 14:40:07 [error] [exception.CException] exception 'CException' with message 'ModulosGeneralesController contiene etiquetas de widget en la vista "/var/www/projectsima/protected/views/modulosGenerales/catModulos.php" anidados incorrectamente. CActiveForm widget no contiene la llamada a endWidget().' in /var/www/yii/framework/web/CBaseController.php:101
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#1 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('catModulos', Array, true)
+#2 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(10): CController->render('catModulos', Array)
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actioncatModulos()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('catModulos')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/catModulos
+---
+2013/07/25 14:43:28 [error] [system.db.CDbCommand] CDbCommand::fetchAll() falló: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'somefieldfield' in 'order clause'. La sentencia SQL ejecutada fue: SELECT * FROM `users_modulosGenerales` `t` ORDER BY somefieldfield.
+in /var/www/projectsima/protected/views/modulosGenerales/catModulos.php (31)
+in /var/www/projectsima/protected/controllers/ModulosGeneralesController.php (10)
+in /var/www/projectsima/index.php (13)
+2013/07/25 14:43:28 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'somefieldfield' in 'order clause'. The SQL statement executed was: SELECT * FROM `users_modulosGenerales` `t` ORDER BY somefieldfield' in /var/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /var/www/yii/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /var/www/projectsima/protected/views/modulosGenerales/catModulos.php(31): CActiveRecord->findAll(Array)
+#4 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#5 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#6 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#7 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('catModulos', Array, true)
+#8 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(10): CController->render('catModulos', Array)
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actioncatModulos()
+#10 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('catModulos')
+#14 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#15 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /var/www/projectsima/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/catModulos
+HTTP_REFERER=http://localhost/projectsima/index.php?r=modulosGenerales/catModulos
+---
+2013/07/25 14:44:01 [error] [exception.CException] exception 'CException' with message 'Propiedad "CDbCriteria"."descripcion" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /var/www/yii/framework/db/schema/CDbCriteria.php(160): CComponent->__set('descripcion', 'ovidio')
+#1 /var/www/yii/framework/db/schema/CDbCommandBuilder.php(483): CDbCriteria->__construct(Array)
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(1415): CDbCommandBuilder->createCriteria(Array, Array)
+#3 /var/www/projectsima/protected/views/modulosGenerales/catModulos.php(31): CActiveRecord->findAll(Array)
+#4 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#5 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#6 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#7 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('catModulos', Array, true)
+#8 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(10): CController->render('catModulos', Array)
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actioncatModulos()
+#10 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('catModulos')
+#14 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#15 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /var/www/projectsima/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/catModulos
+HTTP_REFERER=http://localhost/projectsima/index.php?r=modulosGenerales/catModulos
+---
+2013/07/25 14:44:26 [error] [exception.CException] exception 'CException' with message 'Propiedad "CDbCriteria"."descripcion" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /var/www/yii/framework/db/schema/CDbCriteria.php(160): CComponent->__set('descripcion', 'ovidio')
+#1 /var/www/yii/framework/db/schema/CDbCommandBuilder.php(483): CDbCriteria->__construct(Array)
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(1415): CDbCommandBuilder->createCriteria(Array, Array)
+#3 /var/www/projectsima/protected/views/modulosGenerales/catModulos.php(31): CActiveRecord->findAll(Array)
+#4 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#5 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#6 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#7 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('catModulos', Array, true)
+#8 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(10): CController->render('catModulos', Array)
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actioncatModulos()
+#10 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('catModulos')
+#14 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#15 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /var/www/projectsima/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/catModulos
+HTTP_REFERER=http://localhost/projectsima/index.php?r=modulosGenerales/catModulos
+---
+2013/07/25 14:46:01 [error] [exception.CException] exception 'CException' with message 'ModulosGeneralesController y sus behaviors no tienen un método o closure llamado "getTableAlias".' in /var/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1463): CComponent->__call('getTableAlias', Array)
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(1463): ModulosGeneralesController->getTableAlias(true)
+#2 /var/www/projectsima/protected/views/modulosGenerales/catModulos.php(31): CActiveRecord->findByAttributes(Array)
+#3 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#4 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#5 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#6 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('catModulos', Array, true)
+#7 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(10): CController->render('catModulos', Array)
+#8 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actioncatModulos()
+#9 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('catModulos')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/projectsima/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/catModulos
+HTTP_REFERER=http://localhost/projectsima/index.php?r=modulosGenerales/catModulos
+---
+2013/07/25 14:48:29 [error] [exception.CException] exception 'CException' with message 'ModulosGeneralesController y sus behaviors no tienen un método o closure llamado "getTableAlias".' in /var/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1463): CComponent->__call('getTableAlias', Array)
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(1463): ModulosGeneralesController->getTableAlias(true)
+#2 /var/www/projectsima/protected/views/modulosGenerales/catModulos.php(31): CActiveRecord->findByAttributes(Array)
+#3 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#4 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#5 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#6 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('catModulos', Array, true)
+#7 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(10): CController->render('catModulos', Array)
+#8 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actioncatModulos()
+#9 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('catModulos')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/projectsima/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/catModulos
+HTTP_REFERER=http://localhost/projectsima/index.php?r=modulosGenerales/catModulos
+---
+2013/07/25 14:48:47 [error] [exception.CException] exception 'CException' with message 'ModulosGeneralesController y sus behaviors no tienen un método o closure llamado "getTableAlias".' in /var/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1463): CComponent->__call('getTableAlias', Array)
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(1463): ModulosGeneralesController->getTableAlias(true)
+#2 /var/www/projectsima/protected/views/modulosGenerales/catModulos.php(31): CActiveRecord->findByAttributes(Array)
+#3 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#4 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#5 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#6 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('catModulos', Array, true)
+#7 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(10): CController->render('catModulos', Array)
+#8 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actioncatModulos()
+#9 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('catModulos')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/projectsima/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/catModulos
+HTTP_REFERER=http://localhost/projectsima/index.php?r=modulosGenerales/catModulos
+---
+2013/07/25 14:50:30 [error] [php] Missing argument 2 for CActiveForm::textField(), called in /var/www/projectsima/protected/views/modulosGenerales/catModulos.php on line 35 and defined (/var/www/yii/framework/web/widgets/CActiveForm.php:655)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): ModulosGeneralesController->renderInternal()
+#1 /var/www/yii/framework/web/CController.php(869): ModulosGeneralesController->renderFile()
+#2 /var/www/yii/framework/web/CController.php(782): ModulosGeneralesController->renderPartial()
+#3 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(10): ModulosGeneralesController->render()
+#4 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actioncatModulos()
+#5 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /var/www/yii/framework/web/CController.php(286): ModulosGeneralesController->runAction()
+#7 /var/www/yii/framework/web/CController.php(265): ModulosGeneralesController->runActionWithFilters()
+#8 /var/www/yii/framework/web/CWebApplication.php(282): ModulosGeneralesController->run()
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/catModulos
+in /var/www/projectsima/protected/views/modulosGenerales/catModulos.php (35)
+in /var/www/projectsima/protected/controllers/ModulosGeneralesController.php (10)
+in /var/www/projectsima/index.php (13)
+2013/07/25 14:54:13 [error] [php] Missing argument 2 for CActiveForm::textField(), called in /var/www/projectsima/protected/views/modulosGenerales/catModulos.php on line 37 and defined (/var/www/yii/framework/web/widgets/CActiveForm.php:655)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): ModulosGeneralesController->renderInternal()
+#1 /var/www/yii/framework/web/CController.php(869): ModulosGeneralesController->renderFile()
+#2 /var/www/yii/framework/web/CController.php(782): ModulosGeneralesController->renderPartial()
+#3 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(10): ModulosGeneralesController->render()
+#4 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actioncatModulos()
+#5 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /var/www/yii/framework/web/CController.php(286): ModulosGeneralesController->runAction()
+#7 /var/www/yii/framework/web/CController.php(265): ModulosGeneralesController->runActionWithFilters()
+#8 /var/www/yii/framework/web/CWebApplication.php(282): ModulosGeneralesController->run()
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/catModulos
+in /var/www/projectsima/protected/views/modulosGenerales/catModulos.php (37)
+in /var/www/projectsima/protected/controllers/ModulosGeneralesController.php (10)
+in /var/www/projectsima/index.php (13)
+2013/07/25 14:56:10 [error] [php] include(Employee.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:421)
+Stack trace:
+#0 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(15): spl_autoload_call()
+#1 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actionCrear()
+#2 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/yii/framework/web/CController.php(286): ModulosGeneralesController->runAction()
+#4 /var/www/yii/framework/web/CController.php(265): ModulosGeneralesController->runActionWithFilters()
+#5 /var/www/yii/framework/web/CWebApplication.php(282): ModulosGeneralesController->run()
+#6 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/crear
+in /var/www/projectsima/protected/controllers/ModulosGeneralesController.php (15)
+in /var/www/projectsima/index.php (13)
+2013/07/25 14:56:28 [error] [exception.CException] exception 'CException' with message 'ModulosGeneralesController no ha podido encontrar la vista "create" solicitada.' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#1 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(22): CController->render('create', Array)
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actionCrear()
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('crear')
+#7 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#8 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /var/www/projectsima/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/crear
+---
+2013/07/25 14:56:46 [error] [php] Missing argument 2 for CActiveForm::textField(), called in /var/www/projectsima/protected/views/modulosGenerales/catModulos.php on line 37 and defined (/var/www/yii/framework/web/widgets/CActiveForm.php:655)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): ModulosGeneralesController->renderInternal()
+#1 /var/www/yii/framework/web/CController.php(869): ModulosGeneralesController->renderFile()
+#2 /var/www/yii/framework/web/CController.php(782): ModulosGeneralesController->renderPartial()
+#3 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(22): ModulosGeneralesController->render()
+#4 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actionCrear()
+#5 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /var/www/yii/framework/web/CController.php(286): ModulosGeneralesController->runAction()
+#7 /var/www/yii/framework/web/CController.php(265): ModulosGeneralesController->runActionWithFilters()
+#8 /var/www/yii/framework/web/CWebApplication.php(282): ModulosGeneralesController->run()
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/crear
+in /var/www/projectsima/protected/views/modulosGenerales/catModulos.php (37)
+in /var/www/projectsima/protected/controllers/ModulosGeneralesController.php (22)
+in /var/www/projectsima/index.php (13)
+2013/07/25 15:05:50 [error] [php] include(Personal.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:421)
+Stack trace:
+#0 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(27): spl_autoload_call()
+#1 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actionCreate()
+#2 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/yii/framework/web/CController.php(286): ModulosGeneralesController->runAction()
+#4 /var/www/yii/framework/web/CController.php(265): ModulosGeneralesController->runActionWithFilters()
+#5 /var/www/yii/framework/web/CWebApplication.php(282): ModulosGeneralesController->run()
+#6 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/create
+in /var/www/projectsima/protected/controllers/ModulosGeneralesController.php (27)
+in /var/www/projectsima/index.php (13)
+2013/07/25 15:06:40 [error] [exception.CException] exception 'CException' with message 'ModulosGeneralesController y sus behaviors no tienen un método o closure llamado "performAjaxValidation".' in /var/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(29): CComponent->__call('performAjaxVali...', Array)
+#1 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(29): ModulosGeneralesController->performAjaxValidation(Array)
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actionCreate()
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#7 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#8 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /var/www/projectsima/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/create
+---
+2013/07/25 15:06:51 [error] [exception.CException] exception 'CException' with message 'ModulosGeneralesController no ha podido encontrar la vista "create" solicitada.' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#1 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(44): CController->render('create', Array)
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actionCreate()
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#7 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#8 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /var/www/projectsima/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/create
+---
+2013/07/25 15:07:10 [error] [exception.CException] exception 'CException' with message 'ModulosGeneralesController no ha podido encontrar la vista "create" solicitada.' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#1 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(44): CController->render('create', Array)
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actionCreate()
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#7 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#8 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /var/www/projectsima/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/create
+---
+2013/07/25 15:07:11 [error] [exception.CException] exception 'CException' with message 'ModulosGeneralesController no ha podido encontrar la vista "create" solicitada.' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#1 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(44): CController->render('create', Array)
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actionCreate()
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#7 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#8 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /var/www/projectsima/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/create
+---
+2013/07/25 15:07:12 [error] [exception.CException] exception 'CException' with message 'ModulosGeneralesController no ha podido encontrar la vista "create" solicitada.' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#1 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(44): CController->render('create', Array)
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actionCreate()
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#7 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#8 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /var/www/projectsima/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/create
+---
+2013/07/25 15:07:12 [error] [exception.CException] exception 'CException' with message 'ModulosGeneralesController no ha podido encontrar la vista "create" solicitada.' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#1 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(44): CController->render('create', Array)
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actionCreate()
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#7 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#8 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /var/www/projectsima/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/create
+---
+2013/07/25 15:07:24 [error] [exception.CException] exception 'CException' with message 'ModulosGeneralesController no ha podido encontrar la vista "crear" solicitada.' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('crear', Array, true)
+#1 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(44): CController->render('crear', Array)
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actionCreate()
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#7 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#8 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /var/www/projectsima/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/create
+---
+2013/07/25 15:07:43 [error] [exception.CException] exception 'CException' with message 'ModulosGeneralesController no ha podido encontrar la vista "crear" solicitada.' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('crear', Array, true)
+#1 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(44): CController->render('crear', Array)
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actionCreate()
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#7 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#8 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /var/www/projectsima/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/create
+---
+2013/07/25 15:07:44 [error] [exception.CException] exception 'CException' with message 'ModulosGeneralesController no ha podido encontrar la vista "crear" solicitada.' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('crear', Array, true)
+#1 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(44): CController->render('crear', Array)
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actionCreate()
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#7 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#8 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /var/www/projectsima/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/create
+---
+2013/07/25 15:07:44 [error] [exception.CException] exception 'CException' with message 'ModulosGeneralesController no ha podido encontrar la vista "crear" solicitada.' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('crear', Array, true)
+#1 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(44): CController->render('crear', Array)
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actionCreate()
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#7 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#8 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /var/www/projectsima/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/create
+---
+2013/07/25 15:07:44 [error] [exception.CException] exception 'CException' with message 'ModulosGeneralesController no ha podido encontrar la vista "crear" solicitada.' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('crear', Array, true)
+#1 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(44): CController->render('crear', Array)
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actionCreate()
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#7 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#8 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /var/www/projectsima/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/create
+---
+2013/07/25 15:07:47 [error] [exception.CException] exception 'CException' with message 'ModulosGeneralesController no ha podido encontrar la vista "crear" solicitada.' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('crear', Array, true)
+#1 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(44): CController->render('crear', Array)
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actionCreate()
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#7 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#8 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /var/www/projectsima/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/create
+---
+2013/07/25 15:16:56 [error] [exception.CException] exception 'CException' with message 'ModulosGeneralesController y sus behaviors no tienen un método o closure llamado "performAjaxValidation".' in /var/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(25): CComponent->__call('performAjaxVali...', Array)
+#1 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(25): ModulosGeneralesController->performAjaxValidation(Object(UsersModulosGenerales))
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actionCrear()
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('crear')
+#7 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#8 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /var/www/projectsima/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/crear
+HTTP_REFERER=http://localhost/projectsima/index.php?r=modulosGenerales/crear
+---
+2013/07/25 15:17:01 [error] [php] include(A.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:421)
+Stack trace:
+#0 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(38): spl_autoload_call()
+#1 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actionCreate()
+#2 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/yii/framework/web/CController.php(286): ModulosGeneralesController->runAction()
+#4 /var/www/yii/framework/web/CController.php(265): ModulosGeneralesController->runActionWithFilters()
+#5 /var/www/yii/framework/web/CWebApplication.php(282): ModulosGeneralesController->run()
+#6 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/create
+in /var/www/projectsima/protected/controllers/ModulosGeneralesController.php (38)
+in /var/www/projectsima/index.php (13)
+2013/07/25 15:26:15 [error] [exception.CException] exception 'CException' with message 'Propiedad "UsersModulosGenerales"."beforeSave" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('beforeSave')
+#1 /var/www/projectsima/protected/views/modulosGenerales/catModulos.php(42): CActiveRecord->__get('beforeSave')
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#5 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('catModulos', Array, true)
+#6 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(32): CController->render('catModulos', Array)
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actionCrear()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('crear')
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/projectsima/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/crear
+HTTP_REFERER=http://localhost/projectsima/index.php?r=modulosGenerales/crear
+---
+2013/07/25 15:26:54 [error] [exception.CException] exception 'CException' with message 'Propiedad "UsersModulosGenerales"."beforeSave" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('beforeSave')
+#1 /var/www/projectsima/protected/views/modulosGenerales/catModulos.php(42): CActiveRecord->__get('beforeSave')
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#5 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('catModulos', Array, true)
+#6 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(32): CController->render('catModulos', Array)
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actionCrear()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('crear')
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/projectsima/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/crear
+HTTP_REFERER=http://localhost/projectsima/index.php?r=modulosGenerales/crear
+---
+2013/07/25 15:27:10 [error] [exception.CException] exception 'CException' with message 'Propiedad "UsersModulosGenerales"."beforeSave" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('beforeSave')
+#1 /var/www/projectsima/protected/views/modulosGenerales/catModulos.php(42): CActiveRecord->__get('beforeSave')
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#5 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('catModulos', Array, true)
+#6 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(32): CController->render('catModulos', Array)
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actionCrear()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('crear')
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/projectsima/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/crear
+HTTP_REFERER=http://localhost/projectsima/index.php?r=modulosGenerales/crear
+---
+2013/07/25 15:30:00 [error] [exception.CException] exception 'CException' with message 'Propiedad "UsersModulosGenerales"."beforeSave" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('beforeSave')
+#1 /var/www/projectsima/protected/views/modulosGenerales/catModulos.php(42): CActiveRecord->__get('beforeSave')
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#5 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('catModulos', Array, true)
+#6 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(32): CController->render('catModulos', Array)
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actionCrear()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('crear')
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/projectsima/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/crear
+HTTP_REFERER=http://localhost/projectsima/index.php?r=modulosGenerales/crear
+---
+2013/07/25 15:30:52 [error] [exception.CException] exception 'CException' with message 'Propiedad "UsersModulosGenerales"."beforeSave" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('beforeSave')
+#1 /var/www/projectsima/protected/views/modulosGenerales/catModulos.php(42): CActiveRecord->__get('beforeSave')
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#5 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('catModulos', Array, true)
+#6 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(32): CController->render('catModulos', Array)
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actionCrear()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('crear')
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/projectsima/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/crear
+HTTP_REFERER=http://localhost/projectsima/index.php?r=modulosGenerales/crear
+---
+2013/07/25 15:31:10 [error] [exception.CException] exception 'CException' with message 'Propiedad "UsersModulosGenerales"."beforeSave" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('beforeSave')
+#1 /var/www/projectsima/protected/views/modulosGenerales/catModulos.php(42): CActiveRecord->__get('beforeSave')
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#5 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('catModulos', Array, true)
+#6 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(32): CController->render('catModulos', Array)
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actionCrear()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('crear')
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/projectsima/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/crear
+HTTP_REFERER=http://localhost/projectsima/index.php?r=modulosGenerales/crear
+---
+2013/07/25 15:31:33 [error] [exception.CException] exception 'CException' with message 'Propiedad "UsersModulosGenerales"."beforeSave" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('beforeSave')
+#1 /var/www/projectsima/protected/views/modulosGenerales/catModulos.php(42): CActiveRecord->__get('beforeSave')
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#5 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('catModulos', Array, true)
+#6 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(32): CController->render('catModulos', Array)
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actionCrear()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('crear')
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/projectsima/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/crear
+HTTP_REFERER=http://localhost/projectsima/index.php?r=modulosGenerales/crear
+---
+2013/07/25 15:31:38 [error] [exception.CException] exception 'CException' with message 'Propiedad "UsersModulosGenerales"."beforeSave" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('beforeSave')
+#1 /var/www/projectsima/protected/views/modulosGenerales/catModulos.php(42): CActiveRecord->__get('beforeSave')
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#5 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('catModulos', Array, true)
+#6 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(32): CController->render('catModulos', Array)
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actionCrear()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('crear')
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/projectsima/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/crear
+HTTP_REFERER=http://localhost/projectsima/index.php?r=modulosGenerales/crear
+---
+2013/07/25 15:31:44 [error] [exception.CException] exception 'CException' with message 'Propiedad "UsersModulosGenerales"."beforeSave" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('beforeSave')
+#1 /var/www/projectsima/protected/views/modulosGenerales/catModulos.php(42): CActiveRecord->__get('beforeSave')
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#5 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('catModulos', Array, true)
+#6 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(32): CController->render('catModulos', Array)
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actionCrear()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('crear')
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/projectsima/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/crear
+HTTP_REFERER=http://localhost/projectsima/index.php?r=modulosGenerales/crear
+---
+2013/07/25 15:33:07 [error] [exception.CException] exception 'CException' with message 'Propiedad "UsersModulosGenerales"."beforeSave" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('beforeSave')
+#1 /var/www/projectsima/protected/views/modulosGenerales/catModulos.php(42): CActiveRecord->__get('beforeSave')
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#5 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('catModulos', Array, true)
+#6 /var/www/projectsima/protected/controllers/ModulosGeneralesController.php(32): CController->render('catModulos', Array)
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): ModulosGeneralesController->actionCrear()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('crear')
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/projectsima/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/crear
+HTTP_REFERER=http://localhost/projectsima/index.php?r=modulosGenerales/crear
+---
+2013/07/25 15:44:42 [error] [php] Cannot modify header information - headers already sent by (output started at /var/www/projectsima/protected/controllers/SiteController.php:63) (/var/www/yii/framework/web/CHttpRequest.php:789)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(1043): SiteController->redirect()
+#1 /var/www/projectsima/protected/controllers/SiteController.php(71): SiteController->refresh()
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionContact()
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#5 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#6 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#7 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=site/contact
+in /var/www/projectsima/protected/controllers/SiteController.php (71)
+in /var/www/projectsima/index.php (13)
+2013/07/25 15:45:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "crear" solicitada.' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('crear')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('crear')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/crear')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/projectsima/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/projectsima/index.php?r=site/crear
+---
+2013/07/25 15:45:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "index" solicitada.' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/projectsima/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/
+---
+2013/07/25 15:55:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "modulosGenerales/catModulos"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/catModulos
+HTTP_REFERER=http://localhost/projectsima/index.php
+---
+2013/07/25 15:57:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "modulosGenerales/"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/
+---
+2013/07/25 15:57:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "usersmodulosGenerales/"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersmodulosGen...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=usersmodulosGenerales/
+---
+2013/07/25 15:57:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "usersmodulosGenerales"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersmodulosGen...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=usersmodulosGenerales
+---
+2013/07/25 15:57:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "usersmodulosGenerales/"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersmodulosGen...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=usersmodulosGenerales/
+---
+2013/07/25 15:57:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "modulosGenerales/"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('modulosGenerale...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/projectsima/index.php?r=modulosGenerales/
+---
+2013/07/25 16:14:33 [error] [exception.CException] exception 'CException' with message 'UsersModulosGeneralesController tiene una llamada extra a endWidget(CContentDecorator) en su vista.' in /var/www/yii/framework/web/CBaseController.php:210
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#1 /var/www/projectsima/protected/views/layouts/column2.php(29): CBaseController->endContent()
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(784): CBaseController->renderFile('/var/www/projec...', Array, true)
+#5 /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php(79): CController->render('create', Array)
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(49): UsersModulosGeneralesController->actionCreate()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#14 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#16 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#17 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#18 /var/www/projectsima/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/create
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/index
+---
+2013/07/25 16:15:17 [error] [exception.CException] exception 'CException' with message 'UsersModulosGeneralesController tiene una llamada extra a endWidget(CContentDecorator) en su vista.' in /var/www/yii/framework/web/CBaseController.php:210
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#1 /var/www/projectsima/protected/views/layouts/column2.php(32): CBaseController->endContent()
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(784): CBaseController->renderFile('/var/www/projec...', Array, true)
+#5 /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php(79): CController->render('create', Array)
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(49): UsersModulosGeneralesController->actionCreate()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#14 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#16 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#17 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#18 /var/www/projectsima/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/create
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/index
+---
+2013/07/25 16:15:38 [error] [exception.CException] exception 'CException' with message 'UsersModulosGeneralesController tiene una llamada extra a endWidget(CContentDecorator) en su vista.' in /var/www/yii/framework/web/CBaseController.php:210
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#1 /var/www/projectsima/protected/views/layouts/column2.php(32): CBaseController->endContent()
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(784): CBaseController->renderFile('/var/www/projec...', Array, true)
+#5 /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php(79): CController->render('create', Array)
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(49): UsersModulosGeneralesController->actionCreate()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#14 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#16 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#17 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#18 /var/www/projectsima/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/create
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/index
+---
+2013/07/25 16:15:39 [error] [exception.CException] exception 'CException' with message 'UsersModulosGeneralesController tiene una llamada extra a endWidget(CContentDecorator) en su vista.' in /var/www/yii/framework/web/CBaseController.php:210
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#1 /var/www/projectsima/protected/views/layouts/column2.php(32): CBaseController->endContent()
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(784): CBaseController->renderFile('/var/www/projec...', Array, true)
+#5 /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php(79): CController->render('create', Array)
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(49): UsersModulosGeneralesController->actionCreate()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#14 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#16 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#17 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#18 /var/www/projectsima/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/create
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/index
+---
+2013/07/25 16:31:25 [error] [exception.CException] exception 'CException' with message 'UsersModulosGeneralesController tiene una llamada extra a endWidget(CContentDecorator) en su vista.' in /var/www/yii/framework/web/CBaseController.php:210
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#1 /var/www/projectsima/protected/views/layouts/column2.php(33): CBaseController->endContent()
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(784): CBaseController->renderFile('/var/www/projec...', Array, true)
+#5 /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php(128): CController->render('index', Array)
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(49): UsersModulosGeneralesController->actionIndex()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#14 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#16 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#17 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#18 /var/www/projectsima/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales
+HTTP_REFERER=http://localhost/projectsima/index.php
+---
+2013/07/25 16:42:25 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/create
+---
+2013/07/25 16:42:33 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/create
+---
+2013/07/25 16:44:10 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/create
+---

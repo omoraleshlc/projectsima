@@ -88,4 +88,6 @@ return array(
 		// this is used in contact page
 		'adminEmail'=>'omorales@lacarlota.um.edu.mx',
 	),
+    'sourceLanguage'=>'en',
+    'language'=>'es',
 );

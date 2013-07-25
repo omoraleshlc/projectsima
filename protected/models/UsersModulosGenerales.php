@@ -36,8 +36,7 @@ class UsersModulosGenerales extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('keyMG, descripcion, entidad', 'required'),
-			array('keyMG', 'numerical', 'integerOnly'=>true),
+			array('descripcion, entidad', 'required'),
 			array('descripcion', 'length', 'max'=>30),
 			array('entidad', 'length', 'max'=>2),
 			// The following rule is used by search().

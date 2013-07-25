@@ -24,42 +24,33 @@ $this->breadcrumbs=array(
 /* @var $this UsersModulosGeneralesController */
 /* @var $model UsersModulosGenerales */
 /* @var $form CActiveForm */
+//echo Yii::app()->user->setFlash('contact','Thank you for contacting us. We will respond to you as soon as possible.');
 ?>
+    <div class="hero-unit">
+    <h1>Roles del Sitio</h1>
+    <p>Administración Hospitalaria</p>
+   
+    
+    </div>
+
 
 <div class="form">
-
-<?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'users-modulos-generales-catModulos-form',
-	'enableAjaxValidation'=>false,
+<?php $form = $this->beginWidget('CActiveForm', array(
+    'id'=>'user-form',
+    'enableAjaxValidation'=>true,
+    'focus'=>array($model,'descripcion'),
 )); ?>
+<div class="row">
+	 <?php echo $form->labelEx($model,'nombre_personal'); ?>
+	 <?php echo $form->textField($model,'descripcion'); ?>
+	 <?php echo $form->error($model,'nombre_personal'); ?>
+</div>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
-
-	<?php echo $form->errorSummary($model); ?>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'keyMG'); ?>
-		<?php echo $form->textField($model,'keyMG'); ?>
-		<?php echo $form->error($model,'keyMG'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'descripcion'); ?>
-		<?php echo $form->textField($model,'descripcion'); ?>
-		<?php echo $form->error($model,'descripcion'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'entidad'); ?>
-		<?php echo $form->textField($model,'entidad'); ?>
-		<?php echo $form->error($model,'entidad'); ?>
-	</div>
+<div class="row buttons">
+<?php echo CHtml::submitButton('Submit'); ?>
+</div> 
+    <?php $this->endWidget(); ?> 
+</div>
 
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Submit'); ?>
-	</div>
 
-<?php $this->endWidget(); ?>
-
-</div><!-- form -->
