@@ -5286,3 +5286,1650 @@ Stack trace:
 REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
 HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/create
 ---
+2013/07/25 16:48:53 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/create
+---
+2013/07/25 16:49:43 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/create
+---
+2013/07/26 07:39:14 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/index
+---
+2013/07/26 08:37:09 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=site/login
+---
+2013/07/26 08:37:41 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=site/login
+---
+2013/07/26 08:37:51 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=site/login
+---
+2013/07/26 08:37:52 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=site/login
+---
+2013/07/26 08:38:03 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=site/login
+---
+2013/07/26 08:38:17 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=site/login
+---
+2013/07/26 08:38:41 [error] [exception.CException] exception 'CException' with message 'El filtro "" es inválido. El controlador "UsersModulosGeneralesController" no contiene el método de filtro "filter".' in /var/www/yii/framework/web/filters/CInlineFilter.php:46
+Stack trace:
+#0 /var/www/yii/framework/web/filters/CFilterChain.php(72): CInlineFilter::create(Object(UsersModulosGeneralesController), '')
+#1 /var/www/yii/framework/web/CController.php(291): CFilterChain::create(Object(UsersModulosGeneralesController), Object(CInlineAction), Array)
+#2 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#4 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#5 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /var/www/projectsima/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=site/login
+---
+2013/07/26 08:39:00 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=site/login
+---
+2013/07/26 08:39:10 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=site/login
+---
+2013/07/26 08:39:34 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=site/login
+---
+2013/07/26 08:39:57 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=site/login
+---
+2013/07/26 08:39:58 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=site/login
+---
+2013/07/26 08:40:06 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=site/login
+---
+2013/07/26 08:40:07 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=site/login
+---
+2013/07/26 08:40:13 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=site/login
+---
+2013/07/26 08:40:21 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=site/login
+---
+2013/07/26 08:40:27 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=site/login
+---
+2013/07/26 08:40:33 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=site/login
+---
+2013/07/26 08:40:58 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/create
+---
+2013/07/26 08:41:04 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in /var/www/yii/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('update')
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#10 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /var/www/projectsima/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/update
+---
+2013/07/26 08:41:19 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in /var/www/yii/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('update')
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#10 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /var/www/projectsima/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/update
+---
+2013/07/26 08:41:22 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in /var/www/yii/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('Update')
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#10 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /var/www/projectsima/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/Update
+---
+2013/07/26 08:41:26 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in /var/www/yii/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('Update')
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#10 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /var/www/projectsima/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/Update
+---
+2013/07/26 08:41:36 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in /var/www/yii/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('Update')
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#10 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /var/www/projectsima/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/Update
+---
+2013/07/26 08:41:36 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in /var/www/yii/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('Update')
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#10 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /var/www/projectsima/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/Update
+---
+2013/07/26 08:41:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "ppdate" solicitada.' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('ppdate')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('ppdate')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/projectsima/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/ppdate
+---
+2013/07/26 08:41:44 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in /var/www/yii/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('update')
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#10 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /var/www/projectsima/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/update
+---
+2013/07/26 08:42:06 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in /var/www/yii/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('update')
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#10 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /var/www/projectsima/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/update
+---
+2013/07/26 08:42:07 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in /var/www/yii/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('update')
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#10 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /var/www/projectsima/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/update
+---
+2013/07/26 08:47:59 [error] [exception.CException] exception 'CException' with message 'Propiedad "UsersModulosGenerales"."state_id" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('state_id')
+#1 /var/www/projectsima/protected/views/usersModulosGenerales/_form.php(32): CActiveRecord->__get('state_id')
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#5 /var/www/projectsima/protected/views/usersModulosGenerales/create.php(22): CController->renderPartial('_form', Array)
+#6 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#7 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#8 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#9 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#10 /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php(79): CController->render('create', Array)
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(49): UsersModulosGeneralesController->actionCreate()
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#19 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#21 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#22 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#23 /var/www/projectsima/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/create
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/index
+---
+2013/07/26 08:48:50 [error] [exception.CException] exception 'CException' with message 'Propiedad "UsersModulosGenerales"."descripcionEntidad" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('descripcionEnti...')
+#1 /var/www/projectsima/protected/views/usersModulosGenerales/_form.php(32): CActiveRecord->__get('descripcionEnti...')
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#5 /var/www/projectsima/protected/views/usersModulosGenerales/create.php(22): CController->renderPartial('_form', Array)
+#6 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#7 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#8 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#9 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#10 /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php(79): CController->render('create', Array)
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(49): UsersModulosGeneralesController->actionCreate()
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#19 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#21 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#22 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#23 /var/www/projectsima/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/create
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/index
+---
+2013/07/26 08:52:36 [error] [php] Invalid argument supplied for foreach() (/var/www/yii/framework/web/helpers/CHtml.php:2053)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(126): require()
+#1 /var/www/yii/framework/web/CBaseController.php(95): UsersModulosGeneralesController->renderInternal()
+#2 /var/www/yii/framework/web/CController.php(869): UsersModulosGeneralesController->renderFile()
+#3 /var/www/projectsima/protected/views/usersModulosGenerales/create.php(22): UsersModulosGeneralesController->renderPartial()
+#4 /var/www/yii/framework/web/CBaseController.php(126): require()
+#5 /var/www/yii/framework/web/CBaseController.php(95): UsersModulosGeneralesController->renderInternal()
+#6 /var/www/yii/framework/web/CController.php(869): UsersModulosGeneralesController->renderFile()
+#7 /var/www/yii/framework/web/CController.php(782): UsersModulosGeneralesController->renderPartial()
+#8 /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php(79): UsersModulosGeneralesController->render()
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(49): UsersModulosGeneralesController->actionCreate()
+#10 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#11 /var/www/yii/framework/web/filters/CFilterChain.php(133): UsersModulosGeneralesController->runAction()
+#12 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#14 /var/www/yii/framework/web/filters/CInlineFilter.php(58): UsersModulosGeneralesController->filterAccessControl()
+#15 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#16 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /var/www/yii/framework/web/CController.php(265): UsersModulosGeneralesController->runActionWithFilters()
+#18 /var/www/yii/framework/web/CWebApplication.php(282): UsersModulosGeneralesController->run()
+#19 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#20 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#21 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/create
+in /var/www/projectsima/protected/views/usersModulosGenerales/_form.php (34)
+in /var/www/projectsima/protected/views/usersModulosGenerales/create.php (22)
+in /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php (79)
+2013/07/26 08:54:00 [error] [php] Invalid argument supplied for foreach() (/var/www/yii/framework/web/helpers/CHtml.php:2053)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(126): require()
+#1 /var/www/yii/framework/web/CBaseController.php(95): UsersModulosGeneralesController->renderInternal()
+#2 /var/www/yii/framework/web/CController.php(869): UsersModulosGeneralesController->renderFile()
+#3 /var/www/projectsima/protected/views/usersModulosGenerales/create.php(22): UsersModulosGeneralesController->renderPartial()
+#4 /var/www/yii/framework/web/CBaseController.php(126): require()
+#5 /var/www/yii/framework/web/CBaseController.php(95): UsersModulosGeneralesController->renderInternal()
+#6 /var/www/yii/framework/web/CController.php(869): UsersModulosGeneralesController->renderFile()
+#7 /var/www/yii/framework/web/CController.php(782): UsersModulosGeneralesController->renderPartial()
+#8 /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php(79): UsersModulosGeneralesController->render()
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(49): UsersModulosGeneralesController->actionCreate()
+#10 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#11 /var/www/yii/framework/web/filters/CFilterChain.php(133): UsersModulosGeneralesController->runAction()
+#12 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#14 /var/www/yii/framework/web/filters/CInlineFilter.php(58): UsersModulosGeneralesController->filterAccessControl()
+#15 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#16 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /var/www/yii/framework/web/CController.php(265): UsersModulosGeneralesController->runActionWithFilters()
+#18 /var/www/yii/framework/web/CWebApplication.php(282): UsersModulosGeneralesController->run()
+#19 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#20 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#21 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/create
+in /var/www/projectsima/protected/views/usersModulosGenerales/_form.php (34)
+in /var/www/projectsima/protected/views/usersModulosGenerales/create.php (22)
+in /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php (79)
+2013/07/26 08:55:05 [error] [php] include(Professional.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:421)
+Stack trace:
+#0 /var/www/projectsima/protected/views/usersModulosGenerales/_form.php(36): spl_autoload_call()
+#1 /var/www/yii/framework/web/CBaseController.php(126): require()
+#2 /var/www/yii/framework/web/CBaseController.php(95): UsersModulosGeneralesController->renderInternal()
+#3 /var/www/yii/framework/web/CController.php(869): UsersModulosGeneralesController->renderFile()
+#4 /var/www/projectsima/protected/views/usersModulosGenerales/create.php(22): UsersModulosGeneralesController->renderPartial()
+#5 /var/www/yii/framework/web/CBaseController.php(126): require()
+#6 /var/www/yii/framework/web/CBaseController.php(95): UsersModulosGeneralesController->renderInternal()
+#7 /var/www/yii/framework/web/CController.php(869): UsersModulosGeneralesController->renderFile()
+#8 /var/www/yii/framework/web/CController.php(782): UsersModulosGeneralesController->renderPartial()
+#9 /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php(79): UsersModulosGeneralesController->render()
+#10 /var/www/yii/framework/web/actions/CInlineAction.php(49): UsersModulosGeneralesController->actionCreate()
+#11 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#12 /var/www/yii/framework/web/filters/CFilterChain.php(133): UsersModulosGeneralesController->runAction()
+#13 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#15 /var/www/yii/framework/web/filters/CInlineFilter.php(58): UsersModulosGeneralesController->filterAccessControl()
+#16 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#17 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#18 /var/www/yii/framework/web/CController.php(265): UsersModulosGeneralesController->runActionWithFilters()
+#19 /var/www/yii/framework/web/CWebApplication.php(282): UsersModulosGeneralesController->run()
+#20 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#21 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#22 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/create
+in /var/www/projectsima/protected/views/usersModulosGenerales/_form.php (36)
+in /var/www/projectsima/protected/views/usersModulosGenerales/create.php (22)
+in /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php (79)
+2013/07/26 08:55:16 [error] [system.db.CDbCommand] CDbCommand::fetchAll() falló: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dentist' in 'where clause'. La sentencia SQL ejecutada fue: SELECT * FROM `entidades` `t` WHERE dentist=:dnt.
+in /var/www/projectsima/protected/views/usersModulosGenerales/_form.php (36)
+in /var/www/projectsima/protected/views/usersModulosGenerales/create.php (22)
+in /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php (79)
+2013/07/26 08:55:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dentist' in 'where clause'. The SQL statement executed was: SELECT * FROM `entidades` `t` WHERE dentist=:dnt' in /var/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /var/www/yii/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /var/www/projectsima/protected/views/usersModulosGenerales/_form.php(36): CActiveRecord->findAll('dentist=:dnt', Array)
+#4 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#5 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#6 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#7 /var/www/projectsima/protected/views/usersModulosGenerales/create.php(22): CController->renderPartial('_form', Array)
+#8 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#9 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#10 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#11 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#12 /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php(79): CController->render('create', Array)
+#13 /var/www/yii/framework/web/actions/CInlineAction.php(49): UsersModulosGeneralesController->actionCreate()
+#14 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#15 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#17 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#21 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#23 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#24 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#25 /var/www/projectsima/index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/create
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/index
+---
+2013/07/26 08:55:47 [error] [exception.CException] exception 'CException' with message 'Propiedad "UsersModulosGenerales"."PROFESSIONAL" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('PROFESSIONAL')
+#1 /var/www/yii/framework/web/helpers/CHtml.php(2255): CActiveRecord->__get('PROFESSIONAL')
+#2 /var/www/yii/framework/web/helpers/CHtml.php(1565): CHtml::resolveValue(Object(UsersModulosGenerales), 'PROFESSIONAL')
+#3 /var/www/yii/framework/web/widgets/CActiveForm.php(763): CHtml::activeDropDownList(Object(UsersModulosGenerales), 'PROFESSIONAL', Array, Array)
+#4 /var/www/projectsima/protected/views/usersModulosGenerales/_form.php(39): CActiveForm->dropDownList(Object(UsersModulosGenerales), 'PROFESSIONAL', Array, Array)
+#5 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#6 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#7 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#8 /var/www/projectsima/protected/views/usersModulosGenerales/create.php(22): CController->renderPartial('_form', Array)
+#9 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#10 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#11 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#12 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#13 /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php(79): CController->render('create', Array)
+#14 /var/www/yii/framework/web/actions/CInlineAction.php(49): UsersModulosGeneralesController->actionCreate()
+#15 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#16 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#18 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#22 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#24 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#25 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#26 /var/www/projectsima/index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/create
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/index
+---
+2013/07/26 08:56:01 [error] [exception.CException] exception 'CException' with message 'Propiedad "UsersModulosGenerales"."descripcionEntidad" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('descripcionEnti...')
+#1 /var/www/yii/framework/web/helpers/CHtml.php(2255): CActiveRecord->__get('descripcionEnti...')
+#2 /var/www/yii/framework/web/helpers/CHtml.php(1565): CHtml::resolveValue(Object(UsersModulosGenerales), 'descripcionEnti...')
+#3 /var/www/yii/framework/web/widgets/CActiveForm.php(763): CHtml::activeDropDownList(Object(UsersModulosGenerales), 'descripcionEnti...', Array, Array)
+#4 /var/www/projectsima/protected/views/usersModulosGenerales/_form.php(39): CActiveForm->dropDownList(Object(UsersModulosGenerales), 'descripcionEnti...', Array, Array)
+#5 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#6 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#7 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#8 /var/www/projectsima/protected/views/usersModulosGenerales/create.php(22): CController->renderPartial('_form', Array)
+#9 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#10 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#11 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#12 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#13 /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php(79): CController->render('create', Array)
+#14 /var/www/yii/framework/web/actions/CInlineAction.php(49): UsersModulosGeneralesController->actionCreate()
+#15 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#16 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#18 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#22 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#24 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#25 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#26 /var/www/projectsima/index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/create
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/index
+---
+2013/07/26 08:58:00 [error] [system.db.CDbCommand] CDbCommand::fetchAll() falló: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by descripcionEntidad ASC' at line 1. La sentencia SQL ejecutada fue: SELECT * FROM `entidades` `t` WHERE order by descripcionEntidad ASC.
+in /var/www/projectsima/protected/views/usersModulosGenerales/_form.php (37)
+in /var/www/projectsima/protected/views/usersModulosGenerales/create.php (22)
+in /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php (79)
+2013/07/26 08:58:00 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by descripcionEntidad ASC' at line 1. The SQL statement executed was: SELECT * FROM `entidades` `t` WHERE order by descripcionEntidad ASC' in /var/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /var/www/yii/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /var/www/projectsima/protected/views/usersModulosGenerales/_form.php(37): CActiveRecord->findAll('order by descri...')
+#4 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#5 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#6 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#7 /var/www/projectsima/protected/views/usersModulosGenerales/create.php(22): CController->renderPartial('_form', Array)
+#8 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#9 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#10 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#11 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#12 /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php(79): CController->render('create', Array)
+#13 /var/www/yii/framework/web/actions/CInlineAction.php(49): UsersModulosGeneralesController->actionCreate()
+#14 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#15 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#17 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#21 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#23 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#24 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#25 /var/www/projectsima/index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/create
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/index
+---
+2013/07/26 08:59:43 [error] [php] get_class() expects parameter 1 to be object, string given (/var/www/yii/framework/web/helpers/CHtml.php:2220)
+Stack trace:
+#0 /var/www/yii/framework/web/helpers/CHtml.php(1564): resolveNameID()
+#1 /var/www/yii/framework/web/widgets/CActiveForm.php(763): activeDropDownList()
+#2 /var/www/projectsima/protected/views/usersModulosGenerales/_form.php(40): CActiveForm->dropDownList()
+#3 /var/www/yii/framework/web/CBaseController.php(126): require()
+#4 /var/www/yii/framework/web/CBaseController.php(95): UsersModulosGeneralesController->renderInternal()
+#5 /var/www/yii/framework/web/CController.php(869): UsersModulosGeneralesController->renderFile()
+#6 /var/www/projectsima/protected/views/usersModulosGenerales/create.php(22): UsersModulosGeneralesController->renderPartial()
+#7 /var/www/yii/framework/web/CBaseController.php(126): require()
+#8 /var/www/yii/framework/web/CBaseController.php(95): UsersModulosGeneralesController->renderInternal()
+#9 /var/www/yii/framework/web/CController.php(869): UsersModulosGeneralesController->renderFile()
+#10 /var/www/yii/framework/web/CController.php(782): UsersModulosGeneralesController->renderPartial()
+#11 /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php(79): UsersModulosGeneralesController->render()
+#12 /var/www/yii/framework/web/actions/CInlineAction.php(49): UsersModulosGeneralesController->actionCreate()
+#13 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /var/www/yii/framework/web/filters/CFilterChain.php(133): UsersModulosGeneralesController->runAction()
+#15 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#17 /var/www/yii/framework/web/filters/CInlineFilter.php(58): UsersModulosGeneralesController->filterAccessControl()
+#18 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#19 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#20 /var/www/yii/framework/web/CController.php(265): UsersModulosGeneralesController->runActionWithFilters()
+#21 /var/www/yii/framework/web/CWebApplication.php(282): UsersModulosGeneralesController->run()
+#22 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#23 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#24 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/create
+in /var/www/projectsima/protected/views/usersModulosGenerales/_form.php (40)
+in /var/www/projectsima/protected/views/usersModulosGenerales/create.php (22)
+in /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php (79)
+2013/07/26 09:00:00 [error] [system.db.CDbCommand] CDbCommand::fetchAll() falló: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'descripcion' in 'order clause'. La sentencia SQL ejecutada fue: SELECT * FROM `entidades` `t` ORDER BY descripcion ASC.
+in /var/www/projectsima/protected/views/usersModulosGenerales/_form.php (37)
+in /var/www/projectsima/protected/views/usersModulosGenerales/create.php (22)
+in /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php (79)
+2013/07/26 09:00:00 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'descripcion' in 'order clause'. The SQL statement executed was: SELECT * FROM `entidades` `t` ORDER BY descripcion ASC' in /var/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /var/www/yii/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /var/www/projectsima/protected/views/usersModulosGenerales/_form.php(37): CActiveRecord->findAll(Array)
+#4 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#5 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#6 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#7 /var/www/projectsima/protected/views/usersModulosGenerales/create.php(22): CController->renderPartial('_form', Array)
+#8 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#9 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#10 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#11 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#12 /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php(79): CController->render('create', Array)
+#13 /var/www/yii/framework/web/actions/CInlineAction.php(49): UsersModulosGeneralesController->actionCreate()
+#14 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#15 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#17 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#21 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#23 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#24 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#25 /var/www/projectsima/index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/create
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/index
+---
+2013/07/26 09:00:04 [error] [system.db.CDbCommand] CDbCommand::fetchAll() falló: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'descripcion' in 'order clause'. La sentencia SQL ejecutada fue: SELECT * FROM `entidades` `t` ORDER BY descripcion.
+in /var/www/projectsima/protected/views/usersModulosGenerales/_form.php (37)
+in /var/www/projectsima/protected/views/usersModulosGenerales/create.php (22)
+in /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php (79)
+2013/07/26 09:00:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'descripcion' in 'order clause'. The SQL statement executed was: SELECT * FROM `entidades` `t` ORDER BY descripcion' in /var/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /var/www/yii/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /var/www/projectsima/protected/views/usersModulosGenerales/_form.php(37): CActiveRecord->findAll(Array)
+#4 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#5 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#6 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#7 /var/www/projectsima/protected/views/usersModulosGenerales/create.php(22): CController->renderPartial('_form', Array)
+#8 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#9 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#10 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#11 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#12 /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php(79): CController->render('create', Array)
+#13 /var/www/yii/framework/web/actions/CInlineAction.php(49): UsersModulosGeneralesController->actionCreate()
+#14 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#15 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#17 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#21 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#23 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#24 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#25 /var/www/projectsima/index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/create
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/index
+---
+2013/07/26 09:01:27 [error] [php] get_class() expects parameter 1 to be object, string given (/var/www/yii/framework/web/helpers/CHtml.php:2220)
+Stack trace:
+#0 /var/www/yii/framework/web/helpers/CHtml.php(1564): resolveNameID()
+#1 /var/www/yii/framework/web/widgets/CActiveForm.php(763): activeDropDownList()
+#2 /var/www/projectsima/protected/views/usersModulosGenerales/_form.php(40): CActiveForm->dropDownList()
+#3 /var/www/yii/framework/web/CBaseController.php(126): require()
+#4 /var/www/yii/framework/web/CBaseController.php(95): UsersModulosGeneralesController->renderInternal()
+#5 /var/www/yii/framework/web/CController.php(869): UsersModulosGeneralesController->renderFile()
+#6 /var/www/projectsima/protected/views/usersModulosGenerales/create.php(22): UsersModulosGeneralesController->renderPartial()
+#7 /var/www/yii/framework/web/CBaseController.php(126): require()
+#8 /var/www/yii/framework/web/CBaseController.php(95): UsersModulosGeneralesController->renderInternal()
+#9 /var/www/yii/framework/web/CController.php(869): UsersModulosGeneralesController->renderFile()
+#10 /var/www/yii/framework/web/CController.php(782): UsersModulosGeneralesController->renderPartial()
+#11 /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php(79): UsersModulosGeneralesController->render()
+#12 /var/www/yii/framework/web/actions/CInlineAction.php(49): UsersModulosGeneralesController->actionCreate()
+#13 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /var/www/yii/framework/web/filters/CFilterChain.php(133): UsersModulosGeneralesController->runAction()
+#15 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#17 /var/www/yii/framework/web/filters/CInlineFilter.php(58): UsersModulosGeneralesController->filterAccessControl()
+#18 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#19 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#20 /var/www/yii/framework/web/CController.php(265): UsersModulosGeneralesController->runActionWithFilters()
+#21 /var/www/yii/framework/web/CWebApplication.php(282): UsersModulosGeneralesController->run()
+#22 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#23 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#24 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/create
+in /var/www/projectsima/protected/views/usersModulosGenerales/_form.php (40)
+in /var/www/projectsima/protected/views/usersModulosGenerales/create.php (22)
+in /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php (79)
+2013/07/26 09:02:31 [error] [exception.CException] exception 'CException' with message 'Entidades y sus behaviors no tienen un método o closure llamado "dropDownList".' in /var/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(225): CComponent->__call('dropDownList', Array)
+#1 /var/www/projectsima/protected/views/usersModulosGenerales/_form.php(40): CActiveRecord->__call('dropDownList', Array)
+#2 /var/www/projectsima/protected/views/usersModulosGenerales/_form.php(40): Entidades->dropDownList(Object(Entidades), 'descripcionEnti...', Array, Array)
+#3 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#4 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#5 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#6 /var/www/projectsima/protected/views/usersModulosGenerales/create.php(22): CController->renderPartial('_form', Array)
+#7 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#8 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#9 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#10 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#11 /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php(79): CController->render('create', Array)
+#12 /var/www/yii/framework/web/actions/CInlineAction.php(49): UsersModulosGeneralesController->actionCreate()
+#13 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#14 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#15 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#17 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#19 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#20 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#22 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#23 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#24 /var/www/projectsima/index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/create
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/index
+---
+2013/07/26 09:03:52 [error] [exception.CException] exception 'CException' with message 'Propiedad "Entidades"."entidad" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('entidad')
+#1 /var/www/yii/framework/web/helpers/CHtml.php(2255): CActiveRecord->__get('entidad')
+#2 /var/www/yii/framework/web/helpers/CHtml.php(1565): CHtml::resolveValue(Object(Entidades), 'entidad')
+#3 /var/www/yii/framework/web/widgets/CActiveForm.php(763): CHtml::activeDropDownList(Object(Entidades), 'entidad', Array, Array)
+#4 /var/www/projectsima/protected/views/usersModulosGenerales/_form.php(40): CActiveForm->dropDownList(Object(Entidades), 'entidad', Array, Array)
+#5 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#6 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#7 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#8 /var/www/projectsima/protected/views/usersModulosGenerales/create.php(22): CController->renderPartial('_form', Array)
+#9 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#10 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#11 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#12 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#13 /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php(79): CController->render('create', Array)
+#14 /var/www/yii/framework/web/actions/CInlineAction.php(49): UsersModulosGeneralesController->actionCreate()
+#15 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#16 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#18 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#22 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#24 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#25 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#26 /var/www/projectsima/index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/create
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/index
+---
+2013/07/26 09:03:53 [error] [exception.CException] exception 'CException' with message 'Propiedad "Entidades"."entidad" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('entidad')
+#1 /var/www/yii/framework/web/helpers/CHtml.php(2255): CActiveRecord->__get('entidad')
+#2 /var/www/yii/framework/web/helpers/CHtml.php(1565): CHtml::resolveValue(Object(Entidades), 'entidad')
+#3 /var/www/yii/framework/web/widgets/CActiveForm.php(763): CHtml::activeDropDownList(Object(Entidades), 'entidad', Array, Array)
+#4 /var/www/projectsima/protected/views/usersModulosGenerales/_form.php(40): CActiveForm->dropDownList(Object(Entidades), 'entidad', Array, Array)
+#5 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#6 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#7 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#8 /var/www/projectsima/protected/views/usersModulosGenerales/create.php(22): CController->renderPartial('_form', Array)
+#9 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#10 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#11 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#12 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#13 /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php(79): CController->render('create', Array)
+#14 /var/www/yii/framework/web/actions/CInlineAction.php(49): UsersModulosGeneralesController->actionCreate()
+#15 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#16 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#18 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#22 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#24 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#25 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#26 /var/www/projectsima/index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/create
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/index
+---
+2013/07/26 09:56:09 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/create
+---
+2013/07/26 09:56:13 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/create
+---
+2013/07/26 09:56:27 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/create
+---
+2013/07/26 09:56:46 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/create
+---
+2013/07/26 09:57:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "admin" solicitada.' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('admin')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/projectsima/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/create
+---
+2013/07/26 09:57:23 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/create
+---
+2013/07/26 10:00:41 [error] [php] Invalid argument supplied for foreach() (/var/www/yii/framework/web/auth/CAccessControlFilter.php:101)
+Stack trace:
+#0 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#1 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#2 /var/www/yii/framework/web/CController.php(265): UsersModulosGeneralesController->runActionWithFilters()
+#3 /var/www/yii/framework/web/CWebApplication.php(282): UsersModulosGeneralesController->run()
+#4 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+in /var/www/projectsima/index.php (13)
+2013/07/26 10:46:39 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/create
+---
+2013/07/26 10:46:58 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/create
+---
+2013/07/26 10:47:23 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/create
+---
+2013/07/26 10:52:58 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/create
+---
+2013/07/26 10:54:57 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/create
+---
+2013/07/26 10:55:04 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/create
+---
+2013/07/26 10:55:05 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/create
+---
+2013/07/26 11:33:29 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/create
+---
+2013/07/26 11:36:16 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/create
+---
+2013/07/26 11:36:16 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/create
+---
+2013/07/26 11:36:45 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/create
+---
+2013/07/26 11:36:50 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/create
+---
+2013/07/26 11:37:24 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/create
+---
+2013/07/26 11:37:49 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/index
+---
+2013/07/26 11:38:05 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/index
+---
+2013/07/26 11:38:41 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/index
+---
+2013/07/26 11:46:22 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/index
+---
+2013/07/26 11:46:30 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/index
+---
+2013/07/26 11:46:31 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/index
+---
+2013/07/26 11:54:58 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php(65): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): UsersModulosGeneralesController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/index
+---
+2013/07/26 12:03:07 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php(49): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): UsersModulosGeneralesController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/index
+---
+2013/07/26 12:03:08 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php(49): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): UsersModulosGeneralesController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/index
+---
+2013/07/26 12:03:09 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php(49): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): UsersModulosGeneralesController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/index
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/create
+---
+2013/07/26 12:03:10 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php(49): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): UsersModulosGeneralesController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/index
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/create
+---
+2013/07/26 12:03:16 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php(49): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): UsersModulosGeneralesController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/index
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/create
+---
+2013/07/26 12:03:17 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php(49): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): UsersModulosGeneralesController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/index
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/create
+---
+2013/07/26 12:22:22 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php(49): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): UsersModulosGeneralesController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/create
+---
+2013/07/26 12:22:28 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php(49): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): UsersModulosGeneralesController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/create
+---
+2013/07/26 12:22:29 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/projectsima/protected/controllers/UsersModulosGeneralesController.php(49): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): UsersModulosGeneralesController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usersModulosGen...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/projectsima/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projectsima/index.php?r=usersModulosGenerales/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=usersModulosGenerales/create
+---

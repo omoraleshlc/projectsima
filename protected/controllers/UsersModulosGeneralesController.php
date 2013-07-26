@@ -24,33 +24,39 @@ class UsersModulosGeneralesController extends Controller
 	 * This method is used by the 'accessControl' filter.
 	 * @return array access control rules
 	 */
-	public function accessRules()
-	{
-		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
-			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
-				'users'=>array('@'),
-			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
-			),
-			array('deny',  // deny all users
-				'users'=>array('*'),
-			),
-		);
-	}
+	
+        public function filterReglas() {
+        return array(
+       // other rules here
+       array('deny') // default allow
+   );
+}
+        
+        
+        
+        
+        
+         
+    public function filterAccessControl($filterChain)
+    {   
+        $rules = $this->accessRules();
+ 
+        // default deny
+        $rules[] = array('allow');
+ 
+        $filter = new CAccessControlFilter;
+        $filter->setRules( $rules );
+        $filter->filter($filterChain);
+    }
+        
+        
 
 	/**
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
 	 */
 	public function actionView($id)
-	{
+	{ 
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
 		));
@@ -61,7 +67,7 @@ class UsersModulosGeneralesController extends Controller
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
 	public function actionCreate()
-	{
+	{ 
 		$model=new UsersModulosGenerales;
 
 		// Uncomment the following line if AJAX validation is needed
@@ -85,7 +91,7 @@ class UsersModulosGeneralesController extends Controller
 	 * @param integer $id the ID of the model to be updated
 	 */
 	public function actionUpdate($id)
-	{
+	{ 
 		$model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
@@ -121,7 +127,7 @@ class UsersModulosGeneralesController extends Controller
 	 * Lists all models.
 	 */
 	public function actionIndex()
-	{
+	{ 
 		$dataProvider=new CActiveDataProvider('UsersModulosGenerales');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
@@ -132,7 +138,7 @@ class UsersModulosGeneralesController extends Controller
 	 * Manages all models.
 	 */
 	public function actionAdmin()
-	{
+	{ 
 		$model=new UsersModulosGenerales('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['UsersModulosGenerales']))
@@ -151,7 +157,7 @@ class UsersModulosGeneralesController extends Controller
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
-	{
+	{ 
 		$model=UsersModulosGenerales::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');

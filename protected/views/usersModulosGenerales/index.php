@@ -3,7 +3,7 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Users Modulos Generales',
+	'Módulos Generales',
 );
 
 $this->menu=array(
@@ -12,11 +12,11 @@ $this->menu=array(
 );
 ?>
 
-    <div class="hero-unit">
-    <h1>Módulos Generales</h1>
-    <p>Catálogo</p>
-    
+
+    <div class="page-header">
+    <h1>Catálogo de Módulos Generales</h1>
     </div>
+
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

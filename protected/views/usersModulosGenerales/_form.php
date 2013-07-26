@@ -21,11 +21,22 @@
 		<?php echo $form->error($model,'descripcion'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'entidad'); ?>
-		<?php echo $form->textField($model,'entidad',array('size'=>2,'maxlength'=>2)); ?>
-		<?php echo $form->error($model,'entidad'); ?>
-	</div>
+
+    
+    <div class="dropdown-submenu">
+        
+    <?php 
+$ce=new Entidades();    
+echo $form->dropDownList(
+                    $ce,
+                    'descripcionEntidad', 
+                    CHtml::listData($ce::model()->findAll(array('order'=>'descripcionEntidad ASC')),
+                    'codigoEntidad', 
+                    'descripcionEntidad'), 
+array('empty'=>'Selecciona la Entidad')); 
+?>
+    </div>    
+    
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar'); ?>

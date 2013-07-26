@@ -16,6 +16,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update UsersModulosGenerales <?php echo $model->keyMG; ?></h1>
+<h1>Actualizar <?php echo $model->keyMG; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
