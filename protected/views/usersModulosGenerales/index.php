@@ -14,7 +14,7 @@ $this->menu=array(
 
 
     <div class="page-header">
-    <h1>Catálogo de Módulos Generales</h1>
+    <h1>Módulos Generales</h1>
     </div>
 
 

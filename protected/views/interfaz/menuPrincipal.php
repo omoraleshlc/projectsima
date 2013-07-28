@@ -135,10 +135,22 @@ document.getElementById(id).style.background ="";
 
 
 
-
-
-
-
+<?php 
+/*
+$watermark_options  = array(
+                        'watermark'     => './images/logoCarlota.jpg',
+                        'halign'        => Watermarker::ALIGN_RIGHT,
+                        'valign'        => Watermarker::ALIGN_BOTTOM,
+                        'hshift'        => -10,
+                        'vshift'        => -10,
+                        'type'          => IMAGETYPE_JPEG,          // Save result in JPEG to minimize file size
+                        'jpeg-quality'  => 90,
+                );
+                // Save watermarked image to file
+                Watermarker::output($finalImageName, $finalImageName, $watermark_options);
+ * 
+ */
+?>
 
 
 

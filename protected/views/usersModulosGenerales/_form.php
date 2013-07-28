@@ -23,19 +23,22 @@
 
 
     
-    <div class="dropdown-submenu">
-        
-    <?php 
-$ce=new Entidades();    
-echo $form->dropDownList(
-                    $ce,
-                    'descripcionEntidad', 
-                    CHtml::listData($ce::model()->findAll(array('order'=>'descripcionEntidad ASC')),
-                    'codigoEntidad', 
-                    'descripcionEntidad'), 
-array('empty'=>'Selecciona la Entidad')); 
-?>
-    </div>    
+<div class="dropdown-submenu">    
+<?php 
+//echo $form->dropDownList($model,'nombredelcampo', CHtml::listData(Entidades::model()->findAll(array('order' => 'descripcionEntidad')),'value','optionvalue'));
+  
+echo $form->dropDownList($model,'entidad', CHtml::listData(Entidades::model()->findAll(array('order' => 'descripcionEntidad')),'codigoEntidad','descripcionEntidad'));?>
+
+</div>    
+    
+    
+    
+   
+    
+    
+
+    
+    
     
 
 	<div class="row buttons">

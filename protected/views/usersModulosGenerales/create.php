@@ -13,10 +13,10 @@ $this->menu=array(
 );
 ?>
 
-  <div class="hero-unit">
+  
     <h1>Módulos Generales</h1>
     <p>Catálogo</p>
     
-    </div>
+    
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

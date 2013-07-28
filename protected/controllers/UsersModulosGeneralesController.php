@@ -25,7 +25,7 @@ class UsersModulosGeneralesController extends Controller
 	 * @return array access control rules
 	 */
 	
-        public function filterReglas() {
+        public function filterAccessReglas() {
         return array(
        // other rules here
        array('deny') // default allow
@@ -38,7 +38,8 @@ class UsersModulosGeneralesController extends Controller
         
          
     public function filterAccessControl($filterChain)
-    {   
+    {   //echo is_string($filterChain);
+        if(Yii::app()->user->name!=null and Yii::app()->user->name!='Guest'){
         $rules = $this->accessRules();
  
         // default deny
@@ -47,6 +48,8 @@ class UsersModulosGeneralesController extends Controller
         $filter = new CAccessControlFilter;
         $filter->setRules( $rules );
         $filter->filter($filterChain);
+       Yii::app()->user->name;
+        }
     }
         
         
@@ -176,4 +179,20 @@ class UsersModulosGeneralesController extends Controller
 			Yii::app()->end();
 		}
 	}
+        
+        
+        public function actionLoadcities()
+{
+            
+   $data=RegionCity::model()->findAll('region_id=:region_id', 
+   array(':region_id'=>(int) $_POST['region_id']));
+ 
+   $data=CHtml::listData($data,'id','city_name');
+ 
+   echo "<option value=''>Select City</option>";
+   foreach($data as $value=>$city_name)
+   echo CHtml::tag('option', array('value'=>$value),CHtml::encode($city_name),true);
+}
+        
+        
 }
