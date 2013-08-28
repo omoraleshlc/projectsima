@@ -8,7 +8,6 @@ $this->breadcrumbs=array(
 	'Login',
 );
 
-//Yii::app()->user->name;
 ?>
 
 

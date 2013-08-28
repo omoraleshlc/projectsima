@@ -21,12 +21,18 @@ document.getElementById(id).style.background ="";
 }
 </script>
 
-<div class="navbar">
-              <div class="navbar-inner">
-                <a class="brand" href="#">Módulo de Administración Hospitalaria</a>
-              </div>
-            </div>
 
+
+
+<div class="barra_separadora">
+     
+     <span >Módulo de Administración Hospitalaria</span>
+     
+</div>
+
+
+   
+<br>
 
     
 
@@ -70,7 +76,7 @@ entidad='".$entidad."'
 mainmodulename = 'ADMINISTRACION'
 AND mainmodule = 'REPORTES'
 ORDER BY name ASC
-
+limit 0,5
 ";            
 //$connection=Yii::app()->db;   // assuming you have configured a "db" connection
 // If not, you may explicitly create a connection:
@@ -96,15 +102,17 @@ while(($row4=$dataReader4->read())!==false) {
             
 
 <li class="span2">
+    <a href="index.php?r=/administracion/<?php echo basename($row4["ruta"], '.php');?>" >
                 <div id="<?php print '<td>'.$b.'</td>';?>" class="thumbnail" onmouseover="javascript:cambiarBorde('<?php print '<td>'.$b.'</td>';?>');" onmouseout="normal('<?php print '<td>'.$b.'</td>';?>');">
-                  <img height="40" src="./images/admin.jpg" width="40" data-src="holder.js/64x64" alt="">
+                  <img height="40" src="./images/iadmin.jpeg" width="40" data-src="holder.js/64x64" alt="">
                   <div class="caption" align="center">
                     <p><?php print '<td>'.strtolower($row4["name"]).'</td>';?></p>                    
-                    <a href="index.php?r=/administracion/<?php echo basename($row4["ruta"], '.php');?>" class="btn btn-primary">Entrar</a> 
+                    
                   </div>
                 </div>
+        </a> 
               </li>    
-            
+   
             
   
             
@@ -177,10 +185,10 @@ while(($row4=$dataReader4->read())!==false) {
 
 <li class="span2">
                 <div id="<?php print '<td>'.$b.'</td>';?>" class="thumbnail" onmouseover="javascript:cambiarBorde('<?php print '<td>'.$b.'</td>';?>');" onmouseout="normal('<?php print '<td>'.$b.'</td>';?>');">
-                  <img height="40" src="./images/admin.jpg" width="40" data-src="holder.js/64x64" alt="">
+                  <img height="90" src="./images/iadmin.jpeg" width="90" data-src="holder.js/64x64" alt="">
                   <div class="caption" align="center">
                     <p><?php print '<td>'.strtolower($row4["name"]).'</td>';?></p>                    
-                    <a href="index.php?r=/administracion" class="btn btn-primary">Entrar</a> 
+                    
                   </div>
                 </div>
               </li>    

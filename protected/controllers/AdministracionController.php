@@ -26,7 +26,7 @@ class AdministracionController extends Controller
         }
         
         
-        
+
         
         
         public function accessRules()

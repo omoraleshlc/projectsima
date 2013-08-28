@@ -86,6 +86,14 @@ $connection=Yii::app()->db;   // assuming you have configured a "db" connection
 $cI=null;
 $clientes=null;
 	  
+#####variables para exportar
+
+
+$fecha1=date("Y-m-d");
+$users=Usuarios::model()->findByAttributes(array('usuario'=>Yii::app()->user->name));
+$entidad=$users->entidad;
+$usuario=Yii::app()->user->name;
+$role=$users->role;
 
 $sSQL= "SELECT *
 FROM

@@ -42,6 +42,7 @@ class UserIdentity extends CUserIdentity
 			$this->_folio = $user->folio;
 		}
 		return !$this->errorCode;
+                
 	}
 	
 	public function folio()

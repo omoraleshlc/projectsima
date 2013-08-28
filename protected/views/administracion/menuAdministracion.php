@@ -21,16 +21,15 @@ document.getElementById(id).style.background ="";
 }
 </script>
 
-<div class="navbar">
-              <div class="navbar-inner">
-                <a class="brand" href="index.php?r=/administracion">Módulo de Administración Hospitalaria</a>
-              </div>
-            </div>
 
 
     
 
-
+<div class="barra_separadora">
+     
+     <span >Módulo de Administración Hospitalaria</span>
+     
+</div>
 
         
         

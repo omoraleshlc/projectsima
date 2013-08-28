@@ -1,6 +1,8 @@
 <div class="pager">
  <h4>SOFTWARE HOSPITALARIO MEDICO ADVENTISTA</h4>
- 
+         <div align="center" class="nav-header">
+        <img height="200" src="./images/7day.jpeg" width="200"></img>
+        </div>
 <p>
     
 Haced todas las cosas sin murmuraciones ni discusiones, para que seáis irreprensibles y sencillos,
