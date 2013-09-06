@@ -63,8 +63,8 @@ document.getElementById(id).style.background ="";
 <div class="row-fluid" >  
 <ul class="thumbnails">    
 <?php ###MOSTRAR PROGRAMAS
-            
-           
+$entidad='01';            
+$b=null;           
 
 $connection=Yii::app()->db;   // assuming you have configured a "db" connection
 $entidad='01';

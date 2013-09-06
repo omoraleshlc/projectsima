@@ -1,6 +1,6 @@
 <?php 
 $ip=NULL;
-
+/*
 $siteSima=substr($_SERVER['REMOTE_ADDR'],0,3);
 $siteFinanciero=substr($_SERVER['REMOTE_ADDR'],0,3);
 
@@ -51,7 +51,7 @@ $siteFinanciero=$ipF;
 
 
 
-/*
+
 <div id="navbar-example" class="navbar navbar-static">
               <div class="navbar-inner">
                 <div class="container" style="width: auto;">
