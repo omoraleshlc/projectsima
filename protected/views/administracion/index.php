@@ -120,6 +120,12 @@ while(($row4=$dataReader4->read())!==false) {
 <?php         
 }  
 ?>
+              
+              
+              
+              
+              
+              
 </ul>    
 </div>      
         
@@ -200,9 +206,148 @@ while(($row4=$dataReader4->read())!==false) {
 <?php         
 }  
 ?>
-</ul>    
+</ul> 
+    
+    
+    
+    
+    
+    
+    
+    
 </div>   
     
+     
+     
+     
+     
+   <link rel="stylesheet" type="text/css" href="./css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="./css/style1.css" />
+   
+                
+			<section>
+				<ul class="lb-album">
+					<li>
+						<a href="#image-1">
+							<img src="images/thumbs/1.jpg" alt="image01">
+							<span>Pointe</span>
+						</a>
+						<div class="lb-overlay" id="image-1">
+							<a href="#page" class="lb-close">x Close</a>
+							<img src="images/full/1.jpg" alt="image01" />
+							<div>
+								<h3>pointe <span>/point/</h3>
+								<p>Dance performed on the tips of the toes</p>
+							</div>
+							
+						</div>
+					</li>
+                                        
+                                        
+					
+					
+					<li>
+						<a href="#image-4">
+							<img src="images/thumbs/4.jpg" alt="image04">
+							<span>Adagio</span>
+						</a>
+						<div class="lb-overlay" id="image-4">
+							<img src="images/full/4.jpg" alt="image04" />
+							<div>							
+								<h3>a·da·gio <span>/əˈdäjō/</h3>
+								<p>A movement or composition marked to be played adagio</p>
+							</div>
+							<a href="#page" class="lb-close">x Close</a>
+						</div>
+					</li>
+					<li>
+						<a href="#image-5">
+							<img src="images/thumbs/5.jpg" alt="image05">
+							<span>Frappé</span>
+						</a>
+						<div class="lb-overlay" id="image-5">
+							<img src="images/full/5.jpg" alt="image05" />
+							<div>							
+								<h3>frap·pé<span>/fraˈpā/</h3>
+								<p>Involving a beating action of the toe of one foot against the ankle of the supporting leg</p>
+							</div>
+							<a href="#page" class="lb-close">x Close</a>
+						</div>
+					</li>
+					<li>
+						<a href="#image-6">
+							<img src="images/thumbs/6.jpg" alt="image06">
+							<span>Glissade</span>
+						</a>
+						<div class="lb-overlay" id="image-6">
+							<img src="images/full/6.jpg" alt="image06" />
+							<div>							
+								<h3>glis·sade <span>/gliˈsäd/</h3>
+								<p>One leg is brushed outward from the body, which then takes the weight while the second leg is brushed in to meet it</p>
+							</div>
+							<a href="#page" class="lb-close">x Close</a>
+						</div>
+					</li>
+					<li>
+						<a href="#image-7">
+							<img src="images/thumbs/7.jpg" alt="image07">
+							<span>Jeté</span>
+						</a>
+						<div class="lb-overlay" id="image-7">
+							<img src="images/full/7.jpg" alt="image07" />
+							<div>							
+								<h3>je·té <span>/zhə-ˈtā/</h3>
+								<p>A springing jump made from one foot to the other in any direction</p>
+							</div>
+							<a href="#page" class="lb-close">x Close</a>
+						</div>
+					</li>
+					<li>
+						<a href="#image-8">
+							<img src="images/thumbs/8.jpg" alt="image08">
+							<span>Piqué</span>
+						</a>
+						<div class="lb-overlay" id="image-8">
+							<img src="images/full/8.jpg" alt="image08" />
+							<div>							
+								<h3>pi·qué <span>/pēˈkā/</h3>
+								<p>Strongly pointed toe of the lifted and extended leg sharply lowers to hit the floor then immediately rebounds upward</p>
+							</div>
+							<a href="#page" class="lb-close">x Close</a>
+						</div>
+					</li>
+					<li>
+						<a href="#image-9">
+							<img src="images/thumbs/9.jpg" alt="image09">
+							<span>Arabesque</span>
+						</a>
+						<div class="lb-overlay" id="image-9">
+							<img src="images/full/9.jpg" alt="image09" />
+							<div>							
+								<h3>ar·a·besque <span>/ˌarəˈbesk/</h3>
+								<p>Position of the body supported on one leg, with the other leg extended behind the body with the knee straight</p>
+							</div>
+							<a href="#page" class="lb-close">x Close</a>
+						</div>
+					</li>
+					<li>
+						<a href="#image-10">
+							<img src="images/thumbs/10.jpg" alt="image10">
+							<span>Ballerina</span>
+						</a>
+						<div class="lb-overlay" id="image-10">
+							<img src="images/full/10.jpg" alt="image10" />
+							<div>							
+								<h3>bal·le·ri·na <span>/ˌbaləˈrēnə/</h3>
+								<p>A female ballet dancer</p>
+							</div>
+							<a href="#page" class="lb-close">x Close</a>
+						</div>
+					</li>
+				</ul>
+			</section>
+        </div>   
+     
 
     </div>
     </div>
@@ -211,7 +356,15 @@ while(($row4=$dataReader4->read())!==false) {
 
 
 
-  
-          
-                      
-          
+
+
+
+
+
+
+
+
+
+
+
+    
