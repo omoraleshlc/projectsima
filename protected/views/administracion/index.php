@@ -144,11 +144,35 @@ while(($row4=$dataReader4->read())!==false) {
   
             
 <div class="row-fluid" >  
-<ul class="thumbnails">    
+<ul class="thumbnails">   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+         
+          <div class="registros">
+            <table class="table table-striped" size="100">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>NOMBRE DEL MENU</th>
+                  
+                </tr>
+              </thead>
+              <tbody>    
+    
 <?php ###MOSTRAR PROGRAMAS
             
            
-
+$b=0;
 //$connection=Yii::app()->db;   // assuming you have configured a "db" connection
 //$entidad='01';
 $sql4="SELECT *
@@ -182,25 +206,51 @@ while(($row4=$dataReader4->read())!==false) {
        
 ?>
             
+    
+            
+            
+              
+              
+              
+              
 
-<li class="span2">
-                <div id="<?php print '<td>'.$b.'</td>';?>" class="thumbnail" onmouseover="javascript:cambiarBorde('<?php print '<td>'.$b.'</td>';?>');" onmouseout="normal('<?php print '<td>'.$b.'</td>';?>');">
-                  <img height="90" src="./images/iadmin.jpeg" width="90" data-src="holder.js/64x64" alt="">
-                  <div class="caption" align="center">
-                    <p><?php print '<td>'.strtolower($row4["name"]).'</td>';?></p>                    
-                    
-                  </div>
-                </div>
-              </li>    
+                <tr>
+                  <td width="4"><li><i class="icon-th-list"></i></li></td>
+                  <td width="4"><?php print '<a href="'.strtolower($row4["ruta"]).'">'.$row4["name"].'</a>';?></td>
+                
             
-            
-  
             
             
 <?php         
 }  
 ?>
-</ul>    
+                    </tr>
+                
+                
+                
+              </tbody>
+            </table>
+          </div>
+</ul> 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </div>   
     
 
