@@ -38,7 +38,7 @@ class UserIdentity extends CUserIdentity
 		} else { // Okay!
 		    $this->errorCode=self::ERROR_NONE;
 		    // Store the role in a session:
-		    $this->setState('role', $user->role);
+		        //$this->setState('role', $user->role);
 			$this->_folio = $user->folio;
 		}
 		return !$this->errorCode;
