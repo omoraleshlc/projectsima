@@ -159,7 +159,14 @@ $myrow7ab = mysql_fetch_array($result7ab);
 
  <h4 align="center" >Impuesto por Pagar </h4>
 
-    
+<?php /*
+$this->widget('zii.widgets.CMenu', array(
+    'items'=>array(
+       
+        array('label'=>'Google','url'=>'http://www.google.com'),
+       
+    )));*/
+?>
     
         
 <?php echo CHtml::beginForm(); ?>  
@@ -169,27 +176,27 @@ $myrow7ab = mysql_fetch_array($result7ab);
         <fieldset>    
     <p>Fecha Inicial</p>
     <div class="input-append date" id="dp1"  data-date="<?php echo date("Y-m-d");?>" data-date-format="yyyy-mm-dd">
-    <input name="fechaInicial" class="span2" type="text" value="<?php echo $_POST['fechaInicial'];?>">
+    <input data-toggle="tooltip" title="Proporcione la Fecha Inicial" name="fechaInicial" class="span2" type="text" value="<?php echo $_POST['fechaInicial'];?>">
     <span class="add-on"><i class="icon-th"></i></span>
     </div>   
         
         
     <p>Fecha Final</p>
     <div class="input-append date" id="dp2" data-date="<?php echo date("Y-m-d");?>" data-date-format="yyyy-mm-dd">
-    <input name="fechaFinal" class="span2" type="text" value="<?php echo $_POST['fechaFinal'];?>">
+    <input data-toggle="tooltip" title="Proporcione la Fecha Final" name="fechaFinal" class="span2" type="text" value="<?php echo $_POST['fechaFinal'];?>">
     <span class="add-on"><i class="icon-th"></i></span>
     </div> 
     
     <div class="input">
-    <button type="submit" name="search" class="btn">Buscar</button>
+    <button type="submit" name="search" class="btn btn-primary" data-loading-text="Cargando...">Buscar</button>    
+    
     </div>
     </fieldset> 
     </div> 
  <?php echo CHtml::endForm(); ?>
  
  
-        
-    
+   
 
     
    
@@ -204,7 +211,7 @@ $myrow7ab = mysql_fetch_array($result7ab);
    
    
 
-
+<!--
 <div id="container">
 <div >
     
@@ -233,9 +240,111 @@ $myrow7ab = mysql_fetch_array($result7ab);
 
 </div>
 </div>
+-->
 
 
-   <?php } ?>
+<?php if($_POST['fechaInicial']!='' and $_POST['fechaFinal']!=''){ ?>
+<table class="table table-condensed">
+     
+     <th>Externos <a href="#"><img src="./images/ihelp.jpg" height="20"  width="20" data-toggle="tooltip" title="Muestra los impuestos de los pacientes externos."></img></a></th>     
+     <th>Internos <a href="#"><img src="./images/ihelp.jpg" height="20"  width="20" data-toggle="tooltip" title="Muestra los impuestos de los pacientes internos."></img></a></th>     
+     <th>Ventas Directas <a href="#"><img src="./images/ihelp.jpg" height="20"  width="20" data-toggle="tooltip" title="Muestra los impuestos de las ventas directas ú otros ingresos"></img></a></th>     
+     <th>Abonos Aseguradoras <a href="#"><img src="./images/ihelp.jpg" height="20"  width="20" data-toggle="tooltip" title="Muestra los pagos/abonos de las aseguradoras."></img></a></th>     
+     <th>Abonos Otros <a href="#"><img src="./images/ihelp.jpg" height="20"  width="20" data-toggle="tooltip" title="Muestra los pagos/abonos de los pacientes considerados Otros."></img></a></th>     
+     
+     <tr>
+         <td>
+
+             
+         <a data-toggle="tooltip" title="Impuesto Pacientes Externos" href="javascript:ventanaSecundariaA('wds/ivaPxExternos.php?fechaInicial=<?php echo $_POST['fechaInicial'];?>&amp;fechaFinal=<?php echo $_POST['fechaFinal'];?>&amp;entidad=<?php echo $entidad;?>');">
+         General
+             <img src="./images/ipdf.jpg" height="20"  width="20" ></img>
+         </a>
+         </td>
+         
+         
+         
+         <td>
+         <a data-toggle="tooltip" title="Generar archivo pdf para impresión" href="javascript:ventanaSecundariaA('../ventanas/ivaPxInternos.php?fechaInicial=<?php echo $_POST['fechaInicial'];?>&amp;fechaFinal=<?php echo $_POST['fechaFinal'];?>&amp;entidad=<?php echo $entidad;?>');">
+         General
+             <img src="./images/ipdf.jpg" height="20"  width="20"></img>
+         </a>
+         </td>
+         
+         <td>
+         <a data-toggle="tooltip" title="Generar archivo pdf para impresión" href="javascript:ventanaSecundariaA('../ventanas/ivaVentasDirectas.php?fechaInicial=<?php echo $_POST['fechaInicial'];?>&amp;fechaFinal=<?php echo $_POST['fechaFinal'];?>&amp;entidad=<?php echo $entidad;?>');">
+         General
+             <img src="./images/ipdf.jpg" height="20"  width="20"></img>
+         </a>
+         </td>
+         
+
+         <td>
+         <a data-toggle="tooltip" title="Generar archivo pdf para impresión" href="javascript:ventanaSecundariaA('../ventanas/imprimirAbonosAseguradoras.php?fechaInicial=<?php echo $_POST['fechaInicial'];?>&amp;fechaFinal=<?php echo $_POST['fechaFinal'];?>&amp;entidad=<?php echo $entidad;?>');">
+         General
+             <img src="./images/ipdf.jpg" height="20"  width="20"></img>
+         </a>
+         </td>
+         
+
+          <td>
+         <a data-toggle="tooltip" title="Generar archivo pdf para impresión" href="javascript:ventanaSecundariaA('../ventanas/imprimirAbonosOtros.php?fechaInicial=<?php echo $_POST['fechaInicial'];?>&amp;fechaFinal=<?php echo $_POST['fechaFinal'];?>&amp;entidad=<?php echo $entidad;?>');">
+         General
+             <img src="./images/ipdf.jpg" height="20"  width="20"></img>
+         </a>
+         </td>
+     </tr>
+     
+     
+     
+     <tr>
+        <td>
+         <a data-toggle="tooltip" title="Detalles de Impuesto de Pacientes Externos" href="javascript:ventanaSecundariaA('../ventanas/ivaDetallesExternos.php?fechaInicial=<?php echo $_POST['fechaInicial'];?>&amp;fechaFinal=<?php echo $_POST['fechaFinal'];?>&amp;entidad=<?php echo $entidad;?>');">
+         Detalles
+             <img src="./images/ipdf.jpg" height="20"  width="20"></img>
+         </a>
+         </td>
+      
+         <td>
+         <a data-toggle="tooltip" title="Detalles de Impuesto de Pacientes Internos" href="javascript:ventanaSecundariaA('../ventanas/imprimirIvaDetalles.php?fechaInicial=<?php echo $_POST['fechaInicial'];?>&amp;fechaFinal=<?php echo $_POST['fechaFinal'];?>&amp;entidad=<?php echo $entidad;?>');">
+         Detalles
+             <img src="./images/ipdf.jpg" height="20"  width="20"></img>
+         </a>
+         </td>
+         
+         <td>
+         <a data-toggle="tooltip" title="Detalles de Impuesto de Ventas Directas" href="javascript:ventanaSecundariaA('../ventanas/imprimirDetallesVentasDirectas.php?fechaInicial=<?php echo $_POST['fechaInicial'];?>&amp;fechaFinal=<?php echo $_POST['fechaFinal'];?>&amp;entidad=<?php echo $entidad;?>');">
+         Detalles
+             <img src="./images/ipdf.jpg" height="20"  width="20"></img>
+         </a>
+         </td>
+         
+         <td>
+         <a data-toggle="tooltip" title="Detalles de Abonos de Aseguradoras" href="javascript:ventanaSecundariaA('../ventanas/imprimirDetallesAbonosAseguradoras.php?fechaInicial=<?php echo $_POST['fechaInicial'];?>&amp;fechaFinal=<?php echo $_POST['fechaFinal'];?>&amp;entidad=<?php echo $entidad;?>');">
+         Detalles
+             <img src="./images/ipdf.jpg" height="20"  width="20"></img>
+         </a>
+         </td>
+         
+         <td>
+         <a data-toggle="tooltip" title="Detalles de Abonos de Otros" href="javascript:ventanaSecundariaA('../ventanas/imprimirDetallesAbonosOtros.php?fechaInicial=<?php echo $_POST['fechaInicial'];?>&amp;fechaFinal=<?php echo $_POST['fechaFinal'];?>&amp;entidad=<?php echo $entidad;?>');">
+         Detalles
+             <img src="./images/ipdf.jpg" height="20"  width="20"></img>
+         </a>
+         </td>
+         
+     </tr>    
+         
+     
+     
+</table>
+<?php }else{?>
+<div class="alert alert-block">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <h4>Alerta!</h4>
+  Favor de seleccionar la fecha inicial y fecha final correctamente!
+</div>
+   <?php }} ?>
    
    <p align="center">
      <input type="hidden" name="bandera" id="bandera" value="<?php echo $a;?>" />
@@ -251,28 +360,7 @@ $myrow7ab = mysql_fetch_array($result7ab);
  </form>  
 
  
- <table class="table table-hover">
-     
-     <th>Pacientes Externos</th>     
-     <th>Pacientes Internos</th>
-     <th>Ventas Directas</th>
-     
-     <tr>
-         <td>
-         Detalles <i class="icon-print"></i>
-         </td>
-         
-           <td>
-         Detalles <i class="icon-print"></i>
-         </td>
-         
-         <td>
-         Detalles <i class="icon-print"></i>
-         </td>
-     </tr>
-     
-     
-</table>
+ 
  
  
  

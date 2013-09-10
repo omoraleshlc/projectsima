@@ -28,6 +28,7 @@ class AdministracionController extends Controller
             public function actionivaxPagar(){
             if(Yii::app()->user->name!=null and Yii::app()->user->name!='Guest'){
             $search=$_POST['search'];    
+            //if(!$_POST['fechaInicial']){echo 'paso';}
             $this->render('ivaxPagar'); 
             //return TRUE;
             }else{
@@ -44,7 +45,8 @@ class AdministracionController extends Controller
                  array('allow',  
                          'actions'=>array('admin','update'),
                          'roles'=>array('rol_edicion'),
-                         'expression'=>'$user->id == '.$this->idPropio // Esta es la idea, entonces debe ajustarse a su propia configuración
+                         'expression'=>'$user->id == '.$this->idPropio 
+        // Esta es la idea, entonces debe ajustarse a su propia configuración
                   ),);
          
          

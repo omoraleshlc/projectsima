@@ -48,7 +48,7 @@ $this->breadcrumbs=array(
     </div> 
     
     <div class="input">
-    <button type="submit" class="btn">Buscar</button>
+    <button type="submit" name="buscar" class="btn btn-primary" data-loading-text="Cargando...">Buscar</button>  
     </div>
     </fieldset> 
     </div>  
