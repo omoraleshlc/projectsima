@@ -66,22 +66,22 @@ document.getElementById(id).style.background ="";
     
     
     <div class="registros">
-            <table class="table table-striped" size="100">
+            <table class="table table-hover" size="100">
               <thead>
                 <tr>
                   <th></th>
-                  <th>NOMBRE DEL MENU</th>
-                  
+                    
                 </tr>
               </thead>
               <tbody>    
     
 <?php ###MOSTRAR PROGRAMAS
-            
+$users=Usuarios::model()->findByAttributes(array('usuario'=>Yii::app()->user->name));
+$entidad=$users->entidad;          
            
 $b=0;
 $connection=Yii::app()->db;   // assuming you have configured a "db" connection
-$entidad='01';
+
 $sql4="SELECT *
 FROM `extensionmodules`
 WHERE 
@@ -113,22 +113,40 @@ while(($row4=$dataReader4->read())!==false) {
        
 ?>
             
+    <tr>
+        <td>
+            <div class="media">
+  <a class="pull-left" href="#">
+    <img height="20" src="./images/iadmin.jpeg" width="20" class="media-object" data-src="holder.js/64x64">
+  </a>
+  <div class="media-body">
+    <?php print $row4["name"].'   ';?> <a href="<?php print $row4["ruta"];?>"><i class="icon-eye-open"></i></a>
     
-            
-            
+ 
+    <!-- Nested media object -->
+    <div class="media">
+      <?php echo $row4["keyEM"];?>
+    </div>
+  </div>
+</div>
+        </td>            
+           
               
               
               
               
 
-                <tr>
-                  <td width="4"><li><i class="icon-th-list"></i></li></td>
-                  <td width="4"><?php print '<a href="'.strtolower($row4["ruta"]).'">'.$row4["name"].'</a>';?></td>
                 
             
             
             
-<?php         
+<?php 
+/*
+ * <tr>
+                  <td width="4"><?php print $b;?></td>
+                  <td width="4"><?php print $row4["name"].'  ('.$row4["keyEM"].')';?></td>
+                <td width="4"><a href="<?php echo $row4["ruta"];?>"><li><i class="icon-th-list"></i></li></a></td>
+ */
 }  
 ?>
 
@@ -188,7 +206,7 @@ while(($row4=$dataReader4->read())!==false) {
                 <tr>
                   <th></th>
                   <th>NOMBRE DEL MENU</th>
-                  
+                  <th></th>
                 </tr>
               </thead>
               <tbody>    
@@ -239,9 +257,10 @@ while(($row4=$dataReader4->read())!==false) {
               
 
                 <tr>
-                  <td width="4"><li><i class="icon-th-list"></i></li></td>
+                  <td width="4"><?php print $b;?></td>  
+                  
                   <td width="4"><?php print '<a href="'.strtolower($row4["ruta"]).'">'.$row4["name"].'</a>';?></td>
-                
+                <td width="4"><li><i class="icon-th-list"></i></li></td>
             
             
             

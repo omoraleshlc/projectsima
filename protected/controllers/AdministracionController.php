@@ -25,7 +25,16 @@ class AdministracionController extends Controller
             
         }
         
-        
+            public function actionivaxPagar(){
+            if(Yii::app()->user->name!=null and Yii::app()->user->name!='Guest'){
+            $search=$_POST['search'];    
+            $this->render('ivaxPagar'); 
+            //return TRUE;
+            }else{
+            $this->redirect(array('/site')); 
+            }
+            
+        }
 
         
         

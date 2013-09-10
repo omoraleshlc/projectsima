@@ -106,7 +106,9 @@ $siteFinanciero=$ipF;
         'width'=>100, 
         'maxlength'=>100)); */
     $divid=1;
-    ?>
+$entidad=Usuarios::model()->findByAttributes(array('usuario'=>Yii::app()->user->name));
+$entidad=$users->entidad;
+?>
     
     
 
