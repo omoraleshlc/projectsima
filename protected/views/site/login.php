@@ -25,7 +25,7 @@ $this->breadcrumbs=array(
 
 
 <div class="container" align="center">
-<p>Escribe tu usuario y contraseña.</p>
+<h4>PROPORCIONE EL USUARIO Y PASSWORD</h4>  
 
 
 
@@ -41,8 +41,8 @@ $this->breadcrumbs=array(
 	
     
         
-        
-        
+      
+
   
     
     <div class="controls">

@@ -156,6 +156,11 @@ $myrow7ab = mysql_fetch_array($result7ab);
 </head>
 
 <body>
+    
+    
+    
+  
+    
 
  <h4 align="center" >Impuesto por Pagar </h4>
 
@@ -172,25 +177,26 @@ $this->widget('zii.widgets.CMenu', array(
 <?php echo CHtml::beginForm(); ?>  
 
  
-        <div class="well">
+        <div class="well" align="center">
         <fieldset>    
-    <p>Fecha Inicial</p>
+    
     <div class="input-append date" id="dp1"  data-date="<?php echo date("Y-m-d");?>" data-date-format="yyyy-mm-dd">
-    <input data-toggle="tooltip" title="Proporcione la Fecha Inicial" name="fechaInicial" class="span2" type="text" value="<?php echo $_POST['fechaInicial'];?>">
+    <input placeholder="Fecha Inicial" data-toggle="tooltip" title="Proporcione la Fecha Inicial" name="fechaInicial" class="span2" type="text" value="<?php echo $_POST['fechaInicial'];?>">
     <span class="add-on"><i class="icon-th"></i></span>
     </div>   
         
         
-    <p>Fecha Final</p>
+    
     <div class="input-append date" id="dp2" data-date="<?php echo date("Y-m-d");?>" data-date-format="yyyy-mm-dd">
-    <input data-toggle="tooltip" title="Proporcione la Fecha Final" name="fechaFinal" class="span2" type="text" value="<?php echo $_POST['fechaFinal'];?>">
+    <input placeholder="Fecha Final" data-toggle="tooltip" title="Proporcione la Fecha Final" name="fechaFinal" class="span2" type="text" value="<?php echo $_POST['fechaFinal'];?>">
     <span class="add-on"><i class="icon-th"></i></span>
+    
     </div> 
     
-    <div class="input">
+            <div class="input btn-small">         
     <button type="submit" name="search" class="btn btn-primary" data-loading-text="Cargando...">Buscar</button>    
+            </div>
     
-    </div>
     </fieldset> 
     </div> 
  <?php echo CHtml::endForm(); ?>
@@ -240,25 +246,97 @@ $this->widget('zii.widgets.CMenu', array(
 
 </div>
 </div>
+
+
+    <button type="button" class="btn btn-small" data-toggle="collapse" data-target="#pxEG">
+    Agrupado
+    </button>
 -->
 
 
 <?php if($_POST['fechaInicial']!='' and $_POST['fechaFinal']!=''){ ?>
 <table class="table table-condensed">
      
-     <th>Externos <a href="#"><img src="./images/ihelp.jpg" height="20"  width="20" data-toggle="tooltip" title="Muestra los impuestos de los pacientes externos."></img></a></th>     
-     <th>Internos <a href="#"><img src="./images/ihelp.jpg" height="20"  width="20" data-toggle="tooltip" title="Muestra los impuestos de los pacientes internos."></img></a></th>     
-     <th>Ventas Directas <a href="#"><img src="./images/ihelp.jpg" height="20"  width="20" data-toggle="tooltip" title="Muestra los impuestos de las ventas directas ú otros ingresos"></img></a></th>     
-     <th>Abonos Aseguradoras <a href="#"><img src="./images/ihelp.jpg" height="20"  width="20" data-toggle="tooltip" title="Muestra los pagos/abonos de las aseguradoras."></img></a></th>     
-     <th>Abonos Otros <a href="#"><img src="./images/ihelp.jpg" height="20"  width="20" data-toggle="tooltip" title="Muestra los pagos/abonos de los pacientes considerados Otros."></img></a></th>     
+    
+    
+    <th>
+<div class="btn-group">
+                <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">Px EXTERNOS <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  
+                  <li><a href="#"  data-toggle="collapse" data-target="#pxEG">Agrupado</a></li>
+                  <li><a href="#">Detallado</a></li>
+                  
+                </ul>
+              </div><!-- /btn-group -->
+     </th>
+    
+    
+     
+    
+    <th>
+         
+<div class="btn-group">
+                <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">Px INTERNOS <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  
+                  <li><a href="#">Agrupado</a></li>
+                  <li><a href="#">Detallado</a></li>
+                  
+                </ul>
+              </div><!-- /btn-group -->         
+     </th>  
+    
+    
+     
+    
+    <th>
+    <div class="btn-group">
+                <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">VENTAS DIRECTAS<span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  
+                  <li><a href="#">Agrupado</a></li>
+                  <li><a href="#">Detallado</a></li>
+                  
+                </ul>
+              </div><!-- /btn-group -->        
+     </th>     
+     <th><div class="btn-group">
+                <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">PAGOS ASEGURADORAS<span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  
+                  <li><a href="#">Agrupado</a></li>
+                  <li><a href="#">Detallado</a></li>
+                  
+                </ul>
+              </div><!-- /btn-group -->    </th>     
+    
+    
+    
+    
+    <th><div class="btn-group">
+                <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">PAGOS OTROS<span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  
+                  <li><a href="#">Agrupado</a></li>
+                  <li><a href="#">Detallado</a></li>
+                  
+                </ul>
+              </div><!-- /btn-group -->    </th>     
      
      <tr>
+        
+         
+         <!--
          <td>
-
+            
+        
              
-         <a data-toggle="tooltip" title="Impuesto Pacientes Externos" href="javascript:ventanaSecundariaA('wds/ivaPxExternos.php?fechaInicial=<?php echo $_POST['fechaInicial'];?>&amp;fechaFinal=<?php echo $_POST['fechaFinal'];?>&amp;entidad=<?php echo $entidad;?>');">
+             
+             
+         <a data-toggle="tooltip" title="Generar archivo pdf para impresión" href="javascript:ventanaSecundariaA('../ventanas/ivaPxInternos.php?fechaInicial=<?php echo $_POST['fechaInicial'];?>&amp;fechaFinal=<?php echo $_POST['fechaFinal'];?>&amp;entidad=<?php echo $entidad;?>');">
          General
-             <img src="./images/ipdf.jpg" height="20"  width="20" ></img>
+             <img src="./images/ipdf.jpg" height="20"  width="20"></img>
          </a>
          </td>
          
@@ -335,9 +413,229 @@ $this->widget('zii.widgets.CMenu', array(
          
      </tr>    
          
-     
+     -->
      
 </table>
+
+
+   
+    
+    <?php //include("/var/www/projectsima/wds/ivaPxExternos.php");<div id="demo" class="collapse out"></div> ?>
+   <!--PACIENTES EXTERNOS GENERAL-->
+   <div id="pxEG" class="collapse out">
+       <table width="570" class="table table-hover">
+
+    <tr>
+         <th width="40" ><span class="label label-info">#</span></th>
+
+      <th width="40" ><span class="label label-info">Grupo</span></th>
+<th width="40" ><span class="label label-info">Debe</span></th>
+<th width="40" ><span class="label label-info">Haber</span></th>
+    </tr>
+<?php	
+$connection=Yii::app()->db;   // assuming you have configured a "db" connection
+$cI=null;
+$clientes=null;
+	  
+#####variables para exportar
+
+
+$fecha1=date("Y-m-d");
+$users=Usuarios::model()->findByAttributes(array('usuario'=>Yii::app()->user->name));
+$entidad=$users->entidad;
+$usuario=Yii::app()->user->name;
+$role=$users->role;
+
+$sSQL= "SELECT * FROM cargosCuentaPaciente
+WHERE
+entidad='".$entidad."'
+and
+(fechaCierre>='".$_POST['fechaInicial']."' and fechaCierre<='".$_POST['fechaFinal']."')
+and
+gpoProducto!=''
+and
+tipoPaciente='externo' 
+and
+gpoProducto!='HONMED'
+and
+statusCuenta='cerrada'
+
+
+and
+ventasDirectas!='si'
+group by gpoProducto
+order by gpoProducto
+";
+
+
+$command4=$connection->createCommand($sSQL);
+$dataReader4=$command4->query();
+while(($myrow=$dataReader4->read())!==false) {  
+$a+=1;
+ 
+/*
+$sSQLf= "SELECT *
+FROM
+clientesInternos 
+WHERE 
+entidad='".$entidad."'
+AND
+folioVenta='".$myrow['folioVenta']."'";
+*/
+//$command4=$connection->createCommand($sSQLf);
+//$dataReaderf=$commandf->query();
+//$rowf=$dataReaderf->read(); 
+//$cI=ClientesInternos::model()->findByAttributes(array('entidad'=>$myrow['entidad'],'folioVenta'=>$myrow['folioVenta']));
+/*
+if(isset($cI->seguro)){
+$cli=Clientes::model()->findByAttributes(array('entidad'=>$myrow['entidad'],'numCliente'=>$cI->seguro));
+//$result40=mysql_db_query($basedatos,$sSQL40);
+//$myrow40 = mysql_fetch_array($result40);
+//print $cli->nomCliente;
+}else{
+$myrow40['nomCliente']='Particular';
+}
+*/
+
+
+
+	  ?>    
+    
+    
+   <tr  > 
+       
+             <td height="40"><span ><?php echo $a;
+?></span></td>
+             
+       
+       
+       
+
+      
+      
+
+      
+      
+      
+      
+      <td>
+    
+	  <?php echo $cI->paciente;
+//****************************CARGO A LA CAJA*************************
+$sSQL1a= "SELECT * FROM gpoProductos
+WHERE
+
+codigoGP='".$myrow['gpoProducto']."' 
+
+";
+ 
+$command1a=$connection->createCommand($sSQL1a);
+$dataReader1a=$command1a->query();
+while(($myrow1a=$dataReader1a->read())!==false) {  
+    echo '<br>';
+    echo $myrow1a['descripcionGP'];
+    
+$ccp=  CargosCuentaPaciente::model()->findByAttributes(array('entidad'=>$myrow['entidad'],'gpoProducto'=>$myrow['gpoProducto'],
+'fechaCierre'=>$_POST['fechaInicial'], 'fechaCierre'=>$_POST['fechaFinal'] ,'naturaleza'=>'C',
+'tipoPaciente'=>'externo','ventasDirectas'=>'si','statusCuenta'=>'cerrada'
+    ));
+
+/*********************************************************************************
+$sSQLefectivo="SELECT sum(cantidadParticular*cantidad)  as cargosParticular
+
+FROM
+cargosCuentaPaciente
+WHERE
+entidad='".$entidad."'
+and
+gpoProducto='".$myrow['gpoProducto']."'
+and
+(fechaCierre>='".$_POST['fechaInicial']."' and fechaCierre<='".$_POST['fechaFinal']."')
+and
+naturaleza='C'
+
+and
+
+tipoPaciente='externo' 
+and
+ventasDirectas!='si'
+and
+statusCuenta='cerrada'
+";
+$resultefectivo=mysql_db_query($basedatos,$sSQLefectivo);
+$myrowefectivo = mysql_fetch_array($resultefectivo);
+
+$sSQLefectivod="SELECT sum(cantidadParticular*cantidad) as devolucionesParticular
+
+FROM
+cargosCuentaPaciente
+WHERE
+entidad='".$entidad."'
+and
+
+gpoProducto='".$myrow['gpoProducto']."'
+and
+(fechaCierre>='".$_POST['fechaInicial']."' and fechaCierre<='".$_POST['fechaFinal']."')
+and
+naturaleza='A'
+and
+tipoPaciente='externo' 
+and
+ventasDirectas!='si'
+and
+statusCuenta='cerrada'
+
+";
+$resultefectivod=mysql_db_query($basedatos,$sSQLefectivod);
+$myrowefectivod = mysql_fetch_array($resultefectivod); 
+
+
+$pagoEfectivo=$myrowefectivo['cargosParticular']-$myrowefectivod['devolucionesParticular'];
+$totalEfectivo[0]+=$myrowefectivo['cargosParticular']-$myrowefectivod['devolucionesParticular'];
+*/
+
+
+
+
+//**********************************************************
+
+//*************************************************************************
+//$pdf->SetX('170');
+//$pdf->Cell(0,0,'$'.number_format($pagoEfectivo,2),0,0,M);
+
+
+
+
+}
+	  ?>
+</td>
+        
+        
+     
+        
+        
+        
+      
+   
+       <td></td>
+      
+      <td></td>
+      
+      
+        
+        
+        
+        
+  
+    
+    
+    <?php  }?>
+    
+     </tr>
+</table>
+   </div>
+
+
 <?php }else{?>
 <div class="alert alert-block">
   <button type="button" class="close" data-dismiss="alert">&times;</button>

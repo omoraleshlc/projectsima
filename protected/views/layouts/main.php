@@ -45,6 +45,7 @@
     <script src="./assets/js/google-code-prettify/prettify.js"></script>
     <link href="./css/login-box.css" rel="stylesheet" type="text/css" />
     <script src="./assets/js/application.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/styles3.css"></link>
     
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
         <link href="../images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>

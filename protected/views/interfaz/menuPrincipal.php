@@ -400,6 +400,8 @@ $watermark_options  = array(
               </li>
               
               
+              
+              <a href="index.php?r=/cargos">  
               <li class="span2">
                 <div id="14" class="thumbnail" onmouseover="javascript:cambiarBorde('14');" onmouseout="normal('14');">
                   <img height="80" src="./images/icargos.jpeg" width="80" data-src="holder.js/160x120" alt="">
@@ -409,6 +411,8 @@ $watermark_options  = array(
                   </div>
                 </div>
               </li>
+              </a>
+              
               
               
                 <li class="span2">
