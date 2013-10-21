@@ -198,30 +198,32 @@ $watermark_options  = array(
                 
                 <a href="index.php?r=/administracion">  
               <li class="span2">
+                  
                 <div id="1" class="thumbnail" onmouseover="javascript:cambiarBorde('1');" onmouseout="normal('1');">
-                  <img height="80" src="./images/iadmin.jpeg" width="80" data-src="holder.js/160x120" alt="">
+                  <img height="40" src="./images/iadmin.jpeg" width="40" data-src="holder.js/160x120" alt="">
                   <div class="caption" align="center">
-                    <h5>Administración</h5>                    
+                    <small>Administración</small>                
                     
                   </div>
                 </div>
+                  
               </li>
                 </a>
               
                <li class="span2">
                 <div id="2" class="thumbnail" onmouseover="javascript:cambiarBorde('2');" onmouseout="normal('2');">
-                  <img height="80" width="80" src="./images/icatalogos.jpeg" data-src="holder.js/160x120" alt="">
+                  <img height="40" width="40" src="./images/icatalogos.jpeg" data-src="holder.js/160x120" alt="">
                   <div class="caption" align="center">
-                   <h5>Catalogos</h5>
+                   <small>Catalogos</small>       
                    
                   </div>
                 </div>
               </li>
               <li class="span2">
                 <div id="3" class="thumbnail" onmouseover="javascript:cambiarBorde('3');" onmouseout="normal('3');">
-                  <img height="80" width="80" src="./images/iconfiguracion.jpeg" data-src="holder.js/160x120" alt="">
+                  <img height="40" width="40" src="./images/iconfiguracion.jpeg" data-src="holder.js/160x120" alt="">
                   <div class="caption" align="center">
-                    <h5>Configuracion</h5>
+                    <small>Configuracion</small>  
                     
                   
                   </div>
@@ -229,9 +231,9 @@ $watermark_options  = array(
               </li>
               <li class="span2">
                 <div id="4" class="thumbnail" onmouseover="javascript:cambiarBorde('4');" onmouseout="normal('4');">
-                  <img height="80" width="80" src="./images/ireportes.jpeg"  data-src="holder.js/300x200" alt="">
+                  <img height="40" width="40" src="./images/ireportes.jpeg"  data-src="holder.js/160x120" alt="">
                   <div class="caption" align="center">
-                    <h5>Reportes</h5>
+                    <small>Reportes</small>  
                     
                     
                   </div>
@@ -273,9 +275,9 @@ $watermark_options  = array(
                 <li class="span2">
                     
                 <div id="5" class="thumbnail" onmouseover="javascript:cambiarBorde('5');" onmouseout="normal('5');">
-                  <img height="80" width="80" src="./images/icaja.jpeg"  data-src="holder.js/160x120" alt="">
+                  <img height="40" width="40" src="./images/icaja.jpeg"  data-src="holder.js/160x120" alt="">
                   <div class="caption" align="center">
-                    <h5>Caja</h5>                   
+                    <small>Caja</small>               
                     
                   </div>
                 </div>
@@ -283,9 +285,9 @@ $watermark_options  = array(
               
               <li class="span2">
                 <div id="6" class="thumbnail" onmouseover="javascript:cambiarBorde('6');" onmouseout="normal('6');">
-                  <img height="80" width="80" src="./images/ifacturacion.jpeg" data-src="holder.js/160x120" alt="">
+                  <img height="40" width="40" src="./images/ifacturacion.jpeg" data-src="holder.js/160x120" alt="">
                   <div class="caption" align="center">
-                    <h5>Facturación</h5>                    
+                    <small>Facturacion</small>               
                  
                   </div>
                 </div>
@@ -293,9 +295,9 @@ $watermark_options  = array(
               
               <li class="span2">
                 <div id="7" class="thumbnail" onmouseover="javascript:cambiarBorde('7');" onmouseout="normal('7');">
-                  <img height="80" src="./images/icompras.jpeg" width="80" data-src="holder.js/160x120" alt="">
+                  <img height="40" src="./images/icompras.jpeg" width="40" data-src="holder.js/160x120" alt="">
                   <div class="caption" align="center">
-                    <h5>Compras</h5>
+                    <small>Compras</small>  
               
                   </div>
                 </div>
@@ -304,9 +306,9 @@ $watermark_options  = array(
               
               <li class="span2">
                 <div id="8" class="thumbnail" onmouseover="javascript:cambiarBorde('8');" onmouseout="normal('8');">
-                  <img height="95" width="95" src="./images/iinventarios.jpeg" data-src="holder.js/160x120" alt="">
+                  <img height="46" width="46" src="./images/iinventarios.jpeg" data-src="holder.js/160x120" alt="">
                   <div class="caption" align="center">
-                   <h5>Inventarios</h5>
+                  <small>Inventarios</small>  
               
                   </div>
                 </div>
@@ -325,18 +327,18 @@ $watermark_options  = array(
             <ul class="thumbnails">
               <li class="span2">
                 <div id="9" class="thumbnail" onmouseover="javascript:cambiarBorde('9');" onmouseout="normal('9');">
-                  <img height="90" src="./images/icxc.jpeg" width="90" data-src="holder.js/160x120" alt="">
+                  <img height="46" src="./images/icxc.jpeg" width="46" data-src="holder.js/160x120" alt="">
                   <div class="caption" align="center">
-                    <h5>CXC</h5>
+                  <small>CxC</small>  
          
                   </div>
                 </div>
               </li>
               <li class="span2">
                 <div id="10" class="thumbnail" onmouseover="javascript:cambiarBorde('10');" onmouseout="normal('10');">
-                  <img height="90" width="90" src="./images/icxp.jpeg" data-src="holder.js/160x120" alt="">
+                  <img height="46" width="46" src="./images/icxp.jpeg" data-src="holder.js/160x120" alt="">
                   <div class="caption" align="center">
-                    <h5>CXP</h5>
+                   <small>CxP</small>  
      
                   </div>
                 </div>
@@ -344,10 +346,9 @@ $watermark_options  = array(
               
               <li class="span2">
                 <div id="11" class="thumbnail" onmouseover="javascript:cambiarBorde('11');" onmouseout="normal('11');">
-                  <img height="90" width="90" src="./images/iservicios.jpeg" data-src="holder.js/160x120" alt="">
+                  <img height="46" width="46" src="./images/iservicios.jpeg" data-src="holder.js/160x120" alt="">
                   <div class="caption" align="center">
-                    <h5>Servicios</h5>
-          
+                   <small>Servicios</small>  
                   </div>
                 </div>
               </li>
@@ -377,10 +378,10 @@ $watermark_options  = array(
               
               <li class="span2">
                 <div id="12" class="thumbnail" onmouseover="javascript:cambiarBorde('12');" onmouseout="normal('12');">
-                  <img height="120" width="120" src="./images/iadmisiones.jpeg" data-src="holder.js/160x120" alt="">
+                  <img height="60" width="60" src="./images/iadmisiones.jpeg" data-src="holder.js/160x120" alt="">
                   
                   <div class="caption" align="center">
-                    <h5>Admisiones</h5>
+                  <small>Admisiones</small>  
               
                   </div>
                 </div>
@@ -391,9 +392,9 @@ $watermark_options  = array(
               
               <li class="span2">
                 <div id="13" class="thumbnail" onmouseover="javascript:cambiarBorde('13');" onmouseout="normal('13');">
-                  <img height="80" width="80" src="./images/iarchivo.jpeg"  data-src="holder.js/160x120" alt="">
+                  <img height="40" width="40" src="./images/iarchivo.jpeg"  data-src="holder.js/160x120" alt="">
                   <div class="caption" align="center">
-                    <h5>Archivo</h5>
+                  <small>Archivo</small>  
      
                   </div>
                 </div>
@@ -404,9 +405,9 @@ $watermark_options  = array(
               <a href="index.php?r=/cargos">  
               <li class="span2">
                 <div id="14" class="thumbnail" onmouseover="javascript:cambiarBorde('14');" onmouseout="normal('14');">
-                  <img height="80" src="./images/icargos.jpeg" width="80" data-src="holder.js/160x120" alt="">
+                  <img height="40" src="./images/icargos.jpeg" width="40" data-src="holder.js/160x120" alt="">
                   <div class="caption" align="center">
-                    <h5>Cargos</h5>                    
+                   <small>Ventas</small>                
                
                   </div>
                 </div>
@@ -417,9 +418,9 @@ $watermark_options  = array(
               
                 <li class="span2">
                 <div id="15" class="thumbnail" onmouseover="javascript:cambiarBorde('15');" onmouseout="normal('15');">
-                  <img height="80" src="./images/icitas.jpeg" width="80" data-src="holder.js/160x120" alt="">
+                  <img height="40" src="./images/icitas.jpeg" width="40" data-src="holder.js/160x120" alt="">
                   <div class="caption" align="center">
-                    <h5>Citas</h5>                    
+                  <small>Citas</small>                    
       
                   </div>
                 </div>
