@@ -3,7 +3,8 @@
 /* @var $error array */
 
 $this->pageTitle=Yii::app()->name . ' - Agregar Orden';
-$this->breadcrumbs=array(
+
+$this->breadcrumbs=array('AdministrativoController'=>'index.php',
 	'Agregar Orden',
 );
 ?>
@@ -28,8 +29,10 @@ $this->breadcrumbs=array(
 
 <div class="form">
 <?php $form = $this->beginWidget('CActiveForm', array(
+    
     'id'=>'user-form',
-    'enableAjaxValidation'=>true
+    'enableAjaxValidation'=>true,
+    'action' => Yii::app()->createUrl('administrativo/agregarOrden'), 
 )); ?>
 
 
@@ -47,22 +50,40 @@ $this->breadcrumbs=array(
 
        <tr>
               <td width="152" scope="col"><div align="left"><h6>Usuario</h6></div></td>
+              
+              
               <td width="451" scope="col"><label> </label>
                   <div align="left">
                     <input class="form-control input-sm span2" tabindex = "1" placeholder="Usuario Solicitante" id="focusedInput" type="text" name="nombre" value="<?php //echo $_POST['nombre']; ?>"/>
                 </div></td>
+                
+                
+                
             
               <td scope="col"><div align="left" ><h6>Entidad</h6></div></td>
-              <td scope="col"><div align="left" >
+              <td scope="col">
+                  <div align="left" >
 
                       <?php
-                      $model = new Entidades();
-                      echo $form->dropDownList($model, 'codigoEntidad', CHtml::listData(Entidades::model()->findAll(), 'codigoEntidad', 'descripcionEntidad')
+                      $entidades = new Entidades();
+                      echo $form->dropDownList($entidades, 'codigoEntidad', CHtml::listData(Entidades::model()->findAll(), 'codigoEntidad', 'descripcionEntidad'),
+                      array('empty'=>'Escoje la Entidad','onChange'=>'this.form.submit()'),array(
+                          'class' => 'form-control',
+                          'maxlength' => 20,                                
+                          'options' => array('02' => array('selected' => true))));
+                     
+                  //echo $form->dropDownList($model,'product_id', array('1' => 'Monitor', '2' => 'Keyboard'), array('prompt'=>'--select--','onchange'=>"javascript:combine_product_id();", 'id'=>'product_list', 'options'=>array(2=>array('selected'=>'selected'))));
+                   $form->dropDownList(
+                              $entidades, 'keyEntidades', CHtml::listData(Entidades::model()->findAll(), 'codigoEntidad', 'descripcionEntidad'), array(
+                          'class' => 'form-control',
+                          'maxlength' => 20,                                
+                          'options' => array('codigoEntidad' => array('selected' => true)),
+                              ),
+                          array('onChange'=>'this.form.submit()')
                       );
-                      ?>  
-        
-                  
-              </div></td>
+                      ?>
+                  </div>
+              </td>
         </tr>  
 
 
@@ -87,10 +108,22 @@ $this->breadcrumbs=array(
               <td >
                   <div align="left">
                   <small>  
-                      <?php
-                      $model = new Almacenes();
-                      echo $form->dropDownList($model, 'almacen', CHtml::listData(Almacenes::model()->findAll(), 'almacen', 'descripcion')
-                      );                     
+                     <?php 
+                     //$users=Usuarios::model()->findByAttributes(array('usuario'=>Yii::app()->user->name));
+                     //$entidad=$users->entidad;
+                     //$oAlmacen=  Almacenes::model()->findByAttributes(array('activo'=>'A','miniAlmacen'=>'No'));
+                     //$almacene=$oAlmacen->descripcion;
+                     //print_r($almacene);
+                  
+                     //echo CHtml::listData(Almacenes::model()->findByAttributes(array('activo'=>'A','miniAlmacen'=>'No'),'almacen',$almacene));
+                     
+                      $almacenes=new Almacenes();
+                      //$id=CHtml::listData(Almacenes::model()->findBySql($sql),'almacen','descripcion');
+                      //print $form->dropDownList($almacenes, 'almacen', $id);                     
+                      echo CHtml::activeDropDownList(
+                      $almacenes, 'keyAlmacenes', CHtml::listData(Almacenes::model()->findAll(), 'almacen', 'descripcion'), 
+                              array('empty' => 'Escoje el almacen')
+                        ); 
                       ?>                   
                   
 
@@ -245,7 +278,7 @@ order by descripcion ASC
             <tr>
                   <td  >
         <div class="row submit">
-        <?php echo CHtml::submitButton('Agregar orden'); ?>
+        <?php echo CHtml::submitButton('Agregar orden', array('name' => 'agregar','class' => 'btn-primary btn-xs')); ?>
         </div>
                   </td>
                   <td  ></td>
@@ -262,9 +295,10 @@ order by descripcion ASC
     
 
 
-
-
-
+    
+    
+    
+    
 
 
                       </div>  
