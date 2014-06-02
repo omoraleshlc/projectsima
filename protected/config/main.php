@@ -53,6 +53,13 @@ return array(
 		),*/
 		// uncomment the following to use a MySQL database
 		
+
+    'authManager'=>array(
+                'class'=>'CDbAuthManager',
+                'defaultRoles'=>array('authenticated', 'guest'),
+            ),
+
+
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=sima',
 			'emulatePrepare' => true,
@@ -88,6 +95,6 @@ return array(
 		// this is used in contact page
 		'adminEmail'=>'omorales@lacarlota.um.edu.mx',
 	),
-    'sourceLanguage'=>'en',
+    'sourceLanguage'=>'es',
     'language'=>'es',
 );

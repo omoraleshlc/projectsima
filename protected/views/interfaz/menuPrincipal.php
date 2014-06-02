@@ -93,91 +93,7 @@ $siteFinanciero=$ipF;
                   
                 </div>
               </div>
-            </div> */
-
-?>
-
-  
-    <?php
-    /*
-    echo CHtml::textField('Text', '',
- array('id'=>'test', 
-                'name'=>'test',
-        'width'=>100, 
-        'maxlength'=>100)); */
-    $divid=1;
-$entidad=Usuarios::model()->findByAttributes(array('usuario'=>Yii::app()->user->name));
-$entidad=$entidad->entidad;
-?>
-    
-    
-
-        
-
-
-<script>
-function cambiarBorde(id)
-{
-document.getElementById(id).style.border="1px #42C0FB solid";
-document.getElementById(id).style.background ='';
-}
-</script>
-
-<script>
-function normal(id)
-{
-document.getElementById(id).style.border="";
-document.getElementById(id).style.background ="";
-}
-</script>
-
-        
-
-
-
-
-
-<?php 
-/*
-$watermark_options  = array(
-                        'watermark'     => './images/logoCarlota.jpg',
-                        'halign'        => Watermarker::ALIGN_RIGHT,
-                        'valign'        => Watermarker::ALIGN_BOTTOM,
-                        'hshift'        => -10,
-                        'vshift'        => -10,
-                        'type'          => IMAGETYPE_JPEG,          // Save result in JPEG to minimize file size
-                        'jpeg-quality'  => 90,
-                );
-                // Save watermarked image to file
-                Watermarker::output($finalImageName, $finalImageName, $watermark_options);
- * 
- */
-
-
-/*
- Catalogo de modulos generales: <a href="index.php?r=usersModulosGenerales">
- */
-?>
-
-
-
-
-
-
-
-<div class="barra_separadora">
-     
-     <span >Módulos Generales</span>
-     
-</div>
-
-
-   
-<br>
-
-
-
-
+            </div> 
 
 
 
@@ -432,4 +348,112 @@ $watermark_options  = array(
 
 
 
-       
+
+
+
+
+   */
+
+?>
+
+  
+    <?php
+    /*
+    echo CHtml::textField('Text', '',
+ array('id'=>'test', 
+                'name'=>'test',
+        'width'=>100, 
+        'maxlength'=>100)); */
+    $divid=1;
+$entidad=Usuarios::model()->findByAttributes(array('usuario'=>Yii::app()->user->name));
+$entidad=$entidad->entidad;
+?>
+    
+    
+
+        
+
+
+<script>
+function cambiarBorde(id)
+{
+document.getElementById(id).style.border="1px #42C0FB solid";
+document.getElementById(id).style.background ='';
+}
+</script>
+
+<script>
+function normal(id)
+{
+document.getElementById(id).style.border="";
+document.getElementById(id).style.background ="";
+}
+</script>
+
+        
+
+
+
+
+
+<?php 
+/*
+$watermark_options  = array(
+                        'watermark'     => './images/logoCarlota.jpg',
+                        'halign'        => Watermarker::ALIGN_RIGHT,
+                        'valign'        => Watermarker::ALIGN_BOTTOM,
+                        'hshift'        => -10,
+                        'vshift'        => -10,
+                        'type'          => IMAGETYPE_JPEG,          // Save result in JPEG to minimize file size
+                        'jpeg-quality'  => 90,
+                );
+                // Save watermarked image to file
+                Watermarker::output($finalImageName, $finalImageName, $watermark_options);
+ * 
+ */
+
+
+/*
+ Catalogo de modulos generales: <a href="index.php?r=usersModulosGenerales">
+ */
+?>
+
+
+
+
+
+
+
+<div class="barra_separadora">
+     
+     <span >Administrativo</span>
+     
+</div>
+
+
+<br>
+
+
+<div class="row-fluid" >
+            <ul class="thumbnails">
+              
+                
+                
+                <a href="index.php?r=/administrativo">  
+              <li class="span2">
+                  
+                <div id="1" class="thumbnail" onmouseover="javascript:cambiarBorde('1');" onmouseout="normal('1');">
+                  <img height="40" src="./images/iadmin.jpeg" width="40" data-src="holder.js/160x120" alt="">
+                  <div class="caption" align="center">
+                    <small>Administrativo</small>                
+                    
+                  </div>
+                </div>
+                  
+              </li>
+                </a>
+            </ul>
+</div>    
+
+
+
