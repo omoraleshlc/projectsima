@@ -5,6 +5,9 @@
 
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
+Yii::setPathOfAlias('bootstrap', dirname(__FILE__).'/../extensions/bootstrap');
+Yii::setPathOfAlias('editable', dirname(__FILE__).'/../extensions/x-editable');
+
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'SISTEMA INTEGRAL MEDICO ADVENTISTA',
@@ -16,6 +19,14 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		'editable.*',	
+		
+		/*MODULOS PROPIOS inicia*/
+		'application.modules.ServiciosInstitucionales.*',
+		'application.modules.ServiciosInstitucionales.models.*',
+		'application.modules.ServiciosInstitucionales.modules.Sistemas.*',
+		'application.modules.ServiciosInstitucionales.modules.Sistemas.models.*',
+		/*MODULOS PROPIOS termina*/
 	),
 
 	'modules'=>array(
@@ -27,6 +38,11 @@ return array(
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
+		
+		/*MODULOS PROPIOS inicia*/
+		'ServiciosInstitucionales',
+		'ServiciosInstitucionales.Sistemas',
+		/*MODULOS PROPIOS termina*/
 		
 	),
 
@@ -47,6 +63,21 @@ return array(
 			),
 		),
 		*/
+		
+		//X-editable config
+        'editable' => array(
+            'class'     => 'editable.EditableConfig',
+            'form'      => 'bootstrap',        //form style: 'bootstrap', 'jqueryui', 'plain' 
+            'mode'      => 'inline',            //mode: 'popup' or 'inline'  
+            'defaults'  => array(              //default settings for all editable elements
+               'emptytext' => 'Clic para editar'
+            )
+        ),
+        
+        'bootstrap'=>array(
+   		//'class'=>'application.extensions.bootstrap.components.Bootstrap',
+			'class'=>'bootstrap.components.Bootstrap',
+ 		),
                 /*
 		'db'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
@@ -63,8 +94,8 @@ return array(
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=sima',
 			'emulatePrepare' => true,
-			'username' => 'omorales',
-			'password' => 'wolf3333',
+			'username' => 'root',
+			'password' => '',
 			'charset' => 'utf8',
 		),
 		
