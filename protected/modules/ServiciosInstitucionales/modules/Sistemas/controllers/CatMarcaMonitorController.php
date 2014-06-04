@@ -11,7 +11,7 @@ class CatMarcaMonitorController extends Controller
 	/**
 	 * @return array action filters
 	 */
-	/*public function filters()
+	public function filters()
    {
       return array(array('CrugeAccessControlFilter'));
    }
