@@ -157,14 +157,6 @@ class TelefoniaCelularController extends Controller
 		$es->update();
 	}
 	
-	protected function actionGenerateCode($model)
-	{
-		$allTelefoniaCelular= TelefoniaCelular::model()->findAll();
-		$count = count($allTelefoniaCelular);
-
-		$code="0".$model->entidad."-t01".$count;
-		return $code;
-	}
 	
 	public function actionGetMarcaCelularList()
 	{

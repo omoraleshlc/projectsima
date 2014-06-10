@@ -2,6 +2,8 @@
 /* @var $this EquipoComputoController */
 /* @var $model EquipoComputo */
 /* @var $form CActiveForm */
+
+
 ?>
 
 <div class="form">
@@ -16,6 +18,17 @@
 	<?php echo $form->errorSummary($model); ?>
 	
 <h2> Ubicación y detalles de registro </h1>
+	<div class="row">
+		<?php echo $form->labelEx($model,'codigo'); ?>
+		<?php echo $form->textField($model,'codigo', array('size'=>12,'maxlength'=>12, 'style'=>'width:50%',
+		'pattern'=> '0[0-9]{2}-[A-Za-z][0-9]{2}([A-Fa-f|0-9]){4}'
+		)); ?>
+		<?php 
+			echo CHtml::button('Generar nuevo código', array('onclick'=>'document.getElementById("EquipoComputo_codigo").value = \''.$model->generarCodigo().'\';',));
+		?>
+		<?php echo $form->error($model,'codigo'); ?>
+	</div>
+	
 	<div class="row">
 		<?php echo $form->labelEx($model,'status'); ?>
 		<?php echo CHtml::activeDropDownList($model, 'status', array(
@@ -50,6 +63,15 @@
 		echo CHtml::activeDropDownList($model,'entidad', $lista);
 		?> 
 		<?php echo $form->error($model,'entidad'); ?>
+	</div>
+	
+	<div class="row">
+		<?php echo $form->labelEx($model,'keyP'); ?>
+		<?php 
+		$lista=CHtml::listData(Proveedor::model()->findAll('tipoProveedor="sistemas" order by razonSocial'), 'keyP', 'razonSocial');
+		echo CHtml::activeDropDownList($model,'keyP', $lista);
+		?> 
+		<?php echo $form->error($model,'keyP'); ?>
 	</div>
 
 <h2> Información técnica </h1>

@@ -18,6 +18,17 @@
 	<h2>Ubicación y detalles de registro</h2>
 	
 	<div class="row">
+		<?php echo $form->labelEx($model,'codigo'); ?>
+		<?php echo $form->textField($model,'codigo', array('size'=>12,'maxlength'=>12, 'style'=>'width:50%',
+		'pattern'=> '0[0-9]{2}-[A-Za-z][0-9]{2}([A-Fa-f|0-9]){4}'
+		)); ?>
+		<?php 
+			echo CHtml::button('Generar nuevo código', array('onclick'=>'document.getElementById("TelefoniaCelular_codigo").value = \''.$model->generarCodigo().'\';',));
+		?>
+		<?php echo $form->error($model,'codigo'); ?>
+	</div>
+	
+	<div class="row">
 		<?php echo $form->labelEx($model,'usuarioCelular'); ?>
 		<?php echo $form->textField($model,'usuarioCelular',array('size'=>30,'maxlength'=>30)); ?>
 		<?php echo $form->error($model,'usuarioCelular'); ?>

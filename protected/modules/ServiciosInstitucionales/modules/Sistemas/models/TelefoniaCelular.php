@@ -79,9 +79,10 @@ class TelefoniaCelular extends CActiveRecord
 			array('sms', 'length', 'max'=>4),
 			array('moduloAdicional', 'length', 'max'=>200),
 			array('company', 'length', 'max'=>5),
+			array('codigo', 'length', 'max'=>12),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('keyCTC, precioEquipo, cantidadAutorizada, costoRenta, fechaContratacion, plazoForzoso, keySW, modelo, chip, imei, keyMA, usuarioCelular, descripcionUbicacion, almacen, codigoEntidad, usuario, fecha, hora, entidad, ruta, nTelefonico, registro, solicitud, fechaInicial, fechaFinal, minutos, red, sms, internet, roaming, plan, moduloAdicional, company', 'safe', 'on'=>'search'),
+			array('keyCTC, precioEquipo, cantidadAutorizada, costoRenta, fechaContratacion, plazoForzoso, keySW, modelo, chip, imei, keyMA, usuarioCelular, descripcionUbicacion, almacen, codigoEntidad, usuario, fecha, hora, entidad, ruta, nTelefonico, registro, solicitud, fechaInicial, fechaFinal, minutos, red, sms, internet, roaming, plan, moduloAdicional, company, codigo', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -135,6 +136,7 @@ class TelefoniaCelular extends CActiveRecord
 			'plan' => 'Plan',
 			'moduloAdicional' => 'Modulo Adicional',
 			'company' => 'Compañía',
+			'codigo' => 'Código',
 		);
 	}
 
@@ -182,9 +184,31 @@ class TelefoniaCelular extends CActiveRecord
 		$criteria->compare('plan',$this->plan,true);
 		$criteria->compare('moduloAdicional',$this->moduloAdicional,true);
 		$criteria->compare('company',$this->company,true);
+		$criteria->compare('codigo',$this->codigo,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
+	
+	public function searchLabels()
+	{
+		
+		$myCActiveDataProvider= $this->search();
+		$myCActiveDataProvider->pagination=array('pageSize'=>21);
+		return $myCActiveDataProvider;
+	}
+	
+	public function generarCodigo()
+	{
+		/*$allTelefoniaCelular= TelefoniaCelular::model()->findAll();
+		$count = count($allTelefoniaCelular);
+		*/
+		$criteria = new CDbCriteria();
+		$count = TelefoniaCelular::model()->count($criteria);
+
+		$code="0".$this->entidad."-t".str_pad($this->keyCTC, 2, "0", STR_PAD_LEFT).str_pad(dechex($count), 4, "0", STR_PAD_LEFT);
+		return $code;
+	}
+	
 }

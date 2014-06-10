@@ -22,6 +22,7 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'keyIE',
+		'codigo',
 		'registro',
 		'departamento',
 		'keyTE',
@@ -43,5 +44,6 @@ $this->menu=array(
 		'descripcionAlmacen',
 		'tipoProcesador',
 		'velocidadProcesador',
+		'keyP',
 	),
 )); ?>
