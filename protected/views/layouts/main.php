@@ -5,8 +5,8 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="language" content="en" />
 
-    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/styles.css" />
-
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/styles.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/localfixes.css" />
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 
 	<?php Yii::app()->bootstrap->register(); ?>
@@ -20,6 +20,7 @@
 <?php $this->widget('bootstrap.widgets.TbNavbar',array(
 	'type'=>'inverse',
 	'brand' => 'SIMA V3',
+	'brandUrl' =>Yii::app()->createUrl('site/index'),
 	'items'=>array(
 		array(
 			'class'=>'bootstrap.widgets.TbMenu',
@@ -63,31 +64,32 @@
                     array('label'=>'Mis permisos', 'url'=>'#'),
                     array('label'=>'Mi cuenta', 'url'=>'#'),
                     '---',
-                    array('label'=>'Salir', 'url'=>array('/site/logout')),
+                    array('label'=>'Salir', 'url'=>array('cruge/ui/logout')),
                 )),
-            	array('label'=>'Acceder', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+            	array('label'=>'Acceder', 'url'=>array('cruge/ui/login'), 'visible'=>Yii::app()->user->isGuest),
             ),
         ),
 	),
 )); ?>
 
-
-	<div class="navbar-header" id="header">
-		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
-	</div><!-- header -->
+	<div class="wrapper">
+		<div class="navbar-header" id="header">
+			<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
+		</div><!-- header -->
 	
 		
-	<?php if(isset($this->breadcrumbs)):?>
-		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
-			'links'=>$this->breadcrumbs,
-		)); ?><!-- breadcrumbs -->
-	<?php endif?>
+		<?php if(isset($this->breadcrumbs)):?>
+			<?php $this->widget('zii.widgets.CBreadcrumbs', array(
+				'links'=>$this->breadcrumbs,
+			)); ?><!-- breadcrumbs -->
+		<?php endif?>
 
-	<?php echo $content; ?>
+		<?php echo $content; ?>
 
-	<div class="clear"></div>
-
-	<div id="footer">
+		<div class="push"></div>
+	</div>
+	
+	<div id="footer" class="footer">
 		Copyright &copy; <?php echo date('Y'); ?> by hospital La Carlota. All Rights Reserved.<br/>
 		<?php echo Yii::powered(); ?>
 	</div><!-- footer -->

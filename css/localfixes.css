@@ -1,0 +1,29 @@
+/*
+.bs-docs-footer-links li {
+	display: inline;
+	padding: 0 5%;
+}
+
+div.form .rememberMe label
+{
+	display: inline;
+}
+
+div.form input[type='text'], input[type='password']
+{
+	width: 96%;
+}
+
+*/
+#footer {
+	font-size: 0.75em;
+   text-align: center;
+}
+
+#imgLogoLogin{
+	background:url("caduceus.jpg") no-repeat;
+	background-size:100%;
+	height: 170px;
+	float: left;
+	width: 130px;
+}

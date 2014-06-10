@@ -13,7 +13,7 @@ Filipenses 2:14-16.
 <br>
 
 
-    <a href="index.php?r=site/login" class="btn btn-primary btn-primary">
+    <a href="index.php?r=cruge/ui/login" class="btn btn-primary btn-primary">
       Accesar al sistema
     </a>
 <!-- Button to trigger modal 
