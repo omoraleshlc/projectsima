@@ -76,32 +76,6 @@
 		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
 	</div><!-- header -->
 	
-	<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation" style="height: 100%">
-        <?php $this->widget('bootstrap.widgets.TbMenu',array(
-			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Contact', 'url'=>array('/site/contact')),
-				array('label'=>'Login', 'url'=>array('cruge/ui/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('cruge/ui/logout'), 'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Usuarios', 'url'=>array('/usuarios/admin')),
-				array('label'=>'Administrar Usuarios'
-					, 'url'=>Yii::app()->user->ui->userManagementAdminUrl
-					, 'visible'=>!Yii::app()->user->isGuest),
-				/*array('label'=>'Administrar Usuarios'
-					, 'url'=>Yii::app()->user->ui->userManagementAdminUrl),*/
-				array('label'=>'cat equipo', 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/CatalogoEquipos')),
-				array('label'=>'cat tel', 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/CatalogoTelefonia')),
-				array('label'=>'equipo computo', 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/equipoComputo/admin')),
-				
-			),'htmlOptions'=>array('class'=>'nav navbar-nav'), 
-		)); ?>
-      <!--ul class="nav navbar-nav navbar-right">
-        <li><a href="http://expo.getbootstrap.com" onclick="_gaq.push(['_trackEvent', 'Navbar', 'Community links', 'Expo']);">Expo</a></li>
-        <li><a href="http://blog.getbootstrap.com" onclick="_gaq.push(['_trackEvent', 'Navbar', 'Community links', 'Blog']);">Blog</a></li>
-      </ul-->
-    </nav>
-
 		
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
