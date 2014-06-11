@@ -5,8 +5,9 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="language" content="en" />
 
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/styles.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/localfixes.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" />
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 
 	<?php Yii::app()->bootstrap->register(); ?>
@@ -15,65 +16,66 @@
 <?php echo Yii::app()->bootstrap->init();?>
 <body>
 
-<div class="container" id="page">
+<div class="wrapper" id="page">
 
-<?php $this->widget('bootstrap.widgets.TbNavbar',array(
-	'type'=>'inverse',
-	'brand' => 'SIMA V3',
-	'brandUrl' =>Yii::app()->createUrl('site/index'),
-	'items'=>array(
-		array(
-			'class'=>'bootstrap.widgets.TbMenu',
-			'items'=>array(
+	<?php $this->widget('bootstrap.widgets.TbNavbar',array(
+		'type'=>'inverse',
+		'fixed'=>'false',
+		'brand' => 'SIMA V3',
+		'brandUrl' =>Yii::app()->createUrl('site/index'),
+		'items'=>array(
+			array(
+				'class'=>'bootstrap.widgets.TbMenu',
+				'items'=>array(
 				
 				
-				array('label'=>'Sistemas itemtemp', 'url'=>'#',
-                	'visible'=>!Yii::app()->user->isGuest,
-                	'items'=>array(
-				         array('label'=>'Catálogo de equipos',
-								'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/CatalogoEquipos')),
-                    array('label'=>'Catálogo de telefonía',
-                    'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/CatalogoTelefonia')),
-                    array('label'=>'Inventario de Equipo',
-                    'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/equipoComputo/admin')),
-                    array('label'=>'Inventario de Telefonía',
-                    'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/telefoniaCelular/admin')),
-                    array('label'=>'Impresión de etiquetas',
-                    'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/printLabels')),
-                )),//end dropdown
+					array('label'=>'Sistemas itemtemp', 'url'=>'#',
+		             	'visible'=>!Yii::app()->user->isGuest,
+		             	'items'=>array(
+						      array('label'=>'Catálogo de equipos',
+									'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/CatalogoEquipos')),
+		                 array('label'=>'Catálogo de telefonía',
+		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/CatalogoTelefonia')),
+		                 array('label'=>'Inventario de Equipo',
+		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/equipoComputo/admin')),
+		                 array('label'=>'Inventario de Telefonía',
+		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/telefoniaCelular/admin')),
+		                 array('label'=>'Impresión de etiquetas',
+		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/printLabels')),
+		             )),//end dropdown
 				
 				
-				array('label'=>'Configuracion', 'url'=>'#',
-                	'visible'=>!Yii::app()->user->isGuest,
-                	'items'=>array(
-				         array('label'=>'Usuarios'
-								, 'url'=>Yii::app()->user->ui->userManagementAdminUrl),
-                    array('label'=>'Sistema', 'url'=>'#'),
-                )),//end dropdown
+					array('label'=>'Configuracion', 'url'=>'#',
+		             	'visible'=>!Yii::app()->user->isGuest,
+		             	'items'=>array(
+						      array('label'=>'Usuarios'
+									, 'url'=>Yii::app()->user->ui->userManagementAdminUrl),
+		                 array('label'=>'Sistema', 'url'=>'#'),
+		             )),//end dropdown
 				
 				
+				),
 			),
+			array(
+		         'class'=>'bootstrap.widgets.TbMenu',
+		         'htmlOptions'=>array('class'=>'pull-right'),
+		         'items'=>array(
+		             array('label'=>'Usuario: '.Yii::app()->user->name, 'url'=>'#',
+		             	'visible'=>!Yii::app()->user->isGuest,
+		             	'items'=>array(
+		                 array('label'=>'Mis permisos', 'url'=>'#'),
+		                 array('label'=>'Mi cuenta', 'url'=>'#'),
+		                 '---',
+		                 array('label'=>'Salir', 'url'=>array('cruge/ui/logout')),
+		             )),
+		         	array('label'=>'Acceder', 'url'=>array('cruge/ui/login'), 'visible'=>Yii::app()->user->isGuest),
+		         ),
+		     ),
 		),
-		array(
-            'class'=>'bootstrap.widgets.TbMenu',
-            'htmlOptions'=>array('class'=>'pull-right'),
-            'items'=>array(
-                array('label'=>'Usuario: '.Yii::app()->user->name, 'url'=>'#',
-                	'visible'=>!Yii::app()->user->isGuest,
-                	'items'=>array(
-                    array('label'=>'Mis permisos', 'url'=>'#'),
-                    array('label'=>'Mi cuenta', 'url'=>'#'),
-                    '---',
-                    array('label'=>'Salir', 'url'=>array('cruge/ui/logout')),
-                )),
-            	array('label'=>'Acceder', 'url'=>array('cruge/ui/login'), 'visible'=>Yii::app()->user->isGuest),
-            ),
-        ),
-	),
-)); ?>
+	)); ?>
 
-	<div class="wrapper">
-		<div class="navbar-header" id="header">
+	<div class="container">
+		<!--div class="navbar-header" id="header">
 			<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
 		</div><!-- header -->
 	
@@ -86,7 +88,6 @@
 
 		<?php echo $content; ?>
 
-		<div class="push"></div>
 	</div>
 	
 	<div id="footer" class="footer">

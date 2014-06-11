@@ -231,6 +231,13 @@ return array(
 					/
     			),*/
 	),
+	
+	'controllerMap' => array(
+        // ...
+        'barcodegenerator' => array(
+            'class' => 'ext.barcodegenerator.BarcodeGeneratorController',
+        ),
+    ),
 
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']

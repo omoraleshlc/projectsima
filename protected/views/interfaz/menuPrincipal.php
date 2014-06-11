@@ -424,11 +424,11 @@ $watermark_options  = array(
 
 
 
-<div class="barra_separadora">
+<!--div class="barra_separadora">
      
      <span >Administrativo</span>
      
-</div>
+</div-->
 
 
 <br>

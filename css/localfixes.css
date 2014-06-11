@@ -27,3 +27,34 @@ div.form input[type='text'], input[type='password']
 	float: left;
 	width: 130px;
 }
+
+
+.tetris-thumbnail{
+	width: 33%;
+	float:left;
+	height: 170px;
+	/*padding: 2px;*/
+}
+
+.list-view{
+	float: none;
+}
+
+.tetris-thumbnail > div {
+	text-align: center;
+	padding: 5px;
+}
+	
+.pager {
+	clear: both;
+}
+
+.columna {
+	width: 40%;
+	float:left;
+	margin: 10px;
+}
+
+#divequipo, #divtelefonia{
+	clear:both;
+}

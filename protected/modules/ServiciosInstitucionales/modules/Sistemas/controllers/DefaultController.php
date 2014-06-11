@@ -25,7 +25,6 @@ class DefaultController extends Controller
 	
 	public function actionPrintLabels()
 	{
-		Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/protected/views/layouts/styles/print.css');
 		$model=new EquipoComputo('searchLabels');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['EquipoComputo']))
