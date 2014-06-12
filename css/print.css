@@ -10,7 +10,8 @@
    * This is a compressed file. See the sources in the 'src' directory.
 
 ----------------------------------------------------------------------- */
-
+@media print
+	{
 /* print.css */
 body {line-height:1.5;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;color:#000;background:none;font-size:10pt;}
 .container {background:none;}
@@ -27,3 +28,23 @@ blockquote {margin:1.5em;padding:1em;font-style:italic;font-size:.9em;}
 .hide {display:none;}
 a:link, a:visited {background:transparent;font-weight:700;text-decoration:underline;}
 a:link:after, a:visited:after {content:" (" attr(href) ")";font-size:90%;}
+
+
+		.navbar-header, .navbar-collapse, .breadcrumbs, h1, .search-button, .search-buttont, .search-form, .summary, .pager, #footer, .footer, input[type=checkbox], .chklabel, .navbar{
+			display: none;
+		}
+  		a{
+  			text-decoration: none
+  		}
+  		a[href]:after {
+		 content: none !important;
+	  }
+  
+  		.tetris-thumbnail{
+			width: 30%;
+			float:left;
+			margin: 5px;
+		}
+		
+  
+	}

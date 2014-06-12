@@ -19,6 +19,7 @@
 		'placement' => 'left',
 			)
 		),*/
+		'codigo',
 		'departamento',
 		'descripcionUbicacion',
 		array(
@@ -40,6 +41,17 @@
 				'type' => 'select',
 				'url' => $this->createUrl('EquipoComputo/updateEditable', array('model'=>'EquipoComputo', 'field'=>'keyMA')),
 				'source'    => $this->createUrl('EquipoComputo/getMarcaList'),
+				'placement' => 'left',
+			)
+		),
+		array(
+			'class' => 'editable.EditableColumn',
+			'header' => 'Proveedor',
+			'name' => 'keyP',
+			'editable' => array(
+				'type' => 'select',
+				'url' => $this->createUrl('EquipoComputo/updateEditable', array('model'=>'EquipoComputo', 'field'=>'keyP')),
+				'source'    => $this->createUrl('EquipoComputo/getProveedorSistemasList'),
 				'placement' => 'left',
 			)
 		),

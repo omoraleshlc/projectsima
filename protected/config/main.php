@@ -9,6 +9,7 @@ Yii::setPathOfAlias('bootstrap', dirname(__FILE__).'/../extensions/bootstrap');
 Yii::setPathOfAlias('editable', dirname(__FILE__).'/../extensions/x-editable');
 
 return array(
+	'theme'=>'bootstrap',
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'SISTEMA INTEGRAL MEDICO ADVENTISTA',
 
@@ -26,10 +27,17 @@ return array(
 		'editable.*',	
 		
 		/*MODULOS PROPIOS inicia*/
+		'application.modules.Compras.*',
+		'application.modules.Compras.models.*',
+		'application.modules.Configuracion.*',
+		'application.modules.Configuracion.models.*',
+		'application.modules.Configuracion.modules.Configuracion.*',
+		'application.modules.Configuracion.modules.Configuracion.models.*',
 		'application.modules.ServiciosInstitucionales.*',
 		'application.modules.ServiciosInstitucionales.models.*',
 		'application.modules.ServiciosInstitucionales.modules.Sistemas.*',
 		'application.modules.ServiciosInstitucionales.modules.Sistemas.models.*',
+		'application.modules.ServiciosInstitucionales.modules.Sistemas.controllers.*',
 		/*MODULOS PROPIOS termina*/
 	),
 
@@ -42,6 +50,10 @@ return array(
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
+		/**/ 		
+            		
+            		
+            		
 		'cruge'=>array(
 			'tableprefix'=>'cruge_',
 
@@ -58,9 +70,9 @@ return array(
 			'baseUrl'=>'http://coco.com/',
 
 			// NO OLVIDES PONER EN FALSE TRAS INSTALAR
-			'debug'=>true,
+			'debug'=>false,
 			'rbacSetupEnabled'=>false,
-			'allowUserAlways'=>true,
+			'allowUserAlways'=>false,
 
 			// MIENTRAS INSTALAS..PONLO EN: false
 			// lee mas abajo respecto a 'Encriptando las claves'
@@ -110,11 +122,14 @@ return array(
 		),
 		
 		/*MODULOS PROPIOS inicia*/
+		'Compras',
+		'Configuracion',
+		'Configuracion.Configuracion',
 		'ServiciosInstitucionales',
 		'ServiciosInstitucionales.Sistemas',
 		/*MODULOS PROPIOS termina*/
 		
-	),
+	),//end modules
 
 	// application components
 	'components'=>array(
@@ -160,22 +175,15 @@ return array(
             )
         ),
         
-        'bootstrap'=>array(
-   		//'class'=>'application.extensions.bootstrap.components.Bootstrap',
-			'class'=>'bootstrap.components.Bootstrap',
- 		),
-                /*
-		'db'=>array(
-			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
-		),*/
-		// uncomment the following to use a MySQL database
+                
+		
 		
 
-    /*'authManager'=>array(
-                'class'=>'CDbAuthManager',
-                'defaultRoles'=>array('authenticated', 'guest'),
-            ),
-*/
+
+
+
+
+
 
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=sima',
@@ -200,11 +208,36 @@ return array(
 				/*
 				array(
 					'class'=>'CWebLogRoute',
+				 	'levels'=>'trace',
+			    		'categories'=>'vardump',
+				    	'showInFireBug'=>true
 				),
 				*/
 			),
 		),
+		'bootstrap'=>array(
+   		//'class'=>'application.extensions.bootstrap.components.Bootstrap',
+			'class'=>'bootstrap.components.Bootstrap',
+ 		),
+       		
+       		
+       		/*'authManager'=>array(
+	     			'class'=>'CDbAuthManager',
+	     			'connectionID'=>'db',
+	     			/* comentadas pk tienen los nombres por default
+	     			'itemTable'=>'AuthItem', // Tabla que contiene los elementos de autorizacion
+					'itemChildTable'=>'AuthItemChild', // Tabla que contiene los elementos padre-hijo
+					'assignmentTable'=>'	', // Tabla que contiene la signacion usuario-autorizacion
+					/
+    			),*/
 	),
+	
+	'controllerMap' => array(
+        // ...
+        'barcodegenerator' => array(
+            'class' => 'ext.barcodegenerator.BarcodeGeneratorController',
+        ),
+    ),
 
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
@@ -214,4 +247,6 @@ return array(
 	),
     'sourceLanguage'=>'es',
     'language'=>'es',
+    
+    
 );

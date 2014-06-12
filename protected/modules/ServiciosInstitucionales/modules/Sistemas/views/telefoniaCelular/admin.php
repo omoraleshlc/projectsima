@@ -6,6 +6,7 @@
 	'filter'=>$model,
 	'columns'=>array(
 		'keyCTC',
+		'codigo',
 		'fechaInicial',
 		'fechaFinal',
 		'descripcionUbicacion',

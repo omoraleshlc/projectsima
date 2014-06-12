@@ -6,7 +6,7 @@ class TelefoniaCelularController extends Controller
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/column2';
+	public $layout='//layouts/column1';
 
 	/**
 	 * @return array action filters
@@ -157,14 +157,6 @@ class TelefoniaCelularController extends Controller
 		$es->update();
 	}
 	
-	protected function actionGenerateCode($model)
-	{
-		$allTelefoniaCelular= TelefoniaCelular::model()->findAll();
-		$count = count($allTelefoniaCelular);
-
-		$code="0".$model->entidad."-t01".$count;
-		return $code;
-	}
 	
 	public function actionGetMarcaCelularList()
 	{

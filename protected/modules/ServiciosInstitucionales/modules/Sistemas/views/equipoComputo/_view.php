@@ -4,9 +4,12 @@
 ?>
 
 <div class="view">
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('keyIE')); ?>:</b>
 	<?php echo CHtml::link(CHtml::encode($data->keyIE), array('view', 'id'=>$data->keyIE)); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('codigo')); ?>:</b>
+	<?php echo CHtml::link(CHtml::encode($data->codigo), array('view', 'id'=>$data->keyIE)); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('registro')); ?>:</b>

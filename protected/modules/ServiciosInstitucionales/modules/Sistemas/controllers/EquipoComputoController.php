@@ -6,7 +6,7 @@ class EquipoComputoController extends Controller
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/column2';
+	public $layout='//layouts/column1';
 
 	/**
 	 * @return array action filters
@@ -38,15 +38,16 @@ class EquipoComputoController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		$model2 = new CatEntidad;
-		$model->descripcionEntidad=$model2->findByPk($model->entidad)->descripcionEntidad;
-		$model->usuario=Yii::app()->user->name;
-		$model->fecha=date('Y-m-d', time());
-		$model->hora=date('h:i a', time());
 		
 		if(isset($_POST['EquipoComputo']))
 		{
 			$model->attributes=$_POST['EquipoComputo'];
+			$model2 = new CatEntidad;
+			$model3 =$model2->findByPk($model->entidad);
+			$model->descripcionEntidad=$model3->descripcionEntidad;
+			$model->usuario=Yii::app()->user->name;
+			$model->fecha=date('Y-m-d', time());
+			$model->hora=date('h:i a', time());
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->keyIE));
 		}
@@ -56,33 +57,6 @@ class EquipoComputoController extends Controller
 		));
 	}
 
-	public function actionCreateForm()
-	{
-		$model=new EquipoComputo;
-		$form = new CForm('application.modules.ServiciosInstitucionales.modules.Sistemas.views.equipoComputo.crudForm', $model);
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-		
-		
-		$model2 = new CatEntidad;
-		$model->descripcionEntidad=$model2->findByPk($model->entidad)->descripcionEntidad;
-		$model->usuario=Yii::app()->user->name;
-		$model->fecha=date('Y-m-d', time());
-		$model->hora=date('h:i a', time());
-		
-		if(isset($_POST['EquipoComputo']))
-		{
-			$model->attributes=$_POST['EquipoComputo'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->keyIE));
-		}
-
-		/*$this->render('create',array(
-			'model'=>$model,
-		));*/
-		
-		$this->render('createForm', array('model'=>$model,'form'=>$form));
-	}
 
 
 	/**
@@ -107,7 +81,7 @@ class EquipoComputoController extends Controller
 			$model->usuario=Yii::app()->user->name;
 			$model->fecha=date('Y-m-d', time());
 			$model->hora=date('h:i a', time());
-			
+			//$model->codigo="test2";
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->keyIE));
 		}
@@ -117,25 +91,14 @@ class EquipoComputoController extends Controller
 		));
 	}
 	
-	public function actionUpdateForm($id)
-	{
-		$model=$this->loadModel($id);
-		$form = new CForm('application.modules.ServiciosInstitucionales.modules.Sistemas.views.equipoComputo.crudForm', $model);
-
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['EquipoComputo']))
-		{
-			$model->attributes=$_POST['EquipoComputo'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->keyIE));
-		}
-
-		/*$this->render('update',array(
-			'model'=>$model,
-		));*/
-		$this->render('createForm', array('model'=>$model,'form'=>$form));
+	public function beforeSave(){
+	
+		$model2 = new CatEntidad;
+		$model->descripcionEntidad=$model2->findByPk($model->entidad)->descripcionEntidad;
+		$model->usuario=Yii::app()->user->name;
+		$model->fecha=date('Y-m-d', time());
+		$model->hora=date('h:i a', time());
+		return true;
 	}
 	
 
@@ -230,6 +193,11 @@ class EquipoComputoController extends Controller
 	public function actionGetMarcaMonitorList()
 	{
  		echo CJSON::encode(Editable::source(CatMarcaMonitor::model()->findAll(), 'keyMAM', 'descripcion')); 
+	}
+	
+	public function actionGetProveedorSistemasList()
+	{
+ 		echo CJSON::encode(Editable::source(Proveedor::model()->findAll(), 'keyP', 'razonSocial')); 
 	}
 	
 }

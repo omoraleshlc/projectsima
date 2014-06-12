@@ -1,209 +1,102 @@
 <?php /* @var $this Controller */ ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="language" content="en" />
 
-	<!-- blueprint CSS framework -->
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css" media="print" />
-	<!--[if lt IE 8]>
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection" />
-	<![endif]-->
-
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/localfixes.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
-        
-
-
-    <link href="./css/bootstrap.css" rel="stylesheet">
-    <link href="./css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="./css/docs.css" rel="stylesheet">
-    <link href="./css/prettify.css" rel="stylesheet">
-
-<!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-
-    <script src="./assets/js/jquery.js"></script>
-    <script src="./assets/js/bootstrap-transition.js"></script>
-    <script src="./assets/js/bootstrap-alert.js"></script>
-    <script src="./assets/js/bootstrap-modal.js"></script>
-    <script src="./assets/js/bootstrap-dropdown.js"></script>
-    <script src="./assets/js/bootstrap-scrollspy.js"></script>
-    <script src="./assets/js/bootstrap-tab.js"></script>
-    <script src="./assets/js/bootstrap-tooltip.js"></script>
-    <script src="./assets/js/bootstrap-popover.js"></script>
-    <script src="./assets/js/bootstrap-button.js"></script>
-    <script src="./assets/js/bootstrap-collapse.js"></script>
-    <script src="./assets/js/bootstrap-carousel.js"></script>
-    <script src="./assets/js/bootstrap-typeahead.js"></script>
-    <script src="./assets/js/bootstrap-affix.js"></script>
-
-    <script src="./assets/js/holder/holder.js"></script>
-    <script src="./assets/js/google-code-prettify/prettify.js"></script>
-    <link href="./css/login-box.css" rel="stylesheet" type="text/css" />
-    <script src="./assets/js/application.js"></script>
-    <link rel="stylesheet" type="text/css" href="./css/styles3.css"></link>
-    
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
-        <link href="../images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-<link href="./css/armazon.css" media="screen" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="./assets/m4a.js"></script>   
-<link href="./css/bootstrap-editable.css" media="screen" rel="stylesheet" type="text/css"></link>
 
-<!-- Le fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png">
-                    <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png">
-                                   <link rel="shortcut icon" href="./assets/ico/favicon.png">
-  
-      <!-- Le styles -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="assets/css/docs.css" rel="stylesheet"></link>
-    
+	<?php Yii::app()->bootstrap->register(); ?>
 </head>
 
+<?php echo Yii::app()->bootstrap->init();?>
 <body>
 
-<div class="container" id="page">
+<div class="wrapper" id="page">
 
-
-
-
-
-  
-  
-
-    <!-- Navbar
-    ================================================== -->
-    <div class="navbar navbar-inverse navbar-fixed-top" >
-      <div class="navbar-inner" >
-        <div class="container" >
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="./index.html" >
-          <img height="20" src="./images/healthcare.jpeg" width="20"></img>
-          SIMA  
-          </a>
-            
-            
-            
-            
-            
-            <?php if(Yii::app()->user->name!='Guest'){?>
-            <div  class="nav-collapse collapse" >
-            <ul class="nav pull-right">
-                <li id="fat-menu" class="dropdown">
-             <a href="index.php?r=site/logout" id="drop3"><img height="20" src="./images/salir.jpeg" width="20"></a>
-                </li>
-            </ul>
-            </div>    
-             
-             <div  class="nav-collapse collapse" >
-            <ul class="nav pull-right">
-               
-                    
-                
-                <li id="fat-menu" class="dropdown">
-                       
-                        
-                      <a href="#" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown">Usuario: <?php echo Yii::app()->user->name;?><b class="caret"></b></a>
-                      <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Mis Permisos</a></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Mi Cuenta</a></li>
-                    
-                        <li role="presentation" class="divider"></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Salir</a></li>
-                      </ul>
-                    </li>
-                    
-                    
-                  </ul>
-              
-               
-               </ul>
-                   
-                  
-                  
-              
-          </div>
-            <?php }?>
-            
-          
-            
-          
-        </div>
-      </div>
-        
-        
-    </div> 
-    
-    
-    
-    
-    
-    
-    
-    
-          
-    <br>
-            
-                
-                  
-    
-    
-    
-    
-    
-
-
-
-
-
-
-        
-        
-        <!--
-	<div id="mainmenu">
-		<?php $this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
+	<?php $this->widget('bootstrap.widgets.TbNavbar',array(
+		'type'=>'inverse',
+		'fixed'=>'false',
+		'brand' => 'SIMA V3',
+		'brandUrl' =>Yii::app()->createUrl('site/index'),
+		'items'=>array(
+			array(
+				'class'=>'bootstrap.widgets.TbMenu',
+				'items'=>array(
 				
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+				
+					array('label'=>'Sistemas itemtemp', 'url'=>'#',
+		             	'visible'=>!Yii::app()->user->isGuest,
+		             	'items'=>array(
+						      array('label'=>'Catálogo de equipos',
+									'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/CatalogoEquipos')),
+		                 array('label'=>'Catálogo de telefonía',
+		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/CatalogoTelefonia')),
+		                 array('label'=>'Inventario de Equipo',
+		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/equipoComputo/admin')),
+		                 array('label'=>'Inventario de Telefonía',
+		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/telefoniaCelular/admin')),
+		                 array('label'=>'Impresión de etiquetas',
+		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/printLabels')),
+		             )),//end dropdown
+				
+				
+					array('label'=>'Configuracion', 'url'=>'#',
+		             	'visible'=>!Yii::app()->user->isGuest,
+		             	'items'=>array(
+						      array('label'=>'Usuarios'
+									, 'url'=>Yii::app()->user->ui->userManagementAdminUrl),
+		                 array('label'=>'Sistema', 'url'=>'#'),
+		             )),//end dropdown
+				
+				
+				),
 			),
-		)); ?>
+			array(
+		         'class'=>'bootstrap.widgets.TbMenu',
+		         'htmlOptions'=>array('class'=>'pull-right'),
+		         'items'=>array(
+		             array('label'=>'Usuario: '.Yii::app()->user->name, 'url'=>'#',
+		             	'visible'=>!Yii::app()->user->isGuest,
+		             	'items'=>array(
+		                 array('label'=>'Mis permisos', 'url'=>'#'),
+		                 array('label'=>'Mi cuenta', 'url'=>'#'),
+		                 '---',
+		                 array('label'=>'Salir', 'url'=>array('cruge/ui/logout')),
+		             )),
+		         	array('label'=>'Acceder', 'url'=>array('cruge/ui/login'), 'visible'=>Yii::app()->user->isGuest),
+		         ),
+		     ),
+		),
+	)); ?>
+
+	<div class="container">
+		<!--div class="navbar-header" id="header">
+			<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
+		</div><!-- header -->
+	
+		
+		<?php if(isset($this->breadcrumbs)):?>
+			<?php $this->widget('zii.widgets.CBreadcrumbs', array(
+				'links'=>$this->breadcrumbs,
+			)); ?><!-- breadcrumbs -->
+		<?php endif?>
+
+		<?php echo $content; ?>
+
 	</div>
-        --!>
-        
-        
-        
-        
-        
-        
-	<?php if(isset($this->breadcrumbs)):?>
-		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
-			'links'=>$this->breadcrumbs,
-		)); ?><!-- breadcrumbs -->
-	<?php endif?>
-
-	<?php echo $content; ?>
-
-	<div class="clear"></div>
-
-	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> Hospital La Carlota.<br/>
-		All Rights Reserved.<br/>
+	
+	<div id="footer" class="footer">
+		Copyright &copy; <?php echo date('Y'); ?> by hospital La Carlota. All Rights Reserved.<br/>
 		<?php echo Yii::powered(); ?>
 	</div><!-- footer -->
 
 </div><!-- page -->
-
+<?php echo Yii::app()->user->ui->displayErrorConsole(); ?>
 </body>
 </html>

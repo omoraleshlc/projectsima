@@ -365,8 +365,8 @@ $siteFinanciero=$ipF;
         'width'=>100, 
         'maxlength'=>100)); */
     $divid=1;
-$entidad=Usuarios::model()->findByAttributes(array('usuario'=>Yii::app()->user->name));
-$entidad=$entidad->entidad;
+//$entidad=Usuarios::model()->findByAttributes(array('usuario'=>Yii::app()->user->name));
+//$entidad=$entidad->entidad;
 ?>
     
     
@@ -424,11 +424,11 @@ $watermark_options  = array(
 
 
 
-<div class="barra_separadora">
+<!--div class="barra_separadora">
      
      <span >Administrativo</span>
      
-</div>
+</div-->
 
 
 <br>

@@ -26,6 +26,8 @@
  * @property string $descripcionAlmacen
  * @property integer $tipoProcesador
  * @property string $velocidadProcesador
+ * @property string $codigo
+ * @property string $keyP
  */
 class EquipoComputo extends CActiveRecord
 {
@@ -56,7 +58,7 @@ class EquipoComputo extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('registro, departamento, keyTE, keyMA, motherboard, drives, harddisk, memoriaRam, keyMAM, descripcionUbicacion, monitor, usuario, fecha, hora, entidad, status, solicitud, descripcionEntidad, descripcionAlmacen, tipoProcesador, velocidadProcesador', 'required'),
-			array('keyTE, keyMA, harddisk, memoriaRam, keyMAM, tipoProcesador', 'numerical', 'integerOnly'=>true),
+			array('keyTE, keyMA, harddisk, memoriaRam, keyMAM, tipoProcesador, keyP', 'numerical', 'integerOnly'=>true),
 			array('registro, solicitud, velocidadProcesador', 'length', 'max'=>20),
 			array('departamento', 'length', 'max'=>50),
 			array('motherboard, descripcionUbicacion, descripcionEntidad, descripcionAlmacen', 'length', 'max'=>200),
@@ -65,9 +67,10 @@ class EquipoComputo extends CActiveRecord
 			array('fecha, hora', 'length', 'max'=>10),
 			array('entidad', 'length', 'max'=>2),
 			array('status', 'length', 'max'=>1),
+			array('codigo', 'length', 'max'=>12),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('keyIE, registro, departamento, keyTE, keyMA, motherboard, drives, harddisk, memoriaRam, keyMAM, descripcionUbicacion, monitor, usuario, fecha, hora, entidad, status, solicitud, descripcionEntidad, descripcionAlmacen, tipoProcesador, velocidadProcesador', 'safe', 'on'=>'search'),
+			array('keyIE, registro, departamento, keyTE, keyMA, motherboard, drives, harddisk, memoriaRam, keyMAM, descripcionUbicacion, monitor, usuario, fecha, hora, entidad, status, solicitud, descripcionEntidad, descripcionAlmacen, tipoProcesador, velocidadProcesador, codigo, keyP', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -110,6 +113,8 @@ class EquipoComputo extends CActiveRecord
 			'descripcionAlmacen' => 'Descripcion Almacen',
 			'tipoProcesador' => 'Tipo Procesador',
 			'velocidadProcesador' => 'Velocidad Procesador',
+			'codigo' => 'Código',
+			'keyP' => 'Proveedor'
 		);
 	}
 
@@ -124,7 +129,7 @@ class EquipoComputo extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('keyIE',$this->keyIE);
+		//$criteria->compare('keyIE',$this->keyIE);
 		$criteria->compare('registro',$this->registro,true);
 		$criteria->compare('departamento',$this->departamento,true);
 		$criteria->compare('keyTE',$this->keyTE);
@@ -146,9 +151,33 @@ class EquipoComputo extends CActiveRecord
 		$criteria->compare('descripcionAlmacen',$this->descripcionAlmacen,true);
 		$criteria->compare('tipoProcesador',$this->tipoProcesador);
 		$criteria->compare('velocidadProcesador',$this->velocidadProcesador,true);
+		$criteria->compare('codigo',$this->codigo,true);
+		$criteria->compare('keyP',$this->keyP,true);
+		
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
+	
+	public function searchLabels()
+	{
+		
+		$myCActiveDataProvider= $this->search();
+		$myCActiveDataProvider->pagination=array('pageSize'=>21);
+		return $myCActiveDataProvider;
+	}
+	
+	public function generarCodigo()
+	{
+		/*$allTelefoniaCelular= TelefoniaCelular::model()->findAll();
+		$count = count($allTelefoniaCelular);
+		*/
+		$criteria = new CDbCriteria();
+		$count = EquipoComputo::model()->count($criteria);
+
+		$code="0".$this->entidad."-c".str_pad($this->keyTE, 2, "0", STR_PAD_LEFT).str_pad(dechex($count), 4, "0", STR_PAD_LEFT);
+		return $code;
+	}
+	
 }
