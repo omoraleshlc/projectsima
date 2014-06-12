@@ -250,4 +250,29 @@ class OrdenesSoporteController extends Controller
 	{
  		echo CJSON::encode(Editable::source(CatTipoSoporte::model()->findAll(), 'keyTS', 'descripcion')); 
 	}
+	
+	public function actionUpdateAjax()
+	{
+		$outlets = CatAlmacen::model()->findAll(array(
+			'select'=>'*',
+			/*'condition'=>'is_enabled=:is_enabled',
+			'params'=>array(':is_enabled'=>1),*/
+		));
+
+		$arr = array();
+		foreach($outlets as $value) {
+			$arr[$value->entidad]=$value->reporteSurtir;
+		}
+
+
+		$data = array();
+		if (IsSet($_POST['entidad'])) {
+			$data["entidad"] = (IsSet($_POST['entidad'])) ? $_POST['entidad'] : 0;
+			$data["outlet"] = $arr[$_POST['entidad']];
+
+			$this->renderPartial('_ajaxContent', $data, false, true);
+		}
+	}
+	
+	
 }

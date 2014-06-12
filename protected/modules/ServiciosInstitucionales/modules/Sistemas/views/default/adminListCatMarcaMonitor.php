@@ -18,7 +18,10 @@
 		'placement' => 'left',
 			)
 		),		array(
-			'class'=>'CButtonColumn',
+			'class'=>'bootstrap.widgets.TbButtonColumn',
+			'viewButtonUrl' =>'Yii::app()->createUrl("ServiciosInstitucionales/Sistemas/CatMarcaMonitor/view",array("id"=>$data->primaryKey))',
+			'updateButtonUrl' =>'Yii::app()->createUrl("ServiciosInstitucionales/Sistemas/CatMarcaMonitor/update",array("id"=>$data->primaryKey))',
+			'deleteButtonUrl' =>'Yii::app()->createUrl("ServiciosInstitucionales/Sistemas/CatMarcaMonitor/delete",array("id"=>$data->primaryKey))',
 		),
 	),
 )); ?>
