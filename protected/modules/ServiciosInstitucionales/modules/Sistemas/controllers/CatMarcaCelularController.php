@@ -42,7 +42,8 @@ class CatMarcaCelularController extends Controller
 		{
 			$model->attributes=$_POST['CatMarcaCelular'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->keyMA));
+				$this->redirect(array('default/CatalogoTelefonia'));
+				//$this->redirect(array('view','id'=>$model->keyMA));
 		}
 
 		$this->render('create',array(

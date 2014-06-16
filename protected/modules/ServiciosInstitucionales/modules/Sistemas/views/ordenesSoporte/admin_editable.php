@@ -59,7 +59,17 @@
 				'url' => $this->createUrl('OrdenesSoporte/updateEditable', array('model'=>'OrdenesSoporte', 'field'=>'nombre')),
 				'placement' => 'left',
 			)
-		),		/*
+		),	
+		array(
+			'class' => 'editable.EditableColumn',
+			'name' => 'codigo',
+			'editable' => array(
+				'type' => 'text',
+				'url' => $this->createUrl('OrdenesSoporte/updateEditable', array('model'=>'OrdenesSoporte', 'field'=>'codigo')),
+				'placement' => 'left',
+			)
+		),
+			/*
 
 		array(
 			'class' => 'editable.EditableColumn',

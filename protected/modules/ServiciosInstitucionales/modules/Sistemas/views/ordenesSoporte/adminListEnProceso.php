@@ -12,7 +12,6 @@
 			'name' => 'fecha',
 			'htmlOptions' => array('style' => 'width: 9%; text-align: center;'),
 		),
-		'keyTS',
 		array(
 			'class' => 'editable.EditableColumn',
 			'name' => 'keyTS',
@@ -24,7 +23,8 @@
 			)
 		),	
 		'descripcionAlmacen',
-		'nombre',
+		'usuarioEjecutor',
+		'codigo',
 		'observaciones',
 		array(
 			'class' => 'editable.EditableColumn',

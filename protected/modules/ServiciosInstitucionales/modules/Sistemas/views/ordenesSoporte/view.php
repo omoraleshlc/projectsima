@@ -23,6 +23,7 @@ $this->menu=array(
 	'attributes'=>array(
 		'keySOP',
 		'entidadSolicitud',
+		'codigo',
 		'almacen',
 		'keyTS',
 		'registro',

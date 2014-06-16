@@ -21,7 +21,7 @@
 			'class'=>'bootstrap.widgets.TbButtonColumn',
 			'viewButtonUrl' =>'Yii::app()->createUrl("ServiciosInstitucionales/Sistemas/CatTipoProcesador/view",array("id"=>$data->primaryKey))',
 			'updateButtonUrl' =>'Yii::app()->createUrl("ServiciosInstitucionales/Sistemas/CatTipoProcesador/update",array("id"=>$data->primaryKey))',
-			'deleteButtonUrl' =>'Yii::app()->createUrl("ServiciosInstitucionales/Sistemas/CatCompany/delete",array("id"=>$data->primaryKey))',
+			'deleteButtonUrl' =>'Yii::app()->createUrl("ServiciosInstitucionales/Sistemas/CatTipoProcesador/delete",array("id"=>$data->primaryKey))',
 		),
 	),
 )); ?>

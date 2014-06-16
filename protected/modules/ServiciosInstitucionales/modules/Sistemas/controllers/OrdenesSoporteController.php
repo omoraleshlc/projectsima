@@ -53,7 +53,7 @@ class OrdenesSoporteController extends Controller
 			$model->solicitud=0;
 			$model->descripcionSoporte=$model2->findByPk($model->keyTS)->descripcion;
 			$model->descripcionTS=$model2->findByPk($model->keyTS)->descripcion;
-			$model->descripcionAlmacen=$model3->find('almacen="'.$model->almacen.'"')->descripcion;
+			$model->descripcionAlmacen=$model3->find('almacen="'.$_POST['almacen'].'"')->descripcion;
 			$model->usuario=Yii::app()->user->name;
 			$model->fecha=date('Y-m-d', time());
 			$model->hora=date('h:i a', time());
@@ -88,12 +88,12 @@ class OrdenesSoporteController extends Controller
 			$model->observaciones=$model->observaciones."";
 			//Se han puesto varios de estas pk en la base de datos no pueden ser nulos los campos.
 			//No se ha cambiado la base de datos para no romper otras instalaciones
-			$model->entidad=$model->entidadSolicitud;
+			$model->entidad=$_POST['entidadSolicitud'];
 			$model->registro=0;
 			$model->solicitud=0;
 			$model->descripcionSoporte=$model2->findByPk($model->keyTS)->descripcion;
 			$model->descripcionTS=$model2->findByPk($model->keyTS)->descripcion;
-			$model->descripcionAlmacen=$model3->find('almacen="'.$model->almacen.'"')->descripcion;
+			$model->descripcionAlmacen=$model3->find('almacen="'.$_POST['almacen'].'"')->descripcion;
 			$model->usuario=Yii::app()->user->name;
 			$model->fecha=date('Y-m-d', time());
 			$model->hora=date('h:i a', time());
@@ -133,12 +133,12 @@ class OrdenesSoporteController extends Controller
 			$model->observaciones=$model->observaciones."";
 			//Se han puesto varios de estas pk en la base de datos no pueden ser nulos los campos.
 			//No se ha cambiado la base de datos para no romper otras instalaciones
-			$model->entidad=$model->entidadSolicitud;
+			$model->entidad=$_POST['entidadSolicitud'];
 			$model->registro=0;
 			$model->solicitud=0;
 			$model->descripcionSoporte=$model2->findByPk($model->keyTS)->descripcion;
 			$model->descripcionTS=$model2->findByPk($model->keyTS)->descripcion;
-			$model->descripcionAlmacen=$model3->find('almacen="'.$model->almacen.'"')->descripcion;
+			$model->descripcionAlmacen=$model3->find('almacen="'.$_POST['almacen'].'"')->descripcion;
 			
 			
 			
@@ -180,7 +180,14 @@ class OrdenesSoporteController extends Controller
 	 * Manages all models.
 	 */
 	public function actionAdmin()
-	{
+	{	
+		Yii::log('stuff done', 'Trace', '');
+		Yii::trace('example trace message', 'example');
+		Yii::log('info', CLogger::LEVEL_INFO, 'example');
+		Yii::log('error', CLogger::LEVEL_ERROR, 'example');
+		Yii::log('trace', CLogger::LEVEL_TRACE, 'example');
+		Yii::log('warning', CLogger::LEVEL_WARNING, 'example');
+		
 		$model=new OrdenesSoporte('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['OrdenesSoporte']))
@@ -251,28 +258,26 @@ class OrdenesSoporteController extends Controller
  		echo CJSON::encode(Editable::source(CatTipoSoporte::model()->findAll(), 'keyTS', 'descripcion')); 
 	}
 	
-	public function actionUpdateAjax()
+	
+	/*
+	*Actualiza el dropdown de almacenes con los que pernecen a la entidad seleccionada
+	*
+	*/
+	public function actionAlmacenesPorEntidad()
 	{
-		$outlets = CatAlmacen::model()->findAll(array(
-			'select'=>'*',
-			/*'condition'=>'is_enabled=:is_enabled',
-			'params'=>array(':is_enabled'=>1),*/
-		));
 
-		$arr = array();
-		foreach($outlets as $value) {
-			$arr[$value->entidad]=$value->reporteSurtir;
-		}
+		$catAlmacenvar = new CatAlmacen();
+		$data=$catAlmacenvar::model()->findAll('entidad=:entidad Order by descripcion', 
+			array(':entidad'=>$_POST['entidadSolicitud'])
+		);
 
+		$data=CHtml::listData($data,'almacen','descripcion');
 
-		$data = array();
-		if (IsSet($_POST['entidad'])) {
-			$data["entidad"] = (IsSet($_POST['entidad'])) ? $_POST['entidad'] : 0;
-			$data["outlet"] = $arr[$_POST['entidad']];
-
-			$this->renderPartial('_ajaxContent', $data, false, true);
+		foreach($data as $value=>$name)
+		{
+			echo CHtml::tag('option',
+			array('value'=>$value),CHtml::encode($name),true);
 		}
 	}
-	
 	
 }

@@ -72,7 +72,7 @@ return array(
 			// NO OLVIDES PONER EN FALSE TRAS INSTALAR
 			'debug'=>false,
 			'rbacSetupEnabled'=>false,
-			'allowUserAlways'=>false,
+			'allowUserAlways'=>true,
 
 			// MIENTRAS INSTALAS..PONLO EN: false
 			// lee mas abajo respecto a 'Encriptando las claves'
@@ -205,14 +205,14 @@ return array(
 					'levels'=>'error, warning',
 				),
 				// uncomment the following to show log messages on web pages
-				/*
+				
 				array(
 					'class'=>'CWebLogRoute',
 				 	'levels'=>'trace',
 			    		'categories'=>'vardump',
 				    	'showInFireBug'=>true
 				),
-				*/
+				/**/
 			),
 		),
 		'bootstrap'=>array(

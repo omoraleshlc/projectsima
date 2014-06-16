@@ -42,7 +42,8 @@ class CatSistemaOperativoController extends Controller
 		{
 			$model->attributes=$_POST['CatSistemaOperativo'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->keyOS));
+				$this->redirect(array('default/CatalogoEquipos'));
+				//$this->redirect(array('view','id'=>$model->keyOS));
 		}
 
 		$this->render('create',array(

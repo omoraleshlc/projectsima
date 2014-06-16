@@ -42,7 +42,8 @@ class CatCompanyController extends Controller
 		{
 			$model->attributes=$_POST['CatCompany'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->keyTS));
+				$this->redirect(array('default/CatalogoTelefonia'));
+				//$this->redirect(array('view','id'=>$model->keyTS));
 		}
 
 		$this->render('create',array(

@@ -22,20 +22,48 @@
 	</div>
 	
 	<div class="row">
+		<?php echo $form->labelEx($model,'codigo'); ?>
+		<?php echo $form->textField($model,'codigo',array('size'=>12,'maxlength'=>12, 'pattern'=> '0[0-9]{2}-[A-Za-z][0-9]{2}([A-Fa-f|0-9]){4}')); ?>
+		<?php echo $form->error($model,'codigo'); ?>
+	</div>
+	
+	<div class="row">
 		<?php echo $form->labelEx($model,'entidadSolicitud'); ?>
-		<?php 
-		$lista=CHtml::listData(CatEntidad::model()->findAll(), 'codigoEntidad', 'descripcionEntidad');
-		echo CHtml::activeDropDownList($model,'entidadSolicitud', $lista);
-		?> 
+		<?php
+			$lista=CHtml::listData(CatEntidad::model()->findAll(), 'codigoEntidad', 'descripcionEntidad');
+			echo CHtml::dropDownList('entidadSolicitud','', $lista,
+				array(
+				'empty'=>'Seleccionar entidad',
+				'required'=>'true',
+				'ajax' => array(
+					'type'=>'POST', //request type
+					'url'=>CController::createUrl('ordenesSoporte/almacenesPorEntidad'), //url to call.
+					//Style: CController::createUrl('currentController/methodToCall')
+					'update'=>'#almacen', //selector to update
+					//'data'=>'js:javascript statement' 
+					//leave out the data key to pass all form values through
+				))
+			); 
+			 echo '<br/>';
+			//empty since it will be filled by the other dropdown
+		?>
+		
 		<?php echo $form->error($model,'entidadSolicitud'); ?>
 	</div>
 	
 	<div class="row">
 		<?php echo $form->labelEx($model,'almacen'); ?>
 		<?php 
-		$lista=CHtml::listData(CatAlmacen::model()->findAll(), 'almacen', 'descripcion');
-		echo CHtml::activeDropDownList($model,'almacen', $lista);
-		?> 
+		/*$lista=CHtml::listData(CatAlmacen::model()->findAll(), 'almacen', 'descripcion');
+		echo CHtml::activeDropDownList($model,'almacen', $lista);*/
+		echo CHtml::dropDownList('almacen','almacen', array(),
+			array(
+				'required'=>'true',
+				'ajax' => array(
+					'type'=>'POST', //request type
+				))
+		);
+		?>
 		<?php echo $form->error($model,'almacen'); ?>
 	</div>
 	
@@ -76,7 +104,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'status'); ?>
-		<?php echo $form->textField($model,'status',array('size'=>20,'maxlength'=>20)); ?>
+		<?php echo CHtml::dropDownList('status','', array('pending'=>'Pendiente','ontransit'=>'En proceso','done'=>'Terminada')); ?> 
 		<?php echo $form->error($model,'status'); ?>
 	</div>
 

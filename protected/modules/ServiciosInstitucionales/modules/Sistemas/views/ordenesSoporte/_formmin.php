@@ -8,7 +8,7 @@
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'ordenes-soporte-form',
-	'enableAjaxValidation'=>true,
+	'enableAjaxValidation'=>false,
 )); ?>
 
 	<?php $this->widget('bootstrap.widgets.TbAlert', array(
@@ -32,50 +32,31 @@
 	</div>
 	
 	<div class="row">
+		<?php echo $form->labelEx($model,'codigo'); ?>
+		<?php echo $form->textField($model,'codigo',array('size'=>12,'maxlength'=>12, 'pattern'=> '0[0-9]{2}-[A-Za-z][0-9]{2}([A-Fa-f|0-9]){4}')); ?>
+		<?php echo $form->error($model,'codigo'); ?>
+	</div>
+	
+	<div class="row">
 		<?php echo $form->labelEx($model,'entidadSolicitud'); ?>
-		<?php 
-		$lista=CHtml::listData(CatEntidad::model()->findAll(), 'codigoEntidad', 'descripcionEntidad');
-		echo CHtml::activeDropDownList($model,'entidadSolicitud', $lista);
+		<?php
+			$lista=CHtml::listData(CatEntidad::model()->findAll(), 'codigoEntidad', 'descripcionEntidad');
+			echo CHtml::dropDownList('entidadSolicitud','', $lista,
+				array(
+				'empty'=>'Seleccionar entidad',
+				'ajax' => array(
+					'type'=>'POST', //request type
+					'url'=>CController::createUrl('ordenesSoporte/almacenesPorEntidad'), //url to call.
+					//Style: CController::createUrl('currentController/methodToCall')
+					'update'=>'#almacen', //selector to update
+					//'data'=>'js:javascript statement' 
+					//leave out the data key to pass all form values through
+				))
+			); 
+			 echo '<br/>';
+			//empty since it will be filled by the other dropdown
 		?>
 		
-		Category: 
-<?php
-	/*echo CHtml::dropDownList(
-		'entidadSolicitud',
-		isset($_GET['codigoEntidad'])?$_GET['codigoEntidad']:'00',
-		CHtml::listData(CatEntidad::model()->findAll(),'codigoEntidad','descripcionEntidad'),
-		array('empty'=>'All categories', 'submit'=>'')
-	);*/
-
-	echo CHtml::dropDownList('entidad', '', $lista,
-		array(
-			'ajax' => array(
-				'type'=>'POST',
-				'url'=>CController::createUrl('ordenesSoporte/UpdateAjax'),
-				'data'=>'js:jQuery(this).serialize()',
-				'success'=>'function(response) {
-					$("#OrdenesSoporte_almacen").html(response);
-					$.fn.yiiGridView.update("sales-statement-grid", {
-						data: $(this).serialize()
-					});
-				}',
-			)
-		)
-	);
-
-
-
-
-
-
-
-
-
-
-
-?>
-			 
-		</form>
 		
 		<?php echo $form->error($model,'entidadSolicitud'); ?>
 	</div>
@@ -83,17 +64,16 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'almacen'); ?>
 		<?php 
-		$lista=CHtml::listData(CatAlmacen::model()->findAll(), 'almacen', 'descripcion');
-		echo CHtml::activeDropDownList($model,'almacen', $lista);
+		/*$lista=CHtml::listData(CatAlmacen::model()->findAll(), 'almacen', 'descripcion');
+		echo CHtml::activeDropDownList($model,'almacen', $lista);*/
+		echo CHtml::dropDownList('almacen','', array(),
+			array(
+				'ajax' => array(
+					'type'=>'POST', //request type
+				))
+		);
 		?>
-		
-		<?php 
-		$lista=CHtml::listData(CatAlmacen::model()->findAll(isset($_GET['codigoEntidad'])?'entidad="'.$_GET['entidadSolicitud'].'"':""), 'almacen', 'descripcion');
-		echo CHtml::activeDropDownList($model,'almacen', $lista);
-		?> 
 		<?php echo $form->error($model,'almacen'); ?>
-		
-		
 	</div>
 	
 	<div class="row">

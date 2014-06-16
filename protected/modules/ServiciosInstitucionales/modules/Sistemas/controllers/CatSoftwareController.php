@@ -42,7 +42,8 @@ class CatSoftwareController extends Controller
 		{
 			$model->attributes=$_POST['CatSoftware'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->keySW));
+				$this->redirect(array('default/CatalogoEquipos'));
+				//$this->redirect(array('view','id'=>$model->keySW));
 		}
 
 		$this->render('create',array(

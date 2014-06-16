@@ -42,7 +42,8 @@ class CatMarcaController extends Controller
 		{
 			$model->attributes=$_POST['CatMarca'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->keyMA));
+				$this->redirect(array('default/CatalogoEquipos'));
+				//$this->redirect(array('view','id'=>$model->keyMA));
 		}
 
 		$this->render('create',array(

@@ -42,7 +42,8 @@ class CatTipoEquipoController extends Controller
 		{
 			$model->attributes=$_POST['CatTipoEquipo'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->keyTE));
+				$this->redirect(array('default/CatalogoEquipos'));
+				//$this->redirect(array('view','id'=>$model->keyTE));
 		}
 
 		$this->render('create',array(
