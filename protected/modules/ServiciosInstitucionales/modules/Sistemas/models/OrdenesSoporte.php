@@ -23,6 +23,7 @@
  * @property string $usuarioEjecutor
  * @property string $fechaFinal
  * @property string $almacenSoporte
+ * @property string $codigo
  */
 class OrdenesSoporte extends CActiveRecord
 {
@@ -52,7 +53,8 @@ class OrdenesSoporte extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('entidadSolicitud, almacen, keyTS, registro, nombre, descripcionSoporte, descripcionAlmacen, usuario, fecha, hora, entidad, solicitud, descripcionTS, status, observaciones, usuarioEjecutor, fechaFinal, almacenSoporte', 'required'),
+			array('keyTS, registro, nombre, descripcionSoporte, usuario, fecha, hora, solicitud, descripcionTS, status, observaciones, usuarioEjecutor, fechaFinal, almacenSoporte, descripcionAlmacen', 'required'),
+			//array('entidadSolicitud, almacen, descripcionAlmacen, entidad, almacenSoporte', 'required'),
 			array('keyTS, registro', 'numerical', 'integerOnly'=>true),
 			array('entidadSolicitud, entidad', 'length', 'max'=>2),
 			array('almacen, nombre, usuario, almacenSoporte', 'length', 'max'=>30),
@@ -62,11 +64,22 @@ class OrdenesSoporte extends CActiveRecord
 			array('descripcionTS', 'length', 'max'=>100),
 			array('observaciones', 'length', 'max'=>250),
 			array('usuarioEjecutor', 'length', 'max'=>50),
+			array('codigo', 'length', 'max'=>12),
+			//array('codigo', 'exist', 'className'=>'EquipoComputo', 'message'=>'Ese código no está asignado a ningun equipo',),
+			array('codigo', 'codigoNoRegistrado', 'message'=>'Ese código no está asignado a ningun teléfono',),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('keySOP, entidadSolicitud, almacen, keyTS, registro, nombre, descripcionSoporte, descripcionAlmacen, usuario, fecha, hora, entidad, solicitud, descripcionTS, status, observaciones, usuarioEjecutor, fechaFinal, almacenSoporte', 'safe', 'on'=>'search'),
+			array('keySOP, entidadSolicitud, almacen, keyTS, registro, nombre, descripcionSoporte, descripcionAlmacen, usuario, fecha, hora, entidad, solicitud, descripcionTS, status, observaciones, usuarioEjecutor, fechaFinal, almacenSoporte, codigo', 'safe', 'on'=>'search'),
 		);
 	}
+	
+	public function codigoNoRegistrado($attribute) {
+		$equipos = EquipoComputo::model()->findByAttributes(array('codigo'=>($this->$attribute)));
+		$telefonia= TelefoniaCelular::model()->findByAttributes(array('codigo'=>($this->$attribute)));
+	
+		if(count($equipos)<1 && count($telefonia)<1)
+		   $this->addError($attribute, 'El código no existe o no asignado a ningún equipo');
+	  }
 
 	/**
 	 * @return array relational rules.
@@ -101,9 +114,10 @@ class OrdenesSoporte extends CActiveRecord
 			'descripcionTS' => 'Descripcion tipo de soporte',
 			'status' => 'Status',
 			'observaciones' => 'Observaciones',
-			'usuarioEjecutor' => 'Usuario Ejecutor',
+			'usuarioEjecutor' => 'Atiende',
 			'fechaFinal' => 'Fecha terminación',
 			'almacenSoporte' => 'Almacen Soporte',
+			'codigo' => 'Codigo',
 		);
 	}
 
@@ -137,6 +151,7 @@ class OrdenesSoporte extends CActiveRecord
 		$criteria->compare('usuarioEjecutor',$this->usuarioEjecutor,true);
 		$criteria->compare('fechaFinal',$this->fechaFinal,true);
 		$criteria->compare('almacenSoporte',$this->almacenSoporte,true);
+		$criteria->compare('codigo',$this->codigo,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
