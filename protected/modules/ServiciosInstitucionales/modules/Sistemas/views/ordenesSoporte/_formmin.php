@@ -13,7 +13,6 @@
 			return false;
 		});
 	");
-
 ?>
 
 <div class="form">

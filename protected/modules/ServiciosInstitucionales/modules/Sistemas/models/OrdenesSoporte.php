@@ -65,7 +65,7 @@ class OrdenesSoporte extends CActiveRecord
 			array('observaciones', 'length', 'max'=>250),
 			array('usuarioEjecutor', 'length', 'max'=>50),
 			array('codigo', 'length', 'max'=>12),
-			//array('codigo', 'exist', 'className'=>'EquipoComputo', 'message'=>'Ese código no está asignado a ningun equipo',),
+			array('entidadSolicitud', 'entidadNoCorrespondeACodigo'),
 			array('codigo', 'codigoNoRegistrado'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
@@ -80,6 +80,12 @@ class OrdenesSoporte extends CActiveRecord
 		if(count($equipos)<1 && count($telefonia)<1)
 		   $this->addError($attribute, 'El código no existe o no asignado a ningún equipo');
 	  }
+	  
+	public function entidadNoCorrespondeACodigo($attribute) {
+		$entidadcode=substr($this->codigo, 1, 2);
+		if($this->$attribute != $entidadcode)
+			$this->addError($attribute, 'El codigo no pertenece a esta entidad');
+	}
 
 	/**
 	 * @return array relational rules.

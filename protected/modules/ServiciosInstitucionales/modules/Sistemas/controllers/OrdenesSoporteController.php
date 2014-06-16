@@ -108,10 +108,16 @@ class OrdenesSoporteController extends Controller
 			}else{
 				if (!isset($_POST['almacen']))
 					Yii::app()->user->setFlash('error', "No se ha seleccionado la entidad");
-				else if (!isset($_POST['entidadSolicitud']))
+					
+				if(isset($model->codigo))
+					if ($_POST['almacen'] != substr($model->codigo, 1, 2))
+					Yii::app()->user->setFlash('error', "El codigo no pertenece a esta entidad");
+				
+				if (!isset($_POST['entidadSolicitud']))
 					Yii::app()->user->setFlash('error', "No se ha seleccionado el departamento");
-				else	
-					Yii::app()->user->setFlash('error', "Faltan campos por llenar");
+				else	if (!isset($model->observaciones))
+					Yii::app()->user->setFlash('error', "Faltan observaciones por llenar");
+					
 			}//$this::actionAdmin();
 			$this->redirect('index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin');
 		}
@@ -271,11 +277,12 @@ class OrdenesSoporteController extends Controller
 	*/
 	public function actionAlmacenesPorEntidad()
 	{
-
+		$entidadSolicitud=$_POST['entidadSolicitud'];
 		$catAlmacenvar = new CatAlmacen();
 		$data=$catAlmacenvar::model()->findAll('entidad=:entidad Order by descripcion', 
-			array(':entidad'=>$_POST['entidadSolicitud'])
+			array(':entidad'=>$entidadSolicitud)
 		);
+		
 
 		//$data=CHtml::listData($data,'almacen','descripcion');
 		$data = CMap::mergeArray(array(''=>'Seleccione departamento'),CHtml::listData($data,'almacen','descripcion'));
@@ -285,5 +292,7 @@ class OrdenesSoporteController extends Controller
 			echo CHtml::tag('option',
 			array('value'=>$value),CHtml::encode($name),true);
 		}
+		
+		
 	}
 }

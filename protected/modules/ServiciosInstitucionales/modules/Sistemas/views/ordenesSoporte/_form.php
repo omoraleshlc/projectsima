@@ -35,6 +35,9 @@
 		<?php echo $form->labelEx($model,'codigo'); ?>
 		<?php echo $form->textField($model,'codigo',
 			array('size'=>12,'maxlength'=>12, 'pattern'=> '0[0-9]{2}-[A-Za-z][0-9]{2}([A-Fa-f|0-9]){4}',
+			'ajax' => array(
+					'type'=>'POST', //request type
+				)
 		)); ?>
 		<?php echo $form->error($model,'codigo'); ?>
 	</div>
