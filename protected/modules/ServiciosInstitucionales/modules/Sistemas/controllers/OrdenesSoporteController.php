@@ -93,6 +93,7 @@ class OrdenesSoporteController extends Controller
 			$model->solicitud=0;
 			$model->descripcionSoporte=$model2->findByPk($model->keyTS)->descripcion;
 			$model->descripcionTS=$model2->findByPk($model->keyTS)->descripcion;
+			if(isset($_POST['almacen']))
 			$model->descripcionAlmacen=$model3->find('almacen="'.$_POST['almacen'].'"')->descripcion;
 			$model->usuario=Yii::app()->user->name;
 			$model->fecha=date('Y-m-d', time());
@@ -105,7 +106,12 @@ class OrdenesSoporteController extends Controller
 			if($model->save()){
 				Yii::app()->user->setFlash('success', "Orden de soporte para: ".$model->nombre." registrada.");
 			}else{
-				Yii::app()->user->setFlash('error', "Faltan campos por llenar");
+				if (!isset($_POST['almacen']))
+					Yii::app()->user->setFlash('error', "No se ha seleccionado la entidad");
+				else if (!isset($_POST['entidadSolicitud']))
+					Yii::app()->user->setFlash('error', "No se ha seleccionado el departamento");
+				else	
+					Yii::app()->user->setFlash('error', "Faltan campos por llenar");
 			}//$this::actionAdmin();
 			$this->redirect('index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin');
 		}
@@ -271,7 +277,8 @@ class OrdenesSoporteController extends Controller
 			array(':entidad'=>$_POST['entidadSolicitud'])
 		);
 
-		$data=CHtml::listData($data,'almacen','descripcion');
+		//$data=CHtml::listData($data,'almacen','descripcion');
+		$data = CMap::mergeArray(array(''=>'Seleccione departamento'),CHtml::listData($data,'almacen','descripcion'));
 
 		foreach($data as $value=>$name)
 		{
@@ -279,5 +286,4 @@ class OrdenesSoporteController extends Controller
 			array('value'=>$value),CHtml::encode($name),true);
 		}
 	}
-	
 }

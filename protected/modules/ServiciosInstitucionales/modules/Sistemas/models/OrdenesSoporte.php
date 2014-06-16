@@ -66,7 +66,7 @@ class OrdenesSoporte extends CActiveRecord
 			array('usuarioEjecutor', 'length', 'max'=>50),
 			array('codigo', 'length', 'max'=>12),
 			//array('codigo', 'exist', 'className'=>'EquipoComputo', 'message'=>'Ese código no está asignado a ningun equipo',),
-			array('codigo', 'codigoNoRegistrado', 'message'=>'Ese código no está asignado a ningun teléfono',),
+			array('codigo', 'codigoNoRegistrado'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('keySOP, entidadSolicitud, almacen, keyTS, registro, nombre, descripcionSoporte, descripcionAlmacen, usuario, fecha, hora, entidad, solicitud, descripcionTS, status, observaciones, usuarioEjecutor, fechaFinal, almacenSoporte, codigo', 'safe', 'on'=>'search'),

@@ -2,6 +2,18 @@
 /* @var $this OrdenesSoporteController */
 /* @var $model OrdenesSoporte */
 /* @var $form CActiveForm */
+
+
+	Yii::app()->clientScript->registerScript('codeChange', "
+		$('#OrdenesSoporte_codigo').change(function(){
+			var codigo = document.getElementById('OrdenesSoporte_codigo').value;
+			var entidadcode = codigo.substring(1, 3);
+			$('#entidadSolicitud').val(entidadcode);
+			$('#entidadSolicitud').change();
+			return false;
+		});
+	");
+
 ?>
 
 <div class="form">
@@ -44,6 +56,7 @@
 			echo CHtml::dropDownList('entidadSolicitud','', $lista,
 				array(
 				'empty'=>'Seleccionar entidad',
+				'required'=>'true',
 				'ajax' => array(
 					'type'=>'POST', //request type
 					'url'=>CController::createUrl('ordenesSoporte/almacenesPorEntidad'), //url to call.
@@ -68,6 +81,7 @@
 		echo CHtml::activeDropDownList($model,'almacen', $lista);*/
 		echo CHtml::dropDownList('almacen','', array(),
 			array(
+				'required'=>'true',
 				'ajax' => array(
 					'type'=>'POST', //request type
 				))

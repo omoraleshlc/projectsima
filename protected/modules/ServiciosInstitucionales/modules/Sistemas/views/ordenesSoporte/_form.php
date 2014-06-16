@@ -2,8 +2,18 @@
 /* @var $this OrdenesSoporteController */
 /* @var $model OrdenesSoporte */
 /* @var $form CActiveForm */
-?>
 
+
+	Yii::app()->clientScript->registerScript('codeChange', "
+		$('#OrdenesSoporte_codigo').change(function(){
+			var codigo = document.getElementById('OrdenesSoporte_codigo').value;
+			var entidadcode = codigo.substring(1, 3);
+			$('#entidadSolicitud').val(entidadcode);
+			$('#entidadSolicitud').change();
+			return false;
+		});
+	");
+?>
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -23,7 +33,9 @@
 	
 	<div class="row">
 		<?php echo $form->labelEx($model,'codigo'); ?>
-		<?php echo $form->textField($model,'codigo',array('size'=>12,'maxlength'=>12, 'pattern'=> '0[0-9]{2}-[A-Za-z][0-9]{2}([A-Fa-f|0-9]){4}')); ?>
+		<?php echo $form->textField($model,'codigo',
+			array('size'=>12,'maxlength'=>12, 'pattern'=> '0[0-9]{2}-[A-Za-z][0-9]{2}([A-Fa-f|0-9]){4}',
+		)); ?>
 		<?php echo $form->error($model,'codigo'); ?>
 	</div>
 	
