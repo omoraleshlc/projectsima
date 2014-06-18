@@ -80,6 +80,7 @@
 		echo CHtml::activeDropDownList($model,'almacen', $lista);*/
 		echo CHtml::dropDownList('almacen','', array(),
 			array(
+				'empty'=>'Seleccionar departamento',
 				'required'=>'true',
 				'ajax' => array(
 					'type'=>'POST', //request type
