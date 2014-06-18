@@ -288,7 +288,7 @@ class OrdenesSoporteController extends Controller
 			$model->save();
 		}else if ($model->status=="ontransit"){
 			$model->status="done";
-			$model->fechaFinal=date("Y-m-d");
+			$model->fechaFinal=date("Y-m-d H:i:s");
 			$model->save();
 		}
 		

@@ -60,7 +60,7 @@ class OrdenesSoporte extends CActiveRecord
 			array('entidadSolicitud, entidad', 'length', 'max'=>2),
 			array('almacen, nombre, usuario, almacenSoporte', 'length', 'max'=>30),
 			array('descripcionSoporte, descripcionAlmacen', 'length', 'max'=>200),
-			array('fecha, hora, fechaFinal', 'length', 'max'=>10),
+			array('fecha, hora, fechaFinal', 'length', 'max'=>19),
 			array('fechaFinal, fechaInicio', 'length', 'max'=>19),
 			array('solicitud, status', 'length', 'max'=>20),
 			array('descripcionTS', 'length', 'max'=>100),
