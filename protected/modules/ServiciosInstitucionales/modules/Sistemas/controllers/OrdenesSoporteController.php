@@ -93,8 +93,9 @@ class OrdenesSoporteController extends Controller
 			$model->solicitud=0;
 			$model->descripcionSoporte=$model2->findByPk($model->keyTS)->descripcion;
 			$model->descripcionTS=$model2->findByPk($model->keyTS)->descripcion;
-			if(isset($_POST['almacen']))
-			$model->descripcionAlmacen=$model3->find('almacen="'.$_POST['almacen'].'"')->descripcion;
+			$almacen=$_POST['almacen'];
+			if(!empty($almacen))
+			$model->descripcionAlmacen=$model3->find('almacen="'.$almacen.'"')->descripcion;
 			$model->usuario=Yii::app()->user->name;
 			$model->fecha=date('Y-m-d', time());
 			$model->hora=date('h:i a', time());
@@ -106,17 +107,21 @@ class OrdenesSoporteController extends Controller
 			if($model->save()){
 				Yii::app()->user->setFlash('success', "Orden de soporte para: ".$model->nombre." registrada.");
 			}else{
-				if (!isset($_POST['almacen']))
-					Yii::app()->user->setFlash('error', "No se ha seleccionado la entidad");
+				if (empty($model->nombre))
+					Yii::app()->user->setFlash('error', "Escriba el nombre de usuario");
 					
-				if(isset($model->codigo))
-					if ($_POST['entidadSolicitud'] != substr($model->codigo, 1, 2))
-					Yii::app()->user->setFlash('error', "El codigo no pertenece a esta entidad");
-				
-				if (!isset($_POST['entidadSolicitud']))
-					Yii::app()->user->setFlash('error', "No se ha seleccionado el departamento");
-				else	if (!isset($model->observaciones))
+				else if (empty($model->observaciones))
 					Yii::app()->user->setFlash('error', "Faltan observaciones por llenar");
+
+				if (empty($model->entidad))
+					Yii::app()->user->setFlash('error', "No se ha seleccionado la entidad");
+				
+				else if(empty($almacen))
+					Yii::app()->user->setFlash('error', "No se ha seleccionado el departamento");
+					
+				else if(!empty($model->codigo))
+					if ($model->entidad != substr($model->codigo, 1, 2))
+					Yii::app()->user->setFlash('error', "El codigo no pertenece a esta entidad");
 					
 			}//$this::actionAdmin();
 			$this->redirect('index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin');
@@ -276,13 +281,10 @@ class OrdenesSoporteController extends Controller
 		$model = new OrdenesSoporte();
 		$model = $model->findByPK($_GET['field']);
 		
-		echo '<script type="text/javascript">
-		     console.log(
-				 "--'.$model->status.'"
-		     );
-        </script>';
+       
 		if ($model->status=="pending"){
 			$model->status="ontransit";
+			
 			$model->fechaInicio=date("Y-m-d H:i:s");
 			//$model->fechaFinal=date("");
 			$model->save();
@@ -295,13 +297,6 @@ class OrdenesSoporteController extends Controller
 		
 		$model = $model->findByPK($_GET['field']);
 		
-		echo '<script type="text/javascript">
-		     console.log(
-				 "..'.$model->status.'"
-		     );
-        </script>';
-		
-
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));/**/

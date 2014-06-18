@@ -86,7 +86,7 @@ class OrdenesSoporte extends CActiveRecord
 	  
 	public function entidadNoCorrespondeACodigo($attribute) {
 		$entidadcode=substr($this->codigo, 1, 2);
-		if($this->$attribute != $entidadcode && !empty($this->$attribute))
+		if($this->$attribute != $entidadcode && !empty($this->codigo)&& !empty($this->entidadSolicitud))
 			$this->addError($attribute, $entidadcode.' El codigo no pertenece a esta entidad '.$this->$attribute.'-');
 	}
 
