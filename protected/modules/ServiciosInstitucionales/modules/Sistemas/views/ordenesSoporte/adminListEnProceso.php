@@ -12,6 +12,7 @@
 			'name' => 'fecha',
 			'htmlOptions' => array('style' => 'width: 9%; text-align: center;'),
 		),
+		'fechaInicio',
 		array(
 			'class' => 'editable.EditableColumn',
 			'name' => 'keyTS',
@@ -27,6 +28,19 @@
 		'codigo',
 		'observaciones',
 		array(
+			'class'=>'bootstrap.widgets.TbButtonColumn',
+			'template' => '{begin}',
+			'header' => 'Terminar',
+			'buttons' => array(
+				'begin' => array( //the name {reply} must be same
+					'label' => 'Iniciar', // text label of the button
+					'url' => 'Yii::app()->controller->createUrl("ordenesSoporte/activarOrden", array("model"=>"ordenesSoporte", "field"=>"$data->keySOP"))',
+					'icon'=>'play',
+					'htmlOptions'=>array('href'=>'dfsf'),
+				),	
+			),
+		),
+		/*array(
 			'class' => 'editable.EditableColumn',
 			'name' => 'status',
 			'editable' => array(

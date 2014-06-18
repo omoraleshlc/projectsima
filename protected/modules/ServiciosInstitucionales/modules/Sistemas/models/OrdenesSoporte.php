@@ -24,6 +24,7 @@
  * @property string $fechaFinal
  * @property string $almacenSoporte
  * @property string $codigo
+ * @property string $fechaInicio
  */
 class OrdenesSoporte extends CActiveRecord
 {
@@ -60,6 +61,7 @@ class OrdenesSoporte extends CActiveRecord
 			array('almacen, nombre, usuario, almacenSoporte', 'length', 'max'=>30),
 			array('descripcionSoporte, descripcionAlmacen', 'length', 'max'=>200),
 			array('fecha, hora, fechaFinal', 'length', 'max'=>10),
+			array('fechaFinal, fechaInicio', 'length', 'max'=>19),
 			array('solicitud, status', 'length', 'max'=>20),
 			array('descripcionTS', 'length', 'max'=>100),
 			array('observaciones', 'length', 'max'=>250),
@@ -67,9 +69,10 @@ class OrdenesSoporte extends CActiveRecord
 			array('codigo', 'length', 'max'=>12),
 			array('entidadSolicitud', 'entidadNoCorrespondeACodigo'),
 			array('codigo', 'codigoNoRegistrado'),
+			array('fechaInicio', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('keySOP, entidadSolicitud, almacen, keyTS, registro, nombre, descripcionSoporte, descripcionAlmacen, usuario, fecha, hora, entidad, solicitud, descripcionTS, status, observaciones, usuarioEjecutor, fechaFinal, almacenSoporte, codigo', 'safe', 'on'=>'search'),
+			array('keySOP, entidadSolicitud, almacen, keyTS, registro, nombre, descripcionSoporte, descripcionAlmacen, usuario, fecha, hora, entidad, solicitud, descripcionTS, status, observaciones, usuarioEjecutor, fechaFinal, almacenSoporte, codigo, fechaInicio', 'safe', 'on'=>'search'),
 		);
 	}
 	
@@ -77,14 +80,14 @@ class OrdenesSoporte extends CActiveRecord
 		$equipos = EquipoComputo::model()->findByAttributes(array('codigo'=>($this->$attribute)));
 		$telefonia= TelefoniaCelular::model()->findByAttributes(array('codigo'=>($this->$attribute)));
 	
-		if(count($equipos)<1 && count($telefonia)<1)
+		if(!empty($this->$attribute) && count($equipos)<1 && count($telefonia)<1)
 		   $this->addError($attribute, 'El código no existe o no asignado a ningún equipo');
 	  }
 	  
 	public function entidadNoCorrespondeACodigo($attribute) {
 		$entidadcode=substr($this->codigo, 1, 2);
-		if($this->$attribute != $entidadcode)
-			$this->addError($attribute, 'El codigo no pertenece a esta entidad');
+		if($this->$attribute != $entidadcode && !empty($this->$attribute))
+			$this->addError($attribute, $entidadcode.' El codigo no pertenece a esta entidad '.$this->$attribute.'-');
 	}
 
 	/**
@@ -124,6 +127,7 @@ class OrdenesSoporte extends CActiveRecord
 			'fechaFinal' => 'Fecha terminación',
 			'almacenSoporte' => 'Almacen Soporte',
 			'codigo' => 'Codigo',
+			'fechaInicio' => 'Fecha Inicio'
 		);
 	}
 
@@ -158,6 +162,7 @@ class OrdenesSoporte extends CActiveRecord
 		$criteria->compare('fechaFinal',$this->fechaFinal,true);
 		$criteria->compare('almacenSoporte',$this->almacenSoporte,true);
 		$criteria->compare('codigo',$this->codigo,true);
+		$criteria->compare('fechaInicio',$this->codigo,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

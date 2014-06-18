@@ -110,7 +110,7 @@ class OrdenesSoporteController extends Controller
 					Yii::app()->user->setFlash('error', "No se ha seleccionado la entidad");
 					
 				if(isset($model->codigo))
-					if ($_POST['almacen'] != substr($model->codigo, 1, 2))
+					if ($_POST['entidadSolicitud'] != substr($model->codigo, 1, 2))
 					Yii::app()->user->setFlash('error', "El codigo no pertenece a esta entidad");
 				
 				if (!isset($_POST['entidadSolicitud']))
@@ -155,6 +155,11 @@ class OrdenesSoporteController extends Controller
 			
 			
 			if($model->save())
+				/*echo '<script type="text/javascript">
+				  console.log(
+					  "'.$model->fechaInicio.'"
+				  );
+		     </script>';/**/
 				$this->redirect(array('view','id'=>$model->keySOP));
 		}
 
@@ -193,12 +198,6 @@ class OrdenesSoporteController extends Controller
 	 */
 	public function actionAdmin()
 	{	
-		Yii::log('stuff done', 'Trace', '');
-		Yii::trace('example trace message', 'example');
-		Yii::log('info', CLogger::LEVEL_INFO, 'example');
-		Yii::log('error', CLogger::LEVEL_ERROR, 'example');
-		Yii::log('trace', CLogger::LEVEL_TRACE, 'example');
-		Yii::log('warning', CLogger::LEVEL_WARNING, 'example');
 		
 		$model=new OrdenesSoporte('search');
 		$model->unsetAttributes();  // clear any default values
@@ -265,11 +264,48 @@ class OrdenesSoporteController extends Controller
 		$es->update();
 	}
 	
+	
 	public function actionGetTipoSoporteList()
 	{
  		echo CJSON::encode(Editable::source(CatTipoSoporte::model()->findAll(), 'keyTS', 'descripcion')); 
 	}
 	
+	public function actionActivarOrden()
+	{
+        
+		$model = new OrdenesSoporte();
+		$model = $model->findByPK($_GET['field']);
+		
+		echo '<script type="text/javascript">
+		     console.log(
+				 "--'.$model->status.'"
+		     );
+        </script>';
+		if ($model->status=="pending"){
+			$model->status="ontransit";
+			$model->fechaInicio=date("Y-m-d H:i:s");
+			//$model->fechaFinal=date("");
+			$model->save();
+		}else if ($model->status=="ontransit"){
+			$model->status="done";
+			$model->fechaFinal=date("Y-m-d");
+			$model->save();
+		}
+		
+		
+		$model = $model->findByPK($_GET['field']);
+		
+		echo '<script type="text/javascript">
+		     console.log(
+				 "..'.$model->status.'"
+		     );
+        </script>';
+		
+
+		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+		if(!isset($_GET['ajax']))
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));/**/
+	}
 	
 	/*
 	*Actualiza el dropdown de almacenes con los que pernecen a la entidad seleccionada

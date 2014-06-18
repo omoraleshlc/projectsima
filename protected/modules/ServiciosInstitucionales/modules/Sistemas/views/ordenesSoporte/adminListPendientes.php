@@ -26,11 +26,26 @@
 		'codigo',
 		'observaciones',
 		array(
+			'class'=>'bootstrap.widgets.TbButtonColumn',
+			'template' => '{begin}',
+			'header' => 'Iniciar',
+			'buttons' => array(
+				'begin' => array( //the name {reply} must be same
+					'label' => 'Iniciar', // text label of the button
+					'url' => 'Yii::app()->controller->createUrl("ordenesSoporte/activarOrden", array("model"=>"ordenesSoporte", "field"=>"$data->keySOP"))',
+					'icon'=>'play',
+					'htmlOptions'=>array('href'=>'dfsf'),
+				),	
+			),
+		),
+		/*array(
 			'class' => 'editable.EditableColumn',
 			'name' => 'status',
+			'header'=>'adsd',
 			'editable' => array(
 				'type' => 'select',
-				'url' => $this->createUrl('OrdenesSoporte/updateEditable', array('model'=>'OrdenesSoporte', 'field'=>'status')),
+				'url' => $this->createUrl('OrdenesSoporte/updateStatus', array('model'=>'OrdenesSoporte', 'field'=>'status', 'status'=>'status',)),
+				'params'   => array('id' => '$data->keySOP'),
 				'source'    => Editable::source(array('pending' => 'Pendiente', 'done' => 'Terminada', 'ontransit' => 'En proceso')),
 				'placement' => 'left',
 			)

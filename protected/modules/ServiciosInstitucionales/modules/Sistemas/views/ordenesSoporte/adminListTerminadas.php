@@ -13,6 +13,12 @@
 			'htmlOptions' => array('style' => 'width: 9%; text-align: center;'),
 		),
 		array(
+			'name' => 'Tiempo',
+			'header' => 'Tiempo de terminacion',
+			'value' =>'empty($data->fechaInicio)?\'\':date_diff(new DateTime($data->fechaInicio), new DateTime($data->fechaFinal))->format("%d días, %h horas, %i minutos.")'
+		),
+		
+		array(
 			'name' => 'fechaFinal',
 			'htmlOptions' => array('style' => 'width: 9%; text-align: center;'),
 		),
@@ -29,7 +35,7 @@
 		'descripcionAlmacen',
 		'codigo',
 		'observaciones',
-		array(
+		/*array(
 			'class' => 'editable.EditableColumn',
 			'name' => 'status',
 			'editable' => array(

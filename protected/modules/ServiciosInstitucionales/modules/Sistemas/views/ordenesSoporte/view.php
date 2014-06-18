@@ -39,6 +39,7 @@ $this->menu=array(
 		'status',
 		'observaciones',
 		'usuarioEjecutor',
+		'fechaInicio',
 		'fechaFinal',
 		'almacenSoporte',
 	),

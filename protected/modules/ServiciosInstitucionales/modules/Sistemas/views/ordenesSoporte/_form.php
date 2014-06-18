@@ -130,8 +130,23 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'fechaInicio'); ?>
+		<?php 
+			Yii::import('application.extensions.CJuiDateTimePicker.CJuiDateTimePicker');
+		 	$this->widget('CJuiDateTimePicker',array(
+				'model'=>$model, //Model object
+				'attribute'=>'fechaInicio', //attribute name
+				'mode'=>'datetime', //use "time","date" or "datetime" (default)
+				'options'=>array('timeFormat'=>'hh:mm:ss',
+        			'dateFormat' => 'yy-mm-dd') // jquery plugin options
+			));
+		?>
+		<?php echo $form->error($model,'fechaInicio'); ?>
+	</div>
+	
+	<div class="row">
 		<?php echo $form->labelEx($model,'fechaFinal'); ?>
-		<?php echo $form->textField($model,'fechaFinal',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo CHtml::activeDateField($model,'fechaFinal',array('size'=>10,'maxlength'=>10)); ?>
 		<?php echo $form->error($model,'fechaFinal'); ?>
 	</div>
 
