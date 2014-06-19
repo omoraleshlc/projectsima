@@ -1,6 +1,6 @@
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'ordenes-soporte-grid',
+	'id'=>'ordenes-soporteenproceso-grid',
 	'dataProvider'=>$model->search(),
 	//'filter'=>$model,
 	'columns'=>array(
@@ -74,7 +74,6 @@
 	 $this->widget('bootstrap.widgets.TbButton', array(
     'label'=>'Crear nuevo',
     'size'=>'small', // null, 'large', 'small' or 'mini'
-    /*'url'=>array('create')*/
 		'url' =>$this->createUrl('OrdenesSoporte/create', array('model'=>'OrdenesSoporte')),)); ?>
 </div>
 

@@ -1,6 +1,6 @@
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'ordenes-soporte-grid',
+	'id'=>'ordenes-soporteterminadas-grid',
 	'dataProvider'=>$model->search(),
 	//'filter'=>$model,
 	'columns'=>array(

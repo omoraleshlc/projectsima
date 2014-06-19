@@ -25,6 +25,7 @@
 		),
 	),
 )); ?>
+
 <div style="text-align: right">
 <?php
 	 $this->widget('bootstrap.widgets.TbButton', array(
