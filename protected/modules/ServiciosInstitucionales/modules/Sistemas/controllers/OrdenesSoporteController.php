@@ -26,6 +26,17 @@ class OrdenesSoporteController extends Controller
 			'model'=>$this->loadModel($id),
 		));
 	}
+	
+	/**
+	 * Soporte puede activar o terminar ordenes de soporte.
+	 * Optimizada para celular.
+	 * @param integer $id the ID of the model to be displayed
+	 */
+	public function actionMobileAdmin()
+	{
+		//$this->layout='dasda';
+		$this->render('mobileAdmin');
+	}
 
 	/**
 	 * Creates a new model.
@@ -203,25 +214,28 @@ class OrdenesSoporteController extends Controller
 	 */
 	public function actionAdmin()
 	{	
-		
 		$model=new OrdenesSoporte('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['OrdenesSoporte']))
 			$model->attributes=$_GET['OrdenesSoporte'];
 			
-			$modelPendientes=new OrdenesSoporte('search');
-			$modelPendientes->attributes=$model->attributes;
-			$modelPendientes->status="pending";
+		$modelPendientes=new OrdenesSoporte('search');
+		$modelPendientes->attributes=$model->attributes;
+		$modelPendientes->status="pending";
+		
+		$modelEnProceso=new OrdenesSoporte('search');
+		$modelEnProceso->attributes=$model->attributes;
+		$modelEnProceso->status="ontransit";
+		
+		$modelTeminadas=new OrdenesSoporte('search');
+		$modelTeminadas->attributes=$model->attributes;
+		$modelTeminadas->status="done";
 			
-			$modelEnProceso=new OrdenesSoporte('search');
-			$modelEnProceso->attributes=$model->attributes;
-			$modelEnProceso->status="ontransit";
-			
-			$modelTeminadas=new OrdenesSoporte('search');
-			$modelTeminadas->attributes=$model->attributes;
-			$modelTeminadas->status="done";
-			
-			
+/*		if is operador	
+		$this->render('_formmin',array(
+			'model'=>$model,
+		));
+*/		
 			
 		$this->render('admin',array(
 			'model'=>$model,
@@ -269,19 +283,32 @@ class OrdenesSoporteController extends Controller
 		$es->update();
 	}
 	
-	
+		
+	/*
+	* Obtiene el listado de tipo de soporte
+	*/
 	public function actionGetTipoSoporteList()
 	{
  		echo CJSON::encode(Editable::source(CatTipoSoporte::model()->findAll(), 'keyTS', 'descripcion')); 
 	}
-	
+		
+	/*
+	* Cambia el status de la orden al siguiente.
+	* Puede recibir el id de la tabla de ordenes (GET) o de la activación móvil (POST)
+	*/
 	public function actionActivarOrden()
 	{
         
 		$model = new OrdenesSoporte();
-		$model = $model->findByPK($_GET['field']);
 		
-       
+		if(isset($_GET['field'])){
+			$model = $model->findByPK($_GET['field']);
+		}
+		else if (isset($_POST['id'])){
+			//echo $_POST['id'];
+			$model = $model->findByPK($_POST['id']);
+		}
+		
 		if ($model->status=="pending"){
 			$model->status="ontransit";
 			
@@ -294,8 +321,10 @@ class OrdenesSoporteController extends Controller
 			$model->save();
 		}
 		
-		
-		$model = $model->findByPK($_GET['field']);
+		if(!isset($_GET['field'])){
+			$this->render('mobileAdmin');
+		}
+		//$model = $model->findByPK($_GET['field']);
 		
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
