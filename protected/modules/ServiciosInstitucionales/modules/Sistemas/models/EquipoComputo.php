@@ -160,6 +160,10 @@ class EquipoComputo extends CActiveRecord
 		));
 	}
 	
+	/**
+	 * Limita las etiquetas mostradas a 21 por página
+	 * @return CActiveDataProvider
+	 */
 	public function searchLabels()
 	{
 		
@@ -168,6 +172,10 @@ class EquipoComputo extends CActiveRecord
 		return $myCActiveDataProvider;
 	}
 	
+	/**
+	 * Genera el código de equipo.
+	 * @return String code generated
+	 */
 	public function generarCodigo()
 	{
 		/*$allTelefoniaCelular= TelefoniaCelular::model()->findAll();

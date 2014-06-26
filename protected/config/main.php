@@ -27,8 +27,8 @@ return array(
 		'editable.*',	
 		
 		/*MODULOS PROPIOS inicia*/
-		'application.modules.Compras.*',
 		'application.modules.Compras.models.*',
+		'application.modules.Compras.controllers.*',
 		'application.modules.Configuracion.*',
 		'application.modules.Configuracion.models.*',
 		'application.modules.Configuracion.modules.Configuracion.*',
@@ -142,7 +142,8 @@ return array(
 				'loginUrl' => array('/cruge/ui/login'),
 			),
 			'authManager' => array(
-				'class' => 'application.modules.cruge.components.CrugeAuthManager',
+				//'class' => 'application.modules.cruge.components.CrugeAuthManager',
+				'class' => 'application.components.MyCrugeAuthManager',
 			),
 			'crugemailer'=>array(
 				'class' => 'application.modules.cruge.components.CrugeMailer',

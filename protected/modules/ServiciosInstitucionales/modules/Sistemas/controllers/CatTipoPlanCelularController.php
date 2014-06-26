@@ -1,5 +1,11 @@
 <?php
-
+/**
+ * Catálogo de planes de celular.
+ * 
+ * @author Mitzimon
+ * @version 0.1
+ * @package ServiciosInstitucionales.Sistemas
+ */
 class CatTipoPlanCelularController extends Controller
 {
 	/**
@@ -144,7 +150,7 @@ class CatTipoPlanCelularController extends Controller
 	}
 	
 	/*
-	*Guarda los cambios hechos con x-editable
+	* Guarda los cambios hechos con x-editable
 	*
 	*/
 	public function actionUpdateEditable() {

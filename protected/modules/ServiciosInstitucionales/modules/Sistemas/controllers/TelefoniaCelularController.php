@@ -1,5 +1,11 @@
 <?php
-
+/**
+ * Inventario de telefonía.
+ * 
+ * @author Mitzimon
+ * @version 0.1
+ * @package ServiciosInstitucionales.Sistemas
+ */
 class TelefoniaCelularController extends Controller
 {
 	/**
@@ -157,7 +163,10 @@ class TelefoniaCelularController extends Controller
 		$es->update();
 	}
 	
-	
+	/*
+	* Obtiene el catalogo de márcas de celulares.
+	* @Return JSON El catálogo con keyMa, descripcion.
+	*/
 	public function actionGetMarcaCelularList()
 	{
  		echo CJSON::encode(Editable::source(CatMarcaCelular::model()->findAll(), 'keyMA', 'descripcion')); 

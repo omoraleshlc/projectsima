@@ -1,5 +1,11 @@
 <?php
-
+/**
+ * Catálogo de marcas de monitor.
+ * 
+ * @author Mitzimon
+ * @version 0.1
+ * @package ServiciosInstitucionales.Sistemas
+ */
 class CatMarcaMonitorController extends Controller
 {
 	/**
@@ -144,6 +150,9 @@ class CatMarcaMonitorController extends Controller
 		}
 	}
 	
+	/**
+	 * Actualiza el campo editado en la gridview con x editable
+	 */
 	public function actionUpdateEditable() {
 		Yii::import('editable.EditableSaver');
 		$es = new EditableSaver('CatMarcaMonitor');

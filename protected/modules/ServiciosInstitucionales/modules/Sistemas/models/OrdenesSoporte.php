@@ -76,6 +76,9 @@ class OrdenesSoporte extends CActiveRecord
 		);
 	}
 	
+	/**
+	 * Custom validation por si el código no está registrado
+	 */
 	public function codigoNoRegistrado($attribute) {
 		$equipos = EquipoComputo::model()->findByAttributes(array('codigo'=>($this->$attribute)));
 		$telefonia= TelefoniaCelular::model()->findByAttributes(array('codigo'=>($this->$attribute)));
@@ -83,7 +86,10 @@ class OrdenesSoporte extends CActiveRecord
 		if(!empty($this->$attribute) && count($equipos)<1 && count($telefonia)<1)
 		   $this->addError($attribute, 'El código no existe o no asignado a ningún equipo');
 	  }
-	  
+	 
+	 /**
+	 * Custom validation por si la entidad seleccionada no pertenece al código
+	 */ 
 	public function entidadNoCorrespondeACodigo($attribute) {
 		$entidadcode=substr($this->codigo, 1, 2);
 		if($this->$attribute != $entidadcode && !empty($this->codigo)&& !empty($this->entidadSolicitud))

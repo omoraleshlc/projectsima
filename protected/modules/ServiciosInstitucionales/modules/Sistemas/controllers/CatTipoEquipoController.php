@@ -1,5 +1,11 @@
 <?php
-
+/**
+ * Catálogo de tipo de equipo.
+ * 
+ * @author Mitzimon
+ * @version 0.1
+ * @package ServiciosInstitucionales.Sistemas
+ */
 class CatTipoEquipoController extends Controller
 {
 	/**
@@ -143,6 +149,9 @@ class CatTipoEquipoController extends Controller
 		}
 	}
 	
+	/**
+	 * Actualiza el campo editado en la gridview con x editable
+	 */
 	public function actionUpdateEditable() {
 		Yii::import('editable.EditableSaver');
 		$es = new EditableSaver('CatEquipoController');

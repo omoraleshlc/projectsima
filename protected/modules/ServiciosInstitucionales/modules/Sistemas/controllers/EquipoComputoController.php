@@ -172,29 +172,40 @@ class EquipoComputoController extends Controller
 	
 	/*
 	*Guarda los cambios hechos con x-editable
-	*
 	*/
 	public function actionUpdateEditable() {
 		Yii::import('editable.EditableSaver');
 		$es = new EditableSaver('EquipoComputo');
 		$es->update();
 	}
-	
+		
+	/*
+	* Obtiene el listado de tipo de equipos
+	*/
 	public function actionGetTipoEquipoList()
 	{
  		echo CJSON::encode(Editable::source(CatTipoEquipo::model()->findAll(), 'keyTE', 'descripcion')); 
 	}
-	
+		
+	/*
+	* Obtiene el listado de marcas
+	*/
 	public function actionGetMarcaList()
 	{
  		echo CJSON::encode(Editable::source(CatMarca::model()->findAll(), 'keyMA', 'descripcion')); 
 	}
-	
+		
+	/*
+	* Obtiene el listado de marcas de monitor
+	*/
 	public function actionGetMarcaMonitorList()
 	{
  		echo CJSON::encode(Editable::source(CatMarcaMonitor::model()->findAll(), 'keyMAM', 'descripcion')); 
 	}
-	
+		
+	/*
+	* Obtiene el listado de proveedores de sistemas
+	*/
 	public function actionGetProveedorSistemasList()
 	{
  		echo CJSON::encode(Editable::source(Proveedor::model()->findAll(), 'keyP', 'razonSocial')); 

@@ -1,4 +1,6 @@
 <?php
+Yii::import('application.modules.ServiciosInstitucionales.modules.Sistemas.models.*');
+Yii::import('application.modules.ServiciosInstitucionales.modules.Sistemas.controllers.*');
 
 class SistemasModule extends CWebModule
 {

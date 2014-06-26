@@ -1,4 +1,5 @@
 <?php
+Yii::import('application.modules.ServiciosInstitucionales.models.*');
 
 class ServiciosInstitucionalesModule extends CWebModule
 {

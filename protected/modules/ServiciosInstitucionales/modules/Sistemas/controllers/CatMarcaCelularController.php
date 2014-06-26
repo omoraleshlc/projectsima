@@ -1,5 +1,11 @@
 <?php
-
+/**
+ * Catálogo de marcas de celulares.
+ * 
+ * @author Mitzimon
+ * @version 0.1
+ * @package ServiciosInstitucionales.Sistemas
+ */
 class CatMarcaCelularController extends Controller
 {
 	/**
