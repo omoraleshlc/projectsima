@@ -88,3 +88,29 @@ REQUEST_URI=/yii/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/Orden
 in /var/www/yii/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/_formmin.php (37)
 in /var/www/yii/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php (218)
 in /var/www/yii/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+2014/07/01 15:44:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Configuracion/Usuarios/UsuariosSima/admin"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Configuracion/U...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/yii/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/projectsima/index.php?r=Configuracion/Usuarios/UsuariosSima/admin
+HTTP_REFERER=http://localhost/yii/projectsima/index.php
+---
+2014/07/01 15:52:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Configuracion/Usuarios/UsuariosSima/admin"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Configuracion/U...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/yii/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/projectsima/index.php?r=Configuracion/Usuarios/UsuariosSima/admin
+---
+2014/07/01 15:52:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Configuracion/Usuarios/UsuariosSima/admin"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Configuracion/U...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/yii/projectsima/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/projectsima/index.php?r=Configuracion/Usuarios/UsuariosSima/admin
+HTTP_REFERER=http://localhost/yii/projectsima/index.php
+---

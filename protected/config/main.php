@@ -15,9 +15,13 @@ return array(
 
 	// preloading 'log' component
 	'preload'=>array('log'),
+	
 
 	// autoloading model and component classes
 	'import'=>array(
+		
+	
+	
 		'application.*',
 		'application.models.*',
 		'application.components.*',
@@ -33,6 +37,10 @@ return array(
 		'application.modules.Configuracion.models.*',
 		'application.modules.Configuracion.modules.Configuracion.*',
 		'application.modules.Configuracion.modules.Configuracion.models.*',
+		'application.modules.Configuracion.modules.Configuracion.controllers.*',
+		'application.modules.Configuracion.modules.Usuarios.*',
+		'application.modules.Configuracion.modules.Usuarios.models.*',
+		'application.modules.Configuracion.modules.Usuarios.controllers.*',
 		'application.modules.ServiciosInstitucionales.*',
 		'application.modules.ServiciosInstitucionales.models.*',
 		'application.modules.ServiciosInstitucionales.modules.Sistemas.*',
@@ -124,6 +132,7 @@ return array(
 		/*MODULOS PROPIOS inicia*/
 		'Compras',
 		'Configuracion',
+		'Configuracion.Usuarios',
 		'Configuracion.Configuracion',
 		'ServiciosInstitucionales',
 		'ServiciosInstitucionales.Sistemas',

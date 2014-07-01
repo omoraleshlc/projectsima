@@ -1,6 +1,7 @@
 <?php
+Yii::import('application.modules.Configuracion.modules.Usuarios.models.*');
 
-class ConfiguracionModule extends CWebModule
+class UsuariosModule extends CWebModule
 {
 	public function init()
 	{
@@ -9,11 +10,9 @@ class ConfiguracionModule extends CWebModule
 
 		// import the module-level models and components
 		$this->setImport(array(
-			'Configuracion.models.*',
-			'Configuracion.components.*',
+			'Configuracion.Usuarios.models.*',
+			'Configuracion.Usuarios.components.*',
 		));
-		$this->setModules(array('Configuracion'));
-		$this->setModules(array('Configuracion', 'Usuarios'));
 	}
 
 	public function beforeControllerAction($controller, $action)

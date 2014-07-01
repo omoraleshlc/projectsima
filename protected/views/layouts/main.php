@@ -49,8 +49,10 @@
 					array('label'=>'Configuracion', 'url'=>'#',
 		             	'visible'=>!Yii::app()->user->isGuest,
 		             	'items'=>array(
-						      array('label'=>'Usuarios'
-									, 'url'=>Yii::app()->user->ui->userManagementAdminUrl),
+						      array('label'=>'Usuarios',
+									'url'=>Yii::app()->user->ui->userManagementAdminUrl),
+							 	array('label'=>'Usuarios V2',
+		                 		'url'=>Yii::app()->createUrl('Configuracion/Usuarios/UsuariosSima/admin')),
 		                 array('label'=>'Sistema', 'url'=>'#'),
 		             )),//end dropdown
 				
