@@ -55,7 +55,7 @@
 		<div class="row">
 			<div class="bs-docs-footer-links muted" id="footer">
 				<ul>
-					<li>Copyright &copy; <?php echo date('Y'); ?> by hospital La Carlota</li>
+					<li>Copyright &copy; <?php echo date('Y'); ?> by Hospital La Carlota</li>
 					<li>All Rights Reserved.</li>
 					<li><?php echo Yii::powered(); ?></li>
 				</ul>

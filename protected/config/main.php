@@ -196,10 +196,10 @@ return array(
 
 
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=sima',
+			'connectionString' => 'mysql:host=192.168.1.16;dbname=sima',
 			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '',
+			'username' => 'omorales',
+			'password' => 'lacarlota',
 			'charset' => 'utf8',
 		),
 		
