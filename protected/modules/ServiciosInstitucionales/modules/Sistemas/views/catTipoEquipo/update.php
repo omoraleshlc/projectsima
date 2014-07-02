@@ -3,7 +3,7 @@
 /* @var $model CatTipoEquipo */
 
 $this->breadcrumbs=array(
-	'Cat Tipo Equipos'=>array('index'),
+	'Cat Tipo Equipos'=>array('default/CatalogoEquipos'),
 	$model->keyTE=>array('view','id'=>$model->keyTE),
 	'Update',
 );

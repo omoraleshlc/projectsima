@@ -3,7 +3,7 @@
 /* @var $model CatTipoSoporte */
 
 $this->breadcrumbs=array(
-	'Cat Tipo Soportes'=>array('index'),
+	'Cat Tipo Soportes'=>array('default/CatalogoEquipos'),
 	'Create',
 );
 

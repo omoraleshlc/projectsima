@@ -3,7 +3,7 @@
 /* @var $model CatTipoPlanCelular */
 
 $this->breadcrumbs=array(
-	'Cat Tipo Plan Celulars'=>array('index'),
+	'Cat Tipo Plan Celulars'=>array('default/CatalogoTelefonia'),
 	$model->keyTS,
 );
 

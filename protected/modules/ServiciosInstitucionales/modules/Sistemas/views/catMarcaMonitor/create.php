@@ -3,7 +3,7 @@
 /* @var $model CatMarcaMonitor */
 
 $this->breadcrumbs=array(
-	'Cat Marca Monitors'=>array('index'),
+	'Cat Marca Monitors'=>array('default/CatalogoEquipos'),
 	'Create',
 );
 

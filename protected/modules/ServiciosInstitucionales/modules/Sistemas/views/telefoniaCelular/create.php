@@ -3,7 +3,7 @@
 /* @var $model TelefoniaCelular */
 
 $this->breadcrumbs=array(
-	'Telefonia Celular'=>array('index'),
+	'Telefonia Celular'=>array('admin'),
 	'Crear',
 );
 

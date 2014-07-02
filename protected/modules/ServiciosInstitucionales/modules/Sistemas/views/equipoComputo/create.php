@@ -3,7 +3,7 @@
 /* @var $model EquipoComputo */
 
 $this->breadcrumbs=array(
-	'Equipo Computos'=>array('index'),
+	'Equipo Computos'=>array('admin'),
 	'Crear',
 );
 

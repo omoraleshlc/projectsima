@@ -3,7 +3,7 @@
 /* @var $model CatCompany */
 
 $this->breadcrumbs=array(
-	'Cat Companies'=>array('index'),
+	'Cat Companies'=>array('default/CatalogoTelefonia'),
 	$model->keyTS=>array('view','id'=>$model->keyTS),
 	'Update',
 );
