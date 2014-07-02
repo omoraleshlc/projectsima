@@ -3,7 +3,7 @@
 /* @var $model OrdenesSoporte */
 
 $this->breadcrumbs=array(
-	'Ordenes Soportes'=>array('index'),
+	'Ordenes Soportes'=>array('admin'),
 	$model->keySOP,
 );
 
@@ -23,6 +23,7 @@ $this->menu=array(
 	'attributes'=>array(
 		'keySOP',
 		'entidadSolicitud',
+		'codigo',
 		'almacen',
 		'keyTS',
 		'registro',
@@ -38,6 +39,7 @@ $this->menu=array(
 		'status',
 		'observaciones',
 		'usuarioEjecutor',
+		'fechaInicio',
 		'fechaFinal',
 		'almacenSoporte',
 	),

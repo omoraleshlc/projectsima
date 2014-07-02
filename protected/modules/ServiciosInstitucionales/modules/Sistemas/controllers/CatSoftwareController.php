@@ -1,5 +1,11 @@
 <?php
-
+/**
+ * Catálogo de software.
+ * 
+ * @author Mitzimon
+ * @version 0.1
+ * @package ServiciosInstitucionales.Sistemas
+ */
 class CatSoftwareController extends Controller
 {
 	/**
@@ -42,7 +48,8 @@ class CatSoftwareController extends Controller
 		{
 			$model->attributes=$_POST['CatSoftware'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->keySW));
+				$this->redirect(array('default/CatalogoEquipos'));
+				//$this->redirect(array('view','id'=>$model->keySW));
 		}
 
 		$this->render('create',array(
@@ -142,6 +149,9 @@ class CatSoftwareController extends Controller
 		}
 	}
 	
+	/**
+	 * Actualiza el campo editado en la gridview con x editable
+	 */
 	public function actionUpdateEditable() {
 		Yii::import('editable.EditableSaver');
 		$es = new EditableSaver('CatSoftware');

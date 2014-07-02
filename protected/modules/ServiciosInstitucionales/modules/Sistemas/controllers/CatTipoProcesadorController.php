@@ -1,5 +1,11 @@
 <?php
-
+/**
+ * Catálogo de tipo de procesador.
+ * 
+ * @author Mitzimon
+ * @version 0.1
+ * @package ServiciosInstitucionales.Sistemas
+ */
 class CatTipoProcesadorController extends Controller
 {
 	/**
@@ -42,7 +48,8 @@ class CatTipoProcesadorController extends Controller
 		{
 			$model->attributes=$_POST['CatTipoProcesador'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->keyTP));
+				$this->redirect(array('default/CatalogoEquipos'));
+				//$this->redirect(array('view','id'=>$model->keyTP));
 		}
 
 		$this->render('create',array(
@@ -142,6 +149,9 @@ class CatTipoProcesadorController extends Controller
 		}
 	}
 	
+	/**
+	 * Actualiza el campo editado en la gridview con x editable
+	 */
 	public function actionUpdateEditable() {
 		Yii::import('editable.EditableSaver');
 		$es = new EditableSaver('CatTipoProcesador');

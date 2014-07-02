@@ -2,8 +2,18 @@
 /* @var $this OrdenesSoporteController */
 /* @var $model OrdenesSoporte */
 /* @var $form CActiveForm */
-?>
 
+
+	Yii::app()->clientScript->registerScript('codeChange', "
+		$('#OrdenesSoporte_codigo').change(function(){
+			var codigo = document.getElementById('OrdenesSoporte_codigo').value;
+			var entidadcode = codigo.substring(1, 3);
+			$('#entidadSolicitud').val(entidadcode);
+			$('#entidadSolicitud').change();
+			return false;
+		});
+	");
+?>
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -22,20 +32,53 @@
 	</div>
 	
 	<div class="row">
+		<?php echo $form->labelEx($model,'codigo'); ?>
+		<?php echo $form->textField($model,'codigo',
+			array('size'=>12,'maxlength'=>12, 'pattern'=> '0[0-9]{2}-[A-Za-z][0-9]{2}([A-Fa-f|0-9]){4}',
+			'ajax' => array(
+					'type'=>'POST', //request type
+				)
+		)); ?>
+		<?php echo $form->error($model,'codigo'); ?>
+	</div>
+	
+	<div class="row">
 		<?php echo $form->labelEx($model,'entidadSolicitud'); ?>
-		<?php 
-		$lista=CHtml::listData(CatEntidad::model()->findAll(), 'codigoEntidad', 'descripcionEntidad');
-		echo CHtml::activeDropDownList($model,'entidadSolicitud', $lista);
-		?> 
+		<?php
+			$lista=CHtml::listData(CatEntidad::model()->findAll(), 'codigoEntidad', 'descripcionEntidad');
+			echo CHtml::dropDownList('entidadSolicitud','', $lista,
+				array(
+				'empty'=>'Seleccionar entidad',
+				'required'=>'true',
+				'ajax' => array(
+					'type'=>'POST', //request type
+					'url'=>CController::createUrl('ordenesSoporte/almacenesPorEntidad'), //url to call.
+					//Style: CController::createUrl('currentController/methodToCall')
+					'update'=>'#almacen', //selector to update
+					//'data'=>'js:javascript statement' 
+					//leave out the data key to pass all form values through
+				))
+			); 
+			 echo '<br/>';
+			//empty since it will be filled by the other dropdown
+		?>
+		
 		<?php echo $form->error($model,'entidadSolicitud'); ?>
 	</div>
 	
 	<div class="row">
 		<?php echo $form->labelEx($model,'almacen'); ?>
 		<?php 
-		$lista=CHtml::listData(CatAlmacen::model()->findAll(), 'almacen', 'descripcion');
-		echo CHtml::activeDropDownList($model,'almacen', $lista);
-		?> 
+		/*$lista=CHtml::listData(CatAlmacen::model()->findAll(), 'almacen', 'descripcion');
+		echo CHtml::activeDropDownList($model,'almacen', $lista);*/
+		echo CHtml::dropDownList('almacen','almacen', array(),
+			array(
+				'required'=>'true',
+				'ajax' => array(
+					'type'=>'POST', //request type
+				))
+		);
+		?>
 		<?php echo $form->error($model,'almacen'); ?>
 	</div>
 	
@@ -76,7 +119,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'status'); ?>
-		<?php echo $form->textField($model,'status',array('size'=>20,'maxlength'=>20)); ?>
+		<?php echo CHtml::dropDownList('status','', array('pending'=>'Pendiente','ontransit'=>'En proceso','done'=>'Terminada')); ?> 
 		<?php echo $form->error($model,'status'); ?>
 	</div>
 
@@ -87,8 +130,32 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'fechaInicio'); ?>
+		<?php 
+			Yii::import('application.extensions.CJuiDateTimePicker.CJuiDateTimePicker');
+		 	$this->widget('CJuiDateTimePicker',array(
+				'model'=>$model, //Model object
+				'attribute'=>'fechaInicio', //attribute name
+				'mode'=>'datetime', //use "time","date" or "datetime" (default)
+				'options'=>array('timeFormat'=>'hh:mm:ss',
+        			'dateFormat' => 'yy-mm-dd') // jquery plugin options
+			));
+		?>
+		<?php echo $form->error($model,'fechaInicio'); ?>
+	</div>
+	
+	<div class="row">
 		<?php echo $form->labelEx($model,'fechaFinal'); ?>
-		<?php echo $form->textField($model,'fechaFinal',array('size'=>10,'maxlength'=>10)); ?>
+		<?php 
+			Yii::import('application.extensions.CJuiDateTimePicker.CJuiDateTimePicker');
+		 	$this->widget('CJuiDateTimePicker',array(
+				'model'=>$model, //Model object
+				'attribute'=>'fechaFinal', //attribute name
+				'mode'=>'datetime', //use "time","date" or "datetime" (default)
+				'options'=>array('timeFormat'=>'hh:mm:ss',
+        			'dateFormat' => 'yy-mm-dd') // jquery plugin options
+			));
+		?>
 		<?php echo $form->error($model,'fechaFinal'); ?>
 	</div>
 

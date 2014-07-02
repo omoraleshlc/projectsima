@@ -3,7 +3,7 @@
 /* @var $model CatMarca */
 
 $this->breadcrumbs=array(
-	'Cat Marcas'=>array('index'),
+	'Cat Marcas'=>array('default/CatalogoEquipos'),
 	$model->keyMA,
 );
 

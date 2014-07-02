@@ -1,5 +1,11 @@
 <?php
-
+/**
+ * Catálogo de sistemas operativos.
+ * 
+ * @author Mitzimon
+ * @version 0.1
+ * @package ServiciosInstitucionales.Sistemas
+ */
 class CatSistemaOperativoController extends Controller
 {
 	/**
@@ -42,7 +48,8 @@ class CatSistemaOperativoController extends Controller
 		{
 			$model->attributes=$_POST['CatSistemaOperativo'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->keyOS));
+				$this->redirect(array('default/CatalogoEquipos'));
+				//$this->redirect(array('view','id'=>$model->keyOS));
 		}
 
 		$this->render('create',array(
@@ -142,6 +149,9 @@ class CatSistemaOperativoController extends Controller
 		}
 	}
 	
+	/**
+	 * Actualiza el campo editado en la gridview con x editable
+	 */
 	public function actionUpdateEditable() {
 		Yii::import('editable.EditableSaver');
 		$es = new EditableSaver('CatSistemaOperativo');

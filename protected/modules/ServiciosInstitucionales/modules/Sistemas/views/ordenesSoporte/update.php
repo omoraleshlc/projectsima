@@ -3,7 +3,7 @@
 /* @var $model OrdenesSoporte */
 
 $this->breadcrumbs=array(
-	'Ordenes Soportes'=>array('index'),
+	'Ordenes Soportes'=>array('admin'),
 	$model->keySOP=>array('view','id'=>$model->keySOP),
 	'Update',
 );

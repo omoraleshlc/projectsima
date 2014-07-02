@@ -1,4 +1,5 @@
 <?php
+Yii::import('application.modules.Configuracion.modules.Configuracion.models.*');
 
 class ConfiguracionModule extends CWebModule
 {

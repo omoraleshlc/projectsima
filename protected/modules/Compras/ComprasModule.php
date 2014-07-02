@@ -1,4 +1,6 @@
 <?php
+Yii::import('application.modules.Compras.models.*');
+Yii::import('application.modules.Compras.controllers.*');
 
 class ComprasModule extends CWebModule
 {

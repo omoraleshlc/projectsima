@@ -1,0 +1,12 @@
+2014/06/13 09:36:30 [warning] [application] Error al definir unsafe el atributo "codigo" de "OrdenesSoporte".
+in /var/www/yii/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php (191)
+in /var/www/yii/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+in /var/www/yii/projectsima/index.php (13)
+2014/06/13 09:36:30 [warning] [application] Error al definir unsafe el atributo "codigo" de "OrdenesSoporte".
+in /var/www/yii/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php (195)
+in /var/www/yii/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+in /var/www/yii/projectsima/index.php (13)
+2014/06/13 09:36:30 [warning] [application] Error al definir unsafe el atributo "codigo" de "OrdenesSoporte".
+in /var/www/yii/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php (199)
+in /var/www/yii/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+in /var/www/yii/projectsima/index.php (13)

@@ -15,9 +15,13 @@ return array(
 
 	// preloading 'log' component
 	'preload'=>array('log'),
+	
 
 	// autoloading model and component classes
 	'import'=>array(
+		
+	
+	
 		'application.*',
 		'application.models.*',
 		'application.components.*',
@@ -27,12 +31,16 @@ return array(
 		'editable.*',	
 		
 		/*MODULOS PROPIOS inicia*/
-		'application.modules.Compras.*',
 		'application.modules.Compras.models.*',
+		'application.modules.Compras.controllers.*',
 		'application.modules.Configuracion.*',
 		'application.modules.Configuracion.models.*',
 		'application.modules.Configuracion.modules.Configuracion.*',
 		'application.modules.Configuracion.modules.Configuracion.models.*',
+		'application.modules.Configuracion.modules.Configuracion.controllers.*',
+		'application.modules.Configuracion.modules.Usuarios.*',
+		'application.modules.Configuracion.modules.Usuarios.models.*',
+		'application.modules.Configuracion.modules.Usuarios.controllers.*',
 		'application.modules.ServiciosInstitucionales.*',
 		'application.modules.ServiciosInstitucionales.models.*',
 		'application.modules.ServiciosInstitucionales.modules.Sistemas.*',
@@ -72,7 +80,7 @@ return array(
 			// NO OLVIDES PONER EN FALSE TRAS INSTALAR
 			'debug'=>false,
 			'rbacSetupEnabled'=>false,
-			'allowUserAlways'=>false,
+			'allowUserAlways'=>true,
 
 			// MIENTRAS INSTALAS..PONLO EN: false
 			// lee mas abajo respecto a 'Encriptando las claves'
@@ -124,6 +132,7 @@ return array(
 		/*MODULOS PROPIOS inicia*/
 		'Compras',
 		'Configuracion',
+		'Configuracion.Usuarios',
 		'Configuracion.Configuracion',
 		'ServiciosInstitucionales',
 		'ServiciosInstitucionales.Sistemas',
@@ -142,7 +151,8 @@ return array(
 				'loginUrl' => array('/cruge/ui/login'),
 			),
 			'authManager' => array(
-				'class' => 'application.modules.cruge.components.CrugeAuthManager',
+				//'class' => 'application.modules.cruge.components.CrugeAuthManager',
+				'class' => 'application.components.MyCrugeAuthManager',
 			),
 			'crugemailer'=>array(
 				'class' => 'application.modules.cruge.components.CrugeMailer',
@@ -205,14 +215,14 @@ return array(
 					'levels'=>'error, warning',
 				),
 				// uncomment the following to show log messages on web pages
-				/*
+				
 				array(
 					'class'=>'CWebLogRoute',
 				 	'levels'=>'trace',
 			    		'categories'=>'vardump',
 				    	'showInFireBug'=>true
 				),
-				*/
+				/**/
 			),
 		),
 		'bootstrap'=>array(

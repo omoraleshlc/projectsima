@@ -12,6 +12,10 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('entidadSolicitud')); ?>:</b>
 	<?php echo CHtml::encode($data->entidadSolicitud); ?>
 	<br />
+	
+	<b><?php echo CHtml::encode($data->getAttributeLabel('codigo')); ?>:</b>
+	<?php echo CHtml::encode($data->codigo); ?>
+	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('almacen')); ?>:</b>
 	<?php echo CHtml::encode($data->almacen); ?>

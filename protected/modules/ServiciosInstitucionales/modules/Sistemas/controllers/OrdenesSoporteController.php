@@ -26,6 +26,17 @@ class OrdenesSoporteController extends Controller
 			'model'=>$this->loadModel($id),
 		));
 	}
+	
+	/**
+	 * Soporte puede activar o terminar ordenes de soporte.
+	 * Optimizada para celular.
+	 * @param integer $id the ID of the model to be displayed
+	 */
+	public function actionMobileAdmin()
+	{
+		//$this->layout='dasda';
+		$this->render('mobileAdmin');
+	}
 
 	/**
 	 * Creates a new model.
@@ -53,7 +64,7 @@ class OrdenesSoporteController extends Controller
 			$model->solicitud=0;
 			$model->descripcionSoporte=$model2->findByPk($model->keyTS)->descripcion;
 			$model->descripcionTS=$model2->findByPk($model->keyTS)->descripcion;
-			$model->descripcionAlmacen=$model3->find('almacen="'.$model->almacen.'"')->descripcion;
+			$model->descripcionAlmacen=$model3->find('almacen="'.$_POST['almacen'].'"')->descripcion;
 			$model->usuario=Yii::app()->user->name;
 			$model->fecha=date('Y-m-d', time());
 			$model->hora=date('h:i a', time());
@@ -88,12 +99,14 @@ class OrdenesSoporteController extends Controller
 			$model->observaciones=$model->observaciones."";
 			//Se han puesto varios de estas pk en la base de datos no pueden ser nulos los campos.
 			//No se ha cambiado la base de datos para no romper otras instalaciones
-			$model->entidad=$model->entidadSolicitud;
+			$model->entidad=$_POST['entidadSolicitud'];
 			$model->registro=0;
 			$model->solicitud=0;
 			$model->descripcionSoporte=$model2->findByPk($model->keyTS)->descripcion;
 			$model->descripcionTS=$model2->findByPk($model->keyTS)->descripcion;
-			$model->descripcionAlmacen=$model3->find('almacen="'.$model->almacen.'"')->descripcion;
+			$almacen=$_POST['almacen'];
+			if(!empty($almacen))
+			$model->descripcionAlmacen=$model3->find('almacen="'.$almacen.'"')->descripcion;
 			$model->usuario=Yii::app()->user->name;
 			$model->fecha=date('Y-m-d', time());
 			$model->hora=date('h:i a', time());
@@ -105,7 +118,22 @@ class OrdenesSoporteController extends Controller
 			if($model->save()){
 				Yii::app()->user->setFlash('success', "Orden de soporte para: ".$model->nombre." registrada.");
 			}else{
-				Yii::app()->user->setFlash('error', "Faltan campos por llenar");
+				if (empty($model->nombre))
+					Yii::app()->user->setFlash('error', "Escriba el nombre de usuario");
+					
+				else if (empty($model->observaciones))
+					Yii::app()->user->setFlash('error', "Faltan observaciones por llenar");
+
+				if (empty($model->entidad))
+					Yii::app()->user->setFlash('error', "No se ha seleccionado la entidad");
+				
+				else if(empty($almacen))
+					Yii::app()->user->setFlash('error', "No se ha seleccionado el departamento");
+					
+				else if(!empty($model->codigo))
+					if ($model->entidad != substr($model->codigo, 1, 2))
+					Yii::app()->user->setFlash('error', "El codigo no pertenece a esta entidad");
+					
 			}//$this::actionAdmin();
 			$this->redirect('index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin');
 		}
@@ -133,16 +161,21 @@ class OrdenesSoporteController extends Controller
 			$model->observaciones=$model->observaciones."";
 			//Se han puesto varios de estas pk en la base de datos no pueden ser nulos los campos.
 			//No se ha cambiado la base de datos para no romper otras instalaciones
-			$model->entidad=$model->entidadSolicitud;
+			$model->entidad=$_POST['entidadSolicitud'];
 			$model->registro=0;
 			$model->solicitud=0;
 			$model->descripcionSoporte=$model2->findByPk($model->keyTS)->descripcion;
 			$model->descripcionTS=$model2->findByPk($model->keyTS)->descripcion;
-			$model->descripcionAlmacen=$model3->find('almacen="'.$model->almacen.'"')->descripcion;
+			$model->descripcionAlmacen=$model3->find('almacen="'.$_POST['almacen'].'"')->descripcion;
 			
 			
 			
 			if($model->save())
+				/*echo '<script type="text/javascript">
+				  console.log(
+					  "'.$model->fechaInicio.'"
+				  );
+		     </script>';/**/
 				$this->redirect(array('view','id'=>$model->keySOP));
 		}
 
@@ -180,25 +213,29 @@ class OrdenesSoporteController extends Controller
 	 * Manages all models.
 	 */
 	public function actionAdmin()
-	{
+	{	
 		$model=new OrdenesSoporte('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['OrdenesSoporte']))
 			$model->attributes=$_GET['OrdenesSoporte'];
 			
-			$modelPendientes=new OrdenesSoporte('search');
-			$modelPendientes->attributes=$model->attributes;
-			$modelPendientes->status="pending";
+		$modelPendientes=new OrdenesSoporte('search');
+		$modelPendientes->attributes=$model->attributes;
+		$modelPendientes->status="pending";
+		
+		$modelEnProceso=new OrdenesSoporte('search');
+		$modelEnProceso->attributes=$model->attributes;
+		$modelEnProceso->status="ontransit";
+		
+		$modelTeminadas=new OrdenesSoporte('search');
+		$modelTeminadas->attributes=$model->attributes;
+		$modelTeminadas->status="done";
 			
-			$modelEnProceso=new OrdenesSoporte('search');
-			$modelEnProceso->attributes=$model->attributes;
-			$modelEnProceso->status="ontransit";
-			
-			$modelTeminadas=new OrdenesSoporte('search');
-			$modelTeminadas->attributes=$model->attributes;
-			$modelTeminadas->status="done";
-			
-			
+/*		if is operador	
+		$this->render('_formmin',array(
+			'model'=>$model,
+		));
+*/		
 			
 		$this->render('admin',array(
 			'model'=>$model,
@@ -246,8 +283,76 @@ class OrdenesSoporteController extends Controller
 		$es->update();
 	}
 	
+		
+	/*
+	* Obtiene el listado de tipo de soporte
+	*/
 	public function actionGetTipoSoporteList()
 	{
  		echo CJSON::encode(Editable::source(CatTipoSoporte::model()->findAll(), 'keyTS', 'descripcion')); 
+	}
+		
+	/*
+	* Cambia el status de la orden al siguiente.
+	* Puede recibir el id de la tabla de ordenes (GET) o de la activación móvil (POST)
+	*/
+	public function actionActivarOrden()
+	{
+        
+		$model = new OrdenesSoporte();
+		
+		if(isset($_GET['field'])){
+			$model = $model->findByPK($_GET['field']);
+		}
+		else if (isset($_POST['id'])){
+			//echo $_POST['id'];
+			$model = $model->findByPK($_POST['id']);
+		}
+		
+		if ($model->status=="pending"){
+			$model->status="ontransit";
+			
+			$model->fechaInicio=date("Y-m-d H:i:s");
+			//$model->fechaFinal=date("");
+			$model->save();
+		}else if ($model->status=="ontransit"){
+			$model->status="done";
+			$model->fechaFinal=date("Y-m-d H:i:s");
+			$model->save();
+		}
+		
+		if(!isset($_GET['field'])){
+			$this->render('mobileAdmin');
+		}
+		//$model = $model->findByPK($_GET['field']);
+		
+		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+		if(!isset($_GET['ajax']))
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));/**/
+	}
+	
+	/*
+	*Actualiza el dropdown de almacenes con los que pernecen a la entidad seleccionada
+	*
+	*/
+	public function actionAlmacenesPorEntidad()
+	{
+		$entidadSolicitud=$_POST['entidadSolicitud'];
+		$catAlmacenvar = new CatAlmacen();
+		$data=$catAlmacenvar::model()->findAll('entidad=:entidad Order by descripcion', 
+			array(':entidad'=>$entidadSolicitud)
+		);
+		
+
+		//$data=CHtml::listData($data,'almacen','descripcion');
+		$data = CMap::mergeArray(array(''=>'Seleccione departamento'),CHtml::listData($data,'almacen','descripcion'));
+
+		foreach($data as $value=>$name)
+		{
+			echo CHtml::tag('option',
+			array('value'=>$value),CHtml::encode($name),true);
+		}
+		
+		
 	}
 }

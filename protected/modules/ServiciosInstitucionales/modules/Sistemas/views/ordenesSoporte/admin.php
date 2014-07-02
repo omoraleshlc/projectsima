@@ -8,9 +8,11 @@ $this->breadcrumbs=array(
 ?>
 
 
-<?php $this->widget(
+<?php
+$this->widget(
 	'bootstrap.widgets.TbTabs', array(
 		'type'=>'tabs', // 'tabs' or 'pills'
+		'htmlOptions'=>array('overflow'=>'hidden'),
 		'tabs'=>array(
 			array(
 				'label'=>'Crear nueva',
@@ -29,7 +31,7 @@ $this->breadcrumbs=array(
 				array('model' => $modelEnProceso,),true),),//tab 3
 			array('label'=>'Terminadas', 'content' => $this->renderPartial('adminListTerminadas',
 				array('model' => $modelTeminadas,),true),),//tab 4
-			array('label'=>'Reportes', 'content' => $this->renderPartial('adminListTerminadas',
+			array('label'=>'Reportes','htmlOptions'=>array('overflow'=>'hidden'), 'content' => $this->renderPartial('reportes',
 				array('model' => $modelTeminadas,),true),),//tab 5
 			/**/
 		),//tabs

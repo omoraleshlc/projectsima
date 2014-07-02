@@ -1,5 +1,11 @@
 <?php
-
+/**
+ * Catálogo de marcas.
+ * 
+ * @author Mitzimon
+ * @version 0.1
+ * @package ServiciosInstitucionales.Sistemas
+ */
 class CatMarcaController extends Controller
 {
 	/**
@@ -42,7 +48,8 @@ class CatMarcaController extends Controller
 		{
 			$model->attributes=$_POST['CatMarca'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->keyMA));
+				$this->redirect(array('default/CatalogoEquipos'));
+				//$this->redirect(array('view','id'=>$model->keyMA));
 		}
 
 		$this->render('create',array(
@@ -142,6 +149,9 @@ class CatMarcaController extends Controller
 		}
 	}
 	
+	/**
+	 * Actualiza el campo editado en la gridview con x editable
+	 */
 	public function actionUpdateEditable() {
 		Yii::import('editable.EditableSaver');
 		$es = new EditableSaver('CatMarca');

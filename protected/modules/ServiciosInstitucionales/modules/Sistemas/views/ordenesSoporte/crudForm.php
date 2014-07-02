@@ -12,6 +12,8 @@
 			'type'=>'text',
 		),		'nombre'=>array(
 			'type'=>'text',
+		),			'codigo'=>array(
+			'type'=>'text',
 		),		/*
 		'descripcionSoporte'=>array(
 			'type'=>'text',

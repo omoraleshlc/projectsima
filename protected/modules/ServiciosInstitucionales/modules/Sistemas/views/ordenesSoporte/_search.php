@@ -20,6 +20,15 @@
 		<?php echo $form->label($model,'entidadSolicitud'); ?>
 		<?php echo $form->textField($model,'entidadSolicitud',array('size'=>2,'maxlength'=>2)); ?>
 	</div>
+	
+	<div class="row">
+		<?php echo $form->label($model,'codigo'); ?>
+		<?php echo $form->textField($model,'codigo',array('size'=>12,'maxlength'=>12)); ?>
+	</div>
+	<div class="row">
+		<?php echo $form->label($model,'fechaInicio'); ?>
+		<?php echo $form->textField($model,'fechaInicio',array('size'=>10,'maxlength'=>10)); ?>
+	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'almacen'); ?>

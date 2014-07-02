@@ -3,7 +3,7 @@
 /* @var $model CatTipoProcesador */
 
 $this->breadcrumbs=array(
-	'Cat Tipo Procesadors'=>array('index'),
+	'Cat Tipo Procesadors'=>array('default/CatalogoEquipos'),
 	$model->keyTP,
 );
 

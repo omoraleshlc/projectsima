@@ -1,5 +1,11 @@
 <?php
-
+/**
+ * Catálogo de compañías de teléfono.
+ * 
+ * @author Mitzimon
+ * @version 0.1
+ * @package ServiciosInstitucionales.Sistemas
+ */
 class CatCompanyController extends Controller
 {
 	/**
@@ -42,7 +48,8 @@ class CatCompanyController extends Controller
 		{
 			$model->attributes=$_POST['CatCompany'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->keyTS));
+				$this->redirect(array('default/CatalogoTelefonia'));
+				//$this->redirect(array('view','id'=>$model->keyTS));
 		}
 
 		$this->render('create',array(
@@ -143,7 +150,7 @@ class CatCompanyController extends Controller
 	}
 	
 	/*
-	*Guarda los cambios hechos con x-editable
+	*	Guarda los cambios hechos con x-editable
 	*
 	*/
 	public function actionUpdateEditable() {

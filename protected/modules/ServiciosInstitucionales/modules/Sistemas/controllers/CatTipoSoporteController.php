@@ -1,5 +1,11 @@
 <?php
-
+/**
+ * Catálogo de tipo de soporte.
+ * 
+ * @author Mitzimon
+ * @version 0.1
+ * @package ServiciosInstitucionales.Sistemas
+ */
 class CatTipoSoporteController extends Controller
 {
 	/**
@@ -42,7 +48,8 @@ class CatTipoSoporteController extends Controller
 		{
 			$model->attributes=$_POST['CatTipoSoporte'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->keyTS));
+				$this->redirect(array('default/CatalogoEquipos'));
+				//$this->redirect(array('view','id'=>$model->keyTS));
 		}
 
 		$this->render('create',array(
@@ -142,6 +149,9 @@ class CatTipoSoporteController extends Controller
 		}
 	}
 	
+	/**
+	 * Actualiza el campo editado en la gridview con x editable
+	 */
 	public function actionUpdateEditable() {
 		Yii::import('editable.EditableSaver');
 		$es = new EditableSaver('CatTipoSoporte');

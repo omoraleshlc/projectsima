@@ -49,8 +49,10 @@
 					array('label'=>'Configuracion', 'url'=>'#',
 		             	'visible'=>!Yii::app()->user->isGuest,
 		             	'items'=>array(
-						      array('label'=>'Usuarios'
-									, 'url'=>Yii::app()->user->ui->userManagementAdminUrl),
+						      array('label'=>'Usuarios',
+									'url'=>Yii::app()->user->ui->userManagementAdminUrl),
+							 	array('label'=>'Usuarios V2',
+		                 		'url'=>Yii::app()->createUrl('Configuracion/Usuarios/UsuariosSima/admin')),
 		                 array('label'=>'Sistema', 'url'=>'#'),
 		             )),//end dropdown
 				
@@ -67,9 +69,9 @@
 		                 array('label'=>'Mis permisos', 'url'=>'#'),
 		                 array('label'=>'Mi cuenta', 'url'=>'#'),
 		                 '---',
-		                 array('label'=>'Salir', 'url'=>array('cruge/ui/logout')),
+		                 array('label'=>'Salir', 'url'=>Yii::app()->createUrl('cruge/ui/logout')),
 		             )),
-		         	array('label'=>'Acceder', 'url'=>array('cruge/ui/login'), 'visible'=>Yii::app()->user->isGuest),
+		         	array('label'=>'Acceder', 'url'=>Yii::app()->createUrl('cruge/ui/login'), 'visible'=>Yii::app()->user->isGuest),
 		         ),
 		     ),
 		),

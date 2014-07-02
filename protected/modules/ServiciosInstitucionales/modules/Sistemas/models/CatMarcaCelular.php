@@ -37,6 +37,7 @@ class CatMarcaCelular extends CActiveRecord
 		return array(
 			array('descripcion', 'required'),
 			array('descripcion', 'length', 'max'=>200),
+			array('descripcion', 'unique'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('keyMA, descripcion', 'safe', 'on'=>'search'),

@@ -3,7 +3,7 @@
 /* @var $model CatSoftware */
 
 $this->breadcrumbs=array(
-	'Cat Softwares'=>array('index'),
+	'Cat Softwares'=>array('default/CatalogoEquipos'),
 	$model->keySW,
 );
 

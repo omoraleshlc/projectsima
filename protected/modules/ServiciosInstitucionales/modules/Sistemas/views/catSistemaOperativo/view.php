@@ -3,7 +3,7 @@
 /* @var $model CatSistemaOperativo */
 
 $this->breadcrumbs=array(
-	'Cat Sistema Operativos'=>array('index'),
+	'Cat Sistema Operativos'=>array('default/CatalogoEquipos'),
 	$model->keyOS,
 );
 

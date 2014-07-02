@@ -18,7 +18,10 @@
 		'placement' => 'left',
 			)
 		),		array(
-			'class'=>'CButtonColumn',
+			'class'=>'bootstrap.widgets.TbButtonColumn',
+			'viewButtonUrl' =>'Yii::app()->createUrl("ServiciosInstitucionales/Sistemas/CatTipoSoporte/view",array("id"=>$data->primaryKey))',
+			'updateButtonUrl' =>'Yii::app()->createUrl("ServiciosInstitucionales/Sistemas/CatTipoSoporte/update",array("id"=>$data->primaryKey))',
+			'deleteButtonUrl' =>'Yii::app()->createUrl("ServiciosInstitucionales/Sistemas/CatTipoSoporte/delete",array("id"=>$data->primaryKey))',
 		),
 	),
 )); ?>
