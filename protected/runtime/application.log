@@ -114,3 +114,83 @@ Stack trace:
 REQUEST_URI=/yii/projectsima/index.php?r=Configuracion/Usuarios/UsuariosSima/admin
 HTTP_REFERER=http://localhost/yii/projectsima/index.php
 ---
+2014/07/02 08:59:39 [error] [exception.CException] exception 'CException' with message 'CatTipoSoporteController no ha podido encontrar la vista "index" solicitada.' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#1 /var/www/yii/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/CatTipoSoporteController.php(106): CController->render('index', Array)
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(49): CatTipoSoporteController->actionIndex()
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#6 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#7 /var/www/yii/framework/web/filters/CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#9 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#11 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#12 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /var/www/yii/projectsima/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/yii/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/catTipoSoporte/index
+HTTP_REFERER=http://localhost/yii/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/CatTipoSoporte/create&model=CatTipoSoporte
+---
+2014/07/02 09:03:51 [error] [exception.CException] exception 'CException' with message 'CatTipoSoporteController no ha podido encontrar la vista "index" solicitada.' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#1 /var/www/yii/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/CatTipoSoporteController.php(106): CController->render('index', Array)
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(49): CatTipoSoporteController->actionIndex()
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#6 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#7 /var/www/yii/framework/web/filters/CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#9 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#11 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#12 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /var/www/yii/projectsima/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/yii/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/catTipoSoporte/index
+HTTP_REFERER=http://localhost/yii/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/CatTipoSoporte/create&model=CatTipoSoporte
+---
+2014/07/02 09:03:58 [error] [exception.CException] exception 'CException' with message 'CatTipoSoporteController no ha podido encontrar la vista "index" solicitada.' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#1 /var/www/yii/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/CatTipoSoporteController.php(106): CController->render('index', Array)
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(49): CatTipoSoporteController->actionIndex()
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#6 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#7 /var/www/yii/framework/web/filters/CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#9 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#11 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#12 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /var/www/yii/projectsima/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/yii/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/catTipoSoporte/index
+HTTP_REFERER=http://localhost/yii/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/CatTipoSoporte/update&id=1
+---
+2014/07/02 09:04:02 [error] [exception.CException] exception 'CException' with message 'CatTipoSoporteController no ha podido encontrar la vista "index" solicitada.' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#1 /var/www/yii/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/CatTipoSoporteController.php(106): CController->render('index', Array)
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(49): CatTipoSoporteController->actionIndex()
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#6 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#7 /var/www/yii/framework/web/filters/CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#9 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#11 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#12 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /var/www/yii/projectsima/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/yii/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/catTipoSoporte/index
+HTTP_REFERER=http://localhost/yii/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/CatTipoSoporte/update&id=1
+---
