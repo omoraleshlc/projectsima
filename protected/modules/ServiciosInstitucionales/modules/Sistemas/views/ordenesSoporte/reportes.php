@@ -3,7 +3,7 @@
 	Yii::import('application.extensions.Hzl.google.HzlVisualizationChart');
   
 	$duplicateData=Yii::app()->db->createCommand('
-		 Select almacen, COUNT(*) as num from  sima.sis_ordenesSOP group by almacen order by num
+		 Select almacen, COUNT(*) as num from  sima.sis_ordenesSOP where almacenSoporte="HSIST" group by almacen order by num
 	')->queryAll();
 
 
