@@ -78,7 +78,7 @@
 		<?php 
 		/*$lista=CHtml::listData(CatAlmacen::model()->findAll(), 'almacen', 'descripcion');
 		echo CHtml::activeDropDownList($model,'almacen', $lista);*/
-		echo CHtml::dropDownList('almacen','', array(),
+		echo CHtml::dropDownList('almacen','',  array(),
 			array(
 				'empty'=>'Seleccionar departamento',
 				'required'=>'true',

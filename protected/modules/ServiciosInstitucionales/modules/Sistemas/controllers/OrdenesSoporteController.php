@@ -353,7 +353,7 @@ class OrdenesSoporteController extends Controller
 	{
 		$entidadSolicitud=$_POST['entidadSolicitud'];
 		$catAlmacenvar = new CatAlmacen();
-		$data=$catAlmacenvar::model()->findAll('entidad=:entidad Order by descripcion', 
+		$data=$catAlmacenvar::model()->findAll('miniAlmacen!="Si" and entidad=:entidad Order by descripcion', 
 			array(':entidad'=>$entidadSolicitud)
 		);
 		
@@ -364,7 +364,7 @@ class OrdenesSoporteController extends Controller
 		foreach($data as $value=>$name)
 		{
 			echo CHtml::tag('option',
-			array('value'=>$value),CHtml::encode($name),true);
+			array('value'=>$value),CHtml::encode(ucwords(strtolower($name))),true);
 		}
 		
 		
