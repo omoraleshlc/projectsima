@@ -1,7 +1,7 @@
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'ordenes-soportependientes-grid',
-	'dataProvider'=>$model->search(),
+	'dataProvider'=>$model,
 	'columns'=>array(
 		array(
 			'name' => 'keySOP',

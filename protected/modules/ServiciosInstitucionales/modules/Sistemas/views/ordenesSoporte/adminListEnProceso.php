@@ -1,7 +1,7 @@
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'ordenes-soporteenproceso-grid',
-	'dataProvider'=>$model->search(),
+	'dataProvider'=>$model,
 	//'filter'=>$model,
 	'columns'=>array(
 		array(

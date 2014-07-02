@@ -219,23 +219,37 @@ class OrdenesSoporteController extends Controller
 		if(isset($_GET['OrdenesSoporte']))
 			$model->attributes=$_GET['OrdenesSoporte'];
 			
-		$modelPendientes=new OrdenesSoporte('search');
-		$modelPendientes->attributes=$model->attributes;
-		$modelPendientes->status="pending";
 		
-		$modelEnProceso=new OrdenesSoporte('search');
-		$modelEnProceso->attributes=$model->attributes;
-		$modelEnProceso->status="ontransit";
-		
-		$modelTeminadas=new OrdenesSoporte('search');
-		$modelTeminadas->attributes=$model->attributes;
-		$modelTeminadas->status="done";
-			
-/*		if is operador	
-		$this->render('_formmin',array(
-			'model'=>$model,
+		$modelPendientes=new CActiveDataProvider('OrdenesSoporte', array(
+			 'criteria'=>array(
+				  'condition'=>'status="pending"',
+				  'order'=>'keySOP ASC',
+			 ),
+			 'pagination'=>array(
+				  'pageSize'=>20,
+			 ),
 		));
-*/		
+
+		$modelEnProceso=new CActiveDataProvider('OrdenesSoporte', array(
+			 'criteria'=>array(
+				  'condition'=>'status="ontransit"',
+				  'order'=>'fechaInicio DESC',
+			 ),
+			 'pagination'=>array(
+				  'pageSize'=>20,
+			 ),
+		));
+
+
+		$modelTeminadas=new CActiveDataProvider('OrdenesSoporte', array(
+			 'criteria'=>array(
+				  'condition'=>'status="done"',
+				  'order'=>'fechaFinal DESC',
+			 ),
+			 'pagination'=>array(
+				  'pageSize'=>40,
+			 ),
+		));
 			
 		$this->render('admin',array(
 			'model'=>$model,
