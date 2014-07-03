@@ -1,4 +1,7 @@
-
+<?php $this->widget('bootstrap.widgets.TbButton', array(
+    'label'=>'Imprimir ordenes',
+    'url'=>'index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/listadoParaImprimir',
+)); ?>
 <?php
 	Yii::import('application.extensions.Hzl.google.HzlVisualizationChart');
   
@@ -21,3 +24,4 @@
 			'height' => 600,
 	)));
 ?>
+

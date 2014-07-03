@@ -128,7 +128,7 @@ class OrdenesSoporte extends CActiveRecord
 			'solicitud' => 'Solicitud',
 			'descripcionTS' => 'Descripcion tipo de soporte',
 			'status' => 'Status',
-			'observaciones' => 'Observaciones',
+			'observaciones' => 'Descripción',
 			'usuarioEjecutor' => 'Atiende',
 			'fechaFinal' => 'Fecha terminación',
 			'almacenSoporte' => 'Almacen Soporte',
@@ -174,4 +174,40 @@ class OrdenesSoporte extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+	
+		public function searchPrint()
+	{
+		// Warning: Please modify the following code to remove attributes that
+		// should not be searched.
+
+		$criteria=new CDbCriteria;
+
+		$criteria->compare('keySOP',$this->keySOP);
+		$criteria->compare('entidadSolicitud',$this->entidadSolicitud,true);
+		$criteria->compare('almacen',$this->almacen,true);
+		$criteria->compare('keyTS',$this->keyTS);
+		$criteria->compare('registro',$this->registro);
+		$criteria->compare('nombre',$this->nombre,true);
+		$criteria->compare('descripcionSoporte',$this->descripcionSoporte,true);
+		$criteria->compare('descripcionAlmacen',$this->descripcionAlmacen,true);
+		$criteria->compare('usuario',$this->usuario,true);
+		$criteria->compare('fecha',$this->fecha,true);
+		$criteria->compare('hora',$this->hora,true);
+		$criteria->compare('entidad',$this->entidad,true);
+		$criteria->compare('solicitud',$this->solicitud,true);
+		$criteria->compare('descripcionTS',$this->descripcionTS,true);
+		$criteria->compare('status',$this->status,true);
+		$criteria->compare('observaciones',$this->observaciones,true);
+		$criteria->compare('usuarioEjecutor',$this->usuarioEjecutor,true);
+		$criteria->compare('fechaFinal',$this->fechaFinal,true);
+		$criteria->compare('almacenSoporte',$this->almacenSoporte,true);
+		$criteria->compare('codigo',$this->codigo,true);
+		$criteria->compare('fechaInicio',$this->codigo,true);
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+			'pagination'=>array('pageSize'=>200),
+		));
+	}
+	
 }

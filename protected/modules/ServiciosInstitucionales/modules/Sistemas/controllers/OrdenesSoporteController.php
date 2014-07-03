@@ -369,4 +369,17 @@ class OrdenesSoporteController extends Controller
 		
 		
 	}
+	
+	public function actionListadoParaImprimir()
+	{
+		$model=new OrdenesSoporte('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['OrdenesSoporte']))
+			$model->attributes=$_GET['OrdenesSoporte'];
+			
+
+		$this->render('printOrdenes',array(
+			'model'=>$model,
+		));
+	}
 }
