@@ -14,6 +14,12 @@
 		});
 	");
 ?>
+<style>
+div.form .columna select, div.form .columna input[type='text'], div.form .columna input[type='password']
+{
+	width: 96%;
+}
+</style>
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -24,7 +30,7 @@
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<?php echo $form->errorSummary($model); ?>
-	
+<div class="columna">		
 	<div class="row">
 		<?php echo $form->labelEx($model,'nombre'); ?>
 		<?php echo $form->textField($model,'nombre',array('size'=>30,'maxlength'=>30)); ?>
@@ -90,21 +96,21 @@
 		?> 
 		<?php echo $form->error($model,'keyTS'); ?>
 	</div>
-
+	
 	<div class="row">
 		<?php echo $form->labelEx($model,'observaciones'); ?>
 		<?php echo $form->textField($model,'observaciones',array('size'=>60,'maxlength'=>250)); ?>
 		<?php echo $form->error($model,'observaciones'); ?>
 	</div>
 
-
-
 	<div class="row">
 		<?php echo $form->labelEx($model,'usuario'); ?>
 		<?php echo $form->textField($model,'usuario',array('size'=>30,'maxlength'=>30)); ?>
 		<?php echo $form->error($model,'usuario'); ?>
 	</div>
+</div>
 
+<div class="columna">	
 	<div class="row">
 		<?php echo $form->labelEx($model,'fecha'); ?>
 		<?php echo CHtml::activeDateField($model,'fecha',array('size'=>10,'maxlength'=>10)); ?>
@@ -158,8 +164,8 @@
 		?>
 		<?php echo $form->error($model,'fechaFinal'); ?>
 	</div>
-
-	<div class="row buttons">
+</div>
+	<div class="row buttons" style="clear:both">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar'); ?>
 	</div>
 
