@@ -41,6 +41,14 @@ class ProveedorController extends Controller
 		if(isset($_POST['Proveedor']))
 		{
 			$model->attributes=$_POST['Proveedor'];
+			$model->usuario=Yii::app()->user->name;
+			$model->cp=$model->codigoPostal;
+			$model->fecha=date('Y-m-d', time());
+			$model->hora=date('h:i a', time());
+			if(!$model->limite1)$model->limite1=0;
+			if(!$model->limite2)$model->limite2=0;
+			if(!$model->limite3)$model->limite3=0;
+			if(!$model->limite4)$model->limite4=0;
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->keyP));
 		}
@@ -65,6 +73,7 @@ class ProveedorController extends Controller
 		if(isset($_POST['Proveedor']))
 		{
 			$model->attributes=$_POST['Proveedor'];
+			$model->usuario=Yii::app()->user->name;
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->keyP));
 		}

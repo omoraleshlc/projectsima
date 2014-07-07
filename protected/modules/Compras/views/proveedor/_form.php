@@ -3,7 +3,11 @@
 /* @var $model Proveedor */
 /* @var $form CActiveForm */
 ?>
-
+<style>
+	.columna{
+		width: 30%;
+	}
+</style>
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -14,13 +18,13 @@
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<?php echo $form->errorSummary($model); ?>
-
+<div class="columna">
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_proveedor'); ?>
 		<?php echo $form->textField($model,'id_proveedor',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'id_proveedor'); ?>
 	</div>
-
+	
 	<div class="row">
 		<?php echo $form->labelEx($model,'razonSocial'); ?>
 		<?php echo $form->textField($model,'razonSocial',array('size'=>60,'maxlength'=>255)); ?>
@@ -28,9 +32,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'ciudad'); ?>
-		<?php echo $form->textField($model,'ciudad',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'ciudad'); ?>
+		<?php echo $form->labelEx($model,'rfc'); ?>
+		<?php echo $form->textField($model,'rfc',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->error($model,'rfc'); ?>
 	</div>
 
 	<div class="row">
@@ -40,9 +44,27 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'cp'); ?>
-		<?php echo $form->textField($model,'cp'); ?>
-		<?php echo $form->error($model,'cp'); ?>
+		<?php echo $form->labelEx($model,'ciudad'); ?>
+		<?php echo $form->textField($model,'ciudad',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->error($model,'ciudad'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'colonia'); ?>
+		<?php echo $form->textField($model,'colonia',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->error($model,'colonia'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'calle'); ?>
+		<?php echo $form->textField($model,'calle',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->error($model,'calle'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'codigoPostal'); ?>
+		<?php echo $form->textField($model,'codigoPostal'); ?>
+		<?php echo $form->error($model,'codigoPostal'); ?>
 	</div>
 
 	<div class="row">
@@ -56,52 +78,17 @@
 		<?php echo $form->textField($model,'telefono1',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'telefono1'); ?>
 	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'rfc'); ?>
-		<?php echo $form->textField($model,'rfc',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'rfc'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'calle'); ?>
-		<?php echo $form->textField($model,'calle',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'calle'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'colonia'); ?>
-		<?php echo $form->textField($model,'colonia',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'colonia'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'usuario'); ?>
-		<?php echo $form->textField($model,'usuario',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'usuario'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'fecha'); ?>
-		<?php echo $form->textField($model,'fecha',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'fecha'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'hora'); ?>
-		<?php echo $form->textField($model,'hora',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'hora'); ?>
-	</div>
-
+</div>
+<div class="columna">
 	<div class="row">
 		<?php echo $form->labelEx($model,'status'); ?>
-		<?php echo $form->textField($model,'status',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo CHtml::activeDropDownList($model,'status', array('A'=>'Activo','D'=>'Desactivada')); ?> 
 		<?php echo $form->error($model,'status'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'tipoPersona'); ?>
-		<?php echo $form->textField($model,'tipoPersona',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo CHtml::activeDropDownList($model,'tipoPersona', array('F'=>'Física','M'=>'Moral')); ?> 
 		<?php echo $form->error($model,'tipoPersona'); ?>
 	</div>
 
@@ -146,10 +133,11 @@
 		<?php echo $form->textField($model,'retenciones',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'retenciones'); ?>
 	</div>
-
+</div>
+<div class="columna">
 	<div class="row">
 		<?php echo $form->labelEx($model,'tipoProveedor'); ?>
-		<?php echo $form->textField($model,'tipoProveedor',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo CHtml::activeDropDownList($model,'status', array('productos'=>'Productos','ambos'=>'Desactivada', ''=>'Ninguno', 'sistemas'=>'Sistemas')); ?> 
 		<?php echo $form->error($model,'tipoProveedor'); ?>
 	</div>
 
@@ -169,12 +157,6 @@
 		<?php echo $form->labelEx($model,'id_fiscal'); ?>
 		<?php echo $form->textField($model,'id_fiscal',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'id_fiscal'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'codigoPostal'); ?>
-		<?php echo $form->textField($model,'codigoPostal'); ?>
-		<?php echo $form->error($model,'codigoPostal'); ?>
 	</div>
 
 	<div class="row">
@@ -200,8 +182,8 @@
 		<?php echo $form->textField($model,'limite4'); ?>
 		<?php echo $form->error($model,'limite4'); ?>
 	</div>
-
-	<div class="row buttons">
+</div>
+	<div class="row buttons" style="clear:both">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar'); ?>
 	</div>
 
