@@ -116,7 +116,7 @@ class OrdenesSoporteController extends Controller
 			$model->fechaFinal='1900-01-01';
 			
 			if($model->save()){
-				Yii::app()->user->setFlash('success', "Orden de soporte para: ".$model->nombre." registrada.");
+				Yii::app()->user->setFlash('success', "Orden de soporte para: ".$model->nombre." registrada con código ".$model->keySOP);
 			}else{
 				if (empty($model->nombre))
 					Yii::app()->user->setFlash('error', "Escriba el nombre de usuario");
@@ -312,37 +312,41 @@ class OrdenesSoporteController extends Controller
 	*/
 	public function actionActivarOrden()
 	{
-        
 		$model = new OrdenesSoporte();
 		
 		if(isset($_GET['field'])){
 			$model = $model->findByPK($_GET['field']);
 		}
-		else if (isset($_POST['id'])){
-			//echo $_POST['id'];
+		else if (isset($_POST['id']) and $_POST['id']!=""){
 			$model = $model->findByPK($_POST['id']);
 		}
-		
-		if ($model->status=="pending"){
-			$model->status="ontransit";
-			
-			$model->fechaInicio=date("Y-m-d H:i:s");
-			//$model->fechaFinal=date("");
-			$model->save();
-		}else if ($model->status=="ontransit"){
-			$model->status="done";
-			$model->fechaFinal=date("Y-m-d H:i:s");
-			$model->save();
+		if (isset($_POST['codigo']) and $_POST['codigo']!=""){
+			$model = $this->actionGetKeySOP($_POST['codigo']);
 		}
 		
-		if(!isset($_GET['field'])){
-			$this->render('mobileAdmin');
+		if($model){
+			if ($model->status=="pending"){
+				$model->status="ontransit";
+				$model->usuarioEjecutor=Yii::app()->user->name;
+				$model->fechaInicio=date("Y-m-d H:i:s");
+				//$model->fechaFinal=date("");
+				$model->save();
+			}else if ($model->status=="ontransit"){
+				$model->status="done";
+				$model->usuarioEjecutor=Yii::app()->user->name;
+				$model->fechaFinal=date("Y-m-d H:i:s");
+				$model->save();
+			}
+		}
+		else{
+			Yii::app()->user->setFlash('notice', "No se encontró la órden");
 		}
 		//$model = $model->findByPK($_GET['field']);
 		
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));/**/
+		/*if(!isset($_GET['ajax']))
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('mobileAdmin'));/**/
+			$this->redirect(array('mobileAdmin'));
 	}
 	
 	/*
@@ -381,5 +385,15 @@ class OrdenesSoporteController extends Controller
 		$this->render('printOrdenes',array(
 			'model'=>$model,
 		));
+	}
+	
+	/*
+	*
+	*@return string El keySOP de la orden de soporte no "done" que tenga el codigo del equipo.
+	*/
+	public function actionGetKeySOP($codigo)
+	{
+		$model = OrdenesSoporte::model()->find("codigo='".$codigo."' and (status='ontransit' or status='pending')");
+		return $model;
 	}
 }

@@ -13,7 +13,12 @@ $this->breadcrumbs=array(
 );
 ?>
 <br/><br/>
-
+<?php
+	foreach(Yii::app()->user->getFlashes() as $key => $message) {
+		echo '<div class="alert alert-warning" role="alert">' . $message . '</div>';
+	}
+?>
+<br/>
 <?php
 echo CHtml::beginForm();
 echo CHtml::textField('codigo', '',
