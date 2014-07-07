@@ -59,7 +59,7 @@ class OrdenesSoporteController extends Controller
 			$model->observaciones=$model->observaciones."";
 			//Se han puesto varios de estas pk en la base de datos no pueden ser nulos los campos.
 			//No se ha cambiado la base de datos para no romper otras instalaciones
-			$model->entidad=$model->entidadSolicitud;
+			$model->entidad=UsuariosSima::model()->find("usuario='".Yii::app()->user->name."'")->entidad;
 			$model->registro=0;
 			$model->solicitud=0;
 			$model->descripcionSoporte=$model2->findByPk($model->keyTS)->descripcion;
@@ -99,7 +99,7 @@ class OrdenesSoporteController extends Controller
 			$model->observaciones=$model->observaciones."";
 			//Se han puesto varios de estas pk en la base de datos no pueden ser nulos los campos.
 			//No se ha cambiado la base de datos para no romper otras instalaciones
-			$model->entidad=$_POST['entidadSolicitud'];
+			$model->entidad=UsuariosSima::model()->find("usuario='".Yii::app()->user->name."'")->entidad;
 			$model->registro=0;
 			$model->solicitud=0;
 			$model->descripcionSoporte=$model2->findByPk($model->keyTS)->descripcion;
@@ -161,13 +161,14 @@ class OrdenesSoporteController extends Controller
 			$model->observaciones=$model->observaciones."";
 			//Se han puesto varios de estas pk en la base de datos no pueden ser nulos los campos.
 			//No se ha cambiado la base de datos para no romper otras instalaciones
-			$model->entidad=$_POST['entidadSolicitud'];
+			
 			$model->registro=0;
 			$model->solicitud=0;
 			$model->descripcionSoporte=$model2->findByPk($model->keyTS)->descripcion;
 			$model->descripcionTS=$model2->findByPk($model->keyTS)->descripcion;
 			$model->descripcionAlmacen=$model3->find('almacen="'.$_POST['almacen'].'"')->descripcion;
-			
+			$model->entidadSolicitud=$_POST['entidadSolicitud'];
+			$model->almacen=$_POST['almacen'];
 			
 			
 			if($model->save())

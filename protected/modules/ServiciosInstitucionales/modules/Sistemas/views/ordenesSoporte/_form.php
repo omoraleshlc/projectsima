@@ -52,7 +52,7 @@ div.form .columna select, div.form .columna input[type='text'], div.form .column
 		<?php echo $form->labelEx($model,'entidadSolicitud'); ?>
 		<?php
 			$lista=CHtml::listData(CatEntidad::model()->findAll(), 'codigoEntidad', 'descripcionEntidad');
-			echo CHtml::dropDownList('entidadSolicitud','', $lista,
+			echo CHtml::dropDownList('entidadSolicitud',$model->entidadSolicitud, $lista,
 				array(
 				'empty'=>'Seleccionar entidad',
 				'required'=>'true',
@@ -75,9 +75,9 @@ div.form .columna select, div.form .columna input[type='text'], div.form .column
 	<div class="row">
 		<?php echo $form->labelEx($model,'almacen'); ?>
 		<?php 
-		/*$lista=CHtml::listData(CatAlmacen::model()->findAll(), 'almacen', 'descripcion');
-		echo CHtml::activeDropDownList($model,'almacen', $lista);*/
-		echo CHtml::dropDownList('almacen','almacen', array(),
+		$lista=CHtml::listData(CatAlmacen::model()->findAllByAttributes(array('entidad'=>$model->entidadSolicitud)), 'almacen', 'descripcion');
+		/*echo CHtml::activeDropDownList($model,'almacen', $lista);*/
+		echo CHtml::dropDownList('almacen','almacen', $lista,
 			array(
 				'required'=>'true',
 				'ajax' => array(
@@ -125,7 +125,7 @@ div.form .columna select, div.form .columna input[type='text'], div.form .column
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'status'); ?>
-		<?php echo CHtml::dropDownList('status','', array('pending'=>'Pendiente','ontransit'=>'En proceso','done'=>'Terminada')); ?> 
+		<?php echo CHtml::activeDropDownList($model,'status', array('pending'=>'Pendiente','ontransit'=>'En proceso','done'=>'Terminada')); ?> 
 		<?php echo $form->error($model,'status'); ?>
 	</div>
 
