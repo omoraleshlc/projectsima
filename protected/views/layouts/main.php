@@ -29,6 +29,13 @@
 				'class'=>'bootstrap.widgets.TbMenu',
 				'items'=>array(
 				
+					array('label'=>'Compras itemtemp', 'url'=>'#',
+		             	'visible'=>!Yii::app()->user->isGuest,
+		             	'items'=>array(
+						      array('label'=>'Proveedores',
+									'url'=>Yii::app()->createUrl('Compras/proveedor/admin')),
+		             )),//end dropdown
+				
 				
 					array('label'=>'Sistemas itemtemp', 'url'=>'#',
 		             	'visible'=>!Yii::app()->user->isGuest,
@@ -43,8 +50,12 @@
 		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/telefoniaCelular/admin')),
 		                 array('label'=>'Impresión de etiquetas',
 		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/printLabels')),
+		                 array('label'=>'Ordenes de soporte',
+		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin')),
 		             )),//end dropdown
-				
+		             
+		             
+		             
 				
 					array('label'=>'Configuracion', 'url'=>'#',
 		             	'visible'=>!Yii::app()->user->isGuest,
@@ -53,7 +64,10 @@
 									'url'=>Yii::app()->user->ui->userManagementAdminUrl),
 							 	array('label'=>'Usuarios V2',
 		                 		'url'=>Yii::app()->createUrl('Configuracion/Usuarios/UsuariosSima/admin')),
-		                 array('label'=>'Sistema', 'url'=>'#'),
+		                 	array('label'=>'Almacenes',
+		                 		'url'=>Yii::app()->createUrl('Configuracion/Sistema/CatAlmacen/admin')),
+	                 		array('label'=>'Entidades',
+		                 		'url'=>Yii::app()->createUrl('Configuracion/Sistema/CatEntidad/admin')),
 		             )),//end dropdown
 				
 				

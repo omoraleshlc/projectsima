@@ -1,4 +1,5 @@
 <?php
+Yii::import('application.modules.Configuracion.modules.Configuracion.models.*');
 
 class ConfiguracionModule extends CWebModule
 {
@@ -12,9 +13,6 @@ class ConfiguracionModule extends CWebModule
 			'Configuracion.models.*',
 			'Configuracion.components.*',
 		));
-		$this->setModules(array('Configuracion'));
-		$this->setModules(array('Configuracion', 'Usuarios'));
-		$this->setModules(array('Configuracion', 'Sistema'));
 	}
 
 	public function beforeControllerAction($controller, $action)
