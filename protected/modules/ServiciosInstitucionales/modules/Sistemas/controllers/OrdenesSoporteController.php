@@ -215,7 +215,7 @@ class OrdenesSoporteController extends Controller
 	 */
 	public function actionAdmin()
 	{	
-		$model=new OrdenesSoporte('search');
+		$model=new OrdenesSoporte('searchOperador');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['OrdenesSoporte']))
 			$model->attributes=$_GET['OrdenesSoporte'];
@@ -377,7 +377,7 @@ class OrdenesSoporteController extends Controller
 	
 	public function actionListadoParaImprimir()
 	{
-		$model=new OrdenesSoporte('search');
+		$model=new OrdenesSoporte('searchOperador');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['OrdenesSoporte']))
 			$model->attributes=$_GET['OrdenesSoporte'];

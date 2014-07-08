@@ -175,6 +175,10 @@ class OrdenesSoporte extends CActiveRecord
 		));
 	}
 	
+	/**
+	 * Recupera todas las ordenes que cumplan con los parámetors proporcionados. Páginas de 200 resultados.
+	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+	 */
 		public function searchPrint()
 	{
 		// Warning: Please modify the following code to remove attributes that
@@ -207,6 +211,50 @@ class OrdenesSoporte extends CActiveRecord
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 			'pagination'=>array('pageSize'=>200),
+		));
+	}
+	
+	/**
+	 * Recupera una sola orden que cumpla con los parámetros especificados.
+	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+	 */
+	public function searchOperador()
+	{
+		// Warning: Please modify the following code to remove attributes that
+		// should not be searched.
+
+		$criteria=new CDbCriteria;
+
+		$criteria->compare('keySOP',$this->keySOP);
+		$criteria->compare('entidadSolicitud',$this->entidadSolicitud,true);
+		$criteria->compare('almacen',$this->almacen,true);
+		$criteria->compare('keyTS',$this->keyTS);
+		$criteria->compare('nombre',$this->nombre,true);
+		$criteria->compare('descripcionSoporte',$this->descripcionSoporte,true);
+		$criteria->compare('descripcionAlmacen',$this->descripcionAlmacen,true);
+		$criteria->compare('usuario',$this->usuario,true);
+		$criteria->compare('fecha',$this->fecha,true);
+		$criteria->compare('hora',$this->hora,true);
+		$criteria->compare('entidad',$this->entidad,true);
+		$criteria->compare('descripcionTS',$this->descripcionTS,true);
+		$criteria->compare('status',$this->status,true);
+		$criteria->compare('observaciones',$this->observaciones,true);
+		$criteria->compare('usuarioEjecutor',$this->usuarioEjecutor,true);
+		$criteria->compare('fechaFinal',$this->fechaFinal,true);
+		$criteria->compare('almacenSoporte',$this->almacenSoporte,true);
+		$criteria->compare('codigo',$this->codigo,true);
+		$criteria->compare('fechaInicio',$this->codigo,true);
+		
+		if(!Yii::app()->user->checkAccess('SistemasOperador'))
+			$paginacion = array('pageSize'=>10);
+		else
+			$paginacion = array('pageSize'=>1);
+		
+		
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+			'pagination'=>$paginacion,
+			
 		));
 	}
 	
