@@ -16,7 +16,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>View OrdenesSoporte #<?php echo $model->keySOP; ?></h1>
+<h1>View Ordenes Soporte #<?php echo $model->keySOP; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
@@ -44,3 +44,16 @@ $this->menu=array(
 		'almacenSoporte',
 	),
 )); ?>
+
+<br/>
+<br/>
+<div>
+	<?php
+		$observaciones = new ObservacionesOrdenSoporte();
+		$observaciones = $observaciones::model();
+		$observaciones->keySOP=$model->keySOP;
+		$this->renderPartial('/observacionesOrdenSoporte/adminList',array(
+			'model'=>$observaciones,
+		));
+	?>
+</div>
