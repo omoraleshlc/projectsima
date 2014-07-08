@@ -215,8 +215,9 @@ class OrdenesSoporteController extends Controller
 	 */
 	public function actionAdmin()
 	{	
-		$model=new OrdenesSoporte('searchOperador');
+		$model=new OrdenesSoporte('search');
 		$model->unsetAttributes();  // clear any default values
+		$model->keySOP=0;
 		if(isset($_GET['OrdenesSoporte']))
 			$model->attributes=$_GET['OrdenesSoporte'];
 			

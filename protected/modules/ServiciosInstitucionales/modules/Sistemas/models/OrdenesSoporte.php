@@ -229,6 +229,7 @@ class OrdenesSoporte extends CActiveRecord
 		$criteria->compare('entidadSolicitud',$this->entidadSolicitud,true);
 		$criteria->compare('almacen',$this->almacen,true);
 		$criteria->compare('keyTS',$this->keyTS);
+		$criteria->compare('registro',$this->registro);
 		$criteria->compare('nombre',$this->nombre,true);
 		$criteria->compare('descripcionSoporte',$this->descripcionSoporte,true);
 		$criteria->compare('descripcionAlmacen',$this->descripcionAlmacen,true);
@@ -236,6 +237,7 @@ class OrdenesSoporte extends CActiveRecord
 		$criteria->compare('fecha',$this->fecha,true);
 		$criteria->compare('hora',$this->hora,true);
 		$criteria->compare('entidad',$this->entidad,true);
+		$criteria->compare('solicitud',$this->solicitud,true);
 		$criteria->compare('descripcionTS',$this->descripcionTS,true);
 		$criteria->compare('status',$this->status,true);
 		$criteria->compare('observaciones',$this->observaciones,true);
