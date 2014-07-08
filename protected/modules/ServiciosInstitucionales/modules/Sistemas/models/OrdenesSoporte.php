@@ -245,8 +245,8 @@ class OrdenesSoporte extends CActiveRecord
 		$criteria->compare('codigo',$this->codigo,true);
 		$criteria->compare('fechaInicio',$this->codigo,true);
 		
-		if(!Yii::app()->user->checkAccess('SistemasOperador'))
-			$paginacion = array('pageSize'=>10);
+		if(Yii::app()->user->checkAccess('SistemaCapturista'))
+			$paginacion = array('pageSize'=>20);
 		else
 			$paginacion = array('pageSize'=>1);
 		
