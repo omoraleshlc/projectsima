@@ -67,6 +67,28 @@ class ObservacionesOrdenSoporteController extends Controller
 			'model'=>$model,
 		));
 	}
+	
+	public function actionCreatePopup()
+	{
+		$this->layout='//layouts/column1css';
+		
+		$model=new ObservacionesOrdenSoporte;
+		$model->usuario=Yii::app()->user->name;
+		$model->fecha=date('Y-m-d', time());
+		$model->hora=date('h:i a', time());
+		$model->entidad=UsuariosSima::model()->find("usuario='".Yii::app()->user->name."'")->entidad;
+		$model->keySOP=$_GET['OrdenSoporteId'];
+
+		if(isset($_POST['ObservacionesOrdenSoporte']))
+		{
+			$model->attributes=$_POST['ObservacionesOrdenSoporte'];
+			$model->save();
+		}
+
+		$this->render('_formpopup',array(
+			'model'=>$model,
+		));
+	}
 
 	/**
 	 * Updates a particular model.
