@@ -19,3 +19,16 @@ $this->menu=array(
 <h1>Update OrdenesSoporte <?php echo $model->keySOP; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+
+<br/><br/>
+
+<div>
+	<?php
+		$observaciones = new ObservacionesOrdenSoporte();
+		$observaciones = $observaciones::model();
+		$observaciones->keySOP=$model->keySOP;
+		$this->renderPartial('/observacionesOrdenSoporte/adminList',array(
+			'model'=>$observaciones,
+		));
+	?>
+</div>
