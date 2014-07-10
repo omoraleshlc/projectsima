@@ -7,50 +7,53 @@
 	'columns'=>array(
 		array(
 			'name' => 'keySOP',
-			'htmlOptions' => array('style' => 'width: 9%; text-align: center;'),
+			'headerHtmlOptions' => array('style' => 'width: 5%;'),
+			'htmlOptions' => array('style' => 'text-align: center;'),
+		),
+		array(
+			'header'=>'Fecha',
+			'type'=>'HTML',
+			'value' => "'Reporte:<br/>'.\$data->fecha.'<br/><b>Inicio:<br/>'.\$data->fecha.'</b><br/>Terminación:<br/>'.\$data->fecha",
+			'htmlOptions' => array('style' => 'font-size: 10px'),
 		),
 		array(
 			'name' => 'fecha',
-			'htmlOptions' => array('style' => 'width: 9%; text-align: center;'),
+			'headerHtmlOptions' => array('style' => 'width: 9%;'),
+			'htmlOptions' => array('style' => 'text-align: center;'),
+			'filter'=>CHtml::activeTextField($model, 'fecha', 
+                 array('placeholder'=>'buscar')),
 		),
 		array(
-			'class' => 'editable.EditableColumn',
-			'name' => 'keyTS',
-			'editable' => array(
-				'type' => 'select',
-				'url' => $this->createUrl('ordenesSoporte/updateEditable', array('model'=>'ordenesSoporte', 'field'=>'keyTS')),
-				'source'    => $this->createUrl('ordenesSoporte/getTipoSoporteList'),
-				'placement' => 'left',
-			)
+			'header'=>'Tipo soporte',
+			'value' => "catTipoSoporte()::model(\$data->status)->descripcion",
+			'headerHtmlOptions' => array('style' => 'width: 10%;'),
 		),	
-		'descripcionAlmacen',
-		'nombre',
-		'codigo',
-		'observaciones',
 		array(
-			'class'=>'bootstrap.widgets.TbButtonColumn',
-			'template' => '{begin}',
-			'header' => 'Iniciar',
-			'buttons' => array(
-				'begin' => array( //the name {reply} must be same
-					'label' => 'Iniciar', // text label of the button
-					'url' => 'Yii::app()->controller->createUrl("ordenesSoporte/activarOrden", array("model"=>"ordenesSoporte", "field"=>"$data->keySOP"))',
-					'icon'=>'play',
-					'htmlOptions'=>array('href'=>'dfsf'),
-				),	
-			),
+			'name' => 'descripcionAlmacen',
+			'headerHtmlOptions' => array('style' => 'width: 15%;'),
 		),
-		/*array(
-			'class' => 'editable.EditableColumn',
-			'name' => 'status',
-			'header'=>'adsd',
-			'editable' => array(
-				'type' => 'select',
-				'url' => $this->createUrl('OrdenesSoporte/updateStatus', array('model'=>'OrdenesSoporte', 'field'=>'status', 'status'=>'status',)),
-				'params'   => array('id' => '$data->keySOP'),
-				'source'    => Editable::source(array('pending' => 'Pendiente', 'done' => 'Terminada', 'ontransit' => 'En proceso')),
-				'placement' => 'left',
-			)
+		array(
+			'name' => 'nombre',
+			'headerHtmlOptions' => array('style' => 'width: 9%;'),
+		),
+		array(
+			'name' => 'usuarioEjecutor',
+			'headerHtmlOptions' => array('style' => 'width: 10%;'),
+		),
+		array(
+			'name' => 'observaciones',
+			'headerHtmlOptions' => array('style' => 'width: 25%;'),
+		),
+		array(
+			'name' => 'codigo',
+			'headerHtmlOptions' => array('style' => 'width: 8%;'),
+			'htmlOptions' => array('style' => 'text-align: center;'),
+		),
+		array(
+			'header'=>'Status',
+			'value' => "\$data->status=='pending'?'Pendiente':\$data->status=='ontransit'?'En proceso':'Terminada'",
+			'headerHtmlOptions' => array('style' => 'width: 9%;'),
+			'htmlOptions' => array('style' => 'text-align: center;'),
 		),
 		/*
 		'entidadSolicitud',
@@ -66,17 +69,14 @@
 		'fechaFinal',
 		'almacenSoporte',
 		*/
-		array(
-			'class'=>'bootstrap.widgets.TbButtonColumn',
-		),
 	),
 )); ?>
 <div style="text-align: right">
 <?php
 	 $this->widget('bootstrap.widgets.TbButton', array(
-    'label'=>'Crear nuevo',
+    'label'=>'Buscar',
     'size'=>'small', // null, 'large', 'small' or 'mini'
-    /*'url'=>array('create')*/
-		'url' =>$this->createUrl('OrdenesSoporte/create', array('model'=>'OrdenesSoporte')),)); ?>
+)); 
+		?>
 </div>
 
