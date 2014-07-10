@@ -1,5 +1,6 @@
-
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php
+$vare=$this->createUrl('ObservacionesOrdenSoporte/createPopup');
+$this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'ordenes-soporteterminadas-grid',
 	'dataProvider'=>$model,
 	//'filter'=>$model,
@@ -35,15 +36,22 @@
 		'descripcionAlmacen',
 		'codigo',
 		'observaciones',
-		/*array(
-			'class' => 'editable.EditableColumn',
-			'name' => 'status',
-			'editable' => array(
-				'type' => 'select',
-				'url' => $this->createUrl('OrdenesSoporte/updateEditable', array('model'=>'OrdenesSoporte', 'field'=>'status')),
-				'source'    => Editable::source(array('pending' => 'Pendiente', 'done' => 'Terminada', 'ontransit' => 'En proceso')),
-				'placement' => 'left',
-			)
+		array(
+			'class'=>'bootstrap.widgets.TbButtonColumn',
+			'template' => '{obser}',
+			'header' => 'Obsevaciones',
+			'buttons' => array(
+				'obser' => array(
+					'label' => 'Agregar',
+					'icon'=>'plus',
+					'url' => '$data->keySOP', 
+					'options' => array(
+					  'onclick' => 'js:document.getElementById("idorden").src="'.$vare.'"+"&OrdenSoporteId="+$(this).attr("href");return false;',
+					  'data-target'=>'#myModal', 'data-toggle'=>'modal',
+					  'type'=>"submit"
+					),
+				),	
+			),
 		),
 		/*
 		'entidadSolicitud',

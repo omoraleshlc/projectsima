@@ -1,6 +1,6 @@
 
 <?php
-$vare='"javascript:void(0)"';
+$vare=$this->createUrl('ObservacionesOrdenSoporte/createPopup');
 
 $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'ordenes-soportependientes-grid',
@@ -53,8 +53,8 @@ $this->widget('zii.widgets.grid.CGridView', array(
 					'icon'=>'plus',
 					'url' => '$data->keySOP', 
 					'options' => array(
-						//'onclick' => 'window.location.href = window.location.href +"&idorden=" + $(this).attr("href");return false;',
-					  'onclick' => 'js:document.getElementById("idorden").src=document.getElementById("idorden").src+"&OrdenSoporteId="+$(this).attr("href");return false;',
+					  //'onclick' => 'js:document.getElementById("idorden").src=document.getElementById("idorden").src+"&OrdenSoporteId="+$(this).attr("href");return false;',
+					  'onclick' => 'js:document.getElementById("idorden").src="'.$vare.'"+"&OrdenSoporteId="+$(this).attr("href");return false;',
 					  'data-target'=>'#myModal', 'data-toggle'=>'modal',
 					  'type'=>"submit"
 					),
@@ -91,25 +91,4 @@ $this->widget('zii.widgets.grid.CGridView', array(
 </div>
 
 
-<form>
-<input type="hidden" name="idorden"  value="0">
-</form>
-
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Agregar observaciones</h4>
-      </div>
-      <div class="modal-body">
-      	<iframe style="width:100%; height:200px"
-      	src="<?php echo $this->createUrl('ObservacionesOrdenSoporte/createPopup');?> "
-      	id="idorden">
-			</iframe>
-      </div>
-    </div>
-  </div>
-</div>
 
