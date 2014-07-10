@@ -53,9 +53,8 @@ $this->widget(
         <h4 class="modal-title" id="myModalLabel">Agregar observaciones</h4>
       </div>
       <div class="modal-body">
-      	<iframe style="width:100%; height:200px"
-      	src=""
-      	id="idorden">
+      	<iframe style="width:100%; height:0px"
+      	src="" id="idorden">
 			</iframe>
       </div>
     </div>

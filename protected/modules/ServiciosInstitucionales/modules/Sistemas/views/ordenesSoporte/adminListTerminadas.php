@@ -46,7 +46,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
 					'icon'=>'plus',
 					'url' => '$data->keySOP', 
 					'options' => array(
-					  'onclick' => 'js:document.getElementById("idorden").src="'.$vare.'"+"&OrdenSoporteId="+$(this).attr("href");return false;',
+					  'onclick' => 'js:document.getElementById("idorden").src="'.$vare.'"+"&OrdenSoporteId="+$(this).attr("href");document.getElementById("idorden").style.height="200px";return false;',
 					  'data-target'=>'#myModal', 'data-toggle'=>'modal',
 					  'type'=>"submit"
 					),
