@@ -55,6 +55,7 @@ class UsuariosSimaController extends Controller
 		{
 			$model->attributes=$_POST['UsuariosSima'];
 			if($model->save())
+				$this->actionCopiarACruge($model->folio);
 				$this->redirect(array('view','id'=>$model->folio));
 		}
 
