@@ -1,12 +1,14 @@
 <?php
 /* @var $this DefaultController */
 
+
 $this->breadcrumbs=array(
 	//$this->module->id,
 	"Ordenes de soporte",
 );
-?>
 
+
+?>
 
 <?php
 if(Yii::app()->user->checkAccess('SistemaCapturista')) {

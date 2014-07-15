@@ -54,7 +54,7 @@ class OrdenesSoporte extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('keyTS, registro, nombre, descripcionSoporte, usuario, fecha, hora, solicitud, descripcionTS, status, observaciones, usuarioEjecutor, fechaFinal, almacenSoporte, descripcionAlmacen', 'required'),
+			array('keyTS, registro, nombre, descripcionSoporte, usuario, fecha, hora, solicitud, descripcionTS, status, observaciones,  almacenSoporte, descripcionAlmacen', 'required'),
 			//array('entidadSolicitud, almacen, descripcionAlmacen, entidad, almacenSoporte', 'required'),
 			array('keyTS, registro', 'numerical', 'integerOnly'=>true),
 			array('entidadSolicitud, entidad', 'length', 'max'=>2),
