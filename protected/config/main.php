@@ -80,7 +80,7 @@ return array(
 			// NO OLVIDES PONER EN FALSE TRAS INSTALAR
 			'debug'=>false,
 			'rbacSetupEnabled'=>false,
-			'allowUserAlways'=>true,
+			'allowUserAlways'=>false,
 
 			// MIENTRAS INSTALAS..PONLO EN: false
 			// lee mas abajo respecto a 'Encriptando las claves'
@@ -240,6 +240,11 @@ return array(
 					'assignmentTable'=>'	', // Tabla que contiene la signacion usuario-autorizacion
 					/
     			),*/
+    			
+    			
+		'errorHandler'=>array(
+         'errorAction'=>'App/error',
+  		),
 	),
 	
 	'controllerMap' => array(
