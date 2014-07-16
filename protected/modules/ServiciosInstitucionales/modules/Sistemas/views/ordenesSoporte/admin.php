@@ -9,7 +9,13 @@ $this->breadcrumbs=array(
 
 
 ?>
-
+<?php
+echo CHtml::beginForm();
+      echo CHtml::dropDownList('departamentoSoporte', $this->almacenSoporte,array(''=>'Todos','HMANT' => 'Mantenimiento', 'HSIST' => 'Sistemas'), array('style'=>'width:100%', 'submit'=>"" ));
+echo CHtml::endForm();
+?>
+     
+     
 <?php
 if(Yii::app()->user->checkAccess('SistemaCapturista')) {
 $this->widget(

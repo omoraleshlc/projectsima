@@ -224,7 +224,7 @@ class OrdenesSoporteController extends Controller {
 
         $modelPendientes = new CActiveDataProvider('OrdenesSoporte', array(
             'criteria' => array(
-                'condition' => 'status="pending"',
+                'condition' => 'status="pending" and almacenSoporte like"%'.$this->almacenSoporte.'%"',
                 'order' => 'keySOP ASC',
             ),
             'pagination' => array(
@@ -234,7 +234,7 @@ class OrdenesSoporteController extends Controller {
 
         $modelEnProceso = new CActiveDataProvider('OrdenesSoporte', array(
             'criteria' => array(
-                'condition' => 'status="ontransit"',
+                'condition' => 'status="ontransit" and almacenSoporte like"%'.$this->almacenSoporte.'%"',
                 'order' => 'fechaInicio DESC',
             ),
             'pagination' => array(
@@ -245,7 +245,7 @@ class OrdenesSoporteController extends Controller {
 
         $modelTeminadas = new CActiveDataProvider('OrdenesSoporte', array(
             'criteria' => array(
-                'condition' => 'status="done"',
+                'condition' => 'status="done" and almacenSoporte like"%'.$this->almacenSoporte.'%"',
                 'order' => 'fechaFinal DESC',
             ),
             'pagination' => array(
