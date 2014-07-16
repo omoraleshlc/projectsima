@@ -28,7 +28,6 @@ div.form .columna select, div.form .columna input[type='text'], div.form .column
 )); ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
-
 	<?php echo $form->errorSummary($model); ?>
 <div class="columna">		
 	<div class="row">
@@ -163,6 +162,14 @@ div.form .columna select, div.form .columna input[type='text'], div.form .column
 			));
 		?>
 		<?php echo $form->error($model,'fechaFinal'); ?>
+	</div>
+	
+	<div class="row">
+		<?php echo $form->labelEx($model,'almacenSoporte'); ?>
+		<?php 
+		echo CHtml::activeDropDownList($model,'almacenSoporte', array(''=>'Seleccione un departamento de soporte','HMANT' => 'Mantenimiento', 'HSIST' => 'Sistemas'));
+		?>
+		<?php echo $form->error($model,'almacenSoporte'); ?>
 	</div>
 </div>
 	<div class="row buttons" style="clear:both">

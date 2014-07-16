@@ -71,7 +71,7 @@ class OrdenesSoporteController extends Controller {
             $model->fecha = date('Y-m-d', time());
             $model->hora = date('h:i a', time());
             $model->status = 'pending';
-            $model->almacenSoporte = $this->almacenSoporte; /*             * ******************************************** */
+            $model->almacenSoporte = $model->almacenSoporte!="" ? $model->almacenSoporte : ($this->usuariosima->almacenSoporteDefault != "" ? $this->usuariosima->almacenSoporteDefault : 'HSIST');
             $model->usuarioEjecutor = '';
             $model->fechaFinal = null;
             $model->fechaInicio = null;
