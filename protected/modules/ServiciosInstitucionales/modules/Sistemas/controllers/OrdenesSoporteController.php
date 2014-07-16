@@ -118,8 +118,8 @@ class OrdenesSoporteController extends Controller {
             $model->usuarioEjecutor = '';
             $model->fechaFinal = null;
             $model->fechaInicio = null;
-            echo "(".$model->almacenSoporte.") ";
-            /*if ($model->save()) {
+
+            if ($model->save()) {
                 Yii::app()->user->setFlash('success', "Orden de soporte para: " . $model->nombre . " registrada con código " . $model->keySOP);
             } else {
                 if (empty($model->nombre))
@@ -137,8 +137,8 @@ class OrdenesSoporteController extends Controller {
                 else if (!empty($model->codigo))
                     if ($model->entidad != substr($model->codigo, 1, 2))
                         Yii::app()->user->setFlash('error', "El codigo no pertenece a esta entidad");
-            }*/
-            //$this->redirect('index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin');
+            }
+            $this->redirect('index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin');
         }
     }
 
