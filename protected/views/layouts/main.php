@@ -24,6 +24,7 @@
 		'fixed'=>'false',
 		'brand' => 'SIMA V3',
 		'brandUrl' =>Yii::app()->createUrl('site/index'),
+		'collapse'=>true,
 		'items'=>array(
 			array(
 				'class'=>'bootstrap.widgets.TbMenu',
@@ -41,15 +42,25 @@
 		             	'visible'=>!Yii::app()->user->isGuest,
 		             	'items'=>array(
 						      array('label'=>'Catálogo de equipos',
-									'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/CatalogoEquipos')),
+									'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/CatalogoEquipos'),
+									'visible'=>(Yii::app()->user->checkAccess('SistemaOperador') or Yii::app()->user->checkAccess('SistemaCapturista')),
+									),
 		                 array('label'=>'Catálogo de telefonía',
-		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/CatalogoTelefonia')),
+		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/CatalogoTelefonia'),
+									'visible'=>(Yii::app()->user->checkAccess('SistemaOperador') or Yii::app()->user->checkAccess('SistemaCapturista')),
+									),
 		                 array('label'=>'Inventario de equipos',
-		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/equipoComputo/admin')),
+		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/equipoComputo/admin'),
+									'visible'=>(Yii::app()->user->checkAccess('SistemaOperador') or Yii::app()->user->checkAccess('SistemaCapturista')),
+									),
 		                 array('label'=>'Inventario de telefonía',
-		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/telefoniaCelular/admin')),
+		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/telefoniaCelular/admin'),
+									'visible'=>(Yii::app()->user->checkAccess('SistemaOperador') or Yii::app()->user->checkAccess('SistemaCapturista')),
+									),
 		                 array('label'=>'Impresión de etiquetas',
-		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/printLabels')),
+		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/printLabels'),		
+									'visible'=>(Yii::app()->user->checkAccess('SistemaOperador') or Yii::app()->user->checkAccess('SistemaCapturista')),
+									),
 		                 array('label'=>'Ordenes de soporte',
 		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin')),
 		             )),//end dropdown
@@ -58,7 +69,7 @@
 		             
 				
 					array('label'=>'Configuracion', 'url'=>'#',
-		             	'visible'=>!Yii::app()->user->isGuest,
+		             	'visible'=>Yii::app()->user->isSuperAdmin,
 		             	'items'=>array(
 						      array('label'=>'Usuarios',
 									'url'=>Yii::app()->user->ui->userManagementAdminUrl),
