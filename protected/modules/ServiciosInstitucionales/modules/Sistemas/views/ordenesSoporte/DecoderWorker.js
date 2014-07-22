@@ -632,7 +632,6 @@ function Main(){
 						}
 						if(FormatPriority[i] == "Code39") {
 							Selection=BinaryString(variationData,2);
-                                                        console.log("this is test3: "+Selection);
 							if(Selection) format = "Code39";
 						}
 						if(FormatPriority[i] == "2Of5" || FormatPriority[i] == "Inter2Of5") {
@@ -665,7 +664,7 @@ function Main(){
 				incrmt+=Image.width*4;
 			}while(!Selection&&incrmt<scaled.length)
 			if(Selection && format != "EAN-13") {
-				postMessage({result: [format + ": " + Selection], success: true, finished: false});
+				postMessage({result: [format + ": " + Selection], code: Selection, success: true, finished: false});
 				successfulDecodings++;
 			}
 		}
@@ -696,7 +695,7 @@ function Main(){
 				Selection = false;
 			}
 			if(Selection) {
-				postMessage({result: [format + "-.-.-.-.: " + Selection], success: true, finished: false});
+				postMessage({result: [format + ": " + Selection], code: Selection, success: true, finished: false});
 				successfulDecodings++;
 			}
 		}
