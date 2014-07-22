@@ -42,6 +42,16 @@ class OrdenesSoporteController extends Controller {
         //$this->layout='dasda';
         $this->render('mobileAdmin');
     }
+    
+    
+    /**
+     * 
+     */
+    public function actionScan() {
+        //$this->layout='dasda';
+        $this->render('scanLabels');
+    }
+    
 
     /**
      * Creates a new model.
