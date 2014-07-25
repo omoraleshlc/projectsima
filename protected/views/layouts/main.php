@@ -61,6 +61,10 @@
 		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/printLabels'),		
 									'visible'=>(Yii::app()->user->checkAccess('SistemaOperador') or Yii::app()->user->checkAccess('SistemaCapturista')),
 									),
+									array('label'=>'Escanéo de etiquetas',
+		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/ordenesSoporte/scan'),		
+									'visible'=>(Yii::app()->user->checkAccess('SistemaOperador') or Yii::app()->user->checkAccess('SistemaCapturista')),
+									),
 		                 array('label'=>'Ordenes de soporte',
 		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin')),
 		             )),//end dropdown
