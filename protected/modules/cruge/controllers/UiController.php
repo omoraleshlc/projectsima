@@ -122,7 +122,7 @@ class UiController extends Controller
 
     public function actionLogin()
     {
-
+			//echo isset($_GET['param']) ? $_GET['param'] : "no";
         $this->layout = CrugeUtil::config()->loginLayout;
 
         $model = Yii::app()->user->um->getNewCrugeLogon('login');
@@ -146,7 +146,7 @@ class UiController extends Controller
                     // establecida automaticamente por CAccessControlFilter cuando
                     // preFilter llama a accessDenied quien a su vez llama a
                     // CWebUser::loginRequired que es donde finalmente se llama a setReturnUrl
-                    $this->redirect(Yii::app()->user->returnUrl);
+                    $this->redirect(isset($_GET['param']) ? $_GET['param'] : Yii::app()->user->returnUrl);
                 } else {
                     Yii::app()->user->setFlash('loginflash', Yii::app()->user->getLastError());
                 }
