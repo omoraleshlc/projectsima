@@ -351,7 +351,7 @@ class OrdenesSoporteController extends Controller {
         //$model = $model->findByPK($_GET['field']);
         // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
         if (!isset($_GET['ajax']))
-            $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('mobileAdmin')); /**/
+            $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('scan')); /**/
         //$this->redirect(array('mobileAdmin'));
     }
 
