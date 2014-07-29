@@ -314,46 +314,74 @@ class OrdenesSoporteController extends Controller {
     public function actionGetTipoSoporteList() {
         echo CJSON::encode(Editable::source(CatTipoSoporte::model()->findAll(), 'keyTS', 'descripcion'));
     }
-
+    
+	 /*
+     * Renderiza lista de ordenes pendientes o iniciadas con el mismo código de equipo
+     */
+    public function actionOrdenesByCodigo($codigo) {
+    	$listaOrdenes = new CActiveDataProvider('OrdenesSoporte', array(
+				'criteria' => array(
+					'condition' => 'codigo="'.$codigo.'"',
+					'order' => 'fecha ASC',
+				 ),
+				'pagination' => array(
+			 		'pageSize' => 40,
+				),
+			 ));
+    
+		$this->render('scanLabels', array(
+			'listaOrdenes' => $listaOrdenes,
+		));
+    }
+	
     /*
      * Cambia el status de la orden al siguiente.
      * Puede recibir el id de la tabla de ordenes (GET) o de la activación móvil (POST)
      */
 
-    public function actionActivarOrden() {
-        $model = new OrdenesSoporte();
+	public function actionActivarOrden() {
+		$model = new OrdenesSoporte();
+		$page = 'admin';
+		
+		if (isset($_POST['codigo']) and $_POST['codigo'] != "") {
+			$page= 'scan';
+			$codigo=$_POST['codigo'];
+			if (OrdenesSoporte::model()->count("codigo='" . $codigo . "' and (status='ontransit' or status='pending')")>1)
+				$this->actionOrdenesByCodigo($codigo);
+			else
+				$model = $this->actionGetKeySOP($codigo);
+		}
+		
+		else
+			if (isset($_GET['field'])) {
+				$model = $model->findByPK($_GET['field']);
+			} else if (isset($_POST['id']) and $_POST['id'] != "") {
+				$model = $model->findByPK($_POST['id']);
+			}
 
-        if (isset($_GET['field'])) {
-            $model = $model->findByPK($_GET['field']);
-        } else if (isset($_POST['id']) and $_POST['id'] != "") {
-            $model = $model->findByPK($_POST['id']);
-        }
-        if (isset($_POST['codigo']) and $_POST['codigo'] != "") {
-            $model = $this->actionGetKeySOP($_POST['codigo']);
-        }
-
-        if ($model) {
-            if ($model->status == "pending") {
-                $model->status = "ontransit";
-                $model->usuarioEjecutor = Yii::app()->user->name;
-                $model->fechaInicio = date("Y-m-d H:i:s");
-                //$model->fechaFinal=date("");
-                $model->save();
-            } else if ($model->status == "ontransit") {
-                $model->status = "done";
-                $model->usuarioEjecutor = Yii::app()->user->name;
-                $model->fechaFinal = date("Y-m-d H:i:s");
-                $model->save();
-            }
-        } else {
-            Yii::app()->user->setFlash('notice', "No se encontró la órden");
-        }
-        //$model = $model->findByPK($_GET['field']);
-        // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-        if (!isset($_GET['ajax']))
-            $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('scan')); /**/
-        //$this->redirect(array('mobileAdmin'));
-    }
+		if($model){
+			if ($model->status == "pending") {
+				$model->status = "ontransit";
+				$model->usuarioEjecutor = Yii::app()->user->name;
+				$model->fechaInicio = date("Y-m-d H:i:s");
+				//$model->fechaFinal=date("");
+				$model->save();
+			} else if ($model->status == "ontransit") {
+				$model->status = "done";
+				$model->usuarioEjecutor = Yii::app()->user->name;
+				$model->fechaFinal = date("Y-m-d H:i:s");
+				$model->save();
+			}
+		}
+		else {
+			Yii::app()->user->setFlash('notice', "No se encontró la órden");
+		}
+		//$model = $model->findByPK($_GET['field']);
+		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+		if (!isset($_GET['ajax']))
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array($page)); /**/
+			//$this->redirect(array('mobileAdmin'));
+	}
 
     /*
      * Actualiza el dropdown de almacenes con los que pernecen a la entidad seleccionada
@@ -396,5 +424,24 @@ class OrdenesSoporteController extends Controller {
         $model = OrdenesSoporte::model()->find("codigo='" . $codigo . "' and (status='ontransit' or status='pending')");
         return $model;
     }
+    
+    /*
+     *
+     * @return string El keySOP de la orden de soporte no "done" que tenga el codigo del equipo.
+     */
+
+    public function actionGetAllKeySOP($codigo) {
+    			$model = new CActiveDataProvider('OrdenesSoporte', array(
+            'criteria' => array(
+                'condition' => "codigo='" . $codigo . "' and (status='ontransit' or status='pending')",
+                'order' => 'fechaInicio ASC',
+            ),
+            'pagination' => array(
+                'pageSize' => 5,
+            ),
+        )); 
+        return $model;
+    }
+    
 
 }

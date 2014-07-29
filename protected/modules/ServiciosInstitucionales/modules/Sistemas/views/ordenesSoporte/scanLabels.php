@@ -1,3 +1,9 @@
+<style>
+	.items td {
+		font-size: medium !important;
+		padding: 0.5em !important;
+	}
+</style>
 <?php
 /* @var $this OrdenesSoporteController */
 /* @var $model OrdenesSoporte */
@@ -14,18 +20,108 @@ $this->breadcrumbs=array(
 	}
 ?>
 
-	<img src="" id="picture" style="border:1px solid silver; height: 200px; width: 40%" />
-	<br/><br/>
-	<p id="textbit">&nbsp;</p>
-	
-	
+	<img src="" id="picture" style="border:1px solid silver; height: 200px; max-width: 500px; width: 70%" />
 	<br/>
+	<p id="textbit">&nbsp;</p>
 	<input id="Take-Picture" type="file" accept="image/*;capture=camera" style="
     zoom: 1.5;"/>
 	<!--input type="text" name="barcode" id="barcode"-->
 		
 	
-<br/><br/>
+<br/>
+
+<?php
+if (isset($listaOrdenes)){
+
+
+	$vare=$this->createUrl('ObservacionesOrdenSoporte/createPopup');
+	$this->widget('zii.widgets.grid.CGridView', array(
+		'id'=>'ordenes-soporteenproceso-grid',
+		'dataProvider'=>$listaOrdenes,
+		//'filter'=>$model,
+		'columns'=>array(
+			array(
+				'name' => 'keySOP',
+				'htmlOptions' => array('style' => 'width: 9%; text-align: center;'),
+			),
+			array(
+				'name' => 'fecha',
+				'htmlOptions' => array('style' => 'width: 9%; text-align: center;'),
+			),
+			array(
+				'name' => 'codigo',
+				'htmlOptions' => array('style' => 'width: 10%; text-align: center;'),
+			),
+			'observaciones',
+		
+		
+			array(
+				'class'=>'bootstrap.widgets.TbButtonColumn',
+				'template' => '{begin}',
+				'header' => 'Terminar',
+				'buttons' => array(
+					'begin' => array( //the name {reply} must be same
+						'label' => 'Iniciar', // text label of the button
+						'url' => 'Yii::app()->controller->createUrl("ordenesSoporte/activarOrden", array("model"=>"ordenesSoporte", "field"=>"$data->keySOP"))',
+						'icon'=>'play',
+						'htmlOptions'=>array('href'=>'dfsf'),
+					),	
+				),
+			),
+			
+			array(
+			'header'=>'Status',
+			'value' => "\$data->status=='pending'?'Pendiente':\$data->status=='ontransit'?'En proceso':'Terminada'",
+			'headerHtmlOptions' => array('style' => 'width: 9%;'),
+			'htmlOptions' => array('style' => 'text-align: center;'),
+		),
+		
+			array(
+				'class'=>'bootstrap.widgets.TbButtonColumn',
+				'template' => '{obser}',
+				'header' => 'Obsevaciones',
+				'buttons' => array(
+					'obser' => array(
+						'label' => 'Agregar',
+						'icon'=>'plus',
+						'url' => '$data->keySOP', 
+						'options' => array(
+						  'onclick' => 'js:document.getElementById("idorden").src="'.$vare.'"+"&OrdenSoporteId="+$(this).attr("href");document.getElementById("idorden").style.height="200px";return false;',
+						  'data-target'=>'#myModal', 'data-toggle'=>'modal',
+						  'type'=>"submit"
+						),
+					),	
+				),
+			),
+			array(
+				'class'=>'bootstrap.widgets.TbButtonColumn',
+			),
+		),
+	));
+	}
+?>
+<div style="text-align: right">
+<?php
+	 $this->widget('bootstrap.widgets.TbButton', array(
+    'label'=>'Crear nuevo',
+    'size'=>'small', // null, 'large', 'small' or 'mini'
+		'url' =>$this->createUrl('OrdenesSoporte/create', array('model'=>'OrdenesSoporte')),)); ?>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br/>
 <?php
 echo CHtml::beginForm();
 echo CHtml::textField('codigo', '',
@@ -37,6 +133,8 @@ echo CHtml::textField('codigo', '',
 		)); ?>
 <br/>
 <br/>
+
+
 
 <?php
 	echo CHTML::button('Aceptar',  array('submit' => $this->createUrl("OrdenesSoporte/activarOrden"), 'style'=>'zoom:1.5',));

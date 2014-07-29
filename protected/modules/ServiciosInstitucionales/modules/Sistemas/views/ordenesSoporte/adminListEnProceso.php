@@ -7,7 +7,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
 	'columns'=>array(
 		array(
 			'name' => 'keySOP',
-			'htmlOptions' => array('style' => 'width: 9%; text-align: center;'),
+			'htmlOptions' => array('style' => 'width: 7%; text-align: center;'),
 		),
 		array(
 			'name' => 'fecha',
