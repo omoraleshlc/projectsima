@@ -35,11 +35,6 @@
 	
 	<?php echo $form->errorSummary($model); ?>
 	
-	<div class="row">
-		<?php
-      echo CHtml::activeDropDownList($model,'almacenSoporte', array(''=>'Seleccione un departamento de soporte','HMANT' => 'Mantenimiento', 'HSIST' => 'Sistemas'));
-     ?>
-	</div>
 	
 	<div class="row">
 		<?php echo $form->labelEx($model,'nombre'); ?>
