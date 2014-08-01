@@ -9,7 +9,7 @@
 	if($erroractual=="404"){
 ?>
 	<p>
-    La página a la que intentas acceder no existe o no funciona temporalmente. Intenta alguna de las sigguientes opciones:
+    La página a la que intentas acceder no existe o no funciona temporalmente. Intenta alguna de las siguientes opciones:
     </p>
     <ul>
 		<li><a href="#" onclick="history.go(-2);">Regresar a la página anterior</a></li>
@@ -28,7 +28,6 @@
     <ul>
 		<li><a href="#" onclick="history.go(-2);">Regresar a la página anterior</a></li>
 		<li><a href="<?php echo $this->createUrl('site/index'); ?>">Ir a la página principal</a></li>
-		<li><a href="mailto:<?php echo $this->createUrl('site/index'); ?>">Ir a la página principal</a></li>
     </ul>
     <br/>
     <p><strong>Mensaje:</strong> <?= $error['message']; ?></p>
