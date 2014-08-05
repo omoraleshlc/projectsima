@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Ordenes Soportes'=>array('admin'),
-	'Create',
+	'Crear',
 );
 
 $this->menu=array(
@@ -13,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create OrdenesSoporte</h1>
+<h1>Crear Ordene soporte</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -3,6 +3,70 @@
 		font-size: medium !important;
 		padding: 0.5em !important;
 	}
+	
+	
+	@media only screen and (max-width: 800px) {
+	
+	/* Force table to not be like tables anymore */
+	#no-more-tables table, 
+	#no-more-tables thead, 
+	#no-more-tables tbody, 
+	#no-more-tables th, 
+	#no-more-tables td, 
+	#no-more-tables tr { 
+		display: block;
+		width: auto !important;
+	}
+ 
+	/* Hide table headers (but not display: none;, for accessibility) */
+	#no-more-tables thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+ 
+	#no-more-tables tr { border: 1px solid #ccc; }
+ 
+	#no-more-tables td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+		white-space: normal;
+		text-align:left;
+	}
+ 
+	#no-more-tables td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		text-align:left;
+		font-weight: bold;
+	}
+	
+	#no-more-tables td:last-child {
+	  zoom: 1.5;
+	}
+ 
+	/*
+	Label the data
+	*/
+	#no-more-tables td:before { content: attr(data-title); }
+}
+	
+	
+	
+	
+	
+	
+	
+	
 </style>
 <?php
 /* @var $this OrdenesSoporteController */
@@ -30,10 +94,13 @@ $this->breadcrumbs=array(
 	
 <br/>
 
+
 <?php
 if (isset($listaOrdenes)){
+?>
+<section id="no-more-tables">
 
-
+<?php
 	$vare=$this->createUrl('ObservacionesOrdenSoporte/createPopup');
 	$this->widget('zii.widgets.grid.CGridView', array(
 		'id'=>'ordenes-soporteenproceso-grid',
@@ -42,44 +109,34 @@ if (isset($listaOrdenes)){
 		'columns'=>array(
 			array(
 				'name' => 'keySOP',
-				'htmlOptions' => array('style' => 'width: 9%; text-align: center;'),
+				'htmlOptions' => array('style' => 'width: 9%; text-align: center;', 'data-title'=>"#"),
 			),
 			array(
 				'name' => 'fecha',
-				'htmlOptions' => array('style' => 'width: 9%; text-align: center;'),
+				'htmlOptions' => array('style' => 'width: 9%; text-align: center;', 'data-title'=>"Fecha"),
 			),
 			array(
 				'name' => 'codigo',
-				'htmlOptions' => array('style' => 'width: 10%; text-align: center;'),
+				'htmlOptions' => array('style' => 'width: 10%; text-align: center;', 'data-title'=>"Codigo"),
 			),
 			'observaciones',
 		
 		
 			array(
-				'class'=>'bootstrap.widgets.TbButtonColumn',
-				'template' => '{begin}',
-				'header' => 'Terminar',
-				'buttons' => array(
-					'begin' => array( //the name {reply} must be same
-						'label' => 'Iniciar', // text label of the button
-						'url' => 'Yii::app()->controller->createUrl("ordenesSoporte/activarOrden", array("model"=>"ordenesSoporte", "field"=>"$data->keySOP"))',
-						'icon'=>'play',
-						'htmlOptions'=>array('href'=>'dfsf'),
-					),	
-				),
-			),
-			
-			array(
-			'header'=>'Status',
-			'value' => "\$data->status=='pending'?'Pendiente':\$data->status=='ontransit'?'En proceso':'Terminada'",
-			'headerHtmlOptions' => array('style' => 'width: 9%;'),
-			'htmlOptions' => array('style' => 'text-align: center;'),
+			'class' => 'editable.EditableColumn',
+			'header' => 'Status',
+			'name' => 'status',
+			'editable' => array(
+				'type' => 'select',
+				'url' => $this->createUrl('OrdenesSoporte/updateEditable', array('model'=>'OrdenesSoporte', 'field'=>'status')),
+				'source'    => Editable::source(array('pending' => 'Pendiente', 'ontransit' => 'En proceso', 'done'=>'Terminada')),
+				'placement' => 'left',
+			)
 		),
 		
 			array(
 				'class'=>'bootstrap.widgets.TbButtonColumn',
-				'template' => '{obser}',
-				'header' => 'Obsevaciones',
+				'template' => '{obser} {view} {update} {delete}	',
 				'buttons' => array(
 					'obser' => array(
 						'label' => 'Agregar',
@@ -92,13 +149,10 @@ if (isset($listaOrdenes)){
 						),
 					),	
 				),
-			),
-			array(
-				'class'=>'bootstrap.widgets.TbButtonColumn',
+				'htmlOptions' => array('style' => 'width: 10%; text-align: center;'),
 			),
 		),
 	));
-	}
 ?>
 <div style="text-align: right">
 <?php
@@ -122,7 +176,9 @@ if (isset($listaOrdenes)){
 
 
 <br/>
+</section>
 <?php
+}
 echo CHtml::beginForm();
 echo CHtml::textField('codigo', '',
 			array('size'=>12,'maxlength'=>12, 'style'=>'width:60%; zoom:1.5','pattern'=> '0[0-9]{2}-[A-Za-z][0-9]{2}([A-Fa-f|0-9]){4}', 'placeholder'=>'Codigo'
