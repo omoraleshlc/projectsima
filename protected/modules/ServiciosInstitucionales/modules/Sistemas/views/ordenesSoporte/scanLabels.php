@@ -67,6 +67,7 @@
 	
 	
 	
+	
 </style>
 <?php
 /* @var $this OrdenesSoporteController */
@@ -88,11 +89,11 @@ $this->breadcrumbs=array(
 	<br/>
 	<p id="textbit">&nbsp;</p>
 	<input id="Take-Picture" type="file" accept="image/*;capture=camera" style="
-    zoom: 1.5;"/>
+    zoom: 1.5;" class="custom-file-input"/>
 	<!--input type="text" name="barcode" id="barcode"-->
 		
 	
-<br/>
+<br/><br/><br/>
 
 
 <?php
