@@ -30,7 +30,7 @@
 				'class'=>'bootstrap.widgets.TbMenu',
 				'items'=>array(
 				
-					array('label'=>'Compras itemtemp', 'url'=>'#',
+					array('label'=>'Compras', 'url'=>'#',
 		             	'visible'=>!Yii::app()->user->isGuest,
 		             	'items'=>array(
 						      array('label'=>'Proveedores',
@@ -38,7 +38,7 @@
 		             )),//end dropdown
 				
 				
-					array('label'=>'Sistemas itemtemp', 'url'=>'#',
+					array('label'=>'Servicios institucionales', 'url'=>'#',
 		             	'visible'=>!Yii::app()->user->isGuest,
 		             	'items'=>array(
 						      array('label'=>'Catálogo de equipos',
@@ -61,7 +61,7 @@
 		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/printLabels'),		
 									'visible'=>(Yii::app()->user->checkAccess('SistemaOperador') or Yii::app()->user->checkAccess('SistemaCapturista')),
 									),
-									array('label'=>'Escanéo de etiquetas',
+									array('label'=>'Escaneo de etiquetas',
 		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/ordenesSoporte/scan'),		
 									'visible'=>(Yii::app()->user->checkAccess('SistemaOperador') or Yii::app()->user->checkAccess('SistemaCapturista')),
 									),
