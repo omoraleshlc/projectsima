@@ -68,6 +68,7 @@ class EquipoComputo extends CActiveRecord
 			array('entidad', 'length', 'max'=>2),
 			array('status', 'length', 'max'=>1),
 			array('codigo', 'length', 'max'=>12),
+			array('codigo', 'unique', 'message'=>'Este código ya está asignado'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('keyIE, registro, departamento, keyTE, keyMA, motherboard, drives, harddisk, memoriaRam, keyMAM, descripcionUbicacion, monitor, usuario, fecha, hora, entidad, status, solicitud, descripcionEntidad, descripcionAlmacen, tipoProcesador, velocidadProcesador, codigo, keyP', 'safe', 'on'=>'search'),
@@ -98,7 +99,7 @@ class EquipoComputo extends CActiveRecord
 			'keyMA' => 'Marca',
 			'motherboard' => 'Motherboard',
 			'drives' => 'Drives',
-			'harddisk' => 'Harddisk',
+			'harddisk' => 'Disco duro',
 			'memoriaRam' => 'Memoria Ram',
 			'keyMAM' => 'Marca de monitor',
 			'descripcionUbicacion' => 'Descripcion Ubicacion',
@@ -173,6 +174,29 @@ class EquipoComputo extends CActiveRecord
 	}
 	
 	/**
+	 * Genera el siguiente código de equipo disponible.
+	 * @return String code generated
+	 */
+	public function generarCodigoDisponible($model)
+	{
+		/*$allTelefoniaCelular= TelefoniaCelular::model()->findAll();
+		$count = count($allTelefoniaCelular);
+		*/
+		$criteria = new CDbCriteria();
+		//$count = EquipoComputo::model()->count($criteria);
+		
+		$prefijoCode = "0".$model->entidad."-c".str_pad($model->keyTE, 2, "0", STR_PAD_LEFT);
+		$count=Yii::app()->db->createCommand()
+			->select('count(*)')
+			->from('sis_inventarioEqComputo')
+			->where("codigo like '".$prefijoCode."%'")
+			->queryRow();
+		
+		$code="0".$model->entidad."-c".str_pad($model->keyTE, 2, "0", STR_PAD_LEFT).str_pad(dechex($count), 4, "0", STR_PAD_LEFT);
+		return $code;
+	}
+	
+	/**
 	 * Genera el código de equipo.
 	 * @return String code generated
 	 */
@@ -182,9 +206,16 @@ class EquipoComputo extends CActiveRecord
 		$count = count($allTelefoniaCelular);
 		*/
 		$criteria = new CDbCriteria();
-		$count = EquipoComputo::model()->count($criteria);
+		//$count = EquipoComputo::model()->count($criteria);
+		
+		$prefijoCode = "0".$this->entidad."-c".str_pad($this->keyTE, 2, "0", STR_PAD_LEFT);
+		$count=Yii::app()->db->createCommand()
+			->select('count(*) as total')
+			->from('sis_inventarioEqComputo')
+			->where("codigo like '".$prefijoCode."%'")
+			->queryRow();
 
-		$code="0".$this->entidad."-c".str_pad($this->keyTE, 2, "0", STR_PAD_LEFT).str_pad(dechex($count), 4, "0", STR_PAD_LEFT);
+		$code="0".$this->entidad."-c".str_pad($this->keyTE, 2, "0", STR_PAD_LEFT).str_pad(dechex($count['total']), 4, "0", STR_PAD_LEFT);
 		return $code;
 	}
 	

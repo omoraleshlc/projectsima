@@ -18,9 +18,11 @@
 	<?php echo $form->errorSummary($model); ?>
 	
 <h2> Ubicación y detalles de registro </h1>
+
+<div class="columna">
 	<div class="row">
-		<?php echo $form->labelEx($model,'codigo'); ?>
-		<?php echo $form->textField($model,'codigo', array('size'=>12,'maxlength'=>12, 'style'=>'width:50%',
+		<?php echo $form->labelEx($model,'codigo'); ?><p class="note">Dejar vacío para generación automática al añadir un nuevo equipo.</p>
+		<?php echo $form->textField($model,'codigo', array('size'=>12,'maxlength'=>12, 'style'=>'width: 50%',
 		'pattern'=> '0[0-9]{2}-[A-Za-z][0-9]{2}([A-Fa-f|0-9]){4}'
 		)); ?>
 		<?php 
@@ -44,12 +46,13 @@
 		<?php echo $form->error($model,'departamento'); ?>
 	</div>
 
+</div>
+<div class="columna">
 	<div class="row">
 		<?php echo $form->labelEx($model,'descripcionUbicacion'); ?>
 		<?php echo $form->textField($model,'descripcionUbicacion',array('size'=>60,'maxlength'=>200)); ?>
 		<?php echo $form->error($model,'descripcionUbicacion'); ?>
 	</div>
-
 	<div class="row">
 		<?php echo $form->labelEx($model,'descripcionAlmacen'); ?>
 		<?php echo $form->textField($model,'descripcionAlmacen',array('size'=>60,'maxlength'=>200)); ?>
@@ -73,7 +76,9 @@
 		?> 
 		<?php echo $form->error($model,'keyP'); ?>
 	</div>
-
+</div>
+<br/><br/>
+<div class="columna">
 <h2> Información técnica </h1>
 
 	<div class="row">
@@ -121,7 +126,9 @@
 		<?php echo $form->textField($model,'monitor',array('size'=>60,'maxlength'=>100)); ?>
 		<?php echo $form->error($model,'monitor'); ?>
 	</div>
-
+</div>
+<div class="columna">
+<br/><br/><br/>
 	<div class="row">
 		<?php echo $form->labelEx($model,'tipoProcesador'); ?>
 		<?php echo $form->textField($model,'tipoProcesador'); ?>
@@ -157,9 +164,10 @@
 		<?php echo $form->textField($model,'solicitud',array('size'=>20,'maxlength'=>20)); ?>
 		<?php echo $form->error($model,'solicitud'); ?>
 	</div>
+</div>
 
 
-	<div class="row buttons">
+	<div class="row buttons" style="clear:both">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar'); ?>
 	</div>
 

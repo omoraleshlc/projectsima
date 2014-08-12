@@ -48,6 +48,7 @@ class EquipoComputoController extends Controller
 			$model->usuario=Yii::app()->user->name;
 			$model->fecha=date('Y-m-d', time());
 			$model->hora=date('h:i a', time());
+			if(!isset($model->codigo) or trim($model->codigo)==='') $model->codigo=$model->generarCodigoDisponible($model);
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->keyIE));
 		}
