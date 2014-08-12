@@ -58,3 +58,9 @@ div.form input[type='text'], input[type='password']
 #divequipo, #divtelefonia{
 	clear:both;
 }
+
+div.form .columna select, div.form .columna input[type='text'], div.form .columna input[type='password']
+{
+	width: 96%;
+}
+
