@@ -41,34 +41,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'departamento'); ?>
-		<?php echo $form->textField($model,'departamento',array('size'=>50,'maxlength'=>50)); ?>
-		<?php echo $form->error($model,'departamento'); ?>
-	</div>
-
-</div>
-<div class="columna">
-	<div class="row">
-		<?php echo $form->labelEx($model,'descripcionUbicacion'); ?>
-		<?php echo $form->textField($model,'descripcionUbicacion',array('size'=>60,'maxlength'=>200)); ?>
-		<?php echo $form->error($model,'descripcionUbicacion'); ?>
-	</div>
-	<div class="row">
-		<?php echo $form->labelEx($model,'descripcionAlmacen'); ?>
-		<?php echo $form->textField($model,'descripcionAlmacen',array('size'=>60,'maxlength'=>200)); ?>
-		<?php echo $form->error($model,'descripcionAlmacen'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'entidad'); ?>
-		<?php 
-		$lista=CHtml::listData(CatEntidad::model()->findAll(), 'codigoEntidad', 'descripcionEntidad');
-		echo CHtml::activeDropDownList($model,'entidad', $lista);
-		?> 
-		<?php echo $form->error($model,'entidad'); ?>
-	</div>
-	
-	<div class="row">
 		<?php echo $form->labelEx($model,'keyP'); ?>
 		<?php 
 		$lista=CHtml::listData(Proveedor::model()->findAll('tipoProveedor="sistemas" order by razonSocial'), 'keyP', 'razonSocial');
@@ -76,6 +48,56 @@
 		?> 
 		<?php echo $form->error($model,'keyP'); ?>
 	</div>
+
+</div>
+<br/><br/>
+<div class="columna">
+	<div class="row">
+		<?php echo $form->labelEx($model,'entidad'); ?>
+		<?php
+			$lista=CHtml::listData(CatEntidad::model()->findAll(), 'codigoEntidad', 'descripcionEntidad');
+			echo CHtml::dropDownList('entidad',$model->entidad, $lista,
+				array(
+				'empty'=>'Seleccionar entidad',
+				'required'=>'true',
+				'ajax' => array(
+					'type'=>'POST', //request type
+					'url'=>CController::createUrl('equipoComputo/almacenesPorEntidad'), //url to call.
+					//Style: CController::createUrl('currentController/methodToCall')
+					'update'=>'#departamento', //selector to update
+					//'data'=>'js:javascript statement' 
+					//leave out the data key to pass all form values through
+				))
+			); 
+			 echo '<br/>';
+			//empty since it will be filled by the other dropdown
+		?>
+		
+		<?php echo $form->error($model,'entidad'); ?>
+	</div>
+	
+	<div class="row">
+		<?php echo $form->labelEx($model,'departamento'); ?>
+		<?php 
+		$lista=CHtml::listData(CatAlmacen::model()->findAllByAttributes(array('entidad'=>$model->entidad)), 'departamento', 'descripcionAlmacen');
+		/*echo CHtml::activeDropDownList($model,'almacen', $lista);*/
+		echo CHtml::dropDownList('departamento','departamento', $lista,
+			array(
+				'required'=>'true',
+				'ajax' => array(
+					'type'=>'POST', //request type
+				))
+		);
+		?>
+		<?php echo $form->error($model,'almacen'); ?>
+	</div>
+	<div class="row">
+		<?php echo $form->labelEx($model,'descripcionUbicacion'); ?>
+		<?php echo $form->textField($model,'descripcionUbicacion',array('size'=>60,'maxlength'=>200)); ?>
+		<?php echo $form->error($model,'descripcionUbicacion'); ?>
+	</div>
+	
+
 </div>
 <br/><br/>
 <div class="columna">

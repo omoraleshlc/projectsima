@@ -212,4 +212,23 @@ class EquipoComputoController extends Controller
  		echo CJSON::encode(Editable::source(Proveedor::model()->findAll(), 'keyP', 'razonSocial')); 
 	}
 	
+	/*
+     * Actualiza el dropdown de almacenes con los que pernecen a la entidad seleccionada
+     *
+     */
+    public function actionAlmacenesPorEntidad() {
+        $entidadSolicitud = $_POST['entidad'];
+        $catAlmacenvar = new CatAlmacen();
+        $data = $catAlmacenvar::model()->findAll('miniAlmacen!="Si" and entidad=:entidad Order by descripcion', array(':entidad' => $entidadSolicitud)
+        );
+
+
+        //$data=CHtml::listData($data,'almacen','descripcion');
+        $data = CMap::mergeArray(array('' => 'Seleccione departamento'), CHtml::listData($data, 'almacen', 'descripcion'));
+
+        foreach ($data as $value => $name) {
+            echo CHtml::tag('option', array('value' => $value), CHtml::encode(ucwords(strtolower($name))), true);
+        }
+    }
+	
 }
