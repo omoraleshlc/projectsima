@@ -6,25 +6,30 @@
 	'filter'=>$model,
 	'columns'=>array(
 		array(
-			'header' => '#',
-			'name' => 'keyIE',
-			'htmlOptions' => array('style' => 'width: 10%; text-align: center;'),
+			'name' => 'codigo',
+			'headerHtmlOptions' => array('style' => 'width: 10%;'),
+			'htmlOptions' => array('style' => 'text-align: center;'),
+			'filter'=>"<i class='icon-search'></i>&nbsp;&nbsp;".CHtml::activeTextField($model, 'codigo', 
+                 array('style'=>'width:60%')),
 		),
-		/*		array(
-			'class' => 'editable.EditableColumn',
-			'name' => 'registro',
-			'editable' => array(
-				'type' => 'text',
-				'url' => $this->createUrl('EquipoComputo/updateEditable', array('model'=>'EquipoComputo', 'field'=>'registro')),
-		'placement' => 'left',
-			)
-		),*/
-		'codigo',
-		'departamento',
-		'descripcionUbicacion',
+		array(
+			'name' => 'departamento',
+			'headerHtmlOptions' => array('style' => 'width: 9%;'),
+			'filter'=>CHtml::activeTextField($model, 'departamento', 
+                 array('style'=>'width:88%')),
+		),
+		array(
+			'name' => 'descripcionUbicacion',
+			'headerHtmlOptions' => array('style' => 'width: 30%;'),
+			'filter'=>CHtml::activeTextField($model, 'descripcionUbicacion', 
+                 array('style'=>'width:88%')),
+		),
+		
+		
 		array(
 			'class' => 'editable.EditableColumn',
 			'header' => 'Tipo de equipo',
+			'headerHtmlOptions' => array('style' => 'width: 9%;'),
 			'name' => 'keyTE',
 			'editable' => array(
 				'type' => 'select',
@@ -36,6 +41,7 @@
 		array(
 			'class' => 'editable.EditableColumn',
 			'header' => 'Marca',
+			'headerHtmlOptions' => array('style' => 'width: 9%;'),
 			'name' => 'keyMA',
 			'editable' => array(
 				'type' => 'select',
@@ -55,7 +61,12 @@
 				'placement' => 'left',
 			)
 		),
-		'status',
+		array(
+			'header'=>'Status',
+			'value' => "\$data->status=='A'?'Activo':'Inactivo'",
+			'headerHtmlOptions' => array('style' => 'width: 9%;'),
+			'htmlOptions' => array('style' => 'text-align: center;'),
+		),
 		/*
 		array(
 			'class' => 'editable.EditableColumn',
