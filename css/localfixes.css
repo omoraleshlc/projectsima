@@ -20,6 +20,10 @@ div.form input[type='text'], input[type='password']
    text-align: center;
 }
 
+#footer ul{
+	list-style-type: none;
+}
+
 #imgLogoLogin{
 	background:url("caduceus.jpg") no-repeat;
 	background-size:100%;
