@@ -27,6 +27,19 @@ $this->widget('zii.widgets.grid.CGridView', array(
 			'filterHtmlOptions' => array('style' => 'display:none;'),
 		),
 		array(
+			'name' => 'codigo',
+			'headerHtmlOptions' => array('style' => 'width: 8%;'),
+			'htmlOptions' => array('style' => 'text-align: center;'),
+			'filter'=>CHtml::activeTextField($model, 'observaciones', 
+                 array('style'=>'width:80%')),
+		),
+		array(
+			'name' => 'observaciones',
+			'headerHtmlOptions' => array('style' => 'width: 25%;'),
+			'filter'=>CHtml::activeTextField($model, 'observaciones', 
+                 array('style'=>'width:95%')),
+		),
+		array(
 			'header'=>'Tipo soporte',
 			'name' => 'keyTS',
 			'value' => "(CatTipoSoporte::model()->findByPk(\$data->keyTS))!==null?CatTipoSoporte::model()->findByPk(\$data->keyTS)->descripcion:''",
@@ -50,19 +63,6 @@ $this->widget('zii.widgets.grid.CGridView', array(
 			'headerHtmlOptions' => array('style' => 'width: 10%;'),
 			'filter'=>CHtml::activeTextField($model, 'usuarioEjecutor', 
                  array('style'=>'width:88%')),
-		),
-		array(
-			'name' => 'observaciones',
-			'headerHtmlOptions' => array('style' => 'width: 25%;'),
-			'filter'=>CHtml::activeTextField($model, 'observaciones', 
-                 array('style'=>'width:95%')),
-		),
-		array(
-			'name' => 'codigo',
-			'headerHtmlOptions' => array('style' => 'width: 8%;'),
-			'htmlOptions' => array('style' => 'text-align: center;'),
-			'filter'=>CHtml::activeTextField($model, 'observaciones', 
-                 array('style'=>'width:90%')),
 		),
 		array(
 			'header'=>'Status',

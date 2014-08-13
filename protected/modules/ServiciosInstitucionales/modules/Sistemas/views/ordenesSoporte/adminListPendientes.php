@@ -8,12 +8,11 @@ $this->widget('zii.widgets.grid.CGridView', array(
 	'columns'=>array(
 		array(
 			'name' => 'keySOP',
-			'htmlOptions' => array('style' => 'width: 9%; text-align: center;'),
+			'htmlOptions' => array('style' => 'width: 5%; text-align: center;'),
 		),
-		array(
-			'name' => 'fecha',
-			'htmlOptions' => array('style' => 'width: 9%; text-align: center;'),
-		),
+		'codigo',
+		'observaciones',
+		'nombre',
 		array(
 			'class' => 'editable.EditableColumn',
 			'name' => 'keyTS',
@@ -25,9 +24,10 @@ $this->widget('zii.widgets.grid.CGridView', array(
 			)
 		),	
 		'descripcionAlmacen',
-		'nombre',
-		'codigo',
-		'observaciones',
+		array(
+			'name' => 'fecha',
+			'htmlOptions' => array('style' => 'width: 9%; text-align: center;'),
+		),
 		array(
 			'class'=>'bootstrap.widgets.TbButtonColumn',
 			'template' => '{begin}',

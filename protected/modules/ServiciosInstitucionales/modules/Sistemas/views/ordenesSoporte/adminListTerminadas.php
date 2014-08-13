@@ -7,22 +7,10 @@ $this->widget('zii.widgets.grid.CGridView', array(
 	'columns'=>array(
 		array(
 			'name' => 'keySOP',
-			'htmlOptions' => array('style' => 'width: 9%; text-align: center;'),
+			'htmlOptions' => array('style' => 'width: 5%; text-align: center;'),
 		),
-		array(
-			'name' => 'fecha',
-			'htmlOptions' => array('style' => 'width: 9%; text-align: center;'),
-		),
-		array(
-			'name' => 'Tiempo',
-			'header' => 'Tiempo de terminacion',
-			'value' =>'empty($data->fechaInicio)?\'\':date_diff(new DateTime($data->fechaInicio), new DateTime($data->fechaFinal))->format("%d días, %h horas, %i minutos.")'
-		),
-		
-		array(
-			'name' => 'fechaFinal',
-			'htmlOptions' => array('style' => 'width: 9%; text-align: center;'),
-		),
+		'codigo',
+		'observaciones',
 		array(
 			'class' => 'editable.EditableColumn',
 			'name' => 'keyTS',
@@ -34,8 +22,16 @@ $this->widget('zii.widgets.grid.CGridView', array(
 			)
 		),	
 		'descripcionAlmacen',
-		'codigo',
-		'observaciones',
+		array(
+			'name' => 'fecha',
+			'htmlOptions' => array('style' => 'width: 9%; text-align: center;'),
+		),
+		array(
+			'name' => 'Tiempo',
+			'header' => 'Tiempo de terminacion',
+			'value' =>'empty($data->fechaInicio)?\'\':date_diff(new DateTime($data->fechaInicio), new DateTime($data->fechaFinal))->format("%d días, %h horas, %i minutos.")'
+		),
+		
 		array(
 			'class'=>'bootstrap.widgets.TbButtonColumn',
 			'template' => '{obser}',

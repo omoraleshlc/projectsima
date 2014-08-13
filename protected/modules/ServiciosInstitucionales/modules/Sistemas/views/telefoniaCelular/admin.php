@@ -1,4 +1,5 @@
 <h1>Telefonía Celular</h1>
+
 <div style="text-align: right">
 <?php
 	 $this->widget('bootstrap.widgets.TbButton', array(
@@ -7,19 +8,42 @@
     /*'url'=>array('create')*/
 		'url' =>$this->createUrl('TelefoniaCelular/create', array('model'=>'TelefoniaCelular')),)); ?>
 </div>
-
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'telefonia-celular-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'keyCTC',
-		'codigo',
-		'fechaInicial',
-		'fechaFinal',
-		'descripcionUbicacion',
-		'usuarioCelular',
-		'plan',
+		array(
+			'name' => 'nTelefonico',
+			'headerHtmlOptions' => array('style' => 'width: 15%;'),
+           'filter'=>"<i class='icon-search'></i>&nbsp;&nbsp;".CHtml::activeTextField($model, 'nTelefonico', 
+                 array('style'=>'width:60%')),
+		),
+		array(
+			'name' => 'codigo',
+			'headerHtmlOptions' => array('style' => 'width: 10%;'),
+			'htmlOptions' => array('style' => 'text-align: center;'),
+			'filter'=>CHtml::activeTextField($model, 'codigo', 
+                 array('style'=>'width:88%')),
+		),
+		array(
+			'name' => 'usuarioCelular',
+			'headerHtmlOptions' => array('style' => 'width: 10%;'),
+			'filter'=>CHtml::activeTextField($model, 'usuarioCelular', 
+                 array('style'=>'width:88%')),
+		),
+		array(
+			'name' => 'descripcionUbicacion',
+			'headerHtmlOptions' => array('style' => 'width: 15%;'),
+			'filter'=>CHtml::activeTextField($model, 'descripcionUbicacion', 
+                 array('style'=>'width:88%')),
+		),
+		array(
+			'name' => 'plan',
+			'headerHtmlOptions' => array('style' => 'width: 10%;'),
+			'filter'=>CHtml::activeTextField($model, 'plan', 
+                 array('style'=>'width:88%')),
+		),
 		array(
 			'class' => 'editable.EditableColumn',
 			'header' => 'Tipo de equipo',
@@ -30,6 +54,18 @@
 				'source'    => $this->createUrl('TelefoniaCelular/getMarcaCelularList'),
 				'placement' => 'left',
 			)
+		),
+		array(
+			'name' => 'fechaInicial',
+			'headerHtmlOptions' => array('style' => 'width: 10%;'),
+			'filter'=>CHtml::activeTextField($model, 'fechaInicial', 
+                 array('style'=>'width:88%')),
+		),
+		array(
+			'name' => 'fechaFinal',
+			'headerHtmlOptions' => array('style' => 'width: 10%;'),
+			'filter'=>CHtml::activeTextField($model, 'fechaFinal', 
+                 array('style'=>'width:88%')),
 		),
 		/*array(
 			'class' => 'editable.EditableColumn',
