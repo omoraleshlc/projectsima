@@ -30,7 +30,7 @@
 				'class'=>'bootstrap.widgets.TbMenu',
 				'items'=>array(
 				
-					array('label'=>'Compras', 'url'=>'#',
+					array('label'=>'Contabilidad', 'url'=>'#',
 		             	'visible'=>!Yii::app()->user->isGuest,
 		             	'items'=>array(
 						      array('label'=>'Proveedores',
@@ -38,36 +38,44 @@
 		             )),//end dropdown
 				
 				
-					array('label'=>'Servicios institucionales', 'url'=>'#',
+					array('label'=>'Departamentos', 'url'=>'#',
 		             	'visible'=>!Yii::app()->user->isGuest,
 		             	'items'=>array(
-						      array('label'=>'Catálogo de equipos',
-									'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/CatalogoEquipos'),
-									'visible'=>(Yii::app()->user->checkAccess('SistemaOperador') or Yii::app()->user->checkAccess('SistemaCapturista')),
+		             		array('label'=>'Sistemas', 'url'=>'#',
+				          	'visible'=>!Yii::app()->user->isGuest,
+				          	'items'=>array(
+		             				array('label'=>'Catálogo de equipos',
+											'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/CatalogoEquipos'),
+											'visible'=>(Yii::app()->user->checkAccess('SistemaOperador') or Yii::app()->user->checkAccess('SistemaCapturista')),
+											),
+								        array('label'=>'Catálogo de telefonía',
+								        'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/CatalogoTelefonia'),
+												'visible'=>(Yii::app()->user->checkAccess('SistemaOperador') or Yii::app()->user->checkAccess('SistemaCapturista')),
+												),
+								        array('label'=>'Inventario de equipos',
+								        'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/equipoComputo/admin'),
+												'visible'=>(Yii::app()->user->checkAccess('SistemaOperador') or Yii::app()->user->checkAccess('SistemaCapturista')),
+												),
+								        array('label'=>'Inventario de telefonía',
+								        'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/telefoniaCelular/admin'),
+												'visible'=>(Yii::app()->user->checkAccess('SistemaOperador') or Yii::app()->user->checkAccess('SistemaCapturista')),
+												),
+								        array('label'=>'Impresión de etiquetas',
+								        'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/printLabels'),		
+												'visible'=>(Yii::app()->user->checkAccess('SistemaOperador') or Yii::app()->user->checkAccess('SistemaCapturista')),
+												),
+												array('label'=>'Escaneo de etiquetas',
+								        'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/ordenesSoporte/scan'),		
+												'visible'=>(Yii::app()->user->checkAccess('SistemaOperador') or Yii::app()->user->checkAccess('SistemaCapturista')),
+												),  
 									),
-		                 array('label'=>'Catálogo de telefonía',
-		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/CatalogoTelefonia'),
-									'visible'=>(Yii::app()->user->checkAccess('SistemaOperador') or Yii::app()->user->checkAccess('SistemaCapturista')),
-									),
-		                 array('label'=>'Inventario de equipos',
-		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/equipoComputo/admin'),
-									'visible'=>(Yii::app()->user->checkAccess('SistemaOperador') or Yii::app()->user->checkAccess('SistemaCapturista')),
-									),
-		                 array('label'=>'Inventario de telefonía',
-		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/telefoniaCelular/admin'),
-									'visible'=>(Yii::app()->user->checkAccess('SistemaOperador') or Yii::app()->user->checkAccess('SistemaCapturista')),
-									),
-		                 array('label'=>'Impresión de etiquetas',
-		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/printLabels'),		
-									'visible'=>(Yii::app()->user->checkAccess('SistemaOperador') or Yii::app()->user->checkAccess('SistemaCapturista')),
-									),
-									array('label'=>'Escaneo de etiquetas',
-		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/ordenesSoporte/scan'),		
-									'visible'=>(Yii::app()->user->checkAccess('SistemaOperador') or Yii::app()->user->checkAccess('SistemaCapturista')),
-									),
-		                 array('label'=>'Ordenes de soporte',
-		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin')),
-		             )),//end dropdown
+								),	
+									
+		                 array('label'=>'Soporte',
+		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin')
+		                 ),
+		                 )
+		             ),//end dropdown
 		             
 		             
 		             
@@ -75,14 +83,23 @@
 					array('label'=>'Configuracion', 'url'=>'#',
 		             	'visible'=>Yii::app()->user->isSuperAdmin,
 		             	'items'=>array(
+		             		array('label'=>'Usuarios', 'url'=>'#',
+						       	'visible'=>Yii::app()->user->isSuperAdmin,
+						       	'items'=>array(
+		             	
 						      array('label'=>'Usuarios',
 									'url'=>Yii::app()->user->ui->userManagementAdminUrl),
 							 	array('label'=>'Usuarios V2',
 		                 		'url'=>Yii::app()->createUrl('Configuracion/Usuarios/UsuariosSima/admin')),
+		                 		)),
+		                 	array('label'=>'Sistema', 'url'=>'#',
+						       	'visible'=>Yii::app()->user->isSuperAdmin,
+						       	'items'=>array(	
 		                 	array('label'=>'Almacenes',
 		                 		'url'=>Yii::app()->createUrl('Configuracion/Sistema/CatAlmacen/admin')),
 	                 		array('label'=>'Entidades',
 		                 		'url'=>Yii::app()->createUrl('Configuracion/Sistema/CatEntidad/admin')),
+		                 		)),
 		             )),//end dropdown
 				
 				
