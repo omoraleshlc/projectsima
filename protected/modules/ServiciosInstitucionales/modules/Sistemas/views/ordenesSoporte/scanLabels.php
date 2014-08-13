@@ -92,7 +92,7 @@ $this->breadcrumbs=array(
     zoom: 1.5;" class="custom-file-input"/>
 	<!--input type="text" name="barcode" id="barcode"-->
 		
-	
+	<a href="http://zxing.appspot.com/scan"> SCAN APP TEST</a>
 <br/><br/><br/>
 
 
