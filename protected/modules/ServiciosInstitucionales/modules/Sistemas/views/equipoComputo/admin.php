@@ -1,5 +1,13 @@
 <h1>Equipo de Cómputo</h1>
 
+<div style="text-align: right">
+<?php
+	 $this->widget('bootstrap.widgets.TbButton', array(
+    'label'=>'Crear nuevo',
+    'size'=>'small', // null, 'large', 'small' or 'mini'
+    /*'url'=>array('create')*/
+		'url' =>$this->createUrl('EquipoComputo/create', array('model'=>'EquipoComputo')),)); ?>
+</div>
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'equipo-computo-grid',
 	'dataProvider'=>$model->search(),

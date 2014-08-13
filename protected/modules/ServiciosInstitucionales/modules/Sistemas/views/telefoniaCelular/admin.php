@@ -1,4 +1,12 @@
 <h1>Telefonía Celular</h1>
+<div style="text-align: right">
+<?php
+	 $this->widget('bootstrap.widgets.TbButton', array(
+    'label'=>'Crear nuevo',
+    'size'=>'small', // null, 'large', 'small' or 'mini'
+    /*'url'=>array('create')*/
+		'url' =>$this->createUrl('TelefoniaCelular/create', array('model'=>'TelefoniaCelular')),)); ?>
+</div>
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'telefonia-celular-grid',
