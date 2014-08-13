@@ -3,19 +3,18 @@
 /* @var $model CatEntidad */
 
 $this->breadcrumbs=array(
-	'Cat Entidads'=>array('index'),
+	'Entidades'=>array('admin'),
 	$model->keyEntidades=>array('view','id'=>$model->keyEntidades),
-	'Update',
+	'Actualizar',
 );
 
 $this->menu=array(
-	array('label'=>'List CatEntidad', 'url'=>array('index')),
-	array('label'=>'Create CatEntidad', 'url'=>array('create')),
-	array('label'=>'View CatEntidad', 'url'=>array('view', 'id'=>$model->keyEntidades)),
-	array('label'=>'Manage CatEntidad', 'url'=>array('admin')),
+	array('label'=>'Crear Entidades', 'url'=>array('create')),
+	array('label'=>'Ver Entindades', 'url'=>array('view', 'id'=>$model->keyEntidades)),
+	array('label'=>'Lista de Entidades', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update CatEntidad <?php echo $model->keyEntidades; ?></h1>
+<h1>Actualizar Entidad <?php echo $model->keyEntidades; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -3,16 +3,15 @@
 /* @var $model CatCompany */
 
 $this->breadcrumbs=array(
-	'Cat Companies'=>array('default/CatalogoTelefonia'),
+	'Catálogo de Telefonía'=>array('default/CatalogoTelefonia'),
 	$model->keyTS,
 );
 
 $this->menu=array(
-	array('label'=>'List CatCompany', 'url'=>array('index')),
-	array('label'=>'Create CatCompany', 'url'=>array('create')),
-	array('label'=>'Update CatCompany', 'url'=>array('update', 'id'=>$model->keyTS)),
-	array('label'=>'Delete CatCompany', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->keyTS),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage CatCompany', 'url'=>array('admin')),
+	array('label'=>'Crear Compañía', 'url'=>array('create')),
+	array('label'=>'Actualizar Compañía', 'url'=>array('update', 'id'=>$model->keyTS)),
+	array('label'=>'Borrar Compañía', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->keyTS),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Catálogo de Telefonía', 'url'=>array('default/CatalogoTelefonia')),
 );
 ?>
 

@@ -3,13 +3,12 @@
 /* @var $model CatAlmacen */
 
 $this->breadcrumbs=array(
-	'Cat Almacens'=>array('index'),
-	'Create',
+	'Almacenes'=>array('admin'),
+	'Crear',
 );
 
 $this->menu=array(
-	array('label'=>'List CatAlmacen', 'url'=>array('index')),
-	array('label'=>'Manage CatAlmacen', 'url'=>array('admin')),
+	array('label'=>'Lista de Almacenes', 'url'=>array('admin')),
 );
 ?>
 

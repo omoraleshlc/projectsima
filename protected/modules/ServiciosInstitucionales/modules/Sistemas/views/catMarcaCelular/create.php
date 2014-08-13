@@ -3,13 +3,12 @@
 /* @var $model CatMarcaCelular */
 
 $this->breadcrumbs=array(
-	'Cat Marca Celulars'=>array('default/CatalogoTelefonia'),
-	'Create',
+	'Catálogo de Telefonía'=>array('default/CatalogoTelefonia'),
+	'Crear',
 );
 
 $this->menu=array(
-	array('label'=>'List CatMarcaCelular', 'url'=>array('index')),
-	array('label'=>'Manage CatMarcaCelular', 'url'=>array('admin')),
+	array('label'=>'Catálogo de Telefonía', 'url'=>array('admin')),
 );
 ?>
 

@@ -3,16 +3,15 @@
 /* @var $model CatMarca */
 
 $this->breadcrumbs=array(
-	'Cat Marcas'=>array('default/CatalogoEquipos'),
+	'Catálogo de Equipos'=>array('default/CatalogoEquipos'),
 	$model->keyMA=>array('view','id'=>$model->keyMA),
-	'Update',
+	'Actualizar',
 );
 
 $this->menu=array(
-	array('label'=>'List CatMarca', 'url'=>array('index')),
-	array('label'=>'Create CatMarca', 'url'=>array('create')),
-	array('label'=>'View CatMarca', 'url'=>array('view', 'id'=>$model->keyMA)),
-	array('label'=>'Manage CatMarca', 'url'=>array('admin')),
+	array('label'=>'Crear Marca', 'url'=>array('create')),
+	array('label'=>'Ver Marca', 'url'=>array('view', 'id'=>$model->keyMA)),
+	array('label'=>'Catálogo de Equipos', 'url'=>array('default/CatalogoEquipos')),
 );
 ?>
 

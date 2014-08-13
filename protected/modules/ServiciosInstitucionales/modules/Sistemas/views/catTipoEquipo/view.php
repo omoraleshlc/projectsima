@@ -3,16 +3,15 @@
 /* @var $model CatTipoEquipo */
 
 $this->breadcrumbs=array(
-	'Cat Tipo Equipos'=>array('default/CatalogoEquipos'),
+	'Catálogo de Equipo'=>array('default/CatalogoEquipos'),
 	$model->keyTE,
 );
 
 $this->menu=array(
-	array('label'=>'List CatTipoEquipo', 'url'=>array('index')),
-	array('label'=>'Create CatTipoEquipo', 'url'=>array('create')),
-	array('label'=>'Update CatTipoEquipo', 'url'=>array('update', 'id'=>$model->keyTE)),
-	array('label'=>'Delete CatTipoEquipo', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->keyTE),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage CatTipoEquipo', 'url'=>array('admin')),
+	array('label'=>'Crear Tipo de Equipo', 'url'=>array('create')),
+	array('label'=>'Actualizar Tipo de Equipo', 'url'=>array('update', 'id'=>$model->keyTE)),
+	array('label'=>'Borrar Tipo de Equipo', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->keyTE),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Catálogo de Equipo', 'url'=>array('default/CatalogoEquipos')),
 );
 ?>
 

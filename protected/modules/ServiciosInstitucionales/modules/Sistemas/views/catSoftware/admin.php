@@ -3,13 +3,12 @@
 /* @var $model CatSoftware */
 
 $this->breadcrumbs=array(
-	'Cat Softwares'=>array('index'),
+	'Catálogo de Equipo'=>array('default/CatalogoEquipos'),
 	'Manage',
 );
 
 $this->menu=array(
-	array('label'=>'List CatSoftware', 'url'=>array('index')),
-	array('label'=>'Create CatSoftware', 'url'=>array('create')),
+	array('label'=>'Crear Software', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "

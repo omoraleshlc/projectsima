@@ -3,16 +3,15 @@
 /* @var $model CatEntidad */
 
 $this->breadcrumbs=array(
-	'Cat Entidads'=>array('index'),
+	'Entidades'=>array('admin'),
 	$model->keyEntidades,
 );
 
 $this->menu=array(
-	array('label'=>'List CatEntidad', 'url'=>array('index')),
-	array('label'=>'Create CatEntidad', 'url'=>array('create')),
-	array('label'=>'Update CatEntidad', 'url'=>array('update', 'id'=>$model->keyEntidades)),
-	array('label'=>'Delete CatEntidad', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->keyEntidades),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage CatEntidad', 'url'=>array('admin')),
+	array('label'=>'Crear Entidad', 'url'=>array('create')),
+	array('label'=>'Actualizar Entidad', 'url'=>array('update', 'id'=>$model->keyEntidades)),
+	array('label'=>'Borrar Entidad', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->keyEntidades),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Lista de Entidades', 'url'=>array('admin')),
 );
 ?>
 

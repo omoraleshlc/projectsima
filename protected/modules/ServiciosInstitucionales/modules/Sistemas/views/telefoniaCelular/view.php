@@ -8,11 +8,10 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List TelefoniaCelular', 'url'=>array('index')),
-	array('label'=>'Create TelefoniaCelular', 'url'=>array('create')),
-	array('label'=>'Update TelefoniaCelular', 'url'=>array('update', 'id'=>$model->keyCTC)),
-	array('label'=>'Delete TelefoniaCelular', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->keyCTC),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage TelefoniaCelular', 'url'=>array('admin')),
+	array('label'=>'Crear Equipo de TelefoniaCelular', 'url'=>array('create')),
+	array('label'=>'Actualizar Equipo de Telefonia Celular', 'url'=>array('update', 'id'=>$model->keyCTC)),
+	array('label'=>'Borrar Equipo de Telefonia Celular', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->keyCTC),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Lista de Telefonia de Celular', 'url'=>array('admin')),
 );
 ?>
 

@@ -3,19 +3,18 @@
 /* @var $model CatAlmacen */
 
 $this->breadcrumbs=array(
-	'Cat Almacens'=>array('index'),
+	'Almacenes'=>array('admin'),
 	$model->keyAlmacenes=>array('view','id'=>$model->keyAlmacenes),
-	'Update',
+	'Actualizar',
 );
 
 $this->menu=array(
-	array('label'=>'List CatAlmacen', 'url'=>array('index')),
-	array('label'=>'Create CatAlmacen', 'url'=>array('create')),
-	array('label'=>'View CatAlmacen', 'url'=>array('view', 'id'=>$model->keyAlmacenes)),
-	array('label'=>'Manage CatAlmacen', 'url'=>array('admin')),
+	array('label'=>'Crear Almacén', 'url'=>array('create')),
+	array('label'=>'Ver Almacén', 'url'=>array('view', 'id'=>$model->keyAlmacenes)),
+	array('label'=>'Lista de Almacenes', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update CatAlmacen <?php echo $model->keyAlmacenes; ?></h1>
+<h1>Actualizar Almacén <?php echo $model->keyAlmacenes; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

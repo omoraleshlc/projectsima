@@ -3,8 +3,7 @@
 /* @var $model CatMarca */
 
 $this->breadcrumbs=array(
-	'Cat Marcas'=>array('index'),
-	'Manage',
+	'Marcas',
 );
 
 $this->menu=array(

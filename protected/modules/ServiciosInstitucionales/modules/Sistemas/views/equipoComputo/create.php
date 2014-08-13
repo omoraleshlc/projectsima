@@ -3,13 +3,12 @@
 /* @var $model EquipoComputo */
 
 $this->breadcrumbs=array(
-	'Equipo Computos'=>array('admin'),
+	'Equipo de Computo'=>array('admin'),
 	'Crear',
 );
 
 $this->menu=array(
-	array('label'=>'List EquipoComputo', 'url'=>array('index')),
-	array('label'=>'Manage EquipoComputo', 'url'=>array('admin')),
+	array('label'=>'Lista de Equipo Computo', 'url'=>array('admin')),
 );
 ?>
 

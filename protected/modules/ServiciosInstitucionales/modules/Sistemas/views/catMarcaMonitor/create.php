@@ -3,13 +3,12 @@
 /* @var $model CatMarcaMonitor */
 
 $this->breadcrumbs=array(
-	'Cat Marca Monitors'=>array('default/CatalogoEquipos'),
-	'Create',
+	'Catálogo de Equipo'=>array('default/CatalogoEquipos'),
+	'Crear',
 );
 
 $this->menu=array(
-	array('label'=>'List CatMarcaMonitor', 'url'=>array('index')),
-	array('label'=>'Manage CatMarcaMonitor', 'url'=>array('admin')),
+	array('label'=>'Catálogo de Equipo', 'url'=>array('default/CatalogoEquipos')),
 );
 ?>
 

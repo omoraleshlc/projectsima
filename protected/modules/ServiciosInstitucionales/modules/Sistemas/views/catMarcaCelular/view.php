@@ -3,16 +3,15 @@
 /* @var $model CatMarcaCelular */
 
 $this->breadcrumbs=array(
-	'Cat Marca Celulars'=>array('default/CatalogoTelefonia'),
+	'Catálogo de Telefonía'=>array('default/CatalogoTelefonia'),
 	$model->keyMA,
 );
 
 $this->menu=array(
-	array('label'=>'List CatMarcaCelular', 'url'=>array('index')),
-	array('label'=>'Create CatMarcaCelular', 'url'=>array('create')),
-	array('label'=>'Update CatMarcaCelular', 'url'=>array('update', 'id'=>$model->keyMA)),
-	array('label'=>'Delete CatMarcaCelular', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->keyMA),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage CatMarcaCelular', 'url'=>array('admin')),
+	array('label'=>'Crear Marca de Celular', 'url'=>array('create')),
+	array('label'=>'Actualizar Marca de Celular', 'url'=>array('update', 'id'=>$model->keyMA)),
+	array('label'=>'Borrar Marca de Celular', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->keyMA),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Catálogo de Telefonía', 'url'=>array('default/CatalogoTelefonia')),
 );
 ?>
 

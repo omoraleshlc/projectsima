@@ -3,7 +3,7 @@
 /* @var $model CatTipoProcesador */
 
 $this->breadcrumbs=array(
-	'Cat Tipo Procesadors'=>array('index'),
+	'Catálogo de Equipo'=>array('default/CatalogoEquipos'),
 	'Manage',
 );
 

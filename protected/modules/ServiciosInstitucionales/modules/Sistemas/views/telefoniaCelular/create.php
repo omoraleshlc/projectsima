@@ -8,8 +8,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List TelefoniaCelular', 'url'=>array('index')),
-	array('label'=>'Manage TelefoniaCelular', 'url'=>array('admin')),
+	array('label'=>'Lista de Telefonia Celular', 'url'=>array('admin')),
 );
 ?>
 

@@ -73,7 +73,7 @@
 /* @var $this OrdenesSoporteController */
 /* @var $model OrdenesSoporte */
 $this->breadcrumbs=array(
-	'Ordenes Soportes'=>array('admin'),
+	'Ordenes de Soportes'=>array('admin'),
 	'Escanear codigo de barras',
 );
 ?>

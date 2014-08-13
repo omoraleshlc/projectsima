@@ -3,7 +3,7 @@
 /* @var $model CatSistemaOperativo */
 
 $this->breadcrumbs=array(
-	'Cat Sistema Operativos'=>array('index'),
+	'Catálogo de Equipo'=>array('default/CatalogoEquipos'),
 	'Manage',
 );
 

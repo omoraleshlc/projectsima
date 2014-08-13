@@ -3,16 +3,15 @@
 /* @var $model CatSistemaOperativo */
 
 $this->breadcrumbs=array(
-	'Cat Sistema Operativos'=>array('default/CatalogoEquipos'),
+	'Catálogo de Equipo'=>array('default/CatalogoEquipos'),
 	$model->keyOS=>array('view','id'=>$model->keyOS),
-	'Update',
+	'Actualizar',
 );
 
 $this->menu=array(
-	array('label'=>'List CatSistemaOperativo', 'url'=>array('index')),
-	array('label'=>'Create CatSistemaOperativo', 'url'=>array('create')),
-	array('label'=>'View CatSistemaOperativo', 'url'=>array('view', 'id'=>$model->keyOS)),
-	array('label'=>'Manage CatSistemaOperativo', 'url'=>array('admin')),
+	array('label'=>'Crear Sistema Operativo', 'url'=>array('create')),
+	array('label'=>'Ver Sistema Operativo', 'url'=>array('view', 'id'=>$model->keyOS)),
+	array('label'=>'Catálogo de Equipo', 'url'=>array('default/CatalogoEquipos')),
 );
 ?>
 

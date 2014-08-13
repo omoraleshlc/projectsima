@@ -3,16 +3,15 @@
 /* @var $model OrdenesSoporte */
 
 $this->breadcrumbs=array(
-	'Ordenes Soportes'=>array('admin'),
+	'Ordenes de Soporte'=>array('admin'),
 	$model->keySOP,
 );
 
 $this->menu=array(
-	array('label'=>'List OrdenesSoporte', 'url'=>array('index')),
-	array('label'=>'Create OrdenesSoporte', 'url'=>array('create')),
-	array('label'=>'Update OrdenesSoporte', 'url'=>array('update', 'id'=>$model->keySOP)),
-	array('label'=>'Delete OrdenesSoporte', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->keySOP),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage OrdenesSoporte', 'url'=>array('admin')),
+	array('label'=>'Crear Ordenes de Soporte', 'url'=>array('create')),
+	array('label'=>'Actualizar Ordenes de Soporte', 'url'=>array('update', 'id'=>$model->keySOP)),
+	array('label'=>'Borrar Ordenes de Soporte', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->keySOP),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Lista de Ordenes de Soporte', 'url'=>array('admin')),
 );
 ?>
 

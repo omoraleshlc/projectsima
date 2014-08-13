@@ -8,8 +8,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List EquipoComputo', 'url'=>array('index')),
-	array('label'=>'Manage EquipoComputo', 'url'=>array('admin')),
+	array('label'=>'Lista de Equipo de Computo', 'url'=>array('admin')),
 );
 ?>
 

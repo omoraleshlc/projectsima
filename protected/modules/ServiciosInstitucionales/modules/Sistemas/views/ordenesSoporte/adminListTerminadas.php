@@ -72,12 +72,4 @@ $this->widget('zii.widgets.grid.CGridView', array(
 		),
 	),
 )); ?>
-<div style="text-align: right">
-<?php
-	 $this->widget('bootstrap.widgets.TbButton', array(
-    'label'=>'Crear nuevo',
-    'size'=>'small', // null, 'large', 'small' or 'mini'
-    /*'url'=>array('create')*/
-		'url' =>$this->createUrl('OrdenesSoporte/create', array('model'=>'OrdenesSoporte')),)); ?>
-</div>
 

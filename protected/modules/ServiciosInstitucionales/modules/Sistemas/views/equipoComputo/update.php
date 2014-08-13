@@ -9,10 +9,9 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List EquipoComputo', 'url'=>array('index')),
-	array('label'=>'Create EquipoComputo', 'url'=>array('create')),
-	array('label'=>'View EquipoComputo', 'url'=>array('view', 'id'=>$model->keyIE)),
-	array('label'=>'Manage EquipoComputo', 'url'=>array('admin')),
+	array('label'=>'Crear Equipo de Computo', 'url'=>array('create')),
+	array('label'=>'Ver Equipo de Computo', 'url'=>array('view', 'id'=>$model->keyIE)),
+	array('label'=>'Lista de Equipo de Computo', 'url'=>array('admin')),
 );
 ?>
 

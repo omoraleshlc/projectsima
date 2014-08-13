@@ -3,7 +3,7 @@
 
 $this->breadcrumbs=array(
 	//$this->module->id,
-	"Catalogo de equipos",
+	"Catalogo de equipo",
 );
 ?>
 

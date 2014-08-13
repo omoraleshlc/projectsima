@@ -3,16 +3,15 @@
 /* @var $model CatTipoPlanCelular */
 
 $this->breadcrumbs=array(
-	'Cat Tipo Plan Celulars'=>array('default/CatalogoTelefonia'),
+	'Catálogo de Telefonía'=>array('default/CatalogoTelefonia'),
 	$model->keyTS,
 );
 
 $this->menu=array(
-	array('label'=>'List CatTipoPlanCelular', 'url'=>array('index')),
-	array('label'=>'Create CatTipoPlanCelular', 'url'=>array('create')),
-	array('label'=>'Update CatTipoPlanCelular', 'url'=>array('update', 'id'=>$model->keyTS)),
-	array('label'=>'Delete CatTipoPlanCelular', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->keyTS),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage CatTipoPlanCelular', 'url'=>array('admin')),
+	array('label'=>'Crear Tipo de Plan de Celular', 'url'=>array('create')),
+	array('label'=>'Actualziar Tipo de Plan de Celular', 'url'=>array('update', 'id'=>$model->keyTS)),
+	array('label'=>'Borrar Tipo de Plan de Celular', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->keyTS),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Catálogo de Telefonía', 'url'=>array('default/CatalogoTelefonia')),
 );
 ?>
 

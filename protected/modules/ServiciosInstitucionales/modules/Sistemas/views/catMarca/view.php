@@ -3,16 +3,15 @@
 /* @var $model CatMarca */
 
 $this->breadcrumbs=array(
-	'Cat Marcas'=>array('default/CatalogoEquipos'),
+	'Catálogo de Equipos'=>array('default/CatalogoEquipos'),
 	$model->keyMA,
 );
 
 $this->menu=array(
-	array('label'=>'List CatMarca', 'url'=>array('index')),
-	array('label'=>'Create CatMarca', 'url'=>array('create')),
-	array('label'=>'Update CatMarca', 'url'=>array('update', 'id'=>$model->keyMA)),
-	array('label'=>'Delete CatMarca', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->keyMA),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage CatMarca', 'url'=>array('admin')),
+	array('label'=>'Crear Marca', 'url'=>array('create')),
+	array('label'=>'Actualizar Marca', 'url'=>array('update', 'id'=>$model->keyMA)),
+	array('label'=>'Borrar Marca', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->keyMA),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Catálogo de Equipos', 'url'=>array('default/CatalogoEquipos')),
 );
 ?>
 

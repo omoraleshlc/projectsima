@@ -3,13 +3,12 @@
 /* @var $model CatSoftware */
 
 $this->breadcrumbs=array(
-	'Cat Softwares'=>array('default/CatalogoEquipos'),
-	'Create',
+	'Catálogo de Equipo'=>array('default/CatalogoEquipos'),
+	'Crear',
 );
 
 $this->menu=array(
-	array('label'=>'List CatSoftware', 'url'=>array('index')),
-	array('label'=>'Manage CatSoftware', 'url'=>array('admin')),
+	array('label'=>'Catálogo de Equipo', 'url'=>array('default/CatalogoEquipos')),
 );
 ?>
 

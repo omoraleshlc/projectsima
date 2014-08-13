@@ -3,13 +3,12 @@
 /* @var $model CatTipoProcesador */
 
 $this->breadcrumbs=array(
-	'Cat Tipo Procesadors'=>array('default/CatalogoEquipos'),
-	'Create',
+	'Catálogo de Equipo'=>array('default/CatalogoEquipos'),
+	'Crear',
 );
 
 $this->menu=array(
-	array('label'=>'List CatTipoProcesador', 'url'=>array('index')),
-	array('label'=>'Manage CatTipoProcesador', 'url'=>array('admin')),
+	array('label'=>'Catálogo de Equipos', 'url'=>array('default/CatalogoEquipos')),
 );
 ?>
 

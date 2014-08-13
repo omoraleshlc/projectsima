@@ -9,12 +9,11 @@ else
 
 $this->breadcrumbs=array(
 	'Observaciones'=>$breadurl,
-	'Create',
+	'Crear',
 );
 
 $this->menu=array(
-	array('label'=>'List ObservacionesOrdenSoporte', 'url'=>array('index')),
-	array('label'=>'Manage ObservacionesOrdenSoporte', 'url'=>array('admin')),
+	array('label'=>'Lista de Observaciones de Orden de Soporte', 'url'=>array('admin')),
 );
 ?>
 

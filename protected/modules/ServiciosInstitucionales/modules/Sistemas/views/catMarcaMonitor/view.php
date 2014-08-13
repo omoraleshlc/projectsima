@@ -3,16 +3,15 @@
 /* @var $model CatMarcaMonitor */
 
 $this->breadcrumbs=array(
-	'Cat Marca Monitors'=>array('default/CatalogoEquipos'),
+	'Catálogo de Equipo'=>array('default/CatalogoEquipos'),
 	$model->keyMAM,
 );
 
 $this->menu=array(
-	array('label'=>'List CatMarcaMonitor', 'url'=>array('index')),
-	array('label'=>'Create CatMarcaMonitor', 'url'=>array('create')),
-	array('label'=>'Update CatMarcaMonitor', 'url'=>array('update', 'id'=>$model->keyMAM)),
-	array('label'=>'Delete CatMarcaMonitor', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->keyMAM),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage CatMarcaMonitor', 'url'=>array('admin')),
+	array('label'=>'Crear Marca de Monitor', 'url'=>array('create')),
+	array('label'=>'Actualizar Marca de Monitor', 'url'=>array('update', 'id'=>$model->keyMAM)),
+	array('label'=>'Borrar Marca de Monitor', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->keyMAM),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Catálogo de Equipo', 'url'=>array('default/CatalogoEquipos')),
 );
 ?>
 

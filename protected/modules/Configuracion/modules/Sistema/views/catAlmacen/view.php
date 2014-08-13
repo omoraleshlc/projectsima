@@ -3,16 +3,15 @@
 /* @var $model CatAlmacen */
 
 $this->breadcrumbs=array(
-	'Cat Almacens'=>array('index'),
+	'Almacenes'=>array('admin'),
 	$model->keyAlmacenes,
 );
 
 $this->menu=array(
-	array('label'=>'List CatAlmacen', 'url'=>array('index')),
-	array('label'=>'Create CatAlmacen', 'url'=>array('create')),
-	array('label'=>'Update CatAlmacen', 'url'=>array('update', 'id'=>$model->keyAlmacenes)),
-	array('label'=>'Delete CatAlmacen', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->keyAlmacenes),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage CatAlmacen', 'url'=>array('admin')),
+	array('label'=>'Crear Almacén', 'url'=>array('create')),
+	array('label'=>'Actualizar Almacén', 'url'=>array('update', 'id'=>$model->keyAlmacenes)),
+	array('label'=>'Borrar Almacén', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->keyAlmacenes),'confirm'=>'¿Esta seguro de que quiere borrar este elemento?')),
+	array('label'=>'Lista de Almacenes', 'url'=>array('admin')),
 );
 ?>
 

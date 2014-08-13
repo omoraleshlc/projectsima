@@ -8,11 +8,10 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List EquipoComputo', 'url'=>array('index')),
-	array('label'=>'Create EquipoComputo', 'url'=>array('create')),
-	array('label'=>'Update EquipoComputo', 'url'=>array('update', 'id'=>$model->keyIE)),
-	array('label'=>'Delete EquipoComputo', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->keyIE),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage EquipoComputo', 'url'=>array('admin')),
+	array('label'=>'Crear Equipo de Computo', 'url'=>array('create')),
+	array('label'=>'Actualizar Equipo de Computo', 'url'=>array('update', 'id'=>$model->keyIE)),
+	array('label'=>'Borrar Equipo de Computo', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->keyIE),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Lista de Equipo de Computo', 'url'=>array('admin')),
 );
 ?>
 

@@ -3,16 +3,15 @@
 /* @var $model CatCompany */
 
 $this->breadcrumbs=array(
-	'Cat Companies'=>array('default/CatalogoTelefonia'),
+	'Catálogo de Telefonía'=>array('default/CatalogoTelefonia'),
 	$model->keyTS=>array('view','id'=>$model->keyTS),
-	'Update',
+	'Actualizar',
 );
 
 $this->menu=array(
-	array('label'=>'List CatCompany', 'url'=>array('index')),
-	array('label'=>'Create CatCompany', 'url'=>array('create')),
-	array('label'=>'View CatCompany', 'url'=>array('view', 'id'=>$model->keyTS)),
-	array('label'=>'Manage CatCompany', 'url'=>array('admin')),
+	array('label'=>'Crear Compañía', 'url'=>array('create')),
+	array('label'=>'Ver Compañía', 'url'=>array('view', 'id'=>$model->keyTS)),
+	array('label'=>'Catálogo de Telefonía', 'url'=>array('default/CatalogoTelefonia')),
 );
 ?>
 

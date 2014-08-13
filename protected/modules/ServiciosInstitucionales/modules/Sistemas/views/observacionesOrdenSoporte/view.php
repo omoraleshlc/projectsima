@@ -13,11 +13,10 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List ObservacionesOrdenSoporte', 'url'=>array('index')),
-	array('label'=>'Create ObservacionesOrdenSoporte', 'url'=>array('create')),
-	array('label'=>'Update ObservacionesOrdenSoporte', 'url'=>array('update', 'id'=>$model->keyS)),
-	array('label'=>'Delete ObservacionesOrdenSoporte', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->keyS),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage ObservacionesOrdenSoporte', 'url'=>array('admin')),
+	array('label'=>'Crear Observaciones de Orden de Soporte', 'url'=>array('create')),
+	array('label'=>'Actualizar Observaciones de Orden de Soporte', 'url'=>array('update', 'id'=>$model->keyS)),
+	array('label'=>'Borrar Observaciones de Orden de Soporte', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->keyS),'confirm'=>'¿Seguro que quiere borrar este elemento?')),
+	array('label'=>'Lista de Observaciones de Orden de Soporte', 'url'=>array('admin')),
 );
 ?>
 

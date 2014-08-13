@@ -3,16 +3,15 @@
 /* @var $model CatTipoSoporte */
 
 $this->breadcrumbs=array(
-	'Cat Tipo Soportes'=>array('default/CatalogoEquipos'),
+	'Catálogo de Equipo'=>array('default/CatalogoEquipos'),
 	$model->keyTS=>array('view','id'=>$model->keyTS),
-	'Update',
+	'Actualizar',
 );
 
 $this->menu=array(
-	array('label'=>'List CatTipoSoporte', 'url'=>array('index')),
-	array('label'=>'Create CatTipoSoporte', 'url'=>array('create')),
-	array('label'=>'View CatTipoSoporte', 'url'=>array('view', 'id'=>$model->keyTS)),
-	array('label'=>'Manage CatTipoSoporte', 'url'=>array('admin')),
+	array('label'=>'Crear Tipo de Soporte', 'url'=>array('create')),
+	array('label'=>'Ver Tipo de Soporte', 'url'=>array('view', 'id'=>$model->keyTS)),
+	array('label'=>'Catálogo de Equipo', 'url'=>array('default/CatalogoEquipos')),
 );
 ?>
 

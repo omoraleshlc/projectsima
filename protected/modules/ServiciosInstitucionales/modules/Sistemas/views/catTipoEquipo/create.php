@@ -3,13 +3,12 @@
 /* @var $model CatTipoEquipo */
 
 $this->breadcrumbs=array(
-	'Cat Tipo Equipos'=>array('default/CatalogoEquipos'),
-	'Create',
+	'Catálogo de Equipo'=>array('default/CatalogoEquipos'),
+	'Crear',
 );
 
 $this->menu=array(
-	array('label'=>'List CatTipoEquipo', 'url'=>array('index')),
-	array('label'=>'Manage CatTipoEquipo', 'url'=>array('admin')),
+	array('label'=>'Catálogo de Equipo', 'url'=>array('default/CatalogoEquipos')),
 );
 ?>
 

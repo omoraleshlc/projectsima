@@ -3,13 +3,12 @@
 /* @var $model Proveedor */
 
 $this->breadcrumbs=array(
-	'Proveedors'=>array('index'),
-	'Create',
+	'Proveedores'=>array('admin'),
+	'Crear',
 );
 
 $this->menu=array(
-	array('label'=>'List Proveedor', 'url'=>array('index')),
-	array('label'=>'Manage Proveedor', 'url'=>array('admin')),
+	array('label'=>'Lista de Proveedores', 'url'=>array('admin')),
 );
 ?>
 

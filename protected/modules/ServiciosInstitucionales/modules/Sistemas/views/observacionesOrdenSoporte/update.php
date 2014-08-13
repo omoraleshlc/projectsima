@@ -1,6 +1,6 @@
 <?php
 /* @var $this ObservacionesOrdenSoporteController */
-/* @var $model ObservacionesOrdenSoporte */
+/* @var $model Observaciones de Orden de Soporte */
 
 if (isset($_GET['OrdenSoporteId']))
 	$breadurl=array('OrdenesSoporte/view','id'=>$_GET['OrdenSoporteId'],'#'=>'observaciones-orden-soporte-grid' );
@@ -10,14 +10,13 @@ else
 $this->breadcrumbs=array(
 	'Observaciones'=>$breadurl,
 	$model->keyS=>array('view','id'=>$model->keyS, 'OrdenSoporteId'=>$_GET['OrdenSoporteId']),
-	'Update',
+	'Actualizar',
 );
 
 $this->menu=array(
-	array('label'=>'List ObservacionesOrdenSoporte', 'url'=>array('index')),
-	array('label'=>'Create ObservacionesOrdenSoporte', 'url'=>array('create')),
-	array('label'=>'View ObservacionesOrdenSoporte', 'url'=>array('view', 'id'=>$model->keyS)),
-	array('label'=>'Manage ObservacionesOrdenSoporte', 'url'=>array('admin')),
+	array('label'=>'Crear Observaciones de Orden de Soporte', 'url'=>array('create')),
+	array('label'=>'Ver Observaciones de Orden de Soporte', 'url'=>array('view', 'id'=>$model->keyS)),
+	array('label'=>'Lista de Observaciones de Orden de Soporte', 'url'=>array('admin')),
 );
 ?>
 

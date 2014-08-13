@@ -3,13 +3,12 @@
 /* @var $model CatSistemaOperativo */
 
 $this->breadcrumbs=array(
-	'Cat Sistema Operativos'=>array('default/CatalogoEquipos'),
-	'Create',
+	'Catálogo de Equipo'=>array('default/CatalogoEquipos'),
+	'Crear',
 );
 
 $this->menu=array(
-	array('label'=>'List CatSistemaOperativo', 'url'=>array('index')),
-	array('label'=>'Manage CatSistemaOperativo', 'url'=>array('admin')),
+	array('label'=>'Catálogo de Equipo', 'url'=>array('default/CatalogoEquipos')),
 );
 ?>
 
