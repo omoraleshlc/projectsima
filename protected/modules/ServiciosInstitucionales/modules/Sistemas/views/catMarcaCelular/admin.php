@@ -1,4 +1,4 @@
-<h1>Cat Marca Celulars</h1>
+<h1>Marcas de celular</h1>
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'cat-marca-celular-grid',

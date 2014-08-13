@@ -16,7 +16,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>Ver Equipo de Computo #<?php echo $model->keyIE; ?></h1>
+<h1>Ver Equipo de Cómputo #<?php echo $model->keyIE; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

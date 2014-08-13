@@ -1,4 +1,4 @@
-<h1>Observaciones Orden Soportes</h1>
+<h1>Observaciones de Orden de Soporte</h1>
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'observaciones-orden-soporte-grid',

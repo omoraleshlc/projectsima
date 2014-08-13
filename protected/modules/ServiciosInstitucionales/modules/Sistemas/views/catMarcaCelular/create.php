@@ -13,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create CatMarcaCelular</h1>
+<h1>Crear Marca de Celular</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

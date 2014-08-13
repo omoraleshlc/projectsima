@@ -16,7 +16,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>View CatSistemaOperativo #<?php echo $model->keyOS; ?></h1>
+<h1>Ver Sistema Operativo #<?php echo $model->keyOS; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

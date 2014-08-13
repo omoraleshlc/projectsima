@@ -16,6 +16,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update CatMarca <?php echo $model->keyMA; ?></h1>
+<h1>Actualizar Marca <?php echo $model->keyMA; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -16,6 +16,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update CatTipoEquipo <?php echo $model->keyTE; ?></h1>
+<h1>Actualizar Tipo de Equipo <?php echo $model->keyTE; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -21,6 +21,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update Observaciones <?php echo $model->keyS; ?></h1>
+<h1>Actualizar Observaciones <?php echo $model->keyS; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -1,4 +1,4 @@
-<h1>Telefonia Celular</h1>
+<h1>Telefonía Celular</h1>
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'telefonia-celular-grid',

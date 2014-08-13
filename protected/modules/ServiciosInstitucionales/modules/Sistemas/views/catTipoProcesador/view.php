@@ -16,7 +16,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>View CatTipoProcesador #<?php echo $model->keyTP; ?></h1>
+<h1>Ver Tipo de Procesador #<?php echo $model->keyTP; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

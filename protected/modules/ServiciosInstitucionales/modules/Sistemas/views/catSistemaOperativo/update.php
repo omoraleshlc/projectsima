@@ -16,6 +16,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update CatSistemaOperativo <?php echo $model->keyOS; ?></h1>
+<h1>Actualizar Sistema Operativo <?php echo $model->keyOS; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

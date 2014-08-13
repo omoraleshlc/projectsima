@@ -13,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Crear Equipo de Computo</h1>
+<h1>Crear Equipo de Cómputo</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

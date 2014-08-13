@@ -16,7 +16,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>View CatTipoPlanCelular #<?php echo $model->keyTS; ?></h1>
+<h1>Ver Tipo de Plan de Celular #<?php echo $model->keyTS; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

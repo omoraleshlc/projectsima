@@ -16,6 +16,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Actualizar Equipode Computo #<?php echo $model->keyIE; ?></h1>
+<h1>Actualizar Equipo de Cómputo #<?php echo $model->keyIE; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

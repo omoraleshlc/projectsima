@@ -16,6 +16,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update CatTipoSoporte <?php echo $model->keyTS; ?></h1>
+<h1>Actualizar Tipo de Soporte <?php echo $model->keyTS; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

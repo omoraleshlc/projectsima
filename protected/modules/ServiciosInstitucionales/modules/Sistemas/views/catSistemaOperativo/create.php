@@ -13,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create CatSistemaOperativo</h1>
+<h1>Crear Sistema Operativo</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

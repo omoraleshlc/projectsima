@@ -13,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create CatTipoPlanCelular</h1>
+<h1>Crear Tipo de Plan de Celular</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

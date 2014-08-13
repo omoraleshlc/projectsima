@@ -16,7 +16,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>View CatCompany #<?php echo $model->keyTS; ?></h1>
+<h1>Ver Compañía #<?php echo $model->keyTS; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

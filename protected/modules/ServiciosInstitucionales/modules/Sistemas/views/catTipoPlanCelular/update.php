@@ -16,6 +16,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update CatTipoPlanCelular <?php echo $model->keyTS; ?></h1>
+<h1>Actualizar Tipo de Plan de Celular <?php echo $model->keyTS; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

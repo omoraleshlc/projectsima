@@ -16,6 +16,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update CatSoftware <?php echo $model->keySW; ?></h1>
+<h1>Actualizar Software <?php echo $model->keySW; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

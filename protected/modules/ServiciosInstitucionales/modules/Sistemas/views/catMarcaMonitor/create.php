@@ -13,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create CatMarcaMonitor</h1>
+<h1>Crear Marca de Monitor</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

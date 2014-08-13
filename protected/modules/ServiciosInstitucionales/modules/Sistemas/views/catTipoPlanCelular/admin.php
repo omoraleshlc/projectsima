@@ -1,4 +1,4 @@
-<h1>Cat Tipo Plan Celulars</h1>
+<h1>Tipo de Planes de Celular</h1>
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'cat-tipo-plan-celular-grid',

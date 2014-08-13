@@ -16,7 +16,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>View CatMarca #<?php echo $model->keyMA; ?></h1>
+<h1>Ver Marca #<?php echo $model->keyMA; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

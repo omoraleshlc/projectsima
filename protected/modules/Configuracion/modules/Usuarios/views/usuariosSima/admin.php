@@ -1,4 +1,4 @@
-<h1>Usuarios Simas</h1>
+<h1>Usuarios Sima</h1>
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'usuarios-sima-grid',

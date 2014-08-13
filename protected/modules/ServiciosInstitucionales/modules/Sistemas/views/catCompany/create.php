@@ -13,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create CatCompany</h1>
+<h1>Crear Compañía</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

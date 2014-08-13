@@ -16,7 +16,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>View CatTipoSoporte #<?php echo $model->keyTS; ?></h1>
+<h1>Ver Tipo de Soporte #<?php echo $model->keyTS; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

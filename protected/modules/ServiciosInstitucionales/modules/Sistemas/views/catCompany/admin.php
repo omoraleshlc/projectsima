@@ -1,4 +1,4 @@
-<h1>Cat Companies</h1>
+<h1>Compañías</h1>
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'cat-company-grid',

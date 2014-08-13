@@ -16,6 +16,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update CatCompany <?php echo $model->keyTS; ?></h1>
+<h1>Actualizar Compañía <?php echo $model->keyTS; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

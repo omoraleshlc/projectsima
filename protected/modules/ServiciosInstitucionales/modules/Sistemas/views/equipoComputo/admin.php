@@ -1,4 +1,4 @@
-<h1>Equipo de Computo</h1>
+<h1>Equipo de Cómputo</h1>
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'equipo-computo-grid',
