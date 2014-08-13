@@ -91,8 +91,12 @@ $this->breadcrumbs=array(
 	<input id="Take-Picture" type="file" accept="image/*;capture=camera" style="
     zoom: 1.5;" class="custom-file-input"/>
 	<!--input type="text" name="barcode" id="barcode"-->
+
+
+<br/><br/>
+
 		
-	<a href="http://zxing.appspot.com/scan"> SCAN APP TEST</a>
+	<a href="http://zxing.appspot.com/scan" style="zoom: 1.5"> Escanear con App</a>
 <br/><br/><br/>
 
 

@@ -27,7 +27,7 @@ div.form .columna select, div.form .columna input[type='text'], div.form .column
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Campos con <span class="required">*</span> son requeridos.</p>
 	<?php echo $form->errorSummary($model); ?>
 <div class="columna">		
 	<div class="row">

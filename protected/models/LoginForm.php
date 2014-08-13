@@ -15,7 +15,7 @@ class LoginForm extends CFormModel
 
 	/**
 	 * Declares the validation rules.
-	 * The rules state that username and password are required,
+	 * The rules state that username and password son requeridos.
 	 * and password needs to be authenticated.
 	 */
 	public function rules()
