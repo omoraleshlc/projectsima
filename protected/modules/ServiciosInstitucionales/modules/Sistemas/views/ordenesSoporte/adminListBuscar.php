@@ -66,7 +66,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
 		),
 		array(
 			'header'=>'Status',
-			'value' => "\$data->status=='pending'?'Pendiente':\$data->status=='ontransit'?'En proceso':'Terminada'",
+			'value' => "\$data->status=='pending'?'Pendiente':(\$data->status=='ontransit'?'En proceso':'Terminada')",
 			'headerHtmlOptions' => array('style' => 'width: 9%;'),
 			'htmlOptions' => array('style' => 'text-align: center;'),
 		),
