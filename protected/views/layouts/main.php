@@ -17,6 +17,25 @@
 <?php echo Yii::app()->bootstrap->init();?>
 <body>
 
+<style>
+	.mostrar{
+		display: block !important;
+	}
+</style>
+
+<?php
+
+Yii::app()->clientScript->registerScript('menu', "
+	$('.sistemasitem').click(function(){
+		if ($('.btn-navbar').css('display') == 'block'){
+			$('#boat').parent().parent().addClass('mostrar');
+			$('#boat').parent().parent().addClass('mostrar');
+			$('#warmachine').parent().parent().addClass('mostrar');
+		}
+	});
+");
+
+?>
 <div class="wrapper" id="page">
 
 	<?php $this->widget('bootstrap.widgets.TbNavbar',array(
@@ -43,10 +62,12 @@
 		             	'items'=>array(
 		             		array('label'=>'Sistemas', 'url'=>'#',
 				          	'visible'=>!Yii::app()->user->isGuest,
+				          	'linkOptions'=>array('class'=>'sistemasitem', 'id'=>'boat'),
 				          	'items'=>array(
 		             				array('label'=>'Catálogo de equipos',
 											'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/CatalogoEquipos'),
 											'visible'=>(Yii::app()->user->checkAccess('SistemaOperador') or Yii::app()->user->checkAccess('SistemaCapturista')),
+											'linkOptions'=>array('id'=>'warmachine'),
 											),
 								        array('label'=>'Catálogo de telefonía',
 								        'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/CatalogoTelefonia'),
