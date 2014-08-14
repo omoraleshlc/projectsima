@@ -72,6 +72,8 @@ class OrdenesSoporteController extends Controller {
             //Se han puesto varios de estas pk en la base de datos no pueden ser nulos los campos.
             //No se ha cambiado la base de datos para no romper otras instalaciones
             $model->entidad = $this->usuariosima->entidad;
+            $model->entidadSolicitud = $_POST['entidadSolicitud'];
+            $model->almacen= $_POST['almacen'];
             $model->registro = 0;
             $model->solicitud = 0;
             $model->descripcionSoporte = $model2->findByPk($model->keyTS)->descripcion;
@@ -111,6 +113,8 @@ class OrdenesSoporteController extends Controller {
             //No se ha cambiado la base de datos para no romper otras instalaciones
 
             $model->entidad = $this->usuariosima->entidad;
+            $model->entidadSolicitud = $_POST['entidadSolicitud'];
+            $model->almacen= $_POST['almacen'];
             $model->registro = 0;
             $model->solicitud = 0;
             $model->descripcionSoporte = $model2->findByPk($model->keyTS)->descripcion;
@@ -172,7 +176,8 @@ class OrdenesSoporteController extends Controller {
             $model->observaciones = $model->observaciones . "";
             //Se han puesto varios de estas pk en la base de datos no pueden ser nulos los campos.
             //No se ha cambiado la base de datos para no romper otras instalaciones
-
+				$model->entidadSolicitud = $_POST['entidadSolicitud'];
+            $model->almacen= $_POST['almacen'];
             $model->registro = 0;
             $model->solicitud = 0;
             $model->descripcionSoporte = $model2->findByPk($model->keyTS)->descripcion;
