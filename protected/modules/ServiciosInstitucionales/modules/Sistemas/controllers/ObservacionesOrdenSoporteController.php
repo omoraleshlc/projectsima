@@ -89,6 +89,21 @@ class ObservacionesOrdenSoporteController extends Controller
 			'model'=>$model,
 		));
 	}
+	
+	
+	public function actionViewPopup()
+	{
+		$this->layout='//layouts/column1css';
+		
+		$observaciones = new ObservacionesOrdenSoporte();
+		$observaciones = $observaciones::model();
+		$observaciones->keySOP=$_GET['OrdenSoporteId'];
+
+		$this->render('adminList',array(
+			'model'=>$observaciones,
+		));
+	}
+	
 
 	/**
 	 * Updates a particular model.

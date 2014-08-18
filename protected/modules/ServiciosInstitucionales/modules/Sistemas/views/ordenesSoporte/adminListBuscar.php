@@ -1,7 +1,7 @@
 
 <?php
 
-
+$vare2=$this->createUrl('ObservacionesOrdenSoporte/viewPopup');
 $lista=CHtml::listData(CatTipoSoporte::model()->findAll(), 'keyTS', 'descripcion');
 $lista=CMap::mergeArray(array('' => 'Seleccione'),CHtml::listData(CatTipoSoporte::model()->findAll(), 'keyTS', 'descripcion'));
 
@@ -69,6 +69,23 @@ $this->widget('zii.widgets.grid.CGridView', array(
 			'value' => "\$data->status=='pending'?'Pendiente':(\$data->status=='ontransit'?'En proceso':'Terminada')",
 			'headerHtmlOptions' => array('style' => 'width: 9%;'),
 			'htmlOptions' => array('style' => 'text-align: center;'),
+		),
+		array(
+			'class'=>'bootstrap.widgets.TbButtonColumn',
+			'template' => '{verobser}',
+			'header' => 'Obsevaciones',
+			'buttons' => array(
+				'verobser' => array( //the name {reply} must be same
+					'label' => 'Agregar', // text label of the button
+					'icon'=>'list',
+					'url' => '$data->keySOP', 
+					'options' => array(
+					  'onclick' => 'js:document.getElementById("idorden").src="'.$vare2.'"+"&OrdenSoporteId="+$(this).attr("href");document.getElementById("idorden").style.height="200px";return false;',
+					  'data-target'=>'#myModal', 'data-toggle'=>'modal',
+					  'type'=>"submit"
+					),
+				),
+			),
 		),
 		/*
 		'entidadSolicitud',

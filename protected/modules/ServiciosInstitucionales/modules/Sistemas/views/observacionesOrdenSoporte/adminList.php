@@ -1,5 +1,11 @@
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php
+	$idSoporte="";
+	if(isset($_GET["id"]))
+		$idSoporte=$_GET["id"];
+		
+		
+$this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'observaciones-orden-soporte-grid',
 	'dataProvider'=>$model->search(),
 	'hideHeader'=>true,
@@ -64,12 +70,13 @@
 		array(
 			'class'=>'bootstrap.widgets.TbButtonColumn',
 			'template' => '{view}{update}{delete}',
+			'visible'=>isset($_GET["id"]),
 			'buttons' => array(
 				'view' => array( //the name {reply} must be same
-					'url' => 'Yii::app()->controller->createUrl("ObservacionesOrdenSoporte/view", array("id"=>"$data->keyS", "OrdenSoporteId"=>"'.$_GET['id'].'"))',
+					'url' => 'Yii::app()->controller->createUrl("ObservacionesOrdenSoporte/view", array("id"=>"$data->keyS", "OrdenSoporteId"=>"'.$idSoporte.'"))',
 				),
 				'update' => array( //the name {reply} must be same
-					'url' => 'Yii::app()->controller->createUrl("ObservacionesOrdenSoporte/update", array("id"=>"$data->keyS", "OrdenSoporteId"=>"'.$_GET['id'].'"))',
+					'url' => 'Yii::app()->controller->createUrl("ObservacionesOrdenSoporte/update", array("id"=>"$data->keyS", "OrdenSoporteId"=>"'.$idSoporte.'"))',
 				),
 				'delete' => array( //the name {reply} must be same
 					'url' => 'Yii::app()->controller->createUrl("ObservacionesOrdenSoporte/delete", array("id"=>"$data->keyS"))',
@@ -80,6 +87,7 @@
 )); ?>
 <div style="text-align: right">
 <?php
+if(isset($_GET["id"]))
 	 $this->widget('bootstrap.widgets.TbButton', array(
     'label'=>'Añadir observacion',
     'size'=>'small', // null, 'large', 'small' or 'mini'
