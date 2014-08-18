@@ -12,14 +12,10 @@ $this->widget('zii.widgets.grid.CGridView', array(
 		'codigo',
 		'observaciones',
 		array(
-			'class' => 'editable.EditableColumn',
-			'name' => 'keyTS',
-			'editable' => array(
-				'type' => 'select',
-				'url' => $this->createUrl('ordenesSoporte/updateEditable', array('model'=>'ordenesSoporte', 'field'=>'keyTS')),
-				'source'    => $this->createUrl('ordenesSoporte/getTipoSoporteList'),
-				'placement' => 'left',
-			)
+			'header' => 'Tipo de soporte',
+			'value' => "(new CatTipoSoporte)->findByPk(\$data->keyTS)->descripcion",
+			'headerHtmlOptions' => array('style' => 'width: 9%;'),
+			'filter'=>CHtml::activeDropDownList($model->model,'keyTS',CHtml::listData(CatTipoSoporte::model()->findAll(), 'keyTS', 'descripcion' ), array('prompt'=>'')),
 		),	
 		'descripcionAlmacen',
 		array(
