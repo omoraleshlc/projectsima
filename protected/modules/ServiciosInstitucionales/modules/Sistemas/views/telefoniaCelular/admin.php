@@ -45,15 +45,10 @@
                  array('style'=>'width:88%')),
 		),
 		array(
-			'class' => 'editable.EditableColumn',
-			'header' => 'Tipo de equipo',
-			'name' => 'keyMA',
-			'editable' => array(
-				'type' => 'select',
-				'url' => $this->createUrl('TelefoniaCelular/updateEditable', array('model'=>'TelefoniaCelular', 'field'=>'keyMA')),
-				'source'    => $this->createUrl('TelefoniaCelular/getMarcaCelularList'),
-				'placement' => 'left',
-			)
+			'header' => 'Marca',
+			'value' => "(new CatMarcaCelular)->findByPk(\$data->keyMA)->descripcion",
+			'headerHtmlOptions' => array('style' => 'width: 9%;'),
+			'filter'=>CHtml::activeDropDownList($model,'keyMA',CHtml::listData( CatMarcaCelular::model()->findAll(), 'keyMA', 'descripcion' ), array('prompt'=>'')),
 		),
 		array(
 			'name' => 'fechaInicial',

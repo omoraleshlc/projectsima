@@ -49,15 +49,10 @@ $this->widget('zii.widgets.grid.CGridView', array(
 			'filter'=>CHtml::activeDropDownList($model,'keyMA',CHtml::listData( CatMarca::model()->findAll(), 'keyMA', 'descripcion' ), array('prompt'=>'')),
 		),
 		array(
-			'class' => 'editable.EditableColumn',
 			'header' => 'Proveedor',
-			'name' => 'keyP',
-			'editable' => array(
-				'type' => 'select',
-				'url' => $this->createUrl('EquipoComputo/updateEditable', array('model'=>'EquipoComputo', 'field'=>'keyP')),
-				'source'    => $this->createUrl('EquipoComputo/getProveedorSistemasList'),
-				'placement' => 'left',
-			)
+			'value' => "\$data->keyP?((new Proveedor)->findByPk(\$data->keyP)->razonSocial):'-'",
+			'headerHtmlOptions' => array('style' => 'width: 9%;'),
+			'filter'=>CHtml::activeDropDownList($model,'keyP',CHtml::listData(Proveedor::model()->findAll('tipoProveedor="sistemas" order by razonSocial'), 'keyP', 'razonSocial' ), array('prompt'=>'')),
 		),
 		array(
 			'header'=>'Status',
