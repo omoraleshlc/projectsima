@@ -136,7 +136,7 @@ class TelefoniaCelular extends CActiveRecord
 			'plan' => 'Plan',
 			'moduloAdicional' => 'Modulo Adicional',
 			'company' => 'Compañía',
-			'codigo' => 'Código',
+			'codigo' => 'Código de equipo',
 		);
 	}
 

@@ -114,7 +114,7 @@ class EquipoComputo extends CActiveRecord
 			'descripcionAlmacen' => 'Descripcion Almacen',
 			'tipoProcesador' => 'Tipo Procesador',
 			'velocidadProcesador' => 'Velocidad Procesador',
-			'codigo' => 'Código',
+			'codigo' => 'Código de equipo',
 			'keyP' => 'Proveedor'
 		);
 	}

@@ -132,7 +132,7 @@ class OrdenesSoporte extends CActiveRecord
 			'usuarioEjecutor' => 'Atiende',
 			'fechaFinal' => 'Fecha terminación',
 			'almacenSoporte' => 'Almacen Soporte',
-			'codigo' => 'Codigo',
+			'codigo' => 'Codigo de equipo',
 			'fechaInicio' => 'Fecha Inicio'
 		);
 	}
