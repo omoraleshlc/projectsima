@@ -1,6 +1,17 @@
+<script>
+	function cambio(obj) {
+    $( this ).trigger( 'click' );
+	}
+</script>
+
 <?php
 /* @var $this DefaultController */
 
+Yii::app()->clientScript->registerScript('cambio', "
+		$('.cambio').hover(function(){
+			$(this).trigger('click');
+		});
+	");
 
 $this->breadcrumbs=array(
 	//$this->module->id,
@@ -21,20 +32,20 @@ if(Yii::app()->user->checkAccess('SistemaCapturista')) {
 $this->widget(
 	'bootstrap.widgets.TbTabs', array(
 		'type'=>'tabs', // 'tabs' or 'pills'
-		'htmlOptions'=>array('overflow'=>'hidden'),
+		'htmlOptions'=>array('overflow'=>'hidden', 'class'=>'cambio'),
 		'tabs'=>array(
 			
 
 			array('label'=>'Pendientes', 'content' => $this->renderPartial('adminListPendientes',
-				array('model' => $modelPendientes,),true),'active'=>true),//tab 2
+				array('model' => $modelPendientes,),true),'active'=>true, 'linkOptions'=>array('class'=>'cambio'),),//tab 1
 			array('label'=>'En proceso', 'content' => $this->renderPartial('adminListEnProceso',
-				array('model' => $modelEnProceso,),true),),//tab 3
+				array('model' => $modelEnProceso,),true), 'linkOptions'=>array('class'=>'cambio'),),//tab 2
 			array('label'=>'Terminadas', 'content' => $this->renderPartial('adminListTerminadas',
-				array('model' => $modelTeminadas,),true),),//tab 4
+				array('model' => $modelTeminadas,),true), 'linkOptions'=>array('class'=>'cambio'),),//tab 3
 			array('label'=>'Buscar','content' => $this->renderPartial('adminListBuscar',
-				array('model' => $model, 'pagination'=>!Yii::app()->user->checkAccess('SistemasOperador'),),true),),//tab 5
+				array('model' => $model, 'pagination'=>!Yii::app()->user->checkAccess('SistemasOperador'),),true), 'linkOptions'=>array('class'=>'cambio'),),//tab 4
 			array('label'=>'Reportes','htmlOptions'=>array('overflow'=>'hidden'), 'content' => $this->renderPartial('reportes',
-				array('model' => $modelTeminadas,),true),),//tab 5
+				array('model' => $modelTeminadas,),true), 'linkOptions'=>array('class'=>'cambio'),),//tab 5
 				
 				array(
 				'label'=>'Crear nueva',
@@ -44,7 +55,8 @@ $this->widget(
 						'model' => $model,
 					),true
 				),//render partial
-			),//tab 1
+				'linkOptions'=>array('class'=>'cambio'),
+			),//tab 6
 			/**/
 		),//tabs
 ));
