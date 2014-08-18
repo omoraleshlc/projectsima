@@ -8,7 +8,10 @@
     /*'url'=>array('create')*/
 		'url' =>$this->createUrl('EquipoComputo/create', array('model'=>'EquipoComputo')),)); ?>
 </div>
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php
+$model2 = new CatTipoEquipo;
+
+$this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'equipo-computo-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
@@ -33,30 +36,17 @@
                  array('style'=>'width:88%')),
 		),
 		
-		
 		array(
-			'class' => 'editable.EditableColumn',
 			'header' => 'Tipo de equipo',
+			'value' => "(new CatTipoEquipo)->findByPk(\$data->keyTE)->descripcion",
 			'headerHtmlOptions' => array('style' => 'width: 9%;'),
-			'name' => 'keyTE',
-			'editable' => array(
-				'type' => 'select',
-				'url' => $this->createUrl('EquipoComputo/updateEditable', array('model'=>'EquipoComputo', 'field'=>'keyTE')),
-				'source'    => $this->createUrl('EquipoComputo/getTipoEquipoList'),
-				'placement' => 'left',
-			)
-		),		
+			'filter'=>CHtml::activeDropDownList($model,'keyTE',CHtml::listData(CatTipoEquipo::model()->findAll(), 'keyTE', 'descripcion' ), array('prompt'=>'')),
+		),
 		array(
-			'class' => 'editable.EditableColumn',
 			'header' => 'Marca',
+			'value' => "(new CatMarca)->findByPk(\$data->keyMA)->descripcion",
 			'headerHtmlOptions' => array('style' => 'width: 9%;'),
-			'name' => 'keyMA',
-			'editable' => array(
-				'type' => 'select',
-				'url' => $this->createUrl('EquipoComputo/updateEditable', array('model'=>'EquipoComputo', 'field'=>'keyMA')),
-				'source'    => $this->createUrl('EquipoComputo/getMarcaList'),
-				'placement' => 'left',
-			)
+			'filter'=>CHtml::activeDropDownList($model,'keyMA',CHtml::listData( CatMarca::model()->findAll(), 'keyMA', 'descripcion' ), array('prompt'=>'')),
 		),
 		array(
 			'class' => 'editable.EditableColumn',
