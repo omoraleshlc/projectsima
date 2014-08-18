@@ -60,7 +60,7 @@ class ObservacionesOrdenSoporteController extends Controller
 		{
 			$model->attributes=$_POST['ObservacionesOrdenSoporte'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->keyS, 'OrdenSoporteId'=>$_GET['OrdenSoporteId']));
+				$this->redirect(array('ordenesSoporte/view','id'=>$_GET['OrdenSoporteId']));
 		}
 
 		$this->render('create',array(
