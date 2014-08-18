@@ -1,4 +1,4 @@
-<h3>Observaciones</h3>
+
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'observaciones-orden-soporte-grid',
 	'dataProvider'=>$model->search(),
@@ -81,7 +81,7 @@
 <div style="text-align: right">
 <?php
 	 $this->widget('bootstrap.widgets.TbButton', array(
-    'label'=>'Crear nuevo',
+    'label'=>'Añadir observacion',
     'size'=>'small', // null, 'large', 'small' or 'mini'
     /*'url'=>array('create')*/
 		'url' =>$this->createUrl('ObservacionesOrdenSoporte/create', array('model'=>'ObservacionesOrdenSoporte', 'OrdenSoporteId'=>$_GET["id"])),)); ?>
