@@ -21,6 +21,8 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
+
+<div class="jumbotron" style="zoom:1.6">
 	<?php $this->widget('bootstrap.widgets.TbAlert', array(
 		     'block'=>true, // display a larger alert block?
 		     'fade'=>true, // use transitions?
@@ -30,6 +32,7 @@
 		         'error'=>array('block'=>true, 'fade'=>true, 'closeText'=>'&times;'), // success, info, warning, error or danger
 		     ),)
     ); ?>
+</div>
 	
 	<p class="note">Campos con <span class="required">*</span> son requeridos.</p>
 	
