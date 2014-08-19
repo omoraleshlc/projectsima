@@ -25,6 +25,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
 			'name' => 'fecha',
 			'htmlOptions' => array('style' => 'width: 9%; text-align: center;'),
 		),
+		'fechaFinalEstimada',
 		array(
 			'class'=>'bootstrap.widgets.TbButtonColumn',
 			'template' => '{begin}',

@@ -111,14 +111,30 @@ div.form .columna select, div.form .columna input[type='text'], div.form .column
 
 <div class="columna">	
 	<div class="row">
-		<?php echo $form->labelEx($model,'fecha'); ?>
-		<?php echo CHtml::activeDateField($model,'fecha',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->labelEx($model,'fecha',array('style'=>'width:60%; display:inline; margin-right: 21%')); ?>
+		<?php echo $form->labelEx($model,'hora',array('style'=>'width:40%; display:inline')); ?>
+		<br/>
+		<?php echo CHtml::activeDateField($model,'fecha',array('size'=>10,'maxlength'=>10, 'style'=>'width:40%' )); ?>
+		<?php echo $form->textField($model,'hora', array ('pattern'=>'[0-2][0-9]:[0-5][0-9] (am|pm)', 'style'=>'width:40%', 'type'=>'time' )); ?>
 		<?php echo $form->error($model,'fecha'); ?>
+	</div>
+	
+		<div class="row">
+		<?php echo $form->labelEx($model,'fechaFinalEstimada'); ?>
+		<?php 
+			Yii::import('application.extensions.CJuiDateTimePicker.CJuiDateTimePicker');
+		 	$this->widget('CJuiDateTimePicker',array(
+				'model'=>$model, //Model object
+				'attribute'=>'fechaFinalEstimada', //attribute name
+				'mode'=>'datetime', //use "time","date" or "datetime" (default)
+				'options'=>array('timeFormat'=>'hh:mm:ss',
+        			'dateFormat' => 'yy-mm-dd') // jquery plugin options
+			));
+		?>
+		<?php echo $form->error($model,'fechaFinalEstimada'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'hora'); ?>
-		<?php echo $form->textField($model,'hora', array ('pattern'=>'[0-2][0-9]:[0-5][0-9] (am|pm)' )); ?>
 		<?php echo $form->error($model,'hora'); ?>
 	</div>
 

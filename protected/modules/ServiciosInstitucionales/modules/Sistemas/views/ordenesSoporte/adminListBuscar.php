@@ -32,6 +32,12 @@ $this->widget('zii.widgets.grid.CGridView', array(
 			'filterHtmlOptions' => array('style' => 'display:none;'),
 		),
 		array(
+			'name' => 'fechaFinalEstimada',
+			'headerHtmlOptions' => array('style' => 'width: 8%;'),
+			'filter'=>CHtml::activeTextField($model, 'observaciones', 
+                 array('style'=>'width:70%;visibility: hidden;')),
+		),
+		array(
 			'name' => 'codigo',
 			'headerHtmlOptions' => array('style' => 'width: 8%;'),
 			'htmlOptions' => array('style' => 'text-align: center;'),

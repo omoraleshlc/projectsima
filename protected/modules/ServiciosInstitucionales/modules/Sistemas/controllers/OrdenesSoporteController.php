@@ -87,6 +87,7 @@ class OrdenesSoporteController extends Controller {
             $model->usuarioEjecutor = '';
             $model->fechaFinal = null;
             $model->fechaInicio = null;
+            $model->fechaFinalEstimada = null;
 
             if ($model->save())
                 $this->redirect(array('view', 'id' => $model->keySOP));
@@ -132,6 +133,7 @@ class OrdenesSoporteController extends Controller {
             $model->usuarioEjecutor = '';
             $model->fechaFinal = null;
             $model->fechaInicio = null;
+            $model->fechaFinalEstimada = null;
 
             if ($model->save()) {
                 Yii::app()->user->setFlash('success', "Orden de soporte para: " . $model->nombre . " registrada con código " . $model->keySOP);

@@ -60,8 +60,7 @@ class OrdenesSoporte extends CActiveRecord
 			array('entidadSolicitud, entidad', 'length', 'max'=>2),
 			array('almacen, nombre, usuario, almacenSoporte', 'length', 'max'=>30),
 			array('descripcionSoporte, descripcionAlmacen', 'length', 'max'=>200),
-			array('fecha, hora, fechaFinal', 'length', 'max'=>19),
-			array('fechaFinal, fechaInicio', 'length', 'max'=>19),
+			array('fecha, hora, fechaFinal, fechaInicio, fechaFinalEstimada', 'length', 'max'=>19),
 			array('solicitud, status', 'length', 'max'=>20),
 			array('descripcionTS', 'length', 'max'=>100),
 			array('observaciones', 'length', 'max'=>250),
@@ -133,7 +132,8 @@ class OrdenesSoporte extends CActiveRecord
 			'fechaFinal' => 'Fecha terminación',
 			'almacenSoporte' => 'Almacen Soporte',
 			'codigo' => 'Codigo de equipo',
-			'fechaInicio' => 'Fecha Inicio'
+			'fechaInicio' => 'Fecha Inicio',
+			'fechaFinalEstimada'=>'Fecha Final Estimada'
 		);
 	}
 
@@ -168,7 +168,9 @@ class OrdenesSoporte extends CActiveRecord
 		$criteria->compare('fechaFinal',$this->fechaFinal,true);
 		$criteria->compare('almacenSoporte',$this->almacenSoporte,true);
 		$criteria->compare('codigo',$this->codigo,true);
-		$criteria->compare('fechaInicio',$this->codigo,true);
+		$criteria->compare('fechaInicio',$this->fechaInicio,true);
+		$criteria->compare('fechaFinalEstimada',$this->fechaFinalEstimada,true);
+		
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -206,7 +208,8 @@ class OrdenesSoporte extends CActiveRecord
 		$criteria->compare('fechaFinal',$this->fechaFinal,true);
 		$criteria->compare('almacenSoporte',$this->almacenSoporte,true);
 		$criteria->compare('codigo',$this->codigo,true);
-		$criteria->compare('fechaInicio',$this->codigo,true);
+		$criteria->compare('fechaInicio',$this->fechaInicio,true);
+		$criteria->compare('fechaFinalEstimada',$this->fechaFinalEstimada,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -245,7 +248,8 @@ class OrdenesSoporte extends CActiveRecord
 		$criteria->compare('fechaFinal',$this->fechaFinal,true);
 		$criteria->compare('almacenSoporte',$this->almacenSoporte,true);
 		$criteria->compare('codigo',$this->codigo,true);
-		$criteria->compare('fechaInicio',$this->codigo,true);
+		$criteria->compare('fechaInicio',$this->fechaInicio,true);
+		$criteria->compare('fechaFinalEstimada',$this->fechaFinalEstimada,true);
 		
 		if(Yii::app()->user->checkAccess('SistemaCapturista'))
 			$paginacion = array('pageSize'=>20);
