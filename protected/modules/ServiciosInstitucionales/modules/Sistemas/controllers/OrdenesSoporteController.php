@@ -326,7 +326,7 @@ class OrdenesSoporteController extends Controller {
     public function actionOrdenesByCodigo($codigo) {
     	$listaOrdenes = new CActiveDataProvider('OrdenesSoporte', array(
 				'criteria' => array(
-					'condition' => 'codigo="'.$codigo.'"',
+					'condition' => 'codigo="'.$codigo.'" and (status="pending" or status="ontransit")',
 					'order' => 'fecha ASC',
 				 ),
 				'pagination' => array(
