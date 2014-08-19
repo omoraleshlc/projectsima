@@ -24,6 +24,7 @@ hasta:
 			?>
 
 				<?php 
+				echo CHtml::dropDownList('departamentoSoporteReportes', $this->almacenSoporte,array(''=>'Todos','HMANT' => 'Mantenimiento', 'HSIST' => 'Sistemas'), array('style'=>'width:100%' ));
 			echo CHtml::submitButton('Generar reporte');
 		?>
 		</form>
@@ -39,22 +40,34 @@ hasta:
 <?php
 	if (isset($_POST['OrdenesSoporte'])){
 		$orden=$_POST['OrdenesSoporte'];
-		$duplicateData=Yii::app()->db->createCommand('
-		 Select almacen, COUNT(*) as num from  sima.sis_ordenesSOP where almacenSoporte="HSIST" and fecha between "'.$orden['fecha'].'" and "'.$orden['fechaFinal'].'" group by almacen order by num
-	')->queryAll();
-	
-		$labelFecha=$orden['fecha'].' a '.$orden['fechaFinal'];
+		
+		$fechas= "";
+		$labelFecha="";
+		if(isset($orden['fecha']) and isset($orden['fechaFinal']) and $orden['fecha']!="" and $orden['fechaFinal']!=""){
+			$fechas =  ' and fecha between "'.$orden['fecha'].'" and "'.$orden['fechaFinal'].'"';
+			$labelFecha="de ".$orden['fecha'].' a '.$orden['fechaFinal'];
+		}
+		
+		$depto="'%%'";
+		if(isset($_POST['departamentoSoporteReportes'])){
+			$depto="'".$_POST['departamentoSoporteReportes']."'";
+			$labelFecha=$labelFecha." de ".($_POST['departamentoSoporteReportes']=="HSIST"?"sistemas":($_POST['departamentoSoporteReportes']=="HMANT"?"mantenimiento":"todos"));
+		}
+		
+		$duplicateData=Yii::app()->db->createCommand(
+		'Select almacen, COUNT(*) as num from  sima.sis_ordenesSOP where almacenSoporte like '.$depto.' '.$fechas.' group by almacen order by num'
+		)->queryAll();
 	}
 	else{
 		$duplicateData=Yii::app()->db->createCommand('
-			 Select almacen, COUNT(*) as num from  sima.sis_ordenesSOP where almacenSoporte="HSIST" group by almacen order by num
+			 Select almacen, COUNT(*) as num from  sima.sis_ordenesSOP group by almacen order by num
 		')->queryAll();
 		
-		$labelFecha='todos los tiempos.';
+		$labelFecha='de todos los tiempos de todos los departamentos de soporte.';
 	}
 ?>
 <br/>
-<h3>Reporte de <?php echo $labelFecha;?></h3>
+<h3>Reporte <?php echo $labelFecha;?></h3>
 
 
 
