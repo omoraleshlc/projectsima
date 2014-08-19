@@ -14,7 +14,7 @@ Yii::app()->clientScript->registerScript('cambio', "
 				tabid=$(this).text();
 				tabid=tabid.substr(0, tabid.indexOf(' ')<0?tabid.lenght:tabid.indexOf(' '));
 				url=window.location.href;
-				url=url.substr(0, url.indexOf('&')<0?url.lenght:url.indexOf('&'))+'&'+tabid;
+				url=url.substr(0, url.indexOf('&')<0?url.lenght:url.indexOf('&'))+'&tab='+tabid;
 				if(url!=location.href)location.href =url;
 				
 			}

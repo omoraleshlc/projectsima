@@ -96,7 +96,7 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'keyTS'); ?>
 		<?php 
-		$lista=CHtml::listData(CatTipoSoporte::model()->findAll(), 'keyTS', 'descripcion');
+		$lista=CHtml::listData(CatTipoSoporte::model()->findAll('almacen="'.UsuariosSima::model()->find("usuario='" . Yii::app()->user->name . "'")->almacenSoporteDefault.'"'), 'keyRSA', 'descripcion');
 		echo CHtml::activeDropDownList($model,'keyTS', $lista);
 		?> 
 		<?php echo $form->error($model,'keyTS'); ?>
