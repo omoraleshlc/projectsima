@@ -10,6 +10,14 @@
 Yii::app()->clientScript->registerScript('cambio', "
 		$('.cambio').hover(function(){
 			$(this).trigger('click');
+			if ($(this).is('a')){
+				tabid=$(this).text();
+				tabid=tabid.substr(0, tabid.indexOf(' ')<0?tabid.lenght:tabid.indexOf(' '));
+				url=window.location.href;
+				url=url.substr(0, url.indexOf('&')<0?url.lenght:url.indexOf('&'))+'&'+tabid;
+				if(url!=location.href)location.href =url;
+				
+			}
 		});
 	");
 
@@ -17,9 +25,23 @@ $this->breadcrumbs=array(
 	//$this->module->id,
 	"Ordenes de soporte",
 );
-
-
 ?>
+
+
+<?php if(CHttpRequest::getParam("tab") != null): ?>
+ 
+    <script>
+ 
+        $(document).ready(function() {
+            $('#tabs a:contains("<?php echo CHttpRequest::getParam("tab"); ?>")').tab('show');
+        });
+ 
+    </script>
+ 
+<?php endif; ?>
+
+
+
 <?php
 if(Yii::app()->user->checkAccess('SistemaJefeDepartamento')) {
 
@@ -34,6 +56,7 @@ echo CHtml::endForm();
 if(Yii::app()->user->checkAccess('SistemaCapturista')) {
 $this->widget(
 	'bootstrap.widgets.TbTabs', array(
+		"id" => "tabs",
 		'type'=>'tabs', // 'tabs' or 'pills'
 		'htmlOptions'=>array('overflow'=>'hidden', 'class'=>'cambio'),
 		'tabs'=>array(

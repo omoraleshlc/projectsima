@@ -152,7 +152,7 @@ class OrdenesSoporteController extends Controller {
                     if ($model->entidad != substr($model->codigo, 1, 2))
                         Yii::app()->user->setFlash('error', "El codigo no pertenece a esta entidad");
             }
-            $this->redirect('index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin');
+            $this->redirect('index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin&tab=Crear');
         }
     }
 
