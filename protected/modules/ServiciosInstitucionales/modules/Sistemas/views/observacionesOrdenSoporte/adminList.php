@@ -4,7 +4,7 @@
 	if(isset($_GET["id"]))
 		$idSoporte=$_GET["id"];
 		
-		
+if(Yii::app()->user->checkAccess('SistemaCapturista')) {		
 $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'observaciones-orden-soporte-grid',
 	'dataProvider'=>$model->search(),
@@ -19,7 +19,8 @@ $this->widget('zii.widgets.grid.CGridView', array(
 				'type' => 'text',
 				'url' => $this->createUrl('ObservacionesOrdenSoporte/updateEditable', array('model'=>'ObservacionesOrdenSoporte', 'field'=>'descripcion')),
 				'placement' => 'left',
-			)
+			),
+			'htmlOptions'=>array('style'=>'width:60%'),
 		),
 		array(
 			'class' => 'editable.EditableColumn',
@@ -84,7 +85,30 @@ $this->widget('zii.widgets.grid.CGridView', array(
 			),
 		),
 	),
-)); ?>
+));
+}
+
+else{
+$this->widget('zii.widgets.grid.CGridView', array(
+	'id'=>'observaciones-orden-soporte-grid',
+	'dataProvider'=>$model->search(),
+	'hideHeader'=>true,
+	'htmlOptions'=>array('style'=>'padding:0'),
+	'template'=>'{items}{summary}{pager}',
+	'columns'=>array(
+		array(
+		'name' => 'descripcion',
+		'htmlOptions'=>array('style'=>'width:60%'),
+		),
+		'usuario',
+		'fecha',
+		'hora',
+	),
+));
+
+}
+
+?>
 <div style="text-align: right">
 <?php
 if(isset($_GET["id"]))

@@ -1,6 +1,6 @@
 
 <?php
-
+$vare=$this->createUrl('ObservacionesOrdenSoporte/createPopup');
 $vare2=$this->createUrl('ObservacionesOrdenSoporte/viewPopup');
 $lista=CHtml::listData(CatTipoSoporte::model()->findAll(), 'keyTS', 'descripcion');
 $lista=CMap::mergeArray(array('' => 'Seleccione'),CHtml::listData(CatTipoSoporte::model()->findAll(), 'keyTS', 'descripcion'));
@@ -72,9 +72,19 @@ $this->widget('zii.widgets.grid.CGridView', array(
 		),
 		array(
 			'class'=>'bootstrap.widgets.TbButtonColumn',
-			'template' => '{verobser}',
+			'template' => '{obser}{verobser}',
 			'header' => 'Obsevaciones',
 			'buttons' => array(
+				'obser' => array( //the name {reply} must be same
+					'label' => 'Agregar', // text label of the button
+					'icon'=>'plus',
+					'url' => '$data->keySOP', 
+					'options' => array(
+					  'onclick' => 'js:document.getElementById("idorden").src="'.$vare.'"+"&OrdenSoporteId="+$(this).attr("href");document.getElementById("idorden").style.height="200px";return false;',
+					  'data-target'=>'#myModal', 'data-toggle'=>'modal',
+					  'type'=>"submit"
+					),
+				),	
 				'verobser' => array( //the name {reply} must be same
 					'label' => 'Agregar', // text label of the button
 					'icon'=>'list',
