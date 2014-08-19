@@ -7,20 +7,6 @@
 <?php
 /* @var $this DefaultController */
 
-Yii::app()->clientScript->registerScript('cambio', "
-		$('.cambio').hover(function(){
-			$(this).trigger('click');
-			if ($(this).is('a')){
-				tabid=$(this).text();
-				tabid=tabid.substr(0, tabid.indexOf(' ')<0?tabid.lenght:tabid.indexOf(' '));
-				url=window.location.href;
-				url=url.substr(0, url.indexOf('&')<0?url.lenght:url.indexOf('&'))+'&tab='+tabid;
-				if(url!=location.href)location.href =url;
-				
-			}
-		});
-	");
-
 $this->breadcrumbs=array(
 	//$this->module->id,
 	"Ordenes de soporte",

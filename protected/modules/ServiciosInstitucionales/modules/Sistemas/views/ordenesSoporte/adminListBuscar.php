@@ -1,3 +1,8 @@
+<style>
+	.red{color:darkred;}
+	.ye{color:DarkGoldenRod;}
+	.gresen{color:green;}
+</style>
 
 <?php
 $vare=$this->createUrl('ObservacionesOrdenSoporte/createPopup');
@@ -66,6 +71,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
 		),
 		array(
 			'header'=>'Status',
+			'cssClassExpression' => '$data->status=="pending"?"red":($data->status=="ontransit"?"ye":"gresen")',
 			'value' => "\$data->status=='pending'?'Pendiente':(\$data->status=='ontransit'?'En proceso':'Terminada')",
 			'headerHtmlOptions' => array('style' => 'width: 9%;'),
 			'htmlOptions' => array('style' => 'text-align: center;'),
