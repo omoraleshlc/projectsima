@@ -3,7 +3,7 @@
 $vare=$this->createUrl('ObservacionesOrdenSoporte/createPopup');
 $vare2=$this->createUrl('ObservacionesOrdenSoporte/viewPopup');
 $lista=CHtml::listData(CatTipoSoporte::model()->findAll(), 'keyTS', 'descripcion');
-$lista=CMap::mergeArray(array('' => 'Seleccione'),CHtml::listData(CatTipoSoporte::model()->findAll(), 'keyTS', 'descripcion'));
+$lista=CMap::mergeArray(array('' => 'Seleccione'),CHtml::listData(CatTipoSoporte::model()->findAll('almacen="'.$this->almacenSoporte.'"'), 'keyRSA', 'descripcion'));
 
 $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'ordenes-soportebuscar-grid',

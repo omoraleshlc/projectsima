@@ -6,7 +6,7 @@
 	'columns'=>array(
 		array(
 			'header' => '#',
-			'name' => 'keyTS',
+			'name' => 'keyRSA',
 			'htmlOptions' => array('style' => 'width: 10%; text-align: center;'),
 		),		array(
 			'class' => 'editable.EditableColumn',
@@ -16,7 +16,9 @@
 				'url' => $this->createUrl('CatTipoSoporte/updateEditable', array('model'=>'CatTipoSoporte', 'field'=>'descripcion')),
 		'placement' => 'left',
 			)
-		),		array(
+		),
+		'almacen',
+		array(
 			'class'=>'bootstrap.widgets.TbButtonColumn',
 			'viewButtonUrl' =>'Yii::app()->createUrl("ServiciosInstitucionales/Sistemas/CatTipoSoporte/view",array("id"=>$data->primaryKey))',
 			'updateButtonUrl' =>'Yii::app()->createUrl("ServiciosInstitucionales/Sistemas/CatTipoSoporte/update",array("id"=>$data->primaryKey))',

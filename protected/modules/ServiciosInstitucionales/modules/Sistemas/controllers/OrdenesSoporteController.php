@@ -229,7 +229,7 @@ class OrdenesSoporteController extends Controller {
      */
     public function actionAdmin() {
 
-        $this->almacenSoporte = isset($_POST['departamentoSoporte']) ? $_POST['departamentoSoporte'] : ($this->usuariosima->almacenSoporteDefault != "" ? $this->usuariosima->almacenSoporteDefault : 'HSIST');
+        $this->almacenSoporte = isset($_POST['departamentoSoporte']) ? $_POST['departamentoSoporte'] : ($this->usuariosima->almacenSoporteDefault) ? $this->usuariosima->almacenSoporteDefault : 'HSIST';
         $model = new OrdenesSoporte('search');
         $model->unsetAttributes();  // clear any default values
         $model->keySOP = 0;

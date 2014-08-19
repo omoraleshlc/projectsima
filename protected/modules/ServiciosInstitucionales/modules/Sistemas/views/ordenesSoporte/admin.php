@@ -21,9 +21,12 @@ $this->breadcrumbs=array(
 
 ?>
 <?php
+if(Yii::app()->user->checkAccess('SistemaJefeDepartamento')) {
+
 echo CHtml::beginForm();
       echo CHtml::dropDownList('departamentoSoporte', $this->almacenSoporte,array(''=>'Todos','HMANT' => 'Mantenimiento', 'HSIST' => 'Sistemas'), array('style'=>'width:100%', 'submit'=>"" ));
 echo CHtml::endForm();
+}
 ?>
      
      

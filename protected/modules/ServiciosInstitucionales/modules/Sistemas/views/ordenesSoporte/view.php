@@ -25,7 +25,7 @@ $model3 = new CatEntidad;
 <div>
 		En <?php  echo $model->entidadSolicitud?$model3->find('codigoEntidad="' . $model->entidadSolicitud . '"')->descripcionEntidad:'entidad no especificada'; ?>, departamento de <?php echo CHtml::encode($model->almacen); ?>.
 		<br/>
-		<?php echo CHtml::encode($model->nombre); ?> solicita soporte tipo <?php echo $model->keyTS?$model2->find('keyTS="' . $model->keyTS . '"')->descripcion:'no especificado'; ?> de <?php echo CHtml::encode($model->almacenSoporte); ?>.
+		<?php echo CHtml::encode($model->nombre); ?> solicita soporte tipo <?php echo $model->keyTS?$model2->find('keyRSA="' . $model->keyTS . '"')->descripcion:'no especificado'; ?> de <?php echo CHtml::encode($model->almacenSoporte); ?>.
 </div>
 
 <h2><?php echo CHtml::encode($model->observaciones); ?></h2>
