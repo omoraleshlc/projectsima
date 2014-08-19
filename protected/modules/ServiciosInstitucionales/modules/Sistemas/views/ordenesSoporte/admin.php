@@ -69,6 +69,14 @@ $this->widget(
 				),//render partial
 				'linkOptions'=>array('class'=>'cambio'),
 			),//tab 6
+			array(
+				'label'=>'Tipos de soporte',
+				'content'=>$this->renderPartial(
+					'adminListCatTipoSoporte', array(
+						'model' => CatTipoSoporte::model(),
+					),true
+				),//render partial
+			),//tab 1
 			/**/
 		),//tabs
 ));
@@ -92,7 +100,15 @@ $this->widget(
 
 			array('label'=>'Buscar','content' => $this->renderPartial('adminListBuscar',
 				array('model' => $model, 'pagination'=>Yii::app()->user->checkAccess('SistemaCapturista'),),true),),//tab 1
+				array(
+				'label'=>'Tipos de soporte',
+				'content'=>$this->renderPartial(
+					'adminListCatTipoSoporte', array(
+						'model' => CatTipoSoporte::model(),
+					),true
+				),//render partial
 				
+			),//tab 1
 		),//tabs
 ));
 

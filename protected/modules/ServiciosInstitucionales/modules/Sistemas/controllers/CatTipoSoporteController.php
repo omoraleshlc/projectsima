@@ -47,8 +47,9 @@ class CatTipoSoporteController extends Controller
 		if(isset($_POST['CatTipoSoporte']))
 		{
 			$model->attributes=$_POST['CatTipoSoporte'];
+			$model->entidad=UsuariosSima::model()->find("usuario='" . Yii::app()->user->name . "'")->entidad;
 			if($model->save())
-				$this->redirect(array('default/CatalogoEquipos'));
+				$this->redirect(array('OrdenesSoporte/admin'));
 				//$this->redirect(array('view','id'=>$model->keyTS));
 		}
 
@@ -73,7 +74,7 @@ class CatTipoSoporteController extends Controller
 		{
 			$model->attributes=$_POST['CatTipoSoporte'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->keyTS));
+				$this->redirect(array('OrdenesSoporte/admin'));
 		}
 
 		$this->render('update',array(
