@@ -54,7 +54,7 @@ Orden creada por 	<?php echo CHtml::encode($model->usuario); ?> de <?php echo $m
 	Se terminó el <?php echo CHtml::encode($model->fechaInicio); ?>
 	<br/>
 	<?php 
-		$fechaCreacion = new DateTime($model->fecha.' '.$model->hora);
+		$fechaCreacion = new DateTime($model->fecha.' '.$model->hora, new DateTimeZone('America/Mexico_City'));
 
 		$now = new DateTime('now');
 		$fechaFinal = new DateTime($model->fechaFinal);
