@@ -89,7 +89,7 @@ $this->widget(
 						'model' => CatTipoSoporte::model(),
 					),true
 				),//render partial
-			),//tab 1
+			'linkOptions'=>array('class'=>'cambio'),),//tab 1
 			/**/
 		),//tabs
 ));

@@ -1,5 +1,3 @@
-<h1>Tipos Soporte</h1>
-
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'cat-tipo-soporte-grid',
 	'dataProvider'=>$model->search(),
