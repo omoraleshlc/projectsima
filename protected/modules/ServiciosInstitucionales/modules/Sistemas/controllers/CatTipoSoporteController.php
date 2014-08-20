@@ -46,8 +46,12 @@ class CatTipoSoporteController extends Controller
 
 		if(isset($_POST['CatTipoSoporte']))
 		{
+			$model3 = new CatAlmacen;
+			
 			$model->attributes=$_POST['CatTipoSoporte'];
 			$model->entidad=UsuariosSima::model()->find("usuario='" . Yii::app()->user->name . "'")->entidad;
+			$model->almacen=$_POST['almacen'];
+			$model->descripcionAlmacen = $model3->find('almacen="' . $_POST['almacen'] . '"')->descripcion;
 			if($model->save())
 				$this->redirect(array('OrdenesSoporte/admin'));
 				//$this->redirect(array('view','id'=>$model->keyTS));
@@ -72,7 +76,11 @@ class CatTipoSoporteController extends Controller
 
 		if(isset($_POST['CatTipoSoporte']))
 		{
+			$model3 = new CatAlmacen;
+		
 			$model->attributes=$_POST['CatTipoSoporte'];
+			$model->almacen=$_POST['almacen'];
+			$model->descripcionAlmacen = $model3->find('almacen="' . $_POST['almacen'] . '"')->descripcion;
 			if($model->save())
 				$this->redirect(array('OrdenesSoporte/admin'));
 		}
@@ -158,5 +166,23 @@ class CatTipoSoporteController extends Controller
 		$es = new EditableSaver('CatTipoSoporte');
 		$es->update();
 	}
+	
+    /*
+     * Actualiza el dropdown de almacenes con los que pernecen a la entidad seleccionada
+     *
+     */
+    public function actionAlmacenesPorEntidad() {
+        $entidadSolicitud = $_POST['entidad'];
+        $catAlmacenvar = new CatAlmacen();
+        $data = $catAlmacenvar::model()->findAll('miniAlmacen!="Si" and entidad=:entidad Order by descripcion', array(':entidad' => $entidadSolicitud)
+        );
+
+        //$data=CHtml::listData($data,'almacen','descripcion');
+        $data = CMap::mergeArray(array('' => 'Seleccione departamento'), CHtml::listData($data, 'almacen', 'descripcion'));
+
+        foreach ($data as $value => $name) {
+            echo CHtml::tag('option', array('value' => $value), CHtml::encode(ucwords(strtolower($name))), true);
+        }
+    }
 	
 }

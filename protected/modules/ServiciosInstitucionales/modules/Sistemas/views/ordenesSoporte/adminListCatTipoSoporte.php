@@ -17,7 +17,10 @@
 		'placement' => 'left',
 			)
 		),
-		'almacen',
+		array(
+			'header' => 'Almacen',
+			'name' => 'descripcionAlmacen',
+		),	
 		array(
 			'class'=>'bootstrap.widgets.TbButtonColumn',
 			'viewButtonUrl' =>'Yii::app()->createUrl("ServiciosInstitucionales/Sistemas/CatTipoSoporte/view",array("id"=>$data->primaryKey))',

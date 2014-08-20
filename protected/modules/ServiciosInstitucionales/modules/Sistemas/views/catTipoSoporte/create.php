@@ -3,7 +3,7 @@
 /* @var $model CatTipoSoporte */
 
 $this->breadcrumbs=array(
-	'Catálogo de Equipo'=>array('default/CatalogoEquipos'),
+	'Ordenes de soporte'=>array('ordenesSoporte/admin'),
 	'Crear',
 );
 
