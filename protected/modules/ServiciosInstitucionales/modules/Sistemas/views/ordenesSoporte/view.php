@@ -47,20 +47,22 @@ Orden creada por 	<?php echo CHtml::encode($model->usuario); ?> de <?php echo $m
 </div>	
 		
 <div>
-	Se creó el <?php echo CHtml::encode($model->fecha).' '; echo CHtml::encode($model->hora); ?>
+	<?php $fechaCreacion = DateTime::date_create_from_format('Y-m-d h:i:s', $model->fecha.' '.$model->hora); ?>
+	Se creó el <?php echo CHtml::encode($fechaCreacion); ?>
 	<br/>
 	Se inició el <?php echo CHtml::encode($model->fechaFinal); ?>
 	<br/>
 	Se terminó el <?php echo CHtml::encode($model->fechaInicio); ?>
 	<br/>
 	<?php 
-		$fechaCreacion = new DateTime($model->fecha.' '.$model->hora, new DateTimeZone('America/Mexico_City'));
+		$fechaCreacion = date_create_from_format('Y-m-d h:i:s', $model->fecha.' '.$model->hora);
 
 		$now = new DateTime('now');
 		$fechaFinal = new DateTime($model->fechaFinal);
 		$fechaInicial = new DateTime($model->fechaInicio);
 
-		$total = (isset($model->fechaFinal)?$fechaFinal->getTimestamp():$now->getTimestamp()) -$fechaCreacion->getTimestamp();
+		echo $fechaCreacion;
+		$total = (isset($fechaFinal)?$fechaFinal->getTimestamp():$now->getTimestamp()) -$fechaCreacion->getTimestamp();
 		$intervaloPendiente = $fechaInicial->getTimeStamp() - $fechaCreacion->getTimeStamp();
 		$intervaloProceso = $fechaFinal->getTimeStamp() - $fechaInicial->getTimeStamp();
 	
