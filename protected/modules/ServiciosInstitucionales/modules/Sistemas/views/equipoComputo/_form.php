@@ -79,7 +79,7 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'departamento'); ?>
 		<?php 
-		$lista=CHtml::listData(CatAlmacen::model()->findAllByAttributes(array('entidad'=>$model->entidad)), 'departamento', 'descripcionAlmacen');
+		$lista=CHtml::listData(CatAlmacen::model()->findAllByAttributes(array('entidad'=>$model->entidad)), 'almacen', 'descripcion');
 		/*echo CHtml::activeDropDownList($model,'almacen', $lista);*/
 		echo CHtml::dropDownList('departamento','departamento', $lista,
 			array(
