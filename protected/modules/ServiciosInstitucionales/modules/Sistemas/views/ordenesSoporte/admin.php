@@ -72,7 +72,7 @@ $this->widget(
 			array('label'=>'Reportes','htmlOptions'=>array('overflow'=>'hidden'), 'content' => $this->renderPartial('reportes',
 				array('model' => $modelTeminadas,),true), 'linkOptions'=>array('class'=>'cambio'),),//tab 5
 				
-				array(
+				/*array(
 				'label'=>'Crear nueva',
 				'content'=>
 				$this->renderPartial(
@@ -81,7 +81,7 @@ $this->widget(
 					),true
 				),//render partial
 				'linkOptions'=>array('class'=>'cambio'),
-			),//tab 6
+			),*///tab 6
 			array(
 				'label'=>'Tipos de soporte',
 				'content'=>$this->renderPartial(
