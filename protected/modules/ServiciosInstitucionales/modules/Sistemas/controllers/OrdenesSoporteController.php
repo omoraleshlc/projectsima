@@ -451,5 +451,13 @@ class OrdenesSoporteController extends Controller {
         return $model;
     }
     
+    /**
+     * 
+     */
+    public function actionFirma() {
+        //$this->layout='dasda';
+        $this->render('firma');
+    }
+    
 
 }
