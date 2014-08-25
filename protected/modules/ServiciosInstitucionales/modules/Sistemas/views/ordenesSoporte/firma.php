@@ -13,11 +13,15 @@ $cs->registerCssFile($baseUrl.'/css/jquery.signaturepad.css');
 <?php
 /* @var $this DefaultController */
 
-if(isset($_POST['output']) ){
+if(isset($_POST['output']) && isset($model)){
 	$json = $_POST['output'];
 	$img = sigJsonToImage($json, array('imageSize'=>array(930, 100)));
-	imagepng($img, 'protected/firmas/signature.png');
+	$imgurl= 'protected/firmas/signature'.$model->keySOP.'.png';
+	imagepng($img, $imgurl);
 	imagedestroy($img);/**/
+	Yii::app()->user->setFlash('success', "Firma guardada");
+	$this->redirect('index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/scan');
+	
 }
 
 
@@ -27,7 +31,8 @@ Yii::app()->clientScript->registerScript('comprimir', "
 					defaultAction : 'drawIt',
 					lineTop : '70',
 					errorMessageDraw: 'Firme, por favor.',
-					errorMessage: 'Formulario inválido'	
+					errorMessage: 'Formulario inválido',
+					validateFields: false,	
 				};
 				$('.sigPad').signaturePad(options);
 			
@@ -39,11 +44,10 @@ Yii::app()->clientScript->registerScript('comprimir', "
 <script>
 
 </script>
-
+<h1>Firmar orden #<?php echo $model->keySOP; ?></h1>
+<?php echo $model->observaciones; ?>
 <div style="margin: auto; width: 80%">
 <form method="post" action="" class="sigPad" id="signature_form">
-  <label for="name">Escribe tu nombre</label>
-  <input type="text" name="name" id="name" class="name">
   <p class="typeItDesc">Revisa tu firma</p>
   <p class="drawItDesc">Dibuja tu firma</p>
   <ul class="sigNav">

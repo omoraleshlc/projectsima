@@ -365,7 +365,8 @@ class OrdenesSoporteController extends Controller {
 			} else if (isset($_POST['id']) and $_POST['id'] != "") {
 				$model = $model->findByPK($_POST['id']);
 			}
-
+		
+		//$firma=false;
 		if($model){
 			if ($model->status == "pending") {
 				$model->status = "ontransit";
@@ -378,6 +379,9 @@ class OrdenesSoporteController extends Controller {
 				$model->usuarioEjecutor = Yii::app()->user->name;
 				$model->fechaFinal = date("Y-m-d H:i:s");
 				$model->save();
+				//$firma=true;
+				//$this->actionFirma($model);
+				$this->redirect(array('firma', 'id' => $model->keySOP));
 			}
 		}
 		else {
@@ -386,9 +390,10 @@ class OrdenesSoporteController extends Controller {
 		//$model = $model->findByPK($_GET['field']);
 		//$this->actionScan();
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if (!isset($_GET['ajax']))
+		/*if (!isset($_GET['ajax']))
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array($page)); /**/
-			//$this->redirect(array('mobileAdmin'));
+		$this->redirect(array('scan'));
+		
 	}
 
     /*
@@ -454,9 +459,13 @@ class OrdenesSoporteController extends Controller {
     /**
      * 
      */
-    public function actionFirma() {
+    public function actionFirma($id) {
         //$this->layout='dasda';
-        $this->render('firma');
+        $model = new OrdenesSoporte();
+        $model = $model->findByPK($id);
+        $this->render('firma', array(
+            'model' => $model,
+        ));
     }
     
 
