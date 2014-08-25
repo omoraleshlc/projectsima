@@ -3,14 +3,17 @@
 /* @var $data EquipoComputo */
 ?>
 
-<div class="view tetris-thumbnail">
+<div class="view tetris-thumbnail <?php echo !isset($data->codigo)?'hidden-print':'' ?>">
 	<a href="<?php echo Yii::app()->baseUrl.'/index.php?r=ServiciosInstitucionales/Sistemas/telefoniaCelular/update&id='.$data->keyCTC; ?>">
-		<div style="border: solid 1px grey;">
-			<?php if($data->codigo!='') {
-					//echo '<img src="index.php?r=barcodegenerator/generatebarcode&code='.$data->codigo.'">';
-					echo '<img src="index.php?r=barcodegenerator/generateBarcode&code=code39&o=1&t=30&text='.$data->codigo.'&f=2&a1=&a2=">';
+		<div style="border: solid 1px LightGray ;">
+		<span class="visible-print-block" style="text-align:center;"><b>Hospital La Carlota</b><br/>&nbsp;</span>
+			<?php if(isset($data->codigo)) {
+					$this->widget('application.extensions.qrcode.QRCodeGenerator',array(
+						'data' => $data->codigo,
+						'subfolderVar' => true,
+						'matrixPointSize' => 5,
+					));
 				}else
-			
 					echo '<br />Sin codigo asignado<br />';
 			?>
 			<br />
@@ -18,8 +21,7 @@
 		</div>
 	</a>
 	
-	<?php echo CHtml::encode($data->descripcionUbicacion); ?> 
-	
+	<span class="hidden-print"><?php echo CHtml::encode($data->departamento); ?> - <?php echo CHtml::encode($data->descripcionUbicacion); ?> </span>
 	<br />
 	<br />
 
