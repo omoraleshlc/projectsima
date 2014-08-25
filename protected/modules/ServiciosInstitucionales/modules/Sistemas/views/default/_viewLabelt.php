@@ -21,7 +21,7 @@
 		</div>
 	</a>
 	
-	<span class="hidden-print"><?php echo CHtml::encode($data->departamento); ?> - <?php echo CHtml::encode($data->descripcionUbicacion); ?> </span>
+	<span class="hidden-print"><?php echo CHtml::encode($data->descripcionUbicacion); ?> </span>
 	<br />
 	<br />
 
