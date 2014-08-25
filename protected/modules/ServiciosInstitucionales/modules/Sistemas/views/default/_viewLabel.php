@@ -8,9 +8,14 @@
 		<div style="border: solid 1px grey;">
 			<?php if($data->codigo!='') {
 					//echo '<img src="index.php?r=barcodegenerator/generatebarcode&code='.$data->codigo.'">';
-					echo '<img src="index.php?r=barcodegenerator/generateBarcode&code=code39&o=1&t=50&text='.$data->codigo.'&f=2&a1=&a2=">';
+					//echo '<img src="index.php?r=barcodegenerator/generateBarcode&code=code39&o=1&t=50&text='.$data->codigo.'&f=2&a1=&a2=">';
+					
+					$this->widget('application.extensions.qrcode.QRCodeGenerator',array(
+						'data' => $data->codigo,
+						'subfolderVar' => true,
+						'matrixPointSize' => 5,
+					));
 				}else
-			
 					echo '<br />Sin codigo asignado<br />';
 			?>
 			
