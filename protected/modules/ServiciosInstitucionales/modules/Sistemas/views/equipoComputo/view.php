@@ -13,36 +13,64 @@ $this->menu=array(
 	array('label'=>'Borrar Equipo de Computo', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->keyIE),'confirm'=>'Are you sure you want to delete this item?')),
 	array('label'=>'Lista de Equipo de Computo', 'url'=>array('admin')),
 );
+
+$model2 = new CatTipoEquipo;
+$model3 = new CatMarca;
+$model4 = new CatMarcaMonitor;
+$model5 = new Proveedor;
 ?>
+<div class="hidden-print">
+	<h1>Ver Equipo de Cómputo #<?php echo $model->keyIE; ?></h1>
+	<h2><?php echo CHtml::encode($model->getAttributeLabel('codigo')); ?>:
+		<?php echo CHtml::link(CHtml::encode($model->codigo), array('view', 'id'=>$model->keyIE)); ?></h2>
+	<h3>Equipo <?php  echo $model->status='A'?'activo':'inactivo'; ?> de <?php  echo $model->usuario; ?></h3>
+	<div>
+			<?php  echo $model->keyTE?$model2->find('keyTE="' . $model->keyTE . '"')->descripcion:'tipo no especificado'; ?> marca <?php echo $model->keyMA?$model3->find('keyMA="' . $model->keyMA . '"')->descripcion:'marca no especificada'; ?><?php  echo $model->keyP?' proveido por '.$model5->find('keyP="' . $model->keyP . '"')->razonSocial:'.'; ?>
+			<br/>
+			<?php  echo $model->keyMAM?'Monitor marca '.$model4->find('keyMAM="' . $model->keyMAM . '"')->descripcion:'Monitor no especificado'; ?>
+	</div>
+	
+	<div>
+			En <?php  echo $model->descripcionEntidad; ?>, departamento de <?php echo CHtml::encode($model->descripcionAlmacen); ?>.
+			<br/>
+			<?php  echo $model->descripcionUbicacion; ?>
+	</div>
 
-<h1>Ver Equipo de Cómputo #<?php echo $model->keyIE; ?></h1>
+		<br />
+	<?php $this->widget('zii.widgets.CDetailView', array(
+		'data'=>$model,
+		'attributes'=>array(
+			'motherboard',
+			'drives',
+			'harddisk',
+			'memoriaRam',
+			'monitor',
+			'tipoProcesador',
+			'velocidadProcesador',
+			'fecha',
+			'hora',
+		),
+	)); ?>
+</div>
+<div class="view tetris-thumbnail <?php echo !isset($model->codigo)?'hidden-print':'' ?>">
+	<div class="graybox" style="border: solid 1px LightGray;">
+		<span class="visible-print-block" style="text-align:center;"><b>Hospital La Carlota</b></span>
+		<span class="visible-print-block" style="text-align:center; zoom:0.7">Código de equipo</span><br/>
+		<?php if(isset($model->codigo)) {
+				$this->widget('application.extensions.qrcode.QRCodeGenerator',array(
+				'data' => $model->codigo,
+				'subfolderVar' => true,
+				'matrixPointSize' => 5,
+			));
+			}else{
+				echo '<br />Sin codigo asignado<br />';
+			}
+		?>
+		<br />
+		<b><?php echo CHtml::link(CHtml::encode($model->codigo),array('equipoComputo/update','id'=>$model->keyIE), array('style'=>'zoom:1.3;')); ?></b>
+	</div>
+</div>
+<div class="row buttons hidden-print" style="clear:both">
+	<?php echo CHtml::button('Actualizar', array('submit' => array('equipoComputo/update','id'=>$model->keyIE))); ?>
+</div>
 
-<?php $this->widget('zii.widgets.CDetailView', array(
-	'data'=>$model,
-	'attributes'=>array(
-		'keyIE',
-		'codigo',
-		'registro',
-		'departamento',
-		'keyTE',
-		'keyMA',
-		'motherboard',
-		'drives',
-		'harddisk',
-		'memoriaRam',
-		'keyMAM',
-		'descripcionUbicacion',
-		'monitor',
-		'usuario',
-		'fecha',
-		'hora',
-		'entidad',
-		'status',
-		'solicitud',
-		'descripcionEntidad',
-		'descripcionAlmacen',
-		'tipoProcesador',
-		'velocidadProcesador',
-		'keyP',
-	),
-)); ?>

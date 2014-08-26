@@ -6170,7 +6170,7 @@ a.badge:focus {
   display: none !important;
 }
 @media print {
-  .visible-print-inline-block {
+  .visible-print-block {
     display: inline-block !important;
   }
 }

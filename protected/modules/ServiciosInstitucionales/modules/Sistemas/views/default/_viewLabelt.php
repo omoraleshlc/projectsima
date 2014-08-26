@@ -6,8 +6,8 @@
 <div class="view tetris-thumbnail <?php echo !isset($data->codigo)?'hidden-print':'' ?>">
 	<a href="<?php echo Yii::app()->baseUrl.'/index.php?r=ServiciosInstitucionales/Sistemas/telefoniaCelular/update&id='.$data->keyCTC; ?>">
 		<div class="graybox" style="border: solid 1px LightGray;">
-		<span class="visible-print-block" style="text-align:center;"><b>Hospital La Carlota</b><br/>&nbsp;</span>
-		<span class="visible-print-block" style="text-align:center; zoom:0.7">Código de equipo</span>
+		<span class="visible-print-block" style="text-align:center;"><b>Hospital La Carlota</b></span>
+		<span class="visible-print-block" style="text-align:center; zoom:0.7">Código de equipo</span><br/>
 			<?php if(isset($data->codigo)) {
 					$this->widget('application.extensions.qrcode.QRCodeGenerator',array(
 						'data' => $data->codigo,
