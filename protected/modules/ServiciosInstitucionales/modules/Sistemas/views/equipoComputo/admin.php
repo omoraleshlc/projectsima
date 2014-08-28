@@ -38,7 +38,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
 		
 		array(
 			'header' => 'Tipo de equipo',
-			'value' => "(new CatTipoEquipo)->findByPk(\$data->keyTE)->descripcion",
+			'value' => "\$data->keyTE!='0'?(new CatTipoEquipo)->findByPk(\$data->keyTE)->descripcion:'-'",
 			'headerHtmlOptions' => array('style' => 'width: 9%;'),
 			'filter'=>CHtml::activeDropDownList($model,'keyTE',CHtml::listData(CatTipoEquipo::model()->findAll(), 'keyTE', 'descripcion' ), array('prompt'=>'')),
 		),
