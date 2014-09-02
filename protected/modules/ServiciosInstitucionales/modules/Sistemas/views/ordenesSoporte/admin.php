@@ -5,7 +5,6 @@
 </script>
 
 <?php
-	print_r($_POST);
 	$urlappendage="";
 	if (isset($_POST['OrdenesSoporte'])){
 		$orden=$_POST['OrdenesSoporte'];
@@ -33,7 +32,7 @@ Yii::app()->clientScript->registerScript('cambio', "
 				url=window.location.href;
 				url=url.substr(0, url.indexOf('&')<0?url.lenght:url.indexOf('&'))+'&tab='+tabid;
 				if(url!=location.href)location.href =url;
-				
+				exit();
 			}
 		});
 	");
