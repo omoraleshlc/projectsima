@@ -137,7 +137,7 @@
 <div class="columna">
 	<div class="row">
 		<?php echo $form->labelEx($model,'tipoProveedor'); ?>
-		<?php echo CHtml::activeDropDownList($model,'status', array('productos'=>'Productos','ambos'=>'Desactivada', ''=>'Ninguno', 'sistemas'=>'Sistemas')); ?> 
+		<?php echo CHtml::activeDropDownList($model,'tipoProveedor', array('productos'=>'Productos','ambos'=>'Desactivada', ''=>'Ninguno', 'sistemas'=>'Sistemas')); ?> 
 		<?php echo $form->error($model,'tipoProveedor'); ?>
 	</div>
 
