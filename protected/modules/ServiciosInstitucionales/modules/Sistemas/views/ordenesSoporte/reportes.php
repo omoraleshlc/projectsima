@@ -58,6 +58,24 @@ hasta:
 		'Select almacen, COUNT(*) as num from  sima.sis_ordenesSOP where almacenSoporte like '.$depto.' '.$fechas.' group by almacen order by num'
 		)->queryAll();
 	}
+	else if(isset($_GET['OrdenesSoporte'])){
+		$fechas= "";
+		$labelFecha="";
+		if(isset($_GET['fecha']) and isset($_GET['fechafinal'])){
+			$fechas =  ' and fecha between "'.$_GET['fecha'].'" and "'.$_GET['fechafinal'].'"';
+			$labelFecha="de ".$_GET['fecha'].' a '.$_GET['fechafinal'];
+		}
+		
+		$depto="'%%'";
+		if(isset($_GET['depto'])){
+			$depto="'".$_GET['depto']."'";
+			$labelFecha=$labelFecha." de ".($_GET['depto']=="HSIST"?"sistemas":($_GET['depto']=="HMANT"?"mantenimiento":"todos"));
+		}
+		
+		$duplicateData=Yii::app()->db->createCommand(
+		'Select almacen, COUNT(*) as num from  sima.sis_ordenesSOP where almacenSoporte like '.$depto.' '.$fechas.' group by almacen order by num'
+		)->queryAll();
+	}
 	else{
 		$duplicateData=Yii::app()->db->createCommand('
 			 Select almacen, COUNT(*) as num from  sima.sis_ordenesSOP group by almacen order by num

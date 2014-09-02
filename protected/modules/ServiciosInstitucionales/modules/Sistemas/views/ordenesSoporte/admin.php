@@ -5,6 +5,24 @@
 </script>
 
 <?php
+	print_r($_POST);
+	$urlappendage="";
+	if (isset($_POST['OrdenesSoporte'])){
+		$orden=$_POST['OrdenesSoporte'];
+		$urlappendage="&OrdenesSoporte=1";
+		if(isset($orden['fecha']) and isset($orden['fechaFinal'])){
+			$urlappendage=$urlappendage."&fecha=".$orden['fecha'].'&fechafinal='.$orden['fechaFinal'];
+		}
+		
+		if(isset($_POST['departamentoSoporteReportes'])){
+			$urlappendage=$urlappendage.'&depto='.$_POST['departamentoSoporteReportes'];
+		}
+		$this->redirect('index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Reportes'.$urlappendage);
+	}
+
+
+
+
 /* @var $this DefaultController */
 Yii::app()->clientScript->registerScript('cambio', "
 		$('.cambio').hover(function(){

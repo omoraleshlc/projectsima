@@ -72,5 +72,6 @@ $model5 = new Proveedor;
 </div>
 <div class="row buttons hidden-print" style="clear:both">
 	<?php echo CHtml::button('Actualizar', array('submit' => array('equipoComputo/update','id'=>$model->keyIE))); ?>
+	<input type="button" value="Imprimir código de equipo" onclick="window.print();return false;" />
 </div>
 
