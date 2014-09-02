@@ -65,7 +65,7 @@ class Proveedor extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_proveedor, razonSocial, ciudad, estado, telefono, rfc, calle, colonia, status, tipoPersona, curp, ctaContable, copiaCedula, copiaActa, copiaHacienda, comprobanteDomicilio, retenciones, tipoProveedor, procedenciaProveedor, entidad, id_fiscal, codigoPostal, limite1, limite2, limite3, limite4', 'required'),
+			array('id_proveedor, razonSocial, ciudad, estado, rfc, calle, colonia, status, tipoPersona, tipoProveedor, procedenciaProveedor, entidad, codigoPostal, limite1, limite2, limite3, limite4', 'required'),
 			array('cp, codigoPostal, limite1, limite2, limite3, limite4', 'numerical', 'integerOnly'=>true),
 			array('id_proveedor, razonSocial, ciudad, estado, telefono, telefono1, rfc, calle, colonia, usuario, fecha, hora, status, tipoPersona, curp, ctaContable, copiaCedula, copiaActa, copiaHacienda, comprobanteDomicilio, retenciones, tipoProveedor, procedenciaProveedor, entidad, id_fiscal', 'length', 'max'=>255),
 			// The following rule is used by search().
