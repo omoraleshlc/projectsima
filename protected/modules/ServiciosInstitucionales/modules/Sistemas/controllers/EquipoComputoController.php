@@ -42,9 +42,11 @@ class EquipoComputoController extends Controller
 		if(isset($_POST['EquipoComputo']))
 		{
 			$model->attributes=$_POST['EquipoComputo'];
-			$model2 = new CatEntidad;
-			$model3 =$model2->findByPk($model->entidad);
+			$model3 =CatEntidad::model()->findByAttributes(array('codigoEntidad'=>$_POST['entidad']));
+			$model->entidad= $_POST['entidad'];
+			$model->departamento= $_POST['departamento'];
 			$model->descripcionEntidad=$model3->descripcionEntidad;
+			$model->descripcionAlmacen=CatAlmacen::model()->findByAttributes(array('almacen'=>$_POST['departamento']))->descripcion;
 			$model->usuario=Yii::app()->user->name;
 			$model->fecha=date('Y-m-d', time());
 			$model->hora=date('h:i a', time());
@@ -77,8 +79,11 @@ class EquipoComputoController extends Controller
 			$model->attributes=$_POST['EquipoComputo'];
 			
 			
-			$model2 = new CatEntidad;
-			$model->descripcionEntidad=$model2->findByPk($model->entidad)->descripcionEntidad;
+			$model3 =CatEntidad::model()->findByAttributes(array('codigoEntidad'=>$_POST['entidad']));
+			$model->entidad= $_POST['entidad'];
+			$model->departamento= $_POST['departamento'];
+			$model->descripcionEntidad=$model3->descripcionEntidad;
+			$model->descripcionAlmacen=CatAlmacen::model()->findByAttributes(array('almacen'=>$_POST['departamento']))->descripcion;
 			$model->usuario=Yii::app()->user->name;
 			$model->fecha=date('Y-m-d', time());
 			$model->hora=date('h:i a', time());
