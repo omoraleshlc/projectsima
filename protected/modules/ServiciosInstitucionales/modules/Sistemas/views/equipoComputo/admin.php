@@ -44,7 +44,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
 		),
 		array(
 			'header' => 'Marca',
-			'value' => "(new CatMarca)->findByPk(\$data->keyMA)->descripcion",
+			'value' => "\$data->keyMA=='0'?'-':(new CatMarca)->findByPk(\$data->keyMA)->descripcion",
 			'headerHtmlOptions' => array('style' => 'width: 9%;'),
 			'filter'=>CHtml::activeDropDownList($model,'keyMA',CHtml::listData( CatMarca::model()->findAll(), 'keyMA', 'descripcion' ), array('prompt'=>'')),
 		),

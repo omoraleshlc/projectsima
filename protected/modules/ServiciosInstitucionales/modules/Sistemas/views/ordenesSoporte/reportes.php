@@ -30,14 +30,10 @@ hasta:
 		</form>
 <br/>
 
-<?php $this->widget('bootstrap.widgets.TbButton', array(
-    'label'=>'Imprimir ordenes',
-    'url'=>'index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/listadoParaImprimir',
-)); ?>
-
 
 
 <?php
+		$urlappendage="";
 	if (isset($_POST['OrdenesSoporte'])){
 		$orden=$_POST['OrdenesSoporte'];
 		
@@ -46,12 +42,14 @@ hasta:
 		if(isset($orden['fecha']) and isset($orden['fechaFinal']) and $orden['fecha']!="" and $orden['fechaFinal']!=""){
 			$fechas =  ' and fecha between "'.$orden['fecha'].'" and "'.$orden['fechaFinal'].'"';
 			$labelFecha="de ".$orden['fecha'].' a '.$orden['fechaFinal'];
+			$urlappendage=$urlappendage."&fecha=".$orden['fecha'].'&fechafinal='.$orden['fechaFinal'];
 		}
 		
 		$depto="'%%'";
 		if(isset($_POST['departamentoSoporteReportes'])){
 			$depto="'".$_POST['departamentoSoporteReportes']."'";
 			$labelFecha=$labelFecha." de ".($_POST['departamentoSoporteReportes']=="HSIST"?"sistemas":($_POST['departamentoSoporteReportes']=="HMANT"?"mantenimiento":"todos"));
+			$urlappendage=$urlappendage.'&depto='.$_POST['departamentoSoporteReportes'];
 		}
 		
 		$duplicateData=Yii::app()->db->createCommand(
@@ -64,12 +62,14 @@ hasta:
 		if(isset($_GET['fecha']) and isset($_GET['fechafinal'])){
 			$fechas =  ' and fecha between "'.$_GET['fecha'].'" and "'.$_GET['fechafinal'].'"';
 			$labelFecha="de ".$_GET['fecha'].' a '.$_GET['fechafinal'];
+			$urlappendage=$urlappendage."&fecha=".$_GET['fecha'].'&fechafinal='.$_GET['fechafinal'];
 		}
 		
 		$depto="'%%'";
 		if(isset($_GET['depto'])){
 			$depto="'".$_GET['depto']."'";
 			$labelFecha=$labelFecha." de ".($_GET['depto']=="HSIST"?"sistemas":($_GET['depto']=="HMANT"?"mantenimiento":"todos"));
+			$urlappendage=$urlappendage.'&depto='.$_GET['depto'];
 		}
 		
 		$duplicateData=Yii::app()->db->createCommand(
@@ -84,6 +84,12 @@ hasta:
 		$labelFecha='de todos los tiempos de todos los departamentos de soporte.';
 	}
 ?>
+
+<?php
+	$this->widget('bootstrap.widgets.TbButton', array(
+    'label'=>'Imprimir ordenes',
+    'url'=>'index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/listadoParaImprimir'.$urlappendage,
+)); ?>
 <br/>
 <h3>Reporte <?php echo $labelFecha;?></h3>
 

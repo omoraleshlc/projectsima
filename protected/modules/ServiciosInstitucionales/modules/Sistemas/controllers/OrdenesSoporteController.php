@@ -230,8 +230,7 @@ class OrdenesSoporteController extends Controller {
      * Manages all models.
      */
     public function actionAdmin() {
-
-        $this->almacenSoporte = isset($_POST['departamentoSoporte']) ? $_POST['departamentoSoporte'] : ($this->usuariosima->almacenSoporteDefault) ? $this->usuariosima->almacenSoporteDefault : 'HSIST';
+        $this->almacenSoporte = isset($_POST['departamentoSoporte']) ? $_POST['departamentoSoporte'] :( ($this->usuariosima->almacenSoporteDefault) ? $this->usuariosima->almacenSoporteDefault : 'HSIST');
         $model = new OrdenesSoporte('search');
         $model->unsetAttributes();  // clear any default values
         $model->keySOP = 0;
@@ -416,17 +415,38 @@ class OrdenesSoporteController extends Controller {
         }
     }
 
+	 /*
+     * renderiza una lista simplificada de todas las ordenes de soporte
+     * 
+     */
     public function actionListadoParaImprimir() {
+    
         $model = new OrdenesSoporte('searchOperador');
         $model->unsetAttributes();  // clear any default values
-        if (isset($_GET['OrdenesSoporte']))
+    
+    		/*if (isset($_GET['fecha']) & isset($_GET['fechafinal']) & isset($_GET['depto'])){
+    				$model=$this->actionModelParaListadoParaImprimirFiltrado();
+    			}
+    		else{
+        if (isset($_GET['OrdenesSoporte']))*/
             $model->attributes = $_GET['OrdenesSoporte'];
 
-
+			//}
         $this->render('printOrdenes', array(
             'model' => $model,
         ));
     }
+    
+    /*
+     * renderiza una lista filtrada y simplificada de las ordenes de soporte por fecha y departamento. 
+     * 
+     */
+    public function actionModelParaListadoParaImprimirFiltrado() {
+			$model = OrdenesSoporte::model()->findAll("STR_TO_DATE(fecha, '%Y-%m-%d') between '" . $_GET['fecha'] . "' and '" . $_GET['fechafinal'] ."' and (status='ontransit' or status='pending')");
+    		return $model;
+
+    }
+    
 
     /*
      *
