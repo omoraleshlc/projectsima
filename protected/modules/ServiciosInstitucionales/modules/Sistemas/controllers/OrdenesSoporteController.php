@@ -423,15 +423,11 @@ class OrdenesSoporteController extends Controller {
     
         $model = new OrdenesSoporte('searchOperador');
         $model->unsetAttributes();  // clear any default values
-    
-    		/*if (isset($_GET['fecha']) & isset($_GET['fechafinal']) & isset($_GET['depto'])){
-    				$model=$this->actionModelParaListadoParaImprimirFiltrado();
-    			}
-    		else{
-        if (isset($_GET['OrdenesSoporte']))*/
+
+        if (isset($_GET['OrdenesSoporte'])){
             $model->attributes = $_GET['OrdenesSoporte'];
 
-			//}
+			}
         $this->render('printOrdenes', array(
             'model' => $model,
         ));
