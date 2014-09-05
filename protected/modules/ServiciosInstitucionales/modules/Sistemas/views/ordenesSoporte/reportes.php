@@ -96,6 +96,7 @@ hasta:
 
 
 <?php
+	if(!empty($duplicateData)){
 	Yii::import('application.extensions.Hzl.google.HzlVisualizationChart');
 	
 	
@@ -115,5 +116,8 @@ hasta:
 			'width' => 800,
 			'height' => 600,
 	)));
+	}
+	else
+	echo "No hay registros disponibles";
 ?>
 
