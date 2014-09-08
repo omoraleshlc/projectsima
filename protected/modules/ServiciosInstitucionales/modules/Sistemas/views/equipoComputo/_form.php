@@ -26,7 +26,7 @@
 		'pattern'=> '0[0-9]{2}-[A-Za-z][0-9]{2}([A-Fa-f|0-9]){4}'
 		)); ?>
 		<?php 
-			echo CHtml::button('Generar nuevo código', array('onclick'=>'document.getElementById("EquipoComputo_codigo").value = \''.$model->generarCodigo().'\';',));
+			echo CHtml::button('Generar nuevo código', array('onclick'=>'document.getElementById("EquipoComputo_codigo").value = \''.$model->generarCodigoDisponible($model).'\';',));
 		?>
 		<?php echo $form->error($model,'codigo'); ?>
 	</div>

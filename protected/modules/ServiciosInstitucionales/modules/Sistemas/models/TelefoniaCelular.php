@@ -219,4 +219,27 @@ class TelefoniaCelular extends CActiveRecord
 		return $code;
 	}
 	
+		/**
+	 * Genera el siguiente código de equipo disponible.
+	 * @return String code generated
+	 */
+	public function generarCodigoDisponible($model)
+	{
+		/*$allTelefoniaCelular= TelefoniaCelular::model()->findAll();
+		$count = count($allTelefoniaCelular);
+		*/
+		$criteria = new CDbCriteria();
+		
+		$prefijoCode = "0".$model->entidad."-t".str_pad($model->keyTE, 2, "0", STR_PAD_LEFT);
+		$count=Yii::app()->db->createCommand()
+			->select('count(*)')
+			->from('sis_catTelefoniaCelular')
+			->where("codigo like '".$prefijoCode."%'")
+			->queryRow();
+		$count = (int) $count['count(*)']+1;
+		
+		$code="0".$model->entidad."-c".str_pad($model->keyTE, 2, "0", STR_PAD_LEFT).str_pad(dechex($count), 4, "0", STR_PAD_LEFT);
+		return $code;
+	}
+	
 }
