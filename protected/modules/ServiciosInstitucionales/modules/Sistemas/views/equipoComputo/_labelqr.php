@@ -6,19 +6,10 @@ $this->breadcrumbs=array(
 	'Equipo Computo'=>array('admin'),
 	$model->keyIE,
 );
-
-$this->menu=array(
-	array('label'=>'Crear Equipo de Computo', 'url'=>array('create')),
-	array('label'=>'Actualizar Equipo de Computo', 'url'=>array('update', 'id'=>$model->keyIE)),
-	array('label'=>'Borrar Equipo de Computo', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->keyIE),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Lista de Equipo de Computo', 'url'=>array('admin')),
-);
-
-$model2 = new CatTipoEquipo;
-$model3 = new CatMarca;
-$model4 = new CatMarcaMonitor;
-$model5 = new Proveedor;
 ?>
+<script>
+	window.print();
+</script>
 <div class="hidden-print">
 	<h1>Etiqueta de Equipo de Cómputo #<?php echo $model->keyIE; ?></h1>
 	<h2><?php echo CHtml::encode($model->getAttributeLabel('codigo')); ?>:
@@ -43,7 +34,7 @@ $model5 = new Proveedor;
 	</div>
 </div>
 <div class="row buttons hidden-print" style="clear:both">
-	<?php echo CHtml::button('Actualizar', array('submit' => array('equipoComputo/update','id'=>$model->keyIE))); ?>
-	<input type="button" value="Imprimir código de equipo" onclick="window.print();return false;" />
+	<?php echo CHtml::button('Regresar', array('submit' => array('equipoComputo/view','id'=>$model->keyIE))); ?>
+	<input type="button" value="Imprimir" onclick="window.print();return false;" />
 </div>
 
