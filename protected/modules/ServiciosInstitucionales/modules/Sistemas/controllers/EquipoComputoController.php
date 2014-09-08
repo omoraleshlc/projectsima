@@ -26,6 +26,18 @@ class EquipoComputoController extends Controller
 			'model'=>$this->loadModel($id),
 		));
 	}
+	
+	
+	/**
+	 * Displays the qr code label for a particular model.
+	 * @param integer $id the ID of the model to be displayed
+	 */
+	public function actionPrintLabel($id)
+	{
+		$this->render('_labelqr',array(
+			'model'=>$this->loadModel($id),
+		));
+	}
 
 	/**
 	 * Creates a new model.

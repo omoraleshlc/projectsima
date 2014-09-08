@@ -197,7 +197,6 @@ class OrdenesSoporte extends CActiveRecord
 		$criteria->compare('descripcionSoporte',$this->descripcionSoporte,true);
 		$criteria->compare('descripcionAlmacen',$this->descripcionAlmacen,true);
 		$criteria->compare('usuario',$this->usuario,true);
-		$criteria->compare('fecha',$this->fecha,true);
 		$criteria->compare('hora',$this->hora,true);
 		$criteria->compare('entidad',$this->entidad,true);
 		$criteria->compare('solicitud',$this->solicitud,true);
@@ -206,10 +205,18 @@ class OrdenesSoporte extends CActiveRecord
 		$criteria->compare('observaciones',$this->observaciones,true);
 		$criteria->compare('usuarioEjecutor',$this->usuarioEjecutor,true);
 		$criteria->compare('fechaFinal',$this->fechaFinal,true);
-		$criteria->compare('almacenSoporte',$this->almacenSoporte,true);
 		$criteria->compare('codigo',$this->codigo,true);
 		$criteria->compare('fechaInicio',$this->fechaInicio,true);
 		$criteria->compare('fechaFinalEstimada',$this->fechaFinalEstimada,true);
+		if (isset($_GET['fecha']) & isset($_GET['fechafinal']) & isset($_GET['depto'])){
+			$criteria->addCondition("fecha between '". $_GET['fecha'] ."' and '".$_GET['fechafinal']."'");
+			$criteria->addCondition("almacenSoporte like '%".$_GET['depto']."'");
+ 			}
+		else{
+			$criteria->compare('fecha',$this->fecha,true);
+			$criteria->compare('almacenSoporte',$this->almacenSoporte,true);
+		}
+		
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

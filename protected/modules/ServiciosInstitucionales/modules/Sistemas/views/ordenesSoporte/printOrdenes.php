@@ -65,9 +65,10 @@ $('.search-form form').submit(function(){
 				<b><?php echo CHtml::encode($model->getAttributeLabel('usuario')); ?></b>
 			</td>
 		</tr>
+		
+		
+		
 		<?php
-		
-		
 		
 			$this->widget('zii.widgets.CListView', array(
 				'id'=>'ordenes-list',

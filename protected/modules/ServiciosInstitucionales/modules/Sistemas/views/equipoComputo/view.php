@@ -19,11 +19,19 @@ $model3 = new CatMarca;
 $model4 = new CatMarcaMonitor;
 $model5 = new Proveedor;
 ?>
-<div class="hidden-print">
+
+
+<div  class="visible-print-block">
+<?php
+echo CHtml::image(Yii::app()->request->baseUrl.'/images/hlclogo2.png'); 
+?>
+</div>
+
+<div>
 	<h1>Ver Equipo de Cómputo #<?php echo $model->keyIE; ?></h1>
 	<h2><?php echo CHtml::encode($model->getAttributeLabel('codigo')); ?>:
 		<?php echo CHtml::link(CHtml::encode($model->codigo), array('view', 'id'=>$model->keyIE)); ?></h2>
-	<h3>Equipo <?php  echo $model->status='A'?'activo':'inactivo'; ?> de <?php  echo $model->usuario; ?></h3>
+	<h3>Equipo <?php  echo $model->status='A'?'activo':'inactivo'; ?> dado de alta por <?php  echo $model->usuario; ?></h3>
 	<div>
 			<?php  echo $model->keyTE?$model2->find('keyTE="' . $model->keyTE . '"')->descripcion:'tipo no especificado'; ?> marca <?php echo $model->keyMA?$model3->find('keyMA="' . $model->keyMA . '"')->descripcion:'marca no especificada'; ?><?php  echo $model->keyP?' proveido por '.$model5->find('keyP="' . $model->keyP . '"')->razonSocial:'.'; ?>
 			<br/>
@@ -52,6 +60,19 @@ $model5 = new Proveedor;
 		),
 	)); ?>
 </div>
+<br/>
+<div class="visible-print-block" style="padding-top: 80px; padding-bottom: 30px; width: 100%">
+	<div style="width: 30%; border-top: solid black 1px; display:inline; float: right;">
+		Firma de entregado
+		<br/>
+	</div>
+	<div style="width: 30%; border-top: solid black 1px; diplay: inline; float: left;">
+		Firma de recibido
+		<br/>
+	</div>
+	
+</div>
+<br/>
 <div class="view tetris-thumbnail <?php echo !isset($model->codigo)?'hidden-print':'' ?>">
 	<div class="graybox" style="border: solid 1px LightGray;">
 		<span class="visible-print-block" style="text-align:center;"><b>Hospital La Carlota</b></span>
@@ -72,6 +93,7 @@ $model5 = new Proveedor;
 </div>
 <div class="row buttons hidden-print" style="clear:both">
 	<?php echo CHtml::button('Actualizar', array('submit' => array('equipoComputo/update','id'=>$model->keyIE))); ?>
-	<input type="button" value="Imprimir código de equipo" onclick="window.print();return false;" />
+	<?php echo CHtml::button('Imprimir etiqueta', array('submit' => array('equipoComputo/printLabel','id'=>$model->keyIE))); ?>
+	<input type="button" value="Imprimir datos de equipo" onclick="window.print();return false;" />
 </div>
 
