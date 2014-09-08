@@ -3,20 +3,19 @@
 /* @var $model CatSistemaOperativo */
 
 $this->breadcrumbs=array(
-	'Cat Sistema Operativos'=>array('default/CatalogoEquipos'),
+	'Catálogo de Equipo'=>array('default/CatalogoEquipos'),
 	$model->keyOS,
 );
 
 $this->menu=array(
-	array('label'=>'List CatSistemaOperativo', 'url'=>array('index')),
-	array('label'=>'Create CatSistemaOperativo', 'url'=>array('create')),
-	array('label'=>'Update CatSistemaOperativo', 'url'=>array('update', 'id'=>$model->keyOS)),
-	array('label'=>'Delete CatSistemaOperativo', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->keyOS),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage CatSistemaOperativo', 'url'=>array('admin')),
+	array('label'=>'Crear Sistema Operativo', 'url'=>array('create')),
+	array('label'=>'Actualizar Sistema Operativo', 'url'=>array('update', 'id'=>$model->keyOS)),
+	array('label'=>'Borrar Sistema Operativo', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->keyOS),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Catpalogo de Equipo', 'url'=>array('default/CatalogoEquipos')),
 );
 ?>
 
-<h1>View CatSistemaOperativo #<?php echo $model->keyOS; ?></h1>
+<h1>Ver Sistema Operativo #<?php echo $model->keyOS; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

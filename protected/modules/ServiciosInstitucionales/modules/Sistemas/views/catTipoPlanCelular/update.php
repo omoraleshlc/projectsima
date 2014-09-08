@@ -3,19 +3,18 @@
 /* @var $model CatTipoPlanCelular */
 
 $this->breadcrumbs=array(
-	'Cat Tipo Plan Celulars'=>array('default/CatalogoTelefonia'),
+	'Catálogo de Telefonía'=>array('default/CatalogoTelefonia'),
 	$model->keyTS=>array('view','id'=>$model->keyTS),
-	'Update',
+	'Actualizar',
 );
 
 $this->menu=array(
-	array('label'=>'List CatTipoPlanCelular', 'url'=>array('index')),
-	array('label'=>'Create CatTipoPlanCelular', 'url'=>array('create')),
-	array('label'=>'View CatTipoPlanCelular', 'url'=>array('view', 'id'=>$model->keyTS)),
-	array('label'=>'Manage CatTipoPlanCelular', 'url'=>array('admin')),
+	array('label'=>'Crear Tipo de Plan de Celular', 'url'=>array('create')),
+	array('label'=>'Ver Tipo de Plan de Celular', 'url'=>array('view', 'id'=>$model->keyTS)),
+	array('label'=>'Catálogo de Telefonía', 'url'=>array('default/CatalogoTelefonia')),
 );
 ?>
 
-<h1>Update CatTipoPlanCelular <?php echo $model->keyTS; ?></h1>
+<h1>Actualizar Tipo de Plan de Celular <?php echo $model->keyTS; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

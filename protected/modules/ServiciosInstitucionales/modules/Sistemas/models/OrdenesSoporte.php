@@ -54,14 +54,13 @@ class OrdenesSoporte extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('keyTS, registro, nombre, descripcionSoporte, usuario, fecha, hora, solicitud, descripcionTS, status, observaciones, usuarioEjecutor, fechaFinal, almacenSoporte, descripcionAlmacen', 'required'),
+			array('keyTS, registro, nombre, descripcionSoporte, usuario, fecha, hora, solicitud, descripcionTS, status, observaciones,  almacenSoporte, descripcionAlmacen', 'required'),
 			//array('entidadSolicitud, almacen, descripcionAlmacen, entidad, almacenSoporte', 'required'),
 			array('keyTS, registro', 'numerical', 'integerOnly'=>true),
 			array('entidadSolicitud, entidad', 'length', 'max'=>2),
 			array('almacen, nombre, usuario, almacenSoporte', 'length', 'max'=>30),
 			array('descripcionSoporte, descripcionAlmacen', 'length', 'max'=>200),
-			array('fecha, hora, fechaFinal', 'length', 'max'=>19),
-			array('fechaFinal, fechaInicio', 'length', 'max'=>19),
+			array('fecha, hora, fechaFinal, fechaInicio, fechaFinalEstimada', 'length', 'max'=>19),
 			array('solicitud, status', 'length', 'max'=>20),
 			array('descripcionTS', 'length', 'max'=>100),
 			array('observaciones', 'length', 'max'=>250),
@@ -128,12 +127,13 @@ class OrdenesSoporte extends CActiveRecord
 			'solicitud' => 'Solicitud',
 			'descripcionTS' => 'Descripcion tipo de soporte',
 			'status' => 'Status',
-			'observaciones' => 'Observaciones',
+			'observaciones' => 'Descripción',
 			'usuarioEjecutor' => 'Atiende',
 			'fechaFinal' => 'Fecha terminación',
 			'almacenSoporte' => 'Almacen Soporte',
-			'codigo' => 'Codigo',
-			'fechaInicio' => 'Fecha Inicio'
+			'codigo' => 'Codigo de equipo',
+			'fechaInicio' => 'Fecha Inicio',
+			'fechaFinalEstimada'=>'Fecha Final Estimada'
 		);
 	}
 
@@ -168,10 +168,107 @@ class OrdenesSoporte extends CActiveRecord
 		$criteria->compare('fechaFinal',$this->fechaFinal,true);
 		$criteria->compare('almacenSoporte',$this->almacenSoporte,true);
 		$criteria->compare('codigo',$this->codigo,true);
-		$criteria->compare('fechaInicio',$this->codigo,true);
+		$criteria->compare('fechaInicio',$this->fechaInicio,true);
+		$criteria->compare('fechaFinalEstimada',$this->fechaFinalEstimada,true);
+		
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
+	
+	/**
+	 * Recupera todas las ordenes que cumplan con los parámetors proporcionados. Páginas de 200 resultados.
+	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+	 */
+		public function searchPrint()
+	{
+		// Warning: Please modify the following code to remove attributes that
+		// should not be searched.
+
+		$criteria=new CDbCriteria;
+
+		$criteria->compare('keySOP',$this->keySOP);
+		$criteria->compare('entidadSolicitud',$this->entidadSolicitud,true);
+		$criteria->compare('almacen',$this->almacen,true);
+		$criteria->compare('keyTS',$this->keyTS);
+		$criteria->compare('registro',$this->registro);
+		$criteria->compare('nombre',$this->nombre,true);
+		$criteria->compare('descripcionSoporte',$this->descripcionSoporte,true);
+		$criteria->compare('descripcionAlmacen',$this->descripcionAlmacen,true);
+		$criteria->compare('usuario',$this->usuario,true);
+		$criteria->compare('hora',$this->hora,true);
+		$criteria->compare('entidad',$this->entidad,true);
+		$criteria->compare('solicitud',$this->solicitud,true);
+		$criteria->compare('descripcionTS',$this->descripcionTS,true);
+		$criteria->compare('status',$this->status,true);
+		$criteria->compare('observaciones',$this->observaciones,true);
+		$criteria->compare('usuarioEjecutor',$this->usuarioEjecutor,true);
+		$criteria->compare('fechaFinal',$this->fechaFinal,true);
+		$criteria->compare('codigo',$this->codigo,true);
+		$criteria->compare('fechaInicio',$this->fechaInicio,true);
+		$criteria->compare('fechaFinalEstimada',$this->fechaFinalEstimada,true);
+		if (isset($_GET['fecha']) & isset($_GET['fechafinal']) & isset($_GET['depto'])){
+			$criteria->addCondition("fecha between '". $_GET['fecha'] ."' and '".$_GET['fechafinal']."'");
+			$criteria->addCondition("almacenSoporte like '%".$_GET['depto']."'");
+ 			}
+		else{
+			$criteria->compare('fecha',$this->fecha,true);
+			$criteria->compare('almacenSoporte',$this->almacenSoporte,true);
+		}
+		
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+			'pagination'=>array('pageSize'=>200),
+		));
+	}
+	
+	/**
+	 * Recupera una sola orden que cumpla con los parámetros especificados.
+	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+	 */
+	public function searchOperador()
+	{
+		// Warning: Please modify the following code to remove attributes that
+		// should not be searched.
+
+		$criteria=new CDbCriteria;
+
+		$criteria->compare('keySOP',$this->keySOP);
+		$criteria->compare('entidadSolicitud',$this->entidadSolicitud,true);
+		$criteria->compare('almacen',$this->almacen,true);
+		$criteria->compare('keyTS',$this->keyTS);
+		$criteria->compare('registro',$this->registro);
+		$criteria->compare('nombre',$this->nombre,true);
+		$criteria->compare('descripcionSoporte',$this->descripcionSoporte,true);
+		$criteria->compare('descripcionAlmacen',$this->descripcionAlmacen,true);
+		$criteria->compare('usuario',$this->usuario,true);
+		$criteria->compare('fecha',$this->fecha,true);
+		$criteria->compare('hora',$this->hora,true);
+		$criteria->compare('entidad',$this->entidad,true);
+		$criteria->compare('solicitud',$this->solicitud,true);
+		$criteria->compare('descripcionTS',$this->descripcionTS,true);
+		$criteria->compare('status',$this->status,true);
+		$criteria->compare('observaciones',$this->observaciones,true);
+		$criteria->compare('usuarioEjecutor',$this->usuarioEjecutor,true);
+		$criteria->compare('fechaFinal',$this->fechaFinal,true);
+		$criteria->compare('almacenSoporte',$this->almacenSoporte,true);
+		$criteria->compare('codigo',$this->codigo,true);
+		$criteria->compare('fechaInicio',$this->fechaInicio,true);
+		$criteria->compare('fechaFinalEstimada',$this->fechaFinalEstimada,true);
+		
+		if(Yii::app()->user->checkAccess('SistemasOperador'))
+			$paginacion = array('pageSize'=>20);
+		else
+			$paginacion = array('pageSize'=>1);
+		
+		
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+			'pagination'=>$paginacion,
+			
+		));
+	}
+	
 }

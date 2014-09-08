@@ -1,61 +1,65 @@
-<h1>Equipo de Computo</h1>
+<h1>Equipo de Cómputo</h1>
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<div style="text-align: right">
+<?php
+	 $this->widget('bootstrap.widgets.TbButton', array(
+    'label'=>'Crear nuevo',
+    'size'=>'small', // null, 'large', 'small' or 'mini'
+    /*'url'=>array('create')*/
+		'url' =>$this->createUrl('EquipoComputo/create', array('model'=>'EquipoComputo')),)); ?>
+</div>
+<?php
+$model2 = new CatTipoEquipo;
+
+$this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'equipo-computo-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
 		array(
-			'header' => '#',
-			'name' => 'keyIE',
-			'htmlOptions' => array('style' => 'width: 10%; text-align: center;'),
+			'name' => 'codigo',
+			'headerHtmlOptions' => array('style' => 'width: 10%;'),
+			'htmlOptions' => array('style' => 'text-align: center;'),
+			'filter'=>"<i class='icon-search'></i>&nbsp;&nbsp;".CHtml::activeTextField($model, 'codigo', 
+                 array('style'=>'width:60%')),
 		),
-		/*		array(
-			'class' => 'editable.EditableColumn',
-			'name' => 'registro',
-			'editable' => array(
-				'type' => 'text',
-				'url' => $this->createUrl('EquipoComputo/updateEditable', array('model'=>'EquipoComputo', 'field'=>'registro')),
-		'placement' => 'left',
-			)
-		),*/
-		'codigo',
-		'departamento',
-		'descripcionUbicacion',
 		array(
-			'class' => 'editable.EditableColumn',
+			'name' => 'departamento',
+			'headerHtmlOptions' => array('style' => 'width: 9%;'),
+			'filter'=>CHtml::activeTextField($model, 'departamento', 
+                 array('style'=>'width:88%')),
+		),
+		array(
+			'name' => 'descripcionUbicacion',
+			'headerHtmlOptions' => array('style' => 'width: 30%;'),
+			'filter'=>CHtml::activeTextField($model, 'descripcionUbicacion', 
+                 array('style'=>'width:88%')),
+		),
+		
+		array(
 			'header' => 'Tipo de equipo',
-			'name' => 'keyTE',
-			'editable' => array(
-				'type' => 'select',
-				'url' => $this->createUrl('EquipoComputo/updateEditable', array('model'=>'EquipoComputo', 'field'=>'keyTE')),
-				'source'    => $this->createUrl('EquipoComputo/getTipoEquipoList'),
-				'placement' => 'left',
-			)
-		),		
+			'value' => "(new CatTipoEquipo)->findByPk(\$data->keyTE)->descripcion",
+			'headerHtmlOptions' => array('style' => 'width: 9%;'),
+			'filter'=>CHtml::activeDropDownList($model,'keyTE',CHtml::listData(CatTipoEquipo::model()->findAll(), 'keyTE', 'descripcion' ), array('prompt'=>'')),
+		),
 		array(
-			'class' => 'editable.EditableColumn',
 			'header' => 'Marca',
-			'name' => 'keyMA',
-			'editable' => array(
-				'type' => 'select',
-				'url' => $this->createUrl('EquipoComputo/updateEditable', array('model'=>'EquipoComputo', 'field'=>'keyMA')),
-				'source'    => $this->createUrl('EquipoComputo/getMarcaList'),
-				'placement' => 'left',
-			)
+			'value' => "\$data->keyMA=='0'?'-':(new CatMarca)->findByPk(\$data->keyMA)->descripcion",
+			'headerHtmlOptions' => array('style' => 'width: 9%;'),
+			'filter'=>CHtml::activeDropDownList($model,'keyMA',CHtml::listData( CatMarca::model()->findAll(), 'keyMA', 'descripcion' ), array('prompt'=>'')),
 		),
 		array(
-			'class' => 'editable.EditableColumn',
 			'header' => 'Proveedor',
-			'name' => 'keyP',
-			'editable' => array(
-				'type' => 'select',
-				'url' => $this->createUrl('EquipoComputo/updateEditable', array('model'=>'EquipoComputo', 'field'=>'keyP')),
-				'source'    => $this->createUrl('EquipoComputo/getProveedorSistemasList'),
-				'placement' => 'left',
-			)
+			'value' => "\$data->keyP?((new Proveedor)->findByPk(\$data->keyP)->razonSocial):'-'",
+			'headerHtmlOptions' => array('style' => 'width: 9%;'),
+			'filter'=>CHtml::activeDropDownList($model,'keyP',CHtml::listData(Proveedor::model()->findAll('tipoProveedor="sistemas" order by razonSocial'), 'keyP', 'razonSocial' ), array('prompt'=>'')),
 		),
-		'status',
+		array(
+			'header'=>'Status',
+			'value' => "\$data->status=='A'?'Activo':'Inactivo'",
+			'headerHtmlOptions' => array('style' => 'width: 9%;'),
+			'htmlOptions' => array('style' => 'text-align: center;'),
+		),
 		/*
 		array(
 			'class' => 'editable.EditableColumn',

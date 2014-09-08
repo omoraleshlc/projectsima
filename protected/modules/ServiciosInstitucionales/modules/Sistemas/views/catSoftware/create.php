@@ -3,16 +3,15 @@
 /* @var $model CatSoftware */
 
 $this->breadcrumbs=array(
-	'Cat Softwares'=>array('default/CatalogoEquipos'),
-	'Create',
+	'Catálogo de Equipo'=>array('default/CatalogoEquipos'),
+	'Crear',
 );
 
 $this->menu=array(
-	array('label'=>'List CatSoftware', 'url'=>array('index')),
-	array('label'=>'Manage CatSoftware', 'url'=>array('admin')),
+	array('label'=>'Catálogo de Equipo', 'url'=>array('default/CatalogoEquipos')),
 );
 ?>
 
-<h1>Create CatSoftware</h1>
+<h1>Crear Software</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

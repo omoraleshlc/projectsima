@@ -6165,3 +6165,17 @@ a.badge:focus {
 .affix {
   position: fixed;
 }
+
+.visible-print-block {
+  display: none !important;
+}
+@media print {
+  .visible-print-block {
+    display: inline-block !important;
+  }
+}
+@media print {
+  .hidden-print {
+    display: none !important;
+  }
+}

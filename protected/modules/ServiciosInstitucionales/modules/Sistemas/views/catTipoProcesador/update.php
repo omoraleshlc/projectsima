@@ -3,19 +3,18 @@
 /* @var $model CatTipoProcesador */
 
 $this->breadcrumbs=array(
-	'Cat Tipo Procesadors'=>array('default/CatalogoEquipos'),
+	'Catálogo de Equipo'=>array('default/CatalogoEquipos'),
 	$model->keyTP=>array('view','id'=>$model->keyTP),
-	'Update',
+	'Actualizar',
 );
 
 $this->menu=array(
-	array('label'=>'List CatTipoProcesador', 'url'=>array('index')),
-	array('label'=>'Create CatTipoProcesador', 'url'=>array('create')),
-	array('label'=>'View CatTipoProcesador', 'url'=>array('view', 'id'=>$model->keyTP)),
-	array('label'=>'Manage CatTipoProcesador', 'url'=>array('admin')),
+	array('label'=>'Crear Tipo de Procesador', 'url'=>array('create')),
+	array('label'=>'Ver Tipo de Procesador', 'url'=>array('view', 'id'=>$model->keyTP)),
+	array('label'=>'Catálogo de Equipo', 'url'=>array('default/CatalogoEquipos')),
 );
 ?>
 
-<h1>Update CatTipoProcesador <?php echo $model->keyTP; ?></h1>
+<h1>Actualizar Tipo de Procesador <?php echo $model->keyTP; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

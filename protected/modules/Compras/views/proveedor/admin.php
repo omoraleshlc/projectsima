@@ -1,4 +1,4 @@
-<h1>Proveedors</h1>
+<h1>Proveedores</h1>
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'proveedor-grid',

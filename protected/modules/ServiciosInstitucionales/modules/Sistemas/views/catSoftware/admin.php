@@ -3,13 +3,12 @@
 /* @var $model CatSoftware */
 
 $this->breadcrumbs=array(
-	'Cat Softwares'=>array('index'),
+	'Catálogo de Equipo'=>array('default/CatalogoEquipos'),
 	'Manage',
 );
 
 $this->menu=array(
-	array('label'=>'List CatSoftware', 'url'=>array('index')),
-	array('label'=>'Create CatSoftware', 'url'=>array('create')),
+	array('label'=>'Crear Software', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -26,7 +25,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Cat Softwares</h1>
+<h1>Lista de Software</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>

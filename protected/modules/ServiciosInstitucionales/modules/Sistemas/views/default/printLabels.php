@@ -3,7 +3,7 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Etiquetas',
+	'Imprimir Etiquetas',
 );
 
 Yii::app()->clientScript->registerScript('search', "

@@ -23,7 +23,7 @@
 <body>
 
 	<div class="container" id="page">
-		<div class="row" style="margin-left: auto ; margin-right: auto ; width: 500px; padding: 50px 15px;">
+		<div class="row" style="margin-left: auto ; margin-right: auto ; width: 500px;">
 		
 			<div class="col-xs-6 col-md-offset-4" style="text-align: left;">
 				<div style="width: 380px">

@@ -26,7 +26,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Cat Tipo Soportes</h1>
+<h1>Lista de Tipo de Soporte</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -45,7 +45,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'keyTS',
+		'keyRSA',
 		 array( 
             'class' => 'editable.EditableColumn',
             'name' => 'descripcion',
@@ -54,7 +54,8 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
                 'url'       => $this->createUrl('catTipoSoporte/updateEditable', array('model'=>'catMarca', 'field'=>'descripcion')),
                 'placement' => 'left',
             	)
-       	),  
+       	),
+       'almacen', 
 		array(
 			'class'=>'CButtonColumn',
 		),

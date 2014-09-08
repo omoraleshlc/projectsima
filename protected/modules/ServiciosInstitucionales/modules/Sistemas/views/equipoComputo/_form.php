@@ -13,14 +13,16 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Campos con <span class="required">*</span> son requeridos.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 	
 <h2> Ubicación y detalles de registro </h1>
+
+<div class="columna">
 	<div class="row">
-		<?php echo $form->labelEx($model,'codigo'); ?>
-		<?php echo $form->textField($model,'codigo', array('size'=>12,'maxlength'=>12, 'style'=>'width:50%',
+		<?php echo $form->labelEx($model,'codigo'); ?><p class="note">Dejar vacío para generación automática al añadir un nuevo equipo.</p>
+		<?php echo $form->textField($model,'codigo', array('size'=>12,'maxlength'=>12, 'style'=>'width: 50%',
 		'pattern'=> '0[0-9]{2}-[A-Za-z][0-9]{2}([A-Fa-f|0-9]){4}'
 		)); ?>
 		<?php 
@@ -39,33 +41,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'departamento'); ?>
-		<?php echo $form->textField($model,'departamento',array('size'=>50,'maxlength'=>50)); ?>
-		<?php echo $form->error($model,'departamento'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'descripcionUbicacion'); ?>
-		<?php echo $form->textField($model,'descripcionUbicacion',array('size'=>60,'maxlength'=>200)); ?>
-		<?php echo $form->error($model,'descripcionUbicacion'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'descripcionAlmacen'); ?>
-		<?php echo $form->textField($model,'descripcionAlmacen',array('size'=>60,'maxlength'=>200)); ?>
-		<?php echo $form->error($model,'descripcionAlmacen'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'entidad'); ?>
-		<?php 
-		$lista=CHtml::listData(CatEntidad::model()->findAll(), 'codigoEntidad', 'descripcionEntidad');
-		echo CHtml::activeDropDownList($model,'entidad', $lista);
-		?> 
-		<?php echo $form->error($model,'entidad'); ?>
-	</div>
-	
-	<div class="row">
 		<?php echo $form->labelEx($model,'keyP'); ?>
 		<?php 
 		$lista=CHtml::listData(Proveedor::model()->findAll('tipoProveedor="sistemas" order by razonSocial'), 'keyP', 'razonSocial');
@@ -74,6 +49,58 @@
 		<?php echo $form->error($model,'keyP'); ?>
 	</div>
 
+</div>
+<br/><br/>
+<div class="columna">
+	<div class="row">
+		<?php echo $form->labelEx($model,'entidad'); ?>
+		<?php
+			$lista=CHtml::listData(CatEntidad::model()->findAll(), 'codigoEntidad', 'descripcionEntidad');
+			echo CHtml::dropDownList('entidad',$model->entidad, $lista,
+				array(
+				'empty'=>'Seleccionar entidad',
+				'required'=>'true',
+				'ajax' => array(
+					'type'=>'POST', //request type
+					'url'=>CController::createUrl('equipoComputo/almacenesPorEntidad'), //url to call.
+					//Style: CController::createUrl('currentController/methodToCall')
+					'update'=>'#departamento', //selector to update
+					//'data'=>'js:javascript statement' 
+					//leave out the data key to pass all form values through
+				))
+			); 
+			 echo '<br/>';
+			//empty since it will be filled by the other dropdown
+		?>
+		
+		<?php echo $form->error($model,'entidad'); ?>
+	</div>
+	
+	<div class="row">
+		<?php echo $form->labelEx($model,'departamento'); ?>
+		<?php 
+		$lista=CHtml::listData(CatAlmacen::model()->findAllByAttributes(array('entidad'=>$model->entidad)), 'almacen', 'descripcion');
+		/*echo CHtml::activeDropDownList($model,'almacen', $lista);*/
+		echo CHtml::dropDownList('departamento','departamento', $lista,
+			array(
+				'required'=>'true',
+				'ajax' => array(
+					'type'=>'POST', //request type
+				))
+		);
+		?>
+		<?php echo $form->error($model,'almacen'); ?>
+	</div>
+	<div class="row">
+		<?php echo $form->labelEx($model,'descripcionUbicacion'); ?>
+		<?php echo $form->textField($model,'descripcionUbicacion',array('size'=>60,'maxlength'=>200)); ?>
+		<?php echo $form->error($model,'descripcionUbicacion'); ?>
+	</div>
+	
+
+</div>
+<br/><br/>
+<div class="columna">
 <h2> Información técnica </h1>
 
 	<div class="row">
@@ -121,7 +148,9 @@
 		<?php echo $form->textField($model,'monitor',array('size'=>60,'maxlength'=>100)); ?>
 		<?php echo $form->error($model,'monitor'); ?>
 	</div>
-
+</div>
+<div class="columna">
+<br/><br/><br/>
 	<div class="row">
 		<?php echo $form->labelEx($model,'tipoProcesador'); ?>
 		<?php echo $form->textField($model,'tipoProcesador'); ?>
@@ -157,9 +186,10 @@
 		<?php echo $form->textField($model,'solicitud',array('size'=>20,'maxlength'=>20)); ?>
 		<?php echo $form->error($model,'solicitud'); ?>
 	</div>
+</div>
 
 
-	<div class="row buttons">
+	<div class="row buttons" style="clear:both">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar'); ?>
 	</div>
 

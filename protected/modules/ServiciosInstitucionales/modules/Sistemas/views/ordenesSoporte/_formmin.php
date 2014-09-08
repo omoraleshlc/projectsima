@@ -3,7 +3,6 @@
 /* @var $model OrdenesSoporte */
 /* @var $form CActiveForm */
 
-
 	Yii::app()->clientScript->registerScript('codeChange', "
 		$('#OrdenesSoporte_codigo').change(function(){
 			var codigo = document.getElementById('OrdenesSoporte_codigo').value;
@@ -22,6 +21,8 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
+
+<div class="jumbotron" style="zoom:1.6">
 	<?php $this->widget('bootstrap.widgets.TbAlert', array(
 		     'block'=>true, // display a larger alert block?
 		     'fade'=>true, // use transitions?
@@ -31,10 +32,12 @@
 		         'error'=>array('block'=>true, 'fade'=>true, 'closeText'=>'&times;'), // success, info, warning, error or danger
 		     ),)
     ); ?>
+</div>
 	
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Campos con <span class="required">*</span> son requeridos.</p>
 	
 	<?php echo $form->errorSummary($model); ?>
+	
 	
 	<div class="row">
 		<?php echo $form->labelEx($model,'nombre'); ?>
@@ -93,7 +96,7 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'keyTS'); ?>
 		<?php 
-		$lista=CHtml::listData(CatTipoSoporte::model()->findAll(), 'keyTS', 'descripcion');
+		$lista=CHtml::listData(CatTipoSoporte::model()->findAll('almacen="'.UsuariosSima::model()->find("usuario='" . Yii::app()->user->name . "'")->almacenSoporteDefault.'"'), 'keyRSA', 'descripcion');
 		echo CHtml::activeDropDownList($model,'keyTS', $lista);
 		?> 
 		<?php echo $form->error($model,'keyTS'); ?>

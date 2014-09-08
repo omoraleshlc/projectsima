@@ -3,16 +3,15 @@
 /* @var $model CatTipoSoporte */
 
 $this->breadcrumbs=array(
-	'Cat Tipo Soportes'=>array('default/CatalogoEquipos'),
-	'Create',
+	'Ordenes de soporte'=>array('ordenesSoporte/admin'),
+	'Crear',
 );
 
 $this->menu=array(
-	array('label'=>'List CatTipoSoporte', 'url'=>array('index')),
-	array('label'=>'Manage CatTipoSoporte', 'url'=>array('admin')),
+	array('label'=>'Catálogo de Equipo', 'url'=>array('default/CatalogoEquipos')),
 );
 ?>
 
-<h1>Create CatTipoSoporte</h1>
+<h1>Crear Tipo de Soporte</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

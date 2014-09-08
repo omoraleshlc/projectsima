@@ -3,7 +3,6 @@
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'cat-company-grid',
 	'dataProvider'=>$model->search(),
-	'filter'=>$model,
 	'columns'=>array(
 		array(
 			'header' => '#',

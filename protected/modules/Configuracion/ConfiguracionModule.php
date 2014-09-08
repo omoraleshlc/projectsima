@@ -14,6 +14,7 @@ class ConfiguracionModule extends CWebModule
 		));
 		$this->setModules(array('Configuracion'));
 		$this->setModules(array('Configuracion', 'Usuarios'));
+		$this->setModules(array('Configuracion', 'Sistema'));
 	}
 
 	public function beforeControllerAction($controller, $action)

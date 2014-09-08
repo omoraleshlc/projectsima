@@ -5,14 +5,13 @@
 $this->breadcrumbs=array(
 	'Telefonia Celular'=>array('admin'),
 	$model->keyCTC=>array('view','id'=>$model->keyCTC),
-	'Actializar',
+	'Actualizar',
 );
 
 $this->menu=array(
-	array('label'=>'List TelefoniaCelular', 'url'=>array('index')),
-	array('label'=>'Create TelefoniaCelular', 'url'=>array('create')),
-	array('label'=>'View TelefoniaCelular', 'url'=>array('view', 'id'=>$model->keyCTC)),
-	array('label'=>'Manage TelefoniaCelular', 'url'=>array('admin')),
+	array('label'=>'Crear Equipo de Telefonia Celular', 'url'=>array('create')),
+	array('label'=>'Ver Equipo de Telefonia Celular', 'url'=>array('view', 'id'=>$model->keyCTC)),
+	array('label'=>'Lista de Telefonia Celular', 'url'=>array('admin')),
 );
 ?>
 

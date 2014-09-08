@@ -17,6 +17,25 @@
 <?php echo Yii::app()->bootstrap->init();?>
 <body>
 
+<style>
+	.mostrar{
+		display: block !important;
+	}
+</style>
+
+<?php
+
+Yii::app()->clientScript->registerScript('menu', "
+	$('.sistemasitem').click(function(){
+		if ($('.btn-navbar').css('display') == 'block'){
+			$('#boat').parent().parent().addClass('mostrar');
+			$('#boat').parent().parent().addClass('mostrar');
+			$('#warmachine').parent().parent().addClass('mostrar');
+		}
+	});
+");
+
+?>
 <div class="wrapper" id="page">
 
 	<?php $this->widget('bootstrap.widgets.TbNavbar',array(
@@ -24,36 +43,84 @@
 		'fixed'=>'false',
 		'brand' => 'SIMA V3',
 		'brandUrl' =>Yii::app()->createUrl('site/index'),
+		'collapse'=>true,
 		'items'=>array(
 			array(
 				'class'=>'bootstrap.widgets.TbMenu',
 				'items'=>array(
 				
-				
-					array('label'=>'Sistemas itemtemp', 'url'=>'#',
+					array('label'=>'Contabilidad', 'url'=>'#',
 		             	'visible'=>!Yii::app()->user->isGuest,
 		             	'items'=>array(
-						      array('label'=>'Catálogo de equipos',
-									'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/CatalogoEquipos')),
-		                 array('label'=>'Catálogo de telefonía',
-		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/CatalogoTelefonia')),
-		                 array('label'=>'Inventario de Equipo',
-		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/equipoComputo/admin')),
-		                 array('label'=>'Inventario de Telefonía',
-		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/telefoniaCelular/admin')),
-		                 array('label'=>'Impresión de etiquetas',
-		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/printLabels')),
+						      array('label'=>'Proveedores',
+									'url'=>Yii::app()->createUrl('Compras/proveedor/admin')),
 		             )),//end dropdown
 				
 				
-					array('label'=>'Configuracion', 'url'=>'#',
+					array('label'=>'Departamentos', 'url'=>'#',
 		             	'visible'=>!Yii::app()->user->isGuest,
 		             	'items'=>array(
+		             		array('label'=>'Sistemas', 'url'=>'#',
+				          	'visible'=>!Yii::app()->user->isGuest,
+				          	'linkOptions'=>array('class'=>'sistemasitem', 'id'=>'boat'),
+				          	'items'=>array(
+		             				array('label'=>'Catálogo de equipos',
+											'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/CatalogoEquipos'),
+											'visible'=>(Yii::app()->user->checkAccess('SistemaOperador') or Yii::app()->user->checkAccess('SistemasOperador')),
+											'linkOptions'=>array('id'=>'warmachine'),
+											),
+								        array('label'=>'Catálogo de telefonía',
+								        'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/CatalogoTelefonia'),
+												'visible'=>(Yii::app()->user->checkAccess('SistemaOperador') or Yii::app()->user->checkAccess('SistemasOperador')),
+												),
+								        array('label'=>'Inventario de equipos',
+								        'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/equipoComputo/admin'),
+												'visible'=>(Yii::app()->user->checkAccess('SistemaOperador') or Yii::app()->user->checkAccess('SistemasOperador')),
+												),
+								        array('label'=>'Inventario de telefonía',
+								        'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/telefoniaCelular/admin'),
+												'visible'=>(Yii::app()->user->checkAccess('SistemaOperador') or Yii::app()->user->checkAccess('SistemasOperador')),
+												),
+								        array('label'=>'Impresión de etiquetas',
+								        'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/printLabels'),		
+												'visible'=>(Yii::app()->user->checkAccess('SistemaOperador') or Yii::app()->user->checkAccess('SistemasOperador')),
+												),
+												array('label'=>'Escaneo de etiquetas',
+								        'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/ordenesSoporte/scan'),		
+												'visible'=>(Yii::app()->user->checkAccess('SistemaOperador') or Yii::app()->user->checkAccess('SistemasOperador')),
+												),  
+									),
+								),	
+									
+		                 array('label'=>'Soporte',
+		                 'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin')
+		                 ),
+		                 )
+		             ),//end dropdown
+		             
+		             
+		             
+				
+					array('label'=>'Configuracion', 'url'=>'#',
+		             	'visible'=>Yii::app()->user->isSuperAdmin,
+		             	'items'=>array(
+		             		array('label'=>'Usuarios', 'url'=>'#',
+						       	'visible'=>Yii::app()->user->isSuperAdmin,
+						       	'items'=>array(
+		             	
 						      array('label'=>'Usuarios',
 									'url'=>Yii::app()->user->ui->userManagementAdminUrl),
 							 	array('label'=>'Usuarios V2',
 		                 		'url'=>Yii::app()->createUrl('Configuracion/Usuarios/UsuariosSima/admin')),
-		                 array('label'=>'Sistema', 'url'=>'#'),
+		                 		)),
+		                 	array('label'=>'Sistema', 'url'=>'#',
+						       	'visible'=>Yii::app()->user->isSuperAdmin,
+						       	'items'=>array(	
+		                 	array('label'=>'Almacenes',
+		                 		'url'=>Yii::app()->createUrl('Configuracion/Sistema/CatAlmacen/admin')),
+	                 		array('label'=>'Entidades',
+		                 		'url'=>Yii::app()->createUrl('Configuracion/Sistema/CatEntidad/admin')),
+		                 		)),
 		             )),//end dropdown
 				
 				

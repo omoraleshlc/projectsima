@@ -3,7 +3,7 @@
 /* @var $model CatMarcaMonitor */
 
 $this->breadcrumbs=array(
-	'Cat Marca Monitors'=>array('index'),
+	'Catálogo de Equipo'=>array('default/CatalogoEquipos'),
 	'Manage',
 );
 
@@ -26,7 +26,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Cat Marca Monitors</h1>
+<h1>Lista de Marcas de Monitor</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>

@@ -16,6 +16,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update UsuariosSima <?php echo $model->folio; ?></h1>
+<h1>Actualizar Usuarios Sima <?php echo $model->folio; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

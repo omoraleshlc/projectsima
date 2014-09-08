@@ -419,7 +419,7 @@ class CrugeUi extends CComponent
         CrugeModule::rbacSetupEnabled esta habilitado, el objetivo es informar que el $itemName
         indicado ha fallado para el usuario activo.
 
-        con este metodo se pretende ayudar al operador a que programe los permisos requeridos
+        con este metodo se pretende ayudar al operador a que programe los permisos requeridos.
         para el rol o los roles asignados a un usuario en particular.
 
         @see displayErrorConsole
@@ -458,7 +458,7 @@ class CrugeUi extends CComponent
 
                     $title = CrugeTranslator::t(
                         'logger',
-                        'This page displays the roles, tasks and operations that are required by the current user but unassigned. This message is displayed because CrugeModule::rbacSetupEnabled = true'
+                        'This page displays the roles, tasks and operations that son requeridos.by the current user but unassigned. This message is displayed because CrugeModule::rbacSetupEnabled = true'
                     );
                     $icon = "";
                     $outputText = "<div title='$title' class='rbac-global-error-list'>";

@@ -3,19 +3,18 @@
 /* @var $model CatTipoEquipo */
 
 $this->breadcrumbs=array(
-	'Cat Tipo Equipos'=>array('default/CatalogoEquipos'),
+	'Catálogo de Equipo'=>array('default/CatalogoEquipos'),
 	$model->keyTE=>array('view','id'=>$model->keyTE),
-	'Update',
+	'Actualizar',
 );
 
 $this->menu=array(
-	array('label'=>'List CatTipoEquipo', 'url'=>array('index')),
-	array('label'=>'Create CatTipoEquipo', 'url'=>array('create')),
-	array('label'=>'View CatTipoEquipo', 'url'=>array('view', 'id'=>$model->keyTE)),
-	array('label'=>'Manage CatTipoEquipo', 'url'=>array('admin')),
+	array('label'=>'Crear Tipo de Equipo', 'url'=>array('create')),
+	array('label'=>'Ver Tipo de Equipo', 'url'=>array('view', 'id'=>$model->keyTE)),
+	array('label'=>'Catálogo de Equipo', 'url'=>array('default/CatalogoEquipos')),
 );
 ?>
 
-<h1>Update CatTipoEquipo <?php echo $model->keyTE; ?></h1>
+<h1>Actualizar Tipo de Equipo <?php echo $model->keyTE; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -16,7 +16,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>View CatSoftware #<?php echo $model->keySW; ?></h1>
+<h1>Ver Software #<?php echo $model->keySW; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

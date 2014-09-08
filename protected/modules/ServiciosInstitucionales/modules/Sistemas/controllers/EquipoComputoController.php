@@ -26,6 +26,18 @@ class EquipoComputoController extends Controller
 			'model'=>$this->loadModel($id),
 		));
 	}
+	
+	
+	/**
+	 * Displays the qr code label for a particular model.
+	 * @param integer $id the ID of the model to be displayed
+	 */
+	public function actionPrintLabel($id)
+	{
+		$this->render('_labelqr',array(
+			'model'=>$this->loadModel($id),
+		));
+	}
 
 	/**
 	 * Creates a new model.
@@ -42,12 +54,15 @@ class EquipoComputoController extends Controller
 		if(isset($_POST['EquipoComputo']))
 		{
 			$model->attributes=$_POST['EquipoComputo'];
-			$model2 = new CatEntidad;
-			$model3 =$model2->findByPk($model->entidad);
+			$model3 =CatEntidad::model()->findByAttributes(array('codigoEntidad'=>$_POST['entidad']));
+			$model->entidad= $_POST['entidad'];
+			$model->departamento= $_POST['departamento'];
 			$model->descripcionEntidad=$model3->descripcionEntidad;
+			$model->descripcionAlmacen=CatAlmacen::model()->findByAttributes(array('almacen'=>$_POST['departamento']))->descripcion;
 			$model->usuario=Yii::app()->user->name;
 			$model->fecha=date('Y-m-d', time());
 			$model->hora=date('h:i a', time());
+			if(!isset($model->codigo) or trim($model->codigo)==='') $model->codigo=$model->generarCodigoDisponible($model);
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->keyIE));
 		}
@@ -76,8 +91,11 @@ class EquipoComputoController extends Controller
 			$model->attributes=$_POST['EquipoComputo'];
 			
 			
-			$model2 = new CatEntidad;
-			$model->descripcionEntidad=$model2->findByPk($model->entidad)->descripcionEntidad;
+			$model3 =CatEntidad::model()->findByAttributes(array('codigoEntidad'=>$_POST['entidad']));
+			$model->entidad= $_POST['entidad'];
+			$model->departamento= $_POST['departamento'];
+			$model->descripcionEntidad=$model3->descripcionEntidad;
+			$model->descripcionAlmacen=CatAlmacen::model()->findByAttributes(array('almacen'=>$_POST['departamento']))->descripcion;
 			$model->usuario=Yii::app()->user->name;
 			$model->fecha=date('Y-m-d', time());
 			$model->hora=date('h:i a', time());
@@ -210,5 +228,24 @@ class EquipoComputoController extends Controller
 	{
  		echo CJSON::encode(Editable::source(Proveedor::model()->findAll(), 'keyP', 'razonSocial')); 
 	}
+	
+	/*
+     * Actualiza el dropdown de almacenes con los que pernecen a la entidad seleccionada
+     *
+     */
+    public function actionAlmacenesPorEntidad() {
+        $entidadSolicitud = $_POST['entidad'];
+        $catAlmacenvar = new CatAlmacen();
+        $data = $catAlmacenvar::model()->findAll('miniAlmacen!="Si" and entidad=:entidad Order by descripcion', array(':entidad' => $entidadSolicitud)
+        );
+
+
+        //$data=CHtml::listData($data,'almacen','descripcion');
+        $data = CMap::mergeArray(array('' => 'Seleccione departamento'), CHtml::listData($data, 'almacen', 'descripcion'));
+
+        foreach ($data as $value => $name) {
+            echo CHtml::tag('option', array('value' => $value), CHtml::encode(ucwords(strtolower($name))), true);
+        }
+    }
 	
 }

@@ -3,19 +3,18 @@
 /* @var $model CatMarcaCelular */
 
 $this->breadcrumbs=array(
-	'Cat Marca Celulars'=>array('default/CatalogoTelefonia'),
+	'Catálogo de Telefonía'=>array('default/CatalogoTelefonia'),
 	$model->keyMA=>array('view','id'=>$model->keyMA),
-	'Update',
+	'Actualizar',
 );
 
 $this->menu=array(
-	array('label'=>'List CatMarcaCelular', 'url'=>array('index')),
-	array('label'=>'Create CatMarcaCelular', 'url'=>array('create')),
-	array('label'=>'View CatMarcaCelular', 'url'=>array('view', 'id'=>$model->keyMA)),
-	array('label'=>'Manage CatMarcaCelular', 'url'=>array('admin')),
+	array('label'=>'Crear Marca de Celular', 'url'=>array('create')),
+	array('label'=>'Ver Marca de Celular', 'url'=>array('view', 'id'=>$model->keyMA)),
+	array('label'=>'Catálogo de Telefonía', 'url'=>array('default/CatalogoTelefonia')),
 );
 ?>
 
-<h1>Update CatMarcaCelular <?php echo $model->keyMA; ?></h1>
+<h1>Actualizar Marca de Celular <?php echo $model->keyMA; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

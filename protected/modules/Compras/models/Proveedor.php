@@ -65,7 +65,7 @@ class Proveedor extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_proveedor, razonSocial, ciudad, estado, cp, telefono, telefono1, rfc, calle, colonia, usuario, fecha, hora, status, tipoPersona, curp, ctaContable, copiaCedula, copiaActa, copiaHacienda, comprobanteDomicilio, retenciones, tipoProveedor, procedenciaProveedor, entidad, id_fiscal, codigoPostal, limite1, limite2, limite3, limite4', 'required'),
+			array('razonSocial, ciudad, estado, rfc, calle, colonia, status, tipoPersona, tipoProveedor, procedenciaProveedor, entidad, codigoPostal, limite1, limite2, limite3, limite4', 'required'),
 			array('cp, codigoPostal, limite1, limite2, limite3, limite4', 'numerical', 'integerOnly'=>true),
 			array('id_proveedor, razonSocial, ciudad, estado, telefono, telefono1, rfc, calle, colonia, usuario, fecha, hora, status, tipoPersona, curp, ctaContable, copiaCedula, copiaActa, copiaHacienda, comprobanteDomicilio, retenciones, tipoProveedor, procedenciaProveedor, entidad, id_fiscal', 'length', 'max'=>255),
 			// The following rule is used by search().
@@ -97,9 +97,9 @@ class Proveedor extends CActiveRecord
 			'ciudad' => 'Ciudad',
 			'estado' => 'Estado',
 			'cp' => 'Cp',
-			'telefono' => 'Telefono',
-			'telefono1' => 'Telefono1',
-			'rfc' => 'Rfc',
+			'telefono' => 'Telefono 1',
+			'telefono1' => 'Telefono 2',
+			'rfc' => 'RFC',
 			'calle' => 'Calle',
 			'colonia' => 'Colonia',
 			'usuario' => 'Usuario',
@@ -107,22 +107,22 @@ class Proveedor extends CActiveRecord
 			'hora' => 'Hora',
 			'status' => 'Status',
 			'tipoPersona' => 'Tipo Persona',
-			'curp' => 'Curp',
-			'ctaContable' => 'Cta Contable',
+			'curp' => 'CURP',
+			'ctaContable' => 'Cuenta Contable',
 			'copiaCedula' => 'Copia Cedula',
 			'copiaActa' => 'Copia Acta',
 			'copiaHacienda' => 'Copia Hacienda',
 			'comprobanteDomicilio' => 'Comprobante Domicilio',
 			'retenciones' => 'Retenciones',
-			'tipoProveedor' => 'Tipo Proveedor',
-			'procedenciaProveedor' => 'Procedencia Proveedor',
+			'tipoProveedor' => 'Tipo de Proveedor',
+			'procedenciaProveedor' => 'Procedencia de Proveedor',
 			'entidad' => 'Entidad',
 			'id_fiscal' => 'Id Fiscal',
-			'codigoPostal' => 'Codigo Postal',
-			'limite1' => 'Limite1',
-			'limite2' => 'Limite2',
-			'limite3' => 'Limite3',
-			'limite4' => 'Limite4',
+			'codigoPostal' => 'Código Postal',
+			'limite1' => 'Limite 1',
+			'limite2' => 'Limite 2',
+			'limite3' => 'Limite 3',
+			'limite4' => 'Limite 4',
 		);
 	}
 

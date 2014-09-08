@@ -35,9 +35,9 @@ return array(
 		'application.modules.Compras.controllers.*',
 		'application.modules.Configuracion.*',
 		'application.modules.Configuracion.models.*',
-		'application.modules.Configuracion.modules.Configuracion.*',
-		'application.modules.Configuracion.modules.Configuracion.models.*',
-		'application.modules.Configuracion.modules.Configuracion.controllers.*',
+		'application.modules.Configuracion.modules.Sistema.*',
+		'application.modules.Configuracion.modules.Sistema.models.*',
+		'application.modules.Configuracion.modules.Sistema.controllers.*',
 		'application.modules.Configuracion.modules.Usuarios.*',
 		'application.modules.Configuracion.modules.Usuarios.models.*',
 		'application.modules.Configuracion.modules.Usuarios.controllers.*',
@@ -80,7 +80,7 @@ return array(
 			// NO OLVIDES PONER EN FALSE TRAS INSTALAR
 			'debug'=>false,
 			'rbacSetupEnabled'=>false,
-			'allowUserAlways'=>true,
+			'allowUserAlways'=>false,
 
 			// MIENTRAS INSTALAS..PONLO EN: false
 			// lee mas abajo respecto a 'Encriptando las claves'
@@ -133,7 +133,7 @@ return array(
 		'Compras',
 		'Configuracion',
 		'Configuracion.Usuarios',
-		'Configuracion.Configuracion',
+		'Configuracion.Sistema',
 		'ServiciosInstitucionales',
 		'ServiciosInstitucionales.Sistemas',
 		/*MODULOS PROPIOS termina*/
@@ -196,10 +196,10 @@ return array(
 
 
 		'db'=>array(
-			'connectionString' => 'mysql:host=192.168.1.16;dbname=sima',
+			'connectionString' => 'mysql:host=localhost;dbname=sima',
 			'emulatePrepare' => true,
-			'username' => 'omorales',
-			'password' => 'lacarlota',
+			'username' => 'root',
+			'password' => '',
 			'charset' => 'utf8',
 		),
 		
@@ -240,6 +240,11 @@ return array(
 					'assignmentTable'=>'	', // Tabla que contiene la signacion usuario-autorizacion
 					/
     			),*/
+    			
+    			
+		'errorHandler'=>array(
+         'errorAction'=>'App/error',
+  		),
 	),
 	
 	'controllerMap' => array(

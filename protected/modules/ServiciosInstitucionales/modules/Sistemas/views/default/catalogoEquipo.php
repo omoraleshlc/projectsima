@@ -3,7 +3,7 @@
 
 $this->breadcrumbs=array(
 	//$this->module->id,
-	"Catálogo de equipos",
+	"Catálogo de equipo",
 );
 ?>
 
@@ -12,18 +12,10 @@ $this->breadcrumbs=array(
 	'bootstrap.widgets.TbTabs', array(
 		'type'=>'tabs', // 'tabs' or 'pills'
 		'tabs'=>array(
-			array(
-				'label'=>'Tipos de soporte',
-				'content'=>$this->renderPartial(
-					'adminListCatTipoSoporte', array(
-						'model' => CatTipoSoporte::model(),
-					),true
-				),//render partial
-				'active'=>true
-			),//tab 1
+			
 
 			array('label'=>'Tipos de equipo', 'content' => $this->renderPartial('adminListCatTipoEquipo',
-				array('model' => CatTipoEquipo::model(),),true),),//tab 2
+				array('model' => CatTipoEquipo::model(),),true),'active'=>true),//tab 2
 			array('label'=>'Sistemas operativos', 'content' => $this->renderPartial('adminListCatSistemaOperativo',
 				array('model' => CatSistemaOperativo::model(),),true),),//tab 2
 			array('label'=>'Marcas de monitor', 'content' => $this->renderPartial('adminListCatMarcaMonitor',

@@ -1,13 +1,23 @@
-
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php
+$vare=$this->createUrl('ObservacionesOrdenSoporte/createPopup');
+$this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'ordenes-soporteterminadas-grid',
-	'dataProvider'=>$model->search(),
+	'dataProvider'=>$model,
 	//'filter'=>$model,
 	'columns'=>array(
 		array(
 			'name' => 'keySOP',
-			'htmlOptions' => array('style' => 'width: 9%; text-align: center;'),
+			'htmlOptions' => array('style' => 'width: 5%; text-align: center;'),
 		),
+		'codigo',
+		'observaciones',
+		array(
+			'header' => 'Tipo de soporte',
+			'value' => "\$data->keyTS",
+			'headerHtmlOptions' => array('style' => 'width: 9%;'),
+			'filter'=>CHtml::activeDropDownList($model->model,'keyTS',CHtml::listData(CatTipoSoporte::model()->findAll(), 'keyTS', 'descripcion' ), array('prompt'=>'')),
+		),	
+		'descripcionAlmacen',
 		array(
 			'name' => 'fecha',
 			'htmlOptions' => array('style' => 'width: 9%; text-align: center;'),
@@ -19,31 +29,21 @@
 		),
 		
 		array(
-			'name' => 'fechaFinal',
-			'htmlOptions' => array('style' => 'width: 9%; text-align: center;'),
-		),
-		array(
-			'class' => 'editable.EditableColumn',
-			'name' => 'keyTS',
-			'editable' => array(
-				'type' => 'select',
-				'url' => $this->createUrl('ordenesSoporte/updateEditable', array('model'=>'ordenesSoporte', 'field'=>'keyTS')),
-				'source'    => $this->createUrl('ordenesSoporte/getTipoSoporteList'),
-				'placement' => 'left',
-			)
-		),	
-		'descripcionAlmacen',
-		'codigo',
-		'observaciones',
-		/*array(
-			'class' => 'editable.EditableColumn',
-			'name' => 'status',
-			'editable' => array(
-				'type' => 'select',
-				'url' => $this->createUrl('OrdenesSoporte/updateEditable', array('model'=>'OrdenesSoporte', 'field'=>'status')),
-				'source'    => Editable::source(array('pending' => 'Pendiente', 'done' => 'Terminada', 'ontransit' => 'En proceso')),
-				'placement' => 'left',
-			)
+			'class'=>'bootstrap.widgets.TbButtonColumn',
+			'template' => '{obser}',
+			'header' => 'Obsevaciones',
+			'buttons' => array(
+				'obser' => array(
+					'label' => 'Agregar',
+					'icon'=>'plus',
+					'url' => '$data->keySOP', 
+					'options' => array(
+					  'onclick' => 'js:document.getElementById("idorden").src="'.$vare.'"+"&OrdenSoporteId="+$(this).attr("href");document.getElementById("idorden").style.height="200px";return false;',
+					  'data-target'=>'#myModal', 'data-toggle'=>'modal',
+					  'type'=>"submit"
+					),
+				),	
+			),
 		),
 		/*
 		'entidadSolicitud',
@@ -64,12 +64,4 @@
 		),
 	),
 )); ?>
-<div style="text-align: right">
-<?php
-	 $this->widget('bootstrap.widgets.TbButton', array(
-    'label'=>'Crear nuevo',
-    'size'=>'small', // null, 'large', 'small' or 'mini'
-    /*'url'=>array('create')*/
-		'url' =>$this->createUrl('OrdenesSoporte/create', array('model'=>'OrdenesSoporte')),)); ?>
-</div>
 

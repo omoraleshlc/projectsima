@@ -58,16 +58,18 @@ class EquipoComputo extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('registro, departamento, keyTE, keyMA, motherboard, drives, harddisk, memoriaRam, keyMAM, descripcionUbicacion, monitor, usuario, fecha, hora, entidad, status, solicitud, descripcionEntidad, descripcionAlmacen, tipoProcesador, velocidadProcesador', 'required'),
-			array('keyTE, keyMA, harddisk, memoriaRam, keyMAM, tipoProcesador, keyP', 'numerical', 'integerOnly'=>true),
+			array('keyTE, keyMA, keyMAM, keyP', 'numerical', 'integerOnly'=>true),
 			array('registro, solicitud, velocidadProcesador', 'length', 'max'=>20),
-			array('departamento', 'length', 'max'=>50),
+			array('departamento, tipoProcesador', 'length', 'max'=>50),
 			array('motherboard, descripcionUbicacion, descripcionEntidad, descripcionAlmacen', 'length', 'max'=>200),
 			array('drives, monitor', 'length', 'max'=>100),
 			array('usuario', 'length', 'max'=>30),
+			array('memoriaRam, harddisk, monitor', 'length', 'max'=>20),
 			array('fecha, hora', 'length', 'max'=>10),
 			array('entidad', 'length', 'max'=>2),
 			array('status', 'length', 'max'=>1),
 			array('codigo', 'length', 'max'=>12),
+			array('codigo', 'unique', 'message'=>'Este código ya está asignado'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('keyIE, registro, departamento, keyTE, keyMA, motherboard, drives, harddisk, memoriaRam, keyMAM, descripcionUbicacion, monitor, usuario, fecha, hora, entidad, status, solicitud, descripcionEntidad, descripcionAlmacen, tipoProcesador, velocidadProcesador, codigo, keyP', 'safe', 'on'=>'search'),
@@ -97,8 +99,8 @@ class EquipoComputo extends CActiveRecord
 			'keyTE' => 'Tipo equipo',
 			'keyMA' => 'Marca',
 			'motherboard' => 'Motherboard',
-			'drives' => 'Drives',
-			'harddisk' => 'Harddisk',
+			'drives' => 'Drivers',
+			'harddisk' => 'Disco duro',
 			'memoriaRam' => 'Memoria Ram',
 			'keyMAM' => 'Marca de monitor',
 			'descripcionUbicacion' => 'Descripcion Ubicacion',
@@ -113,7 +115,7 @@ class EquipoComputo extends CActiveRecord
 			'descripcionAlmacen' => 'Descripcion Almacen',
 			'tipoProcesador' => 'Tipo Procesador',
 			'velocidadProcesador' => 'Velocidad Procesador',
-			'codigo' => 'Código',
+			'codigo' => 'Código de equipo',
 			'keyP' => 'Proveedor'
 		);
 	}
@@ -173,6 +175,29 @@ class EquipoComputo extends CActiveRecord
 	}
 	
 	/**
+	 * Genera el siguiente código de equipo disponible.
+	 * @return String code generated
+	 */
+	public function generarCodigoDisponible($model)
+	{
+		/*$allTelefoniaCelular= TelefoniaCelular::model()->findAll();
+		$count = count($allTelefoniaCelular);
+		*/
+		$criteria = new CDbCriteria();
+		//$count = EquipoComputo::model()->count($criteria);
+		
+		$prefijoCode = "0".$model->entidad."-c".str_pad($model->keyTE, 2, "0", STR_PAD_LEFT);
+		$count=Yii::app()->db->createCommand()
+			->select('count(*)')
+			->from('sis_inventarioEqComputo')
+			->where("codigo like '".$prefijoCode."%'")
+			->queryRow();
+		
+		$code="0".$model->entidad."-c".str_pad($model->keyTE, 2, "0", STR_PAD_LEFT).str_pad(dechex($count), 4, "0", STR_PAD_LEFT);
+		return $code;
+	}
+	
+	/**
 	 * Genera el código de equipo.
 	 * @return String code generated
 	 */
@@ -182,9 +207,16 @@ class EquipoComputo extends CActiveRecord
 		$count = count($allTelefoniaCelular);
 		*/
 		$criteria = new CDbCriteria();
-		$count = EquipoComputo::model()->count($criteria);
+		//$count = EquipoComputo::model()->count($criteria);
+		
+		$prefijoCode = "0".$this->entidad."-c".str_pad($this->keyTE, 2, "0", STR_PAD_LEFT);
+		$count=Yii::app()->db->createCommand()
+			->select('count(*) as total')
+			->from('sis_inventarioEqComputo')
+			->where("codigo like '".$prefijoCode."%'")
+			->queryRow();
 
-		$code="0".$this->entidad."-c".str_pad($this->keyTE, 2, "0", STR_PAD_LEFT).str_pad(dechex($count), 4, "0", STR_PAD_LEFT);
+		$code="0".$this->entidad."-c".str_pad($this->keyTE, 2, "0", STR_PAD_LEFT).str_pad(dechex($count['total']), 4, "0", STR_PAD_LEFT);
 		return $code;
 	}
 	

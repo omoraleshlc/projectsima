@@ -4,7 +4,7 @@
  * This is the model class for table "sis_tipoSoporte".
  *
  * The followings are the available columns in table 'sis_tipoSoporte':
- * @property integer $keyTS
+ * @property integer $keyRSA
  * @property string $descripcion
  */
 class CatTipoSoporte extends CActiveRecord
@@ -24,7 +24,7 @@ class CatTipoSoporte extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'sis_tipoSoporte';
+		return 'sis_relacion_soporte_almacenes';
 	}
 
 	/**
@@ -37,10 +37,11 @@ class CatTipoSoporte extends CActiveRecord
 		return array(
 			array('descripcion', 'required'),
 			array('descripcion', 'length', 'max'=>200),
+			array('almacen', 'length', 'max'=>30),
 			array('descripcion', 'unique'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('keyTS, descripcion', 'safe', 'on'=>'search'),
+			array('keyRSA, descripcion', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -61,8 +62,10 @@ class CatTipoSoporte extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'keyTS' => 'Key Ts',
+			'keyRSA' => 'Key Ts',
 			'descripcion' => 'Descripcion',
+			'almacen' => 'Almacen',
+			'entidad' => 'Entidad',
 		);
 	}
 
@@ -77,8 +80,10 @@ class CatTipoSoporte extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('keyTS',$this->keyTS);
+		$criteria->compare('keyRSA',$this->keyRSA);
 		$criteria->compare('descripcion',$this->descripcion,true);
+		$criteria->compare('almacen',$this->almacen,true);
+		$criteria->compare('entidad',$this->entidad,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
