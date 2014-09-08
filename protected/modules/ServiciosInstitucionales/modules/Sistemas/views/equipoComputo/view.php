@@ -48,8 +48,6 @@ echo CHtml::image(Yii::app()->request->baseUrl.'/images/hlclogo2.png');
 	<?php $this->widget('zii.widgets.CDetailView', array(
 		'data'=>$model,
 		'attributes'=>array(
-			'motherboard',
-			'drives',
 			'harddisk',
 			'memoriaRam',
 			'monitor',

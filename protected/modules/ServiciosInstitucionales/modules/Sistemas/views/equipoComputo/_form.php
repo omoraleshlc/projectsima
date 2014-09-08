@@ -44,7 +44,7 @@
 		<?php echo $form->labelEx($model,'keyP'); ?>
 		<?php 
 		$lista=CHtml::listData(Proveedor::model()->findAll('tipoProveedor="sistemas" order by razonSocial'), 'keyP', 'razonSocial');
-		echo CHtml::activeDropDownList($model,'keyP', $lista);
+		echo CHtml::activeDropDownList($model,'keyP', $lista, array('empty'=>'Seleccionar Proveedor',));
 		?> 
 		<?php echo $form->error($model,'keyP'); ?>
 	</div>
