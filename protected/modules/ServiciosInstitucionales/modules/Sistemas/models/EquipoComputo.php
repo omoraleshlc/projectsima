@@ -192,6 +192,7 @@ class EquipoComputo extends CActiveRecord
 			->from('sis_inventarioEqComputo')
 			->where("codigo like '".$prefijoCode."%'")
 			->queryRow();
+		$count = (int) $count['count(*)']+1;
 		
 		$code="0".$model->entidad."-c".str_pad($model->keyTE, 2, "0", STR_PAD_LEFT).str_pad(dechex($count), 4, "0", STR_PAD_LEFT);
 		return $code;
@@ -215,6 +216,7 @@ class EquipoComputo extends CActiveRecord
 			->from('sis_inventarioEqComputo')
 			->where("codigo like '".$prefijoCode."%'")
 			->queryRow();
+			$count = (int) $count['count(*)']+1;
 
 		$code="0".$this->entidad."-c".str_pad($this->keyTE, 2, "0", STR_PAD_LEFT).str_pad(dechex($count['total']), 4, "0", STR_PAD_LEFT);
 		return $code;
