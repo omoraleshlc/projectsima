@@ -19,6 +19,14 @@ $model3 = new CatMarca;
 $model4 = new CatMarcaMonitor;
 $model5 = new Proveedor;
 ?>
+
+
+<div  class="visible-print-block">
+<?php
+echo CHtml::image(Yii::app()->request->baseUrl.'/images/hlclogo2.png'); 
+?>
+</div>
+
 <div>
 	<h1>Ver Equipo de Cómputo #<?php echo $model->keyIE; ?></h1>
 	<h2><?php echo CHtml::encode($model->getAttributeLabel('codigo')); ?>:
