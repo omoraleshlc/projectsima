@@ -52,14 +52,17 @@ echo CHtml::image(Yii::app()->request->baseUrl.'/images/hlclogo2.png');
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
+		'chip',
+		'imei',
+		'plan',
 		'precioEquipo',
-		'cantidadAutorizada',
 		'costoRenta',
+		'minutos',
+		'sms',
+		'internet',
 		'fechaContratacion',
 		'fechaInicial',
 		'fechaFinal',
-		'minutos',
-		'plan',
 	),
 )); ?>
 </div>
