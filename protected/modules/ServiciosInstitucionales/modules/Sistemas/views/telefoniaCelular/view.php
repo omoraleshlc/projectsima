@@ -173,7 +173,7 @@ echo CHtml::image(Yii::app()->request->baseUrl.'/images/hlclogo2.png');
 	</ol>
 </div>
 
-<div class="visible-print-block" style="padding-top: 20px; padding-bottom: 30px; width: 100%">
+<div class="visible-print-block" style="padding-top: 30px; padding-bottom: 30px; width: 100%">
 	<div style="width: 30%; border-top: solid black 1px; display:inline; float: right;">
 		Firma de entregado
 		<br/>
