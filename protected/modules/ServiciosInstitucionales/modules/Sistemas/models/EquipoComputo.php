@@ -57,7 +57,7 @@ class EquipoComputo extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('registro, departamento, keyTE, keyMA, motherboard, drives, harddisk, memoriaRam, keyMAM, descripcionUbicacion, monitor, usuario, fecha, hora, entidad, status, solicitud, descripcionEntidad, descripcionAlmacen, tipoProcesador, velocidadProcesador,meses_mantenimiento', 'required'),
+			array('departamento, keyTE, keyMA, motherboard, drives, harddisk, memoriaRam, keyMAM, descripcionUbicacion, monitor, usuario, fecha, hora, entidad, status, solicitud, descripcionEntidad, descripcionAlmacen, tipoProcesador, velocidadProcesador,meses_mantenimiento', 'required'),
 			array('keyTE, keyMA, keyMAM, keyP', 'numerical', 'integerOnly'=>true),
 			array('registro, solicitud, velocidadProcesador', 'length', 'max'=>20),
 			array('departamento, tipoProcesador', 'length', 'max'=>50),
@@ -117,7 +117,7 @@ class EquipoComputo extends CActiveRecord
 			'velocidadProcesador' => 'Velocidad Procesador',
 			'codigo' => 'Código de equipo',
 			'keyP' => 'Proveedor',
-			'meses_mantenimiento' => 'Intervalo de mantenimiento en meses'
+			'meses_mantenimiento' => 'Intervalo de mantenimiento'
 		);
 	}
 
