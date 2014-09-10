@@ -52,6 +52,10 @@ class TelefoniaCelularController extends Controller
 		if(isset($_POST['TelefoniaCelular']))
 		{
 			$model->attributes=$_POST['TelefoniaCelular'];
+			$model->entidad= $_POST['entidad'];
+			$model->codigoEntidad= $_POST['entidad'];
+			$model->almacen= $_POST['almacen'];
+			//$model->company= $_POST['company'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->keyCTC));
 		}
@@ -171,5 +175,25 @@ class TelefoniaCelularController extends Controller
 	{
  		echo CJSON::encode(Editable::source(CatMarcaCelular::model()->findAll(), 'keyMA', 'descripcion')); 
 	}
+	
+	
+		/*
+     * Actualiza el dropdown de almacenes con los que pernecen a la entidad seleccionada
+     *
+     */
+    public function actionAlmacenesPorEntidad() {
+        $entidadSolicitud = $_POST['entidad'];
+        $catAlmacenvar = new CatAlmacen();
+        $data = $catAlmacenvar::model()->findAll('miniAlmacen!="Si" and entidad=:entidad Order by descripcion', array(':entidad' => $entidadSolicitud)
+        );
+
+
+        //$data=CHtml::listData($data,'almacen','descripcion');
+        $data = CMap::mergeArray(array('' => 'Seleccione departamento'), CHtml::listData($data, 'almacen', 'descripcion'));
+
+        foreach ($data as $value => $name) {
+            echo CHtml::tag('option', array('value' => $value), CHtml::encode(ucwords(strtolower($name))), true);
+        }
+    }
 	
 }

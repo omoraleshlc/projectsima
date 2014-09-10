@@ -66,8 +66,8 @@ class TelefoniaCelular extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('precioEquipo, cantidadAutorizada, costoRenta, fechaContratacion, plazoForzoso, keySW, modelo, chip, imei, keyMA, usuarioCelular, descripcionUbicacion, almacen, codigoEntidad, usuario, fecha, hora, entidad, ruta, nTelefonico, registro, solicitud, fechaInicial, fechaFinal, minutos, red, sms, internet, roaming, plan, moduloAdicional, company', 'required'),
-			array('plazoForzoso, keySW, keyMA, registro, solicitud, minutos', 'numerical', 'integerOnly'=>true),
+			array('precioEquipo, cantidadAutorizada, costoRenta, fechaContratacion, plazoForzoso, modelo, keyMA, usuarioCelular, descripcionUbicacion, almacen, codigoEntidad, usuario, fecha, hora, entidad, nTelefonico,fechaInicial, fechaFinal, minutos, plan,  company', 'required'),
+			array('plazoForzoso, keySW, keyMA, registro, solicitud, minutos, keyP', 'numerical', 'integerOnly'=>true),
 			array('precioEquipo, cantidadAutorizada, costoRenta', 'length', 'max'=>6),
 			array('fechaContratacion, fecha, hora, fechaInicial, fechaFinal, plan', 'length', 'max'=>10),
 			array('modelo, descripcionUbicacion, red', 'length', 'max'=>100),
@@ -137,6 +137,7 @@ class TelefoniaCelular extends CActiveRecord
 			'moduloAdicional' => 'Modulo Adicional',
 			'company' => 'Compañía',
 			'codigo' => 'Código de equipo',
+			'keyP' => 'Proveedor',
 		);
 	}
 

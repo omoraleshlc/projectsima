@@ -17,6 +17,7 @@
 	
 	<h2>Ubicación y detalles de registro</h2>
 	
+<div class="columna">
 	<div class="row">
 		<?php echo $form->labelEx($model,'codigo'); ?>
 		<?php echo $form->textField($model,'codigo', array('size'=>12,'maxlength'=>12, 'style'=>'width:50%',
@@ -39,29 +40,60 @@
 		<?php echo $form->textField($model,'nTelefonico',array('size'=>15,'maxlength'=>15)); ?>
 		<?php echo $form->error($model,'nTelefonico'); ?>
 	</div>
+</div>
+<div class="columna">
 
+<div class="row">
+		<?php echo $form->labelEx($model,'entidad'); ?>
+		<?php
+			$lista=CHtml::listData(CatEntidad::model()->findAll(), 'codigoEntidad', 'descripcionEntidad');
+			echo CHtml::dropDownList('entidad',$model->entidad, $lista,
+				array(
+				'empty'=>'Seleccionar entidad',
+				'required'=>'true',
+				'ajax' => array(
+					'type'=>'POST', //request type
+					'url'=>CController::createUrl('equipoComputo/almacenesPorEntidad'), //url to call.
+					//Style: CController::createUrl('currentController/methodToCall')
+					'update'=>'#almacen', //selector to update
+					//'data'=>'js:javascript statement' 
+					//leave out the data key to pass all form values through
+				))
+			); 
+			 echo '<br/>';
+			//empty since it will be filled by the other dropdown
+		?>
+		
+		<?php echo $form->error($model,'entidad'); ?>
+	</div>
+	
+	<div class="row">
+		<?php echo $form->labelEx($model,'almacen'); ?>
+		<?php 
+		$lista=CHtml::listData(CatAlmacen::model()->findAllByAttributes(array('entidad'=>$model->entidad)), 'almacen', 'descripcion');
+		/*echo CHtml::activeDropDownList($model,'almacen', $lista);*/
+		echo CHtml::dropDownList('almacen','almacen', $lista,
+			array(
+				'required'=>'true',
+				'ajax' => array(
+					'type'=>'POST', //request type
+				))
+		);
+		?>
+		<?php echo $form->error($model,'almacen'); ?>
+	</div>
 	<div class="row">
 		<?php echo $form->labelEx($model,'descripcionUbicacion'); ?>
 		<?php echo $form->textField($model,'descripcionUbicacion',array('size'=>60,'maxlength'=>100)); ?>
 		<?php echo $form->error($model,'descripcionUbicacion'); ?>
 	</div>
+</div>
 
+
+<div class="columna">
 	<div class="row">
-		<?php echo $form->labelEx($model,'almacen'); ?>
-		<?php echo $form->textField($model,'almacen',array('size'=>30,'maxlength'=>30)); ?>
-		<?php echo $form->error($model,'almacen'); ?>
+		<h2>Información de contratación</h2>
 	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'entidad'); ?>
-		<?php 
-		$lista=CHtml::listData(CatEntidad::model()->findAll(), 'codigoEntidad', 'descripcionEntidad');
-		echo CHtml::activeDropDownList($model,'entidad', $lista);
-		?> 
-		<?php echo $form->error($model,'entidad'); ?>
-	</div>
-
-	<h2>Información de contratación</h2>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'precioEquipo'); ?>
@@ -86,13 +118,17 @@
 		<?php echo $form->textField($model,'plazoForzoso'); ?>
 		<?php echo $form->error($model,'plazoForzoso'); ?>
 	</div>
-
 	<div class="row">
 		<?php echo $form->labelEx($model,'minutos'); ?>
 		<?php echo $form->textField($model,'minutos'); ?>
 		<?php echo $form->error($model,'minutos'); ?>
 	</div>
 
+</div>
+
+
+<div class="columna">
+<br/><br/><br/>
 	<div class="row">
 		<?php echo $form->labelEx($model,'fechaContratacion'); ?>
 		<?php 
@@ -167,16 +203,40 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'plan'); ?>
-		<?php echo $form->textField($model,'plan',array('size'=>10,'maxlength'=>10)); ?>
+		<?php
+		 //echo $form->textField($model,'plan',array('size'=>10,'maxlength'=>10));
+		 echo CHtml::activeDropDownList($model,'plan', array('Abierto'=>'Abierto'));
+		 ?>
 		<?php echo $form->error($model,'plan'); ?>
 	</div>
+	<br/><br/><br/>
+</div>
 
+<div class="columna">
 <h2>Información técnica</h2>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'keyP'); ?>
+		<?php 
+		$lista=CHtml::listData(Proveedor::model()->findAll('tipoProveedor="sistemas" order by razonSocial'), 'keyP', 'razonSocial');
+		echo CHtml::activeDropDownList($model,'keyP', $lista, array('empty'=>'Seleccionar Proveedor',));
+		?> 
+		<?php echo $form->error($model,'keyP'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'company'); ?>
-		<?php echo $form->textField($model,'company',array('size'=>5,'maxlength'=>5)); ?>
+		<?php  $lista=CHtml::listData(CatCompany::model()->findAll(), 'keyTS', 'descripcion');
+			echo CHtml::activeDropDownList($model,'company', $lista); ?>
 		<?php echo $form->error($model,'company'); ?>
+	</div>
+
+	
+	<div class="row">
+		<?php echo $form->labelEx($model,'keyMA'); ?>
+		<?php  $lista=CHtml::listData(CatMarcaCelular::model()->findAll(), 'keyMA', 'descripcion');
+			echo CHtml::activeDropDownList($model,'keyMA', $lista); ?>
+		<?php echo $form->error($model,'keyMA'); ?>
 	</div>
 
 	<div class="row">
@@ -190,19 +250,13 @@
 		<?php echo $form->textField($model,'chip',array('size'=>25,'maxlength'=>25)); ?>
 		<?php echo $form->error($model,'chip'); ?>
 	</div>
-
 	<div class="row">
 		<?php echo $form->labelEx($model,'imei'); ?>
 		<?php echo $form->textField($model,'imei',array('size'=>25,'maxlength'=>25)); ?>
 		<?php echo $form->error($model,'imei'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'keyMA'); ?>
-		<?php  $lista=CHtml::listData(CatMarcaCelular::model()->findAll(), 'keyMA', 'descripcion');
-			echo CHtml::activeDropDownList($model,'keyMA', $lista); ?>
-		<?php echo $form->error($model,'keyMA'); ?>
-	</div>
+
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'ruta'); ?>
@@ -216,6 +270,9 @@
 		<?php echo $form->error($model,'moduloAdicional'); ?>
 	</div>
 
+</div>
+<div class="columna">
+<br/><br/><br/>
 	<div class="row">
 		<?php echo $form->labelEx($model,'roaming'); ?>
 		<?php echo $form->checkBox($model,'roaming'); ?>
@@ -243,14 +300,8 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'keySW'); ?>
 		<?php  $lista=CHtml::listData(CatSoftware::model()->findAll(), 'keySW', 'descripcion');
-			echo CHtml::activeDropDownList($model,'keySW', $lista); ?>
+			echo CHtml::activeDropDownList($model,'keySW', $lista, array('empty'=>'Seleccione software')); ?>
 		<?php echo $form->error($model,'keySW'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'codigoEntidad'); ?>
-		<?php echo $form->textField($model,'codigoEntidad',array('size'=>2,'maxlength'=>2)); ?>
-		<?php echo $form->error($model,'codigoEntidad'); ?>
 	</div>
 
 	<div class="row">
@@ -264,8 +315,8 @@
 		<?php echo $form->textField($model,'solicitud'); ?>
 		<?php echo $form->error($model,'solicitud'); ?>
 	</div>
-
-	<div class="row buttons">
+</div>
+	<div class="row buttons" style="clear:both">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar'); ?>
 	</div>
 
