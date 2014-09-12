@@ -151,6 +151,20 @@
 </div>
 <div class="columna">
 <br/><br/><br/>
+		<div class="row">
+		<?php echo $form->labelEx($model,'meses_mantenimiento'); ?>
+		<?php echo CHtml::activeDropDownList($model, 'meses_mantenimiento', array(
+            '1'=>'Cada mes',
+            '2'=>'Cada 2 meses',
+            '3'=>'Cada 3 meses',
+            '4'=>'Cada 4 meses',
+            '6'=>'Cada 6 meses',
+            '12'=>'Cada 12 meses',
+		 )); ?>
+			<?php echo $form->error($model,'meses_mantenimiento'); ?>
+		</div>
+
+
 	<div class="row">
 		<?php echo $form->labelEx($model,'tipoProcesador'); ?>
 		<?php echo $form->textField($model,'tipoProcesador'); ?>
@@ -161,12 +175,6 @@
 		<?php echo $form->labelEx($model,'motherboard'); ?>
 		<?php echo $form->textField($model,'motherboard',array('size'=>60,'maxlength'=>200)); ?>
 		<?php echo $form->error($model,'motherboard'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'registro'); ?>
-		<?php echo $form->textField($model,'registro',array('size'=>20,'maxlength'=>20)); ?>
-		<?php echo $form->error($model,'registro'); ?>
 	</div>
 
 	<div class="row">

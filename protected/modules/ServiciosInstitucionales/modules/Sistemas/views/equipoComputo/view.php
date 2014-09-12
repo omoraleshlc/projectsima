@@ -43,6 +43,12 @@ echo CHtml::image(Yii::app()->request->baseUrl.'/images/hlclogo2.png');
 			<br/>
 			<?php  echo $model->descripcionUbicacion; ?>
 	</div>
+	
+	<div  class="buttons hidden-print" >
+			Próximo mantenimiento el <?php  echo $model->meses_mantenimiento; ?>
+			<br/>
+	</div>
+	
 
 		<br />
 	<?php $this->widget('zii.widgets.CDetailView', array(
@@ -55,6 +61,10 @@ echo CHtml::image(Yii::app()->request->baseUrl.'/images/hlclogo2.png');
 			'velocidadProcesador',
 			'fecha',
 			'hora',
+			array(
+            'name'=>'meses_mantenimiento',
+            'value'=>(($model->meses_mantenimiento===1)?"Cada mes":"Cada ".$model->meses_mantenimiento." meses"),
+        ),
 		),
 	)); ?>
 </div>
