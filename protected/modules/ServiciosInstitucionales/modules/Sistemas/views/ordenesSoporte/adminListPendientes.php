@@ -16,7 +16,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
 		'nombre',
 		array(
 			'header' => 'Tipo de soporte',
-			'value' => "(new CatTipoSoporte)->findByPk(\$data->keyTS)->descripcion",
+			'value' => "isset(\$data->keyTS):(new CatTipoSoporte)->findByPk(\$data->keyTS)->descripcion:'-'",
 			'headerHtmlOptions' => array('style' => 'width: 9%;'),
 			'filter'=>CHtml::activeDropDownList($model->model,'keyTS',CHtml::listData(CatTipoSoporte::model()->findAll(), 'keyTS', 'descripcion' ), array('prompt'=>'')),
 		),
