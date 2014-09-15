@@ -95,7 +95,7 @@ Orden creada por 	<?php echo CHtml::encode($model->usuario); ?> de <?php echo $m
 			'visualization' => 'ColumnChart',
 			'data'=>$stack3,
 			'options' => array(
-				'title' => 'Incidencias por departamento',
+				'title' => 'Porcentaje de tiempos',
 				'width' => 800,
 				'height' => 600,
 				'colors' => array('#F08080', '#008080'),
