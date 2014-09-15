@@ -181,11 +181,18 @@ if (isset($listaOrdenes)){
 		),
 		
 		array(
-				'name' => 'Seleccionar',
-				'htmlOptions' => array('style' => 'width: 9%; text-align: center;', 'data-title'=>"#"),
-				'value'=>'CHtml::radioButton("statuschange",false, array("value"=>"$data->keySOP", "class"=>"sc", "code"=>$data->codigo))',
-				'type'=>'raw',
+			'class'=>'bootstrap.widgets.TbButtonColumn',
+			'template' => '{begin}',
+			'header' => 'Iniciar',
+			'buttons' => array(
+				'begin' => array( //the name {reply} must be same
+					'label' => 'Iniciar', // text label of the button
+					'url' => 'Yii::app()->controller->createUrl("ordenesSoporte/activarOrden", array("model"=>"ordenesSoporte", "field"=>"$data->keySOP"))',
+					'icon'=>'play',
+					'htmlOptions'=>array('href'=>'dfsf'),
+				),	
 			),
+		),
 		
 		
 			array(
