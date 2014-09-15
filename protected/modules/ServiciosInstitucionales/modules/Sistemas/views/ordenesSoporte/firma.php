@@ -20,7 +20,8 @@ if(isset($_POST['output']) && isset($model)){
 	imagepng($img, $imgurl);
 	imagedestroy($img);/**/
 	Yii::app()->user->setFlash('success', "Firma guardada");
-	$this->redirect('index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/scan');
+	$this->redirect(array('ordenesSoporte/activarOrden', 'field'=>$model->keySOP ));
+	//$this->redirect('index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin');
 	
 }
 

@@ -210,7 +210,7 @@ echo CHtml::textField('codigo', '',
 			array('size'=>12,'maxlength'=>12, 'style'=>'width:60%; zoom:1.5','pattern'=> '0[0-9]{2}-[A-Za-z][0-9]{2}([A-Fa-f|0-9]){4}', 'placeholder'=>'Codigo'
 		)); ?>
 <br/>
-<?php echo CHtml::textField('id', '',
+<?php echo CHtml::textField('id', isset($_GET['field'])?$_GET['field']:'',
 			array('size'=>12,'maxlength'=>12, 'style'=>'width:60%; zoom:1.5','pattern'=> '[0-9]{1,4}', 'placeholder'=>'Id'
 		)); ?>
 <br/>
