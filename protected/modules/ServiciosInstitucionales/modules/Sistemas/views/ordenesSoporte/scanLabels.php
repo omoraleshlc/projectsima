@@ -60,6 +60,26 @@
 	#no-more-tables td:before { content: attr(data-title); }
 }
 </style>
+
+<?php
+
+	Yii::app()->clientScript->registerScript('codeChange', "
+		$('.sc').change(function(){
+			$('#id').val($(this).val());
+			$('#codigo').val($(this).attr( 'code' ));
+		});
+	");
+?>
+
+<script>
+	
+	$('input[name="statuschange"]').on('change', function() {
+		
+		 $('#id').val($(this).val());
+		//   $('input[type="text"]').val('');
+		 
+	});
+</script>
 	
 
 
@@ -159,6 +179,14 @@ if (isset($listaOrdenes)){
 				'placement' => 'left',
 			)
 		),
+		
+		array(
+				'name' => 'Seleccionar',
+				'htmlOptions' => array('style' => 'width: 9%; text-align: center;', 'data-title'=>"#"),
+				'value'=>'CHtml::radioButton("statuschange",false, array("value"=>"$data->keySOP", "class"=>"sc", "code"=>$data->codigo))',
+				'type'=>'raw',
+			),
+		
 		
 			array(
 				'class'=>'bootstrap.widgets.TbButtonColumn',
