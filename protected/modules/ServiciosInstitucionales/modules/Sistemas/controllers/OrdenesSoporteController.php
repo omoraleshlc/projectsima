@@ -318,7 +318,10 @@ class OrdenesSoporteController extends Controller {
      */
 
     public function actionGetTipoSoporteList() {
-        echo CJSON::encode(Editable::source(CatTipoSoporte::model()->findAll(), 'keyTS', 'descripcion'));
+        //echo CJSON::encode(Editable::source(CatTipoSoporte::model()->findAll(), 'keyTS', 'descripcion'));
+        
+        return CHtml::listData(CatTipoSoporte::model()->findAll('almacen="'.UsuariosSima::model()->find("usuario='" . Yii::app()->user->name . "'")->almacenSoporteDefault.'"'), 'keyRSA', 'descripcion');
+        
     }
     
 	 /*
