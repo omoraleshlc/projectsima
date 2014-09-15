@@ -43,7 +43,12 @@ Orden creada por 	<?php echo CHtml::encode($model->usuario); ?> de <?php echo $m
 </div>
 	
 <div>
-			<h4>Orden <span style='color:DodgerBlue'><?php echo $model->status=='pending'?'pendiente':($model->status=='ontransit'?'en proceso':'terminada') ?></span> atendida por <?php echo CHtml::encode($model->usuarioEjecutor); ?>.</h4>
+			<h4>Orden <span style='color:DodgerBlue'><?php echo $model->status=='pending'?'pendiente':($model->status=='ontransit'?'en proceso':'terminada') ?></span> atendida por <?php
+			
+			$simauser= UsuariosSima::model()->find('usuario=:usuario',array(':usuario'=>$model->usuarioEjecutor,));
+			echo CHtml::encode(
+			 ucwords(strtolower($simauser->nombre.' '.$simauser->aPaterno))
+			); ?>.</h4>
 </div>	
 		
 <div>
