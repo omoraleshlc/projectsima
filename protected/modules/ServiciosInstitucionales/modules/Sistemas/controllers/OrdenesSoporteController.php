@@ -318,7 +318,10 @@ class OrdenesSoporteController extends Controller {
      */
 
     public function actionGetTipoSoporteList() {
-        echo CJSON::encode(Editable::source(CatTipoSoporte::model()->findAll(), 'keyTS', 'descripcion'));
+        //echo CJSON::encode(Editable::source(CatTipoSoporte::model()->findAll(), 'keyTS', 'descripcion'));
+        
+        return CHtml::listData(CatTipoSoporte::model()->findAll('almacen="'.UsuariosSima::model()->find("usuario='" . Yii::app()->user->name . "'")->almacenSoporteDefault.'"'), 'keyRSA', 'descripcion');
+        
     }
     
 	 /*
@@ -365,12 +368,12 @@ class OrdenesSoporteController extends Controller {
 				$model = $model->findByPK($_POST['id']);
 			}
 		
-		//$firma=false;
 		if($model){
 			if ($model->status == "pending") {
 				$model->status = "ontransit";
 				$model->usuarioEjecutor = Yii::app()->user->name;
 				$model->fechaInicio = date("Y-m-d H:i:s");
+				$model->fechaFinal = null;
 				//$model->fechaFinal=date("");
 				$model->save();
 			} else if ($model->status == "ontransit") {
@@ -378,20 +381,17 @@ class OrdenesSoporteController extends Controller {
 				$model->usuarioEjecutor = Yii::app()->user->name;
 				$model->fechaFinal = date("Y-m-d H:i:s");
 				$model->save();
-				//$firma=true;
 				//$this->actionFirma($model);
-				$this->redirect(array('firma', 'id' => $model->keySOP));
+				//$this->redirect(array('firma', 'id' => $model->keySOP));
 			}
 		}
 		else {
 			Yii::app()->user->setFlash('notice', "No se encontró la órden");
 		}
-		//$model = $model->findByPK($_GET['field']);
-		//$this->actionScan();
+		
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		/*if (!isset($_GET['ajax']))
+		if (!isset($_GET['ajax']))
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array($page)); /**/
-		$this->redirect(array('scan'));
 		
 	}
 

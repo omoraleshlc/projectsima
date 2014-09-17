@@ -20,7 +20,8 @@ if(isset($_POST['output']) && isset($model)){
 	imagepng($img, $imgurl);
 	imagedestroy($img);/**/
 	Yii::app()->user->setFlash('success', "Firma guardada");
-	$this->redirect('index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/scan');
+	$this->redirect(array('ordenesSoporte/activarOrden', 'field'=>$model->keySOP ));
+	//$this->redirect('index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin');
 	
 }
 
@@ -33,6 +34,7 @@ Yii::app()->clientScript->registerScript('comprimir', "
 					errorMessageDraw: 'Firme, por favor.',
 					errorMessage: 'Formulario inválido',
 					validateFields: false,	
+					drawOnly: true,
 				};
 				$('.sigPad').signaturePad(options);
 			
@@ -51,7 +53,6 @@ Yii::app()->clientScript->registerScript('comprimir', "
   <p class="typeItDesc">Revisa tu firma</p>
   <p class="drawItDesc">Dibuja tu firma</p>
   <ul class="sigNav">
-    <li class="typeIt"><a href="#type-it" class="current">Escribir</a></li>
     <li class="drawIt"><a href="#draw-it">Dibujar</a></li>
     <li class="clearButton"><a href="#clear">Limpiar</a></li>
   </ul>

@@ -60,6 +60,26 @@
 	#no-more-tables td:before { content: attr(data-title); }
 }
 </style>
+
+<?php
+
+	Yii::app()->clientScript->registerScript('codeChange', "
+		$('.sc').change(function(){
+			$('#id').val($(this).val());
+			$('#codigo').val($(this).attr( 'code' ));
+		});
+	");
+?>
+
+<script>
+	
+	$('input[name="statuschange"]').on('change', function() {
+		
+		 $('#id').val($(this).val());
+		//   $('input[type="text"]').val('');
+		 
+	});
+</script>
 	
 
 
@@ -160,6 +180,21 @@ if (isset($listaOrdenes)){
 			)
 		),
 		
+		array(
+			'class'=>'bootstrap.widgets.TbButtonColumn',
+			'template' => '{begin}',
+			'header' => 'Iniciar',
+			'buttons' => array(
+				'begin' => array( //the name {reply} must be same
+					'label' => 'Iniciar', // text label of the button
+					'url' => 'Yii::app()->controller->createUrl("ordenesSoporte/activarOrden", array("model"=>"ordenesSoporte", "field"=>"$data->keySOP"))',
+					'icon'=>'play',
+					'htmlOptions'=>array('href'=>'dfsf'),
+				),	
+			),
+		),
+		
+		
 			array(
 				'class'=>'bootstrap.widgets.TbButtonColumn',
 				'template' => '{obser} {view} {update} {delete}	',
@@ -210,7 +245,7 @@ echo CHtml::textField('codigo', '',
 			array('size'=>12,'maxlength'=>12, 'style'=>'width:60%; zoom:1.5','pattern'=> '0[0-9]{2}-[A-Za-z][0-9]{2}([A-Fa-f|0-9]){4}', 'placeholder'=>'Codigo'
 		)); ?>
 <br/>
-<?php echo CHtml::textField('id', '',
+<?php echo CHtml::textField('id', isset($_GET['field'])?$_GET['field']:'',
 			array('size'=>12,'maxlength'=>12, 'style'=>'width:60%; zoom:1.5','pattern'=> '[0-9]{1,4}', 'placeholder'=>'Id'
 		)); ?>
 <br/>
