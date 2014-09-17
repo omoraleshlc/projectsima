@@ -361,6 +361,7 @@ class OrdenesSoporteController extends Controller {
 				$model = $this->actionGetKeySOP($codigo);
 		}
 		
+		
 		else
 			if (isset($_GET['field'])) {
 				$model = $model->findByPK($_GET['field']);
@@ -394,6 +395,74 @@ class OrdenesSoporteController extends Controller {
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array($page)); /**/
 		
 	}
+	
+	
+	/*
+     * Cambia el status de la orden de pending a ontransit
+     * debe recibir los parametros GET del scan de qr
+     */
+
+	public function actionIniciarOrden() {
+		$model = new OrdenesSoporte();
+		$page = 'admin';
+		
+		$change=true;
+		
+		if (isset($_POST['codigo']) and $_POST['codigo'] != "") {
+			$codigo=$_POST['codigo'];
+		
+			if (isset($_POST['id']) and $_POST['id'] != "") {
+				$model = $model->findByPK($_POST['id']);
+				if($model->codigo!=$codigo){
+					Yii::app()->user->setFlash('notice', "El qr escaneado y el código de la orden no coinciden");
+					$change=false;
+				}
+			}		
+			else{
+				if (OrdenesSoporte::model()->count("codigo='" . $codigo . "' and (status='ontransit' or status='pending')")>1)
+					$this->actionOrdenesByCodigo($codigo);
+				else
+					$model = $this->actionGetKeySOP($codigo);
+			}
+		}
+		else{
+			if (isset($_POST['id']) and $_POST['id'] != "") {
+				//lanzar alert de comentario
+				//set flag para guardar comentario
+				//Yii::app()->user->setFlash('notice', "No escaneaste un qr");
+				$model = $model->findByPK($_POST['id']);
+			}	
+		}
+		
+		if($model && $change){
+			if ($model->status == "pending") {
+				$model->status = "ontransit";
+				$model->usuarioEjecutor = Yii::app()->user->name;
+				$model->fechaInicio = date("Y-m-d H:i:s");
+				$model->fechaFinal = null;
+				//$model->fechaFinal=date("");
+				$model->save();
+				//Yii::app()->user->setFlash('notice', serialize($model->getErrors()));
+			} else{
+				Yii::app()->user->setFlash('notice', "La orden que quieres iniciar no está pendiente");
+			}
+		}
+		else if($change){
+			Yii::app()->user->setFlash('notice', "No se encontró la órden");
+		}
+		
+		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+		if (!isset($_GET['ajax']))
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array($page)); /**/
+		
+	}
+	
+	
+	
+	public function statusPendingToOntransit(){
+	
+	}
+	
 
     /*
      * Actualiza el dropdown de almacenes con los que pernecen a la entidad seleccionada

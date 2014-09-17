@@ -50,7 +50,6 @@ Yii::app()->clientScript->registerScript('comprimir', "
 <?php echo $model->observaciones; ?>
 <div style="margin: auto; width: 80%">
 <form method="post" action="" class="sigPad" id="signature_form">
-  <p class="typeItDesc">Revisa tu firma</p>
   <p class="drawItDesc">Dibuja tu firma</p>
   <ul class="sigNav">
     <li class="drawIt"><a href="#draw-it">Dibujar</a></li>
