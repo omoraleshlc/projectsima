@@ -187,7 +187,7 @@ if (isset($listaOrdenes)){
 			'buttons' => array(
 				'begin' => array( //the name {reply} must be same
 					'label' => 'Iniciar', // text label of the button
-					'url' => 'Yii::app()->controller->createUrl("ordenesSoporte/activarOrden", array("model"=>"ordenesSoporte", "field"=>"$data->keySOP"))',
+					'url' => 'Yii::app()->controller->createUrl("ordenesSoporte/iniciarOrden", array("model"=>"ordenesSoporte", "id"=>"$data->keySOP"))',
 					'icon'=>'play',
 					'htmlOptions'=>array('href'=>'dfsf'),
 				),	
@@ -254,7 +254,7 @@ echo CHtml::textField('codigo', '',
 
 
 <?php
-	echo CHTML::button('Aceptar',  array('submit' => $this->createUrl("OrdenesSoporte/activarOrden"), 'style'=>'zoom:1.5',));
+	echo CHTML::button('Aceptar',  array('submit' => $this->createUrl("OrdenesSoporte/iniciarOrden"), 'style'=>'zoom:1.5',));
 	
 	echo CHtml::endForm();
 ?>	
