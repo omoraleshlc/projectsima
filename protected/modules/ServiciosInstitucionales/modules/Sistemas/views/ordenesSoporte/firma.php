@@ -51,6 +51,22 @@ Yii::app()->clientScript->registerScript('comprimir', "
 		});
 		
 	");
+	
+	Yii::app()->clientScript->registerScript('comprimir', "
+		$(document).ready(function () {
+				var options = {
+					defaultAction : 'drawIt',
+					lineTop : '70',
+					errorMessageDraw: 'Firme, por favor.',
+					errorMessage: 'Formulario inválido',
+					validateFields: false,	
+					drawOnly: true,
+				};
+				$('.sigPad').signaturePad(options);
+			
+		});
+		
+	");
 ?>
 
 <script>
