@@ -420,7 +420,7 @@ class OrdenesSoporteController extends Controller {
 			}		
 			else{
 				if (OrdenesSoporte::model()->count("codigo='" . $codigo . "' and (status='ontransit' or status='pending')")>1)
-					$this->actionOrdenesByCodigo($codigo);
+					$this->redirect(array('OrdenesSoporte/ordenesByCodigo', 'codigo'=>$codigo));
 				else
 					$model = $this->actionGetKeySOP($codigo);
 			}
