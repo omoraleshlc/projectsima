@@ -63,8 +63,18 @@ class EquipoComputoController extends Controller
 			$model->fecha=date('Y-m-d', time());
 			$model->hora=date('h:i a', time());
 			if(!isset($model->codigo) or trim($model->codigo)==='') $model->codigo=$model->generarCodigoDisponible($model);
-			if($model->save())
+			if($model->save()){
+                                Yii::app()->db->createCommand("update sima.sis_inventarioEqComputo set next_mantenimiento = IF(
+        DAYOFWEEK(DATE_ADD(fecha, INTERVAL meses_mantenimiento MONTH))='1', DATE_ADD(DATE_ADD(fecha, INTERVAL meses_mantenimiento MONTH), INTERVAL 1 DAY),
+        IF(DAYOFWEEK(DATE_ADD(next_mantenimiento, INTERVAL meses_mantenimiento MONTH))='7', DATE_ADD(DATE_ADD(fecha, INTERVAL meses_mantenimiento MONTH), INTERVAL 2 DAY), DATE_ADD(fecha, INTERVAL meses_mantenimiento MONTH)
+        )) where next_mantenimiento IS NULL")
+                                    ->execute();
+                                
+                                
+                            
+                            
 				$this->redirect(array('view','id'=>$model->keyIE));
+                        }
 		}
 
 		$this->render('create',array(

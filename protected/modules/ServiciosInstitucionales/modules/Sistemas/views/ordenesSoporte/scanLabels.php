@@ -61,6 +61,27 @@
 }
 </style>
 
+<script>
+    function validate(form)
+                    {
+                        var valid = true
+                        var textbox = document.getElementById("codigo");
+                        
+                        var oneDay = 24*60*60*1000;
+                        var firstDate = new Date();
+                        var secondDate = new Date(2014,10,20);
+                        
+                        var diffDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
+                        
+
+                        if (!textbox.value) {
+                             valid=confirm("¿Seguro que quieres continuar sin escanear un código?\n"+
+                                  "En "+diffDays+" días ya no podrán ser procesadas las órdenes sin código de equipo.");
+                        }
+                        return valid;
+                    }
+    </script>
+
 <?php
 
 	Yii::app()->clientScript->registerScript('codeChange', "
@@ -71,15 +92,6 @@
 	");
 ?>
 
-<script>
-	
-	$('input[name="statuschange"]').on('change', function() {
-		
-		 $('#id').val($(this).val());
-		//   $('input[type="text"]').val('');
-		 
-	});
-</script>
 	
 
 
@@ -240,7 +252,8 @@ if (isset($listaOrdenes)){
 </section>
 <?php
 }
-echo CHtml::beginForm();
+//echo CHtml::beginForm();
+echo CHtml::beginForm(array('OrdenesSoporte/iniciarOrden'),'post', array("onsubmit"=>"return validate(this);"));
 echo CHtml::textField('codigo', '',
 			array('size'=>12,'maxlength'=>12, 'style'=>'width:60%; zoom:1.5','pattern'=> '0[0-9]{2}-[A-Za-z][0-9]{2}([A-Fa-f|0-9]){4}', 'placeholder'=>'Codigo'
 		)); ?>
@@ -254,7 +267,8 @@ echo CHtml::textField('codigo', '',
 
 
 <?php
-	echo CHTML::button('Aceptar',  array('submit' => $this->createUrl("OrdenesSoporte/iniciarOrden"), 'style'=>'zoom:1.5',));
+	//echo CHTML::button('Aceptar',  array('submit' => $this->createUrl("OrdenesSoporte/iniciarOrden"), 'style'=>'zoom:1.5',"onClick"=>"return validate(this);"));
+	echo CHTML::submitButton('Aceptar',  array('style'=>'zoom:1.5'));
 	
 	echo CHtml::endForm();
 ?>	

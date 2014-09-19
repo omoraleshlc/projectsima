@@ -9,6 +9,16 @@ $cs->registerScriptFile($baseUrl.'/js/json2.min.js');
 $cs->registerCssFile($baseUrl.'/css/jquery.signaturepad.css');
 
 ?>
+<style>
+	 #canvas {
+        display: block;
+        padding: 0;
+        margin: 0 auto;
+
+        background-color:red;
+    }
+
+</style>
 
 <?php
 /* @var $this DefaultController */
@@ -20,13 +30,29 @@ if(isset($_POST['output']) && isset($model)){
 	imagepng($img, $imgurl);
 	imagedestroy($img);/**/
 	Yii::app()->user->setFlash('success', "Firma guardada");
-	$this->redirect(array('ordenesSoporte/activarOrden', 'field'=>$model->keySOP ));
+	$this->redirect(array('ordenesSoporte/FinalizarOrden', 'id'=>$model->keySOP ));
 	//$this->redirect('index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin');
 	
 }
 
 
 Yii::app()->clientScript->registerScript('comprimir', "
+		$(document).ready(function () {
+				var options = {
+					defaultAction : 'drawIt',
+					lineTop : '70',
+					errorMessageDraw: 'Firme, por favor.',
+					errorMessage: 'Formulario inválido',
+					validateFields: false,	
+					drawOnly: true,
+				};
+				$('.sigPad').signaturePad(options);
+			
+		});
+		
+	");
+	
+	Yii::app()->clientScript->registerScript('comprimir', "
 		$(document).ready(function () {
 				var options = {
 					defaultAction : 'drawIt',
@@ -57,7 +83,7 @@ Yii::app()->clientScript->registerScript('comprimir', "
   </ul>
   <div class="sig sigWrapper">
     <div class="typed"></div>
-    <canvas class="pad" width="930" height="100"></canvas>
+    <canvas class="pad" width="330" height="100" id="canvas"></canvas>
     <input type="hidden" id="output" name="output" class="output" onchange="alert('hi')">
   </div>
   <button type="submit">Acepto el trabajo realizado de esta orden de soporte.</button>

@@ -324,7 +324,7 @@ class OrdenesSoporteController extends Controller {
         
     }
     
-	 /*
+    /*
      * Renderiza lista de ordenes pendientes o iniciadas con el mismo código de equipo
      */
     public function actionOrdenesByCodigo($codigo) {
@@ -348,118 +348,151 @@ class OrdenesSoporteController extends Controller {
      * Puede recibir el id de la tabla de ordenes (GET) o de la activación móvil (POST)
      */
 
-	public function actionActivarOrden() {
-		$model = new OrdenesSoporte();
-		$page = 'admin';
-		
-		if (isset($_POST['codigo']) and $_POST['codigo'] != "") {
-			$page= 'scan';
-			$codigo=$_POST['codigo'];
-			if (OrdenesSoporte::model()->count("codigo='" . $codigo . "' and (status='ontransit' or status='pending')")>1)
-				$this->actionOrdenesByCodigo($codigo);
-			else
-				$model = $this->actionGetKeySOP($codigo);
-		}
-		
-		
-		else
-			if (isset($_GET['field'])) {
-				$model = $model->findByPK($_GET['field']);
-			} else if (isset($_POST['id']) and $_POST['id'] != "") {
-				$model = $model->findByPK($_POST['id']);
-			}
-		
-		if($model){
-			if ($model->status == "pending") {
-				$model->status = "ontransit";
-				$model->usuarioEjecutor = Yii::app()->user->name;
-				$model->fechaInicio = date("Y-m-d H:i:s");
-				$model->fechaFinal = null;
-				//$model->fechaFinal=date("");
-				$model->save();
-			} else if ($model->status == "ontransit") {
-				$model->status = "done";
-				$model->usuarioEjecutor = Yii::app()->user->name;
-				$model->fechaFinal = date("Y-m-d H:i:s");
-				$model->save();
-				//$this->actionFirma($model);
-				//$this->redirect(array('firma', 'id' => $model->keySOP));
-			}
-		}
-		else {
-			Yii::app()->user->setFlash('notice', "No se encontró la órden");
-		}
-		
-		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if (!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array($page)); /**/
-		
-	}
-	
-	
-	/*
-     * Cambia el status de la orden de pending a ontransit
-     * debe recibir los parametros GET del scan de qr
+    public function actionActivarOrden() {
+            $model = new OrdenesSoporte();
+            $page = 'admin';
+
+            if (isset($_POST['codigo']) and $_POST['codigo'] != "") {
+                    $page= 'scan';
+                    $codigo=$_POST['codigo'];
+                    if (OrdenesSoporte::model()->count("codigo='" . $codigo . "' and (status='ontransit' or status='pending')")>1)
+                            $this->actionOrdenesByCodigo($codigo);
+                    else
+                            $model = $this->actionGetKeySOP($codigo);
+            }
+
+
+            else
+                    if (isset($_GET['field'])) {
+                            $model = $model->findByPK($_GET['field']);
+                    } else if (isset($_POST['id']) and $_POST['id'] != "") {
+                            $model = $model->findByPK($_POST['id']);
+                    }
+
+            if($model){
+                    if ($model->status == "pending") {
+                            $model->status = "ontransit";
+                            $model->usuarioEjecutor = Yii::app()->user->name;
+                            $model->fechaInicio = date("Y-m-d H:i:s");
+                            $model->fechaFinal = null;
+                            //$model->fechaFinal=date("");
+                            $model->save();
+                    } else if ($model->status == "ontransit") {
+                            $model->status = "done";
+                            $model->usuarioEjecutor = Yii::app()->user->name;
+                            $model->fechaFinal = date("Y-m-d H:i:s");
+                            $model->save();
+                            //$this->actionFirma($model);
+                            //$this->redirect(array('firma', 'id' => $model->keySOP));
+                    }
+            }
+            else {
+                    Yii::app()->user->setFlash('notice', "No se encontró la órden");
+            }
+
+            // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+            if (!isset($_GET['ajax']))
+                    $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array($page)); /**/
+
+    }
+
+
+    /*
+    * Cambia el status de la orden de pending a ontransit
+    * debe recibir los parametros GET del scan de qr
+    */
+
+    public function actionIniciarOrden() {
+        $model = new OrdenesSoporte();
+        //$page = array($page);
+        $page=array('admin', "tab"=>"En");
+        
+        $change=true;
+
+        if (isset($_POST['codigo']) and $_POST['codigo'] != "") {
+                $codigo=$_POST['codigo'];
+
+                if (isset($_POST['id']) and $_POST['id'] != "") {
+                        $model = $model->findByPK($_POST['id']);
+                        if($model->codigo!=$codigo){
+                                Yii::app()->user->setFlash('notice', "El qr escaneado y el código de la orden no coinciden");
+                                $change=false;
+                        }
+                }		
+                else{
+                        if (OrdenesSoporte::model()->count("codigo='" . $codigo . "' and (status='ontransit' or status='pending')")>1)
+                                $this->redirect(array('OrdenesSoporte/ordenesByCodigo', 'codigo'=>$codigo));
+                        else
+                                $model = $this->actionGetKeySOP($codigo);
+                }
+        }
+        else{
+                if (isset($_POST['id']) and $_POST['id'] != "") {
+                        //lanzar alert de comentario
+                        //set flag para guardar comentario
+                        //Yii::app()->user->setFlash('notice', "No escaneaste un qr");
+                        $model = $model->findByPK($_POST['id']);
+                }	
+        }
+
+        if($model && $change){
+                if ($model->status == "pending") {
+                        $model->status = "ontransit";
+                        $model->usuarioEjecutor = Yii::app()->user->name;
+                        $model->fechaInicio = date("Y-m-d H:i:s");
+                        $model->fechaFinal = null;
+                        //$model->fechaFinal=date("");
+                        $model->save();
+                        //Yii::app()->user->setFlash('notice', serialize($model->getErrors()));
+                } else{
+                        Yii::app()->user->setFlash('notice', "La orden que quieres iniciar no está pendiente");
+                }
+        }
+        else if($change){
+                Yii::app()->user->setFlash('notice', "No se encontró la órden");
+        }
+
+        // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+        if (!isset($_GET['ajax']))
+                $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : $page ); /**/
+
+    }
+
+
+    /*
+     * Cambia el status de la orden al siguiente.
+     * Puede recibir el id de la tabla de ordenes (GET) o de la activación móvil (POST)
      */
 
-	public function actionIniciarOrden() {
-		$model = new OrdenesSoporte();
-		$page = 'admin';
-		
-		$change=true;
-		
-		if (isset($_POST['codigo']) and $_POST['codigo'] != "") {
-			$codigo=$_POST['codigo'];
-		
-			if (isset($_POST['id']) and $_POST['id'] != "") {
-				$model = $model->findByPK($_POST['id']);
-				if($model->codigo!=$codigo){
-					Yii::app()->user->setFlash('notice', "El qr escaneado y el código de la orden no coinciden");
-					$change=false;
-				}
-			}		
-			else{
-				if (OrdenesSoporte::model()->count("codigo='" . $codigo . "' and (status='ontransit' or status='pending')")>1)
-					$this->actionOrdenesByCodigo($codigo);
-				else
-					$model = $this->actionGetKeySOP($codigo);
-			}
-		}
-		else{
-			if (isset($_POST['id']) and $_POST['id'] != "") {
-				//lanzar alert de comentario
-				//set flag para guardar comentario
-				//Yii::app()->user->setFlash('notice', "No escaneaste un qr");
-				$model = $model->findByPK($_POST['id']);
-			}	
-		}
-		
-		if($model && $change){
-			if ($model->status == "pending") {
-				$model->status = "ontransit";
-				$model->usuarioEjecutor = Yii::app()->user->name;
-				$model->fechaInicio = date("Y-m-d H:i:s");
-				$model->fechaFinal = null;
-				//$model->fechaFinal=date("");
-				$model->save();
-				//Yii::app()->user->setFlash('notice', serialize($model->getErrors()));
-			} else{
-				Yii::app()->user->setFlash('notice', "La orden que quieres iniciar no está pendiente");
-			}
-		}
-		else if($change){
-			Yii::app()->user->setFlash('notice', "No se encontró la órden");
-		}
-		
-		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if (!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array($page)); /**/
-		
-	}
-	
-	
-	
-	public function statusPendingToOntransit(){
+    public function actionFinalizarOrden() {
+            $model = new OrdenesSoporte();
+            $page=array('admin', "tab"=>"Terminadas");
+
+            if (isset($_GET['id'])) {
+                    $model = $model->findByPK($_GET['id']);
+            }
+
+            if($model){
+                if ($model->status == "ontransit") {
+                    $model->status = "done";
+                    $model->usuarioEjecutor = Yii::app()->user->name;
+                    $model->fechaFinal = date("Y-m-d H:i:s");
+                    $model->save();
+                }
+            }
+            else {
+                Yii::app()->user->setFlash('notice', "No se encontró la órden");
+            }
+
+            // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+            if (!isset($_GET['ajax']))
+                    $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : $page); /**/
+
+    }
+    
+    
+
+    public function statusPendingToOntransit(){
 	
 	}
 	
