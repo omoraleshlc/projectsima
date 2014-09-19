@@ -459,6 +459,38 @@ class OrdenesSoporteController extends Controller {
     }
 
 
+    /*
+     * Cambia el status de la orden al siguiente.
+     * Puede recibir el id de la tabla de ordenes (GET) o de la activación móvil (POST)
+     */
+
+    public function actionFinalizarOrden() {
+            $model = new OrdenesSoporte();
+            $page=array('admin', "tab"=>"Terminadas");
+
+            if (isset($_GET['id'])) {
+                    $model = $model->findByPK($_GET['id']);
+            }
+
+            if($model){
+                if ($model->status == "ontransit") {
+                    $model->status = "done";
+                    $model->usuarioEjecutor = Yii::app()->user->name;
+                    $model->fechaFinal = date("Y-m-d H:i:s");
+                    $model->save();
+                }
+            }
+            else {
+                Yii::app()->user->setFlash('notice', "No se encontró la órden");
+            }
+
+            // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+            if (!isset($_GET['ajax']))
+                    $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : $page); /**/
+
+    }
+    
+    
 
     public function statusPendingToOntransit(){
 	
