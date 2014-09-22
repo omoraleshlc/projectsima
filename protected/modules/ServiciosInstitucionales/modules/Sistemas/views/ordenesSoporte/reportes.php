@@ -1,4 +1,4 @@
-Ver reportes desde: 
+Filtrar reportes por fecha y departamento
 <form id="ordenes-soporte-form" action="/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin" method="post">
 		<?php 
 			Yii::import('application.extensions.CJuiDateTimePicker.CJuiDateTimePicker');
@@ -11,7 +11,7 @@ Ver reportes desde:
 			));
 		?>
 
-hasta:		
+a		
 				<?php 
 			Yii::import('application.extensions.CJuiDateTimePicker.CJuiDateTimePicker');
 		 	$this->widget('CJuiDateTimePicker',array(
@@ -22,10 +22,14 @@ hasta:
         			'dateFormat' => 'yy-mm-dd') // jquery plugin options
 			));
 			?>
+			
+			<?php 
+			
+				echo CHtml::dropDownList('departamentoSoporteReportes', $this->almacenSoporte,array(''=>'Todos','HMANT' => 'Mantenimiento', 'HSIST' => 'Sistemas'), array('style'=>'width:30%' ));
+			?>
 
 				<?php 
-				echo CHtml::dropDownList('departamentoSoporteReportes', $this->almacenSoporte,array(''=>'Todos','HMANT' => 'Mantenimiento', 'HSIST' => 'Sistemas'), array('style'=>'width:100%' ));
-			echo CHtml::submitButton('Generar reporte');
+			echo CHtml::submitButton('Generar reporte', array('style'=>'margin-bottom: 10px;'));
 		?>
 		</form>
 <br/>
