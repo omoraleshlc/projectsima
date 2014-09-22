@@ -61,7 +61,7 @@ Yii::app()->clientScript->registerScript('menu', "
 		             	'visible'=>!Yii::app()->user->isGuest,
 		             	'items'=>array(
 		             		array('label'=>'Sistemas', 'url'=>'#',
-				          	'visible'=>!Yii::app()->user->isGuest,
+				          	'visible'=>!Yii::app()->user->isGuest and (Yii::app()->user->checkAccess('SistemaOperador') or Yii::app()->user->checkAccess('SistemasOperador')),
 				          	'linkOptions'=>array('class'=>'sistemasitem', 'id'=>'boat'),
 				          	'items'=>array(
 		             				array('label'=>'Catálogo de equipos',
@@ -71,6 +71,10 @@ Yii::app()->clientScript->registerScript('menu', "
 											),
 								        array('label'=>'Catálogo de telefonía',
 								        'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/CatalogoTelefonia'),
+												'visible'=>(Yii::app()->user->checkAccess('SistemaOperador') or Yii::app()->user->checkAccess('SistemasOperador')),
+												),
+												array('label'=>'Catálogo de soporte',
+								        'url'=>Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/CatalogoSoporte'),
 												'visible'=>(Yii::app()->user->checkAccess('SistemaOperador') or Yii::app()->user->checkAccess('SistemasOperador')),
 												),
 								        array('label'=>'Inventario de equipos',
