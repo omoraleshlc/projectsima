@@ -99,14 +99,7 @@ $this->widget(
 				),//render partial
 				'linkOptions'=>array('class'=>'cambio'),
 			),*///tab 6
-			array(
-				'label'=>'Tipos de soporte',
-				'content'=>$this->renderPartial(
-					'adminListCatTipoSoporte', array(
-						'model' => CatTipoSoporte::model(),
-					),true
-				),//render partial
-			'linkOptions'=>array('class'=>'cambio'),),//tab 1
+			
 			/**/
 		),//tabs
 ));
