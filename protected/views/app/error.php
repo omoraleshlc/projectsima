@@ -23,7 +23,7 @@
 	else if($erroractual=="401"){
 ?>
 	<p>
-    No tienes permiso de acceso a esta página. <strong><a href="<?php echo $this->createUrl('cruge/ui/login', array('param'=>$_SERVER['REQUEST_URI'])); ?>">Ingresa al sistema</a></strong> o intenta alguna de las sigguientes opciones:
+    No tienes permiso de acceso a esta página. <strong><a href="<?php echo $this->createUrl('cruge/ui/login', array('param'=>$_SERVER['REQUEST_URI'])); ?>">Ingresa al sistema</a></strong> o intenta alguna de las siguientes opciones:
     </p>
     <ul>
 		<li><a href="#" onclick="history.go(-2);">Regresar a la página anterior</a></li>
