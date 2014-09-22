@@ -83,9 +83,16 @@ $this->widget('zii.widgets.grid.CGridView', array(
 			'htmlOptions' => array('style' => 'text-align: center;'),
 		),
 		array(
+			'header'=>'Firma',
+			'cssClassExpression' => "file_exists('protected/firmas/signature'.\$data->keySOP.'.png')?'gresen':'red'",
+			'value' => "file_exists('protected/firmas/signature'.\$data->keySOP.'.png')?'Firmada':'No firmada'",
+			'headerHtmlOptions' => array('style' => 'width: 9%;'),
+			'htmlOptions' => array('style' => 'text-align: center;'),
+		),
+		array(
 			'class'=>'bootstrap.widgets.TbButtonColumn',
 			'template' => '{obser}{verobser}',
-			'header' => 'Obsevaciones',
+			'header' => 'Observaciones',
 			'buttons' => array(
 				'obser' => array( //the name {reply} must be same
 					'label' => 'Agregar', // text label of the button
