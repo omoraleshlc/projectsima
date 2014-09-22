@@ -101,8 +101,8 @@ Orden creada por 	<?php echo CHtml::encode($model->usuario); ?> de <?php echo $m
 			'data'=>$stack3,
 			'options' => array(
 				'title' => 'Porcentaje de tiempos',
-				'width' => 800,
-				'height' => 600,
+				'width' => 500,
+				'height' => 400,
 				'colors' => array('#F08080', '#008080'),
 				'isStacked'=>'true',
 		)));
