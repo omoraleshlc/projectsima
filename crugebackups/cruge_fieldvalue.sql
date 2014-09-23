@@ -32,7 +32,7 @@ CREATE TABLE `cruge_fieldvalue` (
   KEY `fk_cruge_fieldvalue_cruge_field1` (`idfield`),
   CONSTRAINT `fk_cruge_fieldvalue_cruge_field1` FOREIGN KEY (`idfield`) REFERENCES `cruge_field` (`idfield`) ON DELETE CASCADE ON UPDATE NO ACTION,
   CONSTRAINT `fk_cruge_fieldvalue_cruge_user1` FOREIGN KEY (`iduser`) REFERENCES `cruge_user` (`iduser`) ON DELETE CASCADE ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +41,7 @@ CREATE TABLE `cruge_fieldvalue` (
 
 LOCK TABLES `cruge_fieldvalue` WRITE;
 /*!40000 ALTER TABLE `cruge_fieldvalue` DISABLE KEYS */;
-INSERT INTO `cruge_fieldvalue` VALUES (1,11,1,''),(2,1,1,''),(3,28,1,''),(4,29,1,'');
+INSERT INTO `cruge_fieldvalue` VALUES (1,11,1,''),(2,1,1,''),(3,28,1,''),(4,29,1,''),(5,30,1,'');
 /*!40000 ALTER TABLE `cruge_fieldvalue` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-09-12 10:23:46
+-- Dump completed on 2014-09-23 16:47:50
