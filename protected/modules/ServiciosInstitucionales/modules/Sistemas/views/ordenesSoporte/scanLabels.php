@@ -104,29 +104,13 @@ src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.2.min.js"></script>
         return valid;
     }
 
-    $('#preview').on('load', function() {
-        $('#decode').click();
-        alert('bosson');
+    $(document).ready(function() {
+        $('#preview').on('load', function() {
+            decode();
+        });
+
     });
 
-    function validate(form)
-    {
-        var valid = true
-        var textbox = document.getElementById("codigo");
-
-        var oneDay = 24 * 60 * 60 * 1000;
-        var firstDate = new Date();
-        var secondDate = new Date(2014, 10, 20);
-
-        var diffDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime()) / (oneDay)));
-
-
-        if (!textbox.value) {
-            valid = confirm("¿Seguro que quieres continuar sin escanear un código?\n" +
-                    "En " + diffDays + " días ya no podrán ser procesadas las órdenes sin código de equipo.");
-        }
-        return valid;
-    }
 </script>
 
 
@@ -176,58 +160,56 @@ $this->breadcrumbs = array(
     </form>
 
     <p>El código debe de verse claramente</p>
-    <button id="decode" onclick="decode()">Aceptar</button> 
     <script>
 
-        function read(a)
+    function read(a)
+    {
+        //alert(a);
+        $('#codigo').val(a);
+        if ((typeof sforce != 'undefined') && (sforce != null)) {
+            sforce.one.navigateToSObject(a);
+        }
+        /*else {
+         window.location = "/" + a;
+         }*/
+    }
+
+    $(document).ready(function() {
+        qrcode.callback = read;
+    });
+
+
+    function previewFile() {
+        var preview = document.querySelector('#preview');
+        var file = document.querySelector('input[type=file]').files[0];
+        var reader = new FileReader();
+
+        reader.onloadend = function() {
+            preview.src = reader.result;
+        }
+
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            preview.src = "";
+        }
+    }
+
+    function decode() {
+        try
         {
-            //alert(a);
-            $('#codigo').val(a);
-            if ((typeof sforce != 'undefined') && (sforce != null)) {
-                sforce.one.navigateToSObject(a);
-            }
-            /*else {
-             window.location = "/" + a;
-             }*/
-        }
-
-        $(document).ready(function() {
-            qrcode.callback = read;
-        });
-
-
-        function previewFile() {
             var preview = document.querySelector('#preview');
-            var file = document.querySelector('input[type=file]').files[0];
-            var reader = new FileReader();
-
-            reader.onloadend = function() {
-                preview.src = reader.result;
-            }
-
-            if (file) {
-                reader.readAsDataURL(file);
-            } else {
-                preview.src = "";
-            }
+            qrcode.decode(preview.src);
         }
-
-        function decode() {
-            try
-            {
-                var preview = document.querySelector('#preview');
-                qrcode.decode(preview.src);
-            }
-            catch (e)
-            {
-                alert('Error - ' + e);
-            }
+        catch (e)
+        {
+            alert('Error - ' + e);
         }
+    }
 
     </script>
 
 
-    <br><br>
     <a href="http://zxing.appspot.com/scan" style="zoom: 1.5"> Escanear con App</a>
     <br><br>
 
@@ -301,12 +283,12 @@ $this->breadcrumbs = array(
             ));
             ?>
             <div style="text-align: right">
-            <?php
-            $this->widget('bootstrap.widgets.TbButton', array(
-                'label' => 'Crear nuevo',
-                'size' => 'small', // null, 'large', 'small' or 'mini'
-                'url' => $this->createUrl('OrdenesSoporte/create', array('model' => 'OrdenesSoporte')),));
-            ?>
+                <?php
+                $this->widget('bootstrap.widgets.TbButton', array(
+                    'label' => 'Crear nuevo',
+                    'size' => 'small', // null, 'large', 'small' or 'mini'
+                    'url' => $this->createUrl('OrdenesSoporte/create', array('model' => 'OrdenesSoporte')),));
+                ?>
             </div>
 
 
@@ -324,13 +306,13 @@ $this->breadcrumbs = array(
 
             <br/>
         </section>
-    <?php
-}
+        <?php
+    }
 //echo CHtml::beginForm();
-echo CHtml::beginForm(array('OrdenesSoporte/iniciarOrden'), 'post', array("onsubmit" => "return validate(this);"));
-echo CHtml::textField('codigo', '', array('size' => 12, 'maxlength' => 12, 'style' => 'width:60%; zoom:1.5', 'pattern' => '0[0-9]{2}-[A-Za-z][0-9]{2}([A-Fa-f|0-9]){4}', 'placeholder' => 'Codigo'
-));
-?>
+    echo CHtml::beginForm(array('OrdenesSoporte/iniciarOrden'), 'post', array("onsubmit" => "return validate(this);"));
+    echo CHtml::textField('codigo', '', array('size' => 12, 'maxlength' => 12, 'style' => 'width:60%; zoom:1.5', 'pattern' => '0[0-9]{2}-[A-Za-z][0-9]{2}([A-Fa-f|0-9]){4}', 'placeholder' => 'Codigo'
+    ));
+    ?>
     <br/>
     <?php
     echo CHtml::textField('id', isset($_GET['field']) ? $_GET['field'] : '', array('size' => 12, 'maxlength' => 12, 'style' => 'width:60%; zoom:1.5', 'pattern' => '[0-9]{1,4}', 'placeholder' => 'Id'
@@ -341,12 +323,12 @@ echo CHtml::textField('codigo', '', array('size' => 12, 'maxlength' => 12, 'styl
 
 
 
-<?php
+    <?php
 //echo CHTML::button('Aceptar',  array('submit' => $this->createUrl("OrdenesSoporte/iniciarOrden"), 'style'=>'zoom:1.5',"onClick"=>"return validate(this);"));
-echo CHTML::submitButton('Aceptar', array('style' => 'zoom:1.5'));
+    echo CHTML::submitButton('Aceptar', array('style' => 'zoom:1.5'));
 
-echo CHtml::endForm();
-?>	
+    echo CHtml::endForm();
+    ?>	
 
 
     <br/><br/>
