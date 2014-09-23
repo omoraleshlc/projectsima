@@ -56,8 +56,14 @@ class TelefoniaCelularController extends Controller
 			$model->codigoEntidad= $_POST['entidad'];
 			$model->almacen= $_POST['almacen'];
 			//$model->company= $_POST['company'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->keyCTC));
+			if($model->save()){
+                                Yii::app()->db->createCommand("update sima.sis_catTelefoniaCelular set next_mantenimiento = IF(
+        DAYOFWEEK(DATE_ADD(fecha, INTERVAL meses_mantenimiento MONTH))='1', DATE_ADD(DATE_ADD(fecha, INTERVAL meses_mantenimiento MONTH), INTERVAL 1 DAY),
+        IF(DAYOFWEEK(DATE_ADD(next_mantenimiento, INTERVAL meses_mantenimiento MONTH))='7', DATE_ADD(DATE_ADD(fecha, INTERVAL meses_mantenimiento MONTH), INTERVAL 2 DAY), DATE_ADD(fecha, INTERVAL meses_mantenimiento MONTH)
+        )) where next_mantenimiento IS NULL")
+                                    ->execute();
+                                $this->redirect(array('view','id'=>$model->keyCTC));
+                        }
 		}
 
 		$this->render('create',array(
