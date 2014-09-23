@@ -586,14 +586,4 @@ class OrdenesSoporteController extends Controller {
         ));
     }
     
-    
-    /**
-     * 
-     */
-    public function actionScanqr() {
-        //$this->layout='dasda';
-        $this->render('scanqr');
-    }
-    
-
 }
