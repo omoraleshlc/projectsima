@@ -66,7 +66,7 @@ class TelefoniaCelular extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('precioEquipo, cantidadAutorizada, costoRenta, fechaContratacion, plazoForzoso, modelo, keyMA, usuarioCelular, descripcionUbicacion, almacen, codigoEntidad, usuario, fecha, hora, entidad, nTelefonico,fechaInicial, fechaFinal, minutos, plan,  company', 'required'),
+			array('precioEquipo, cantidadAutorizada, costoRenta, fechaContratacion, plazoForzoso, modelo, keyMA, usuarioCelular, descripcionUbicacion, almacen, codigoEntidad, usuario, fecha, hora, entidad, nTelefonico,fechaInicial, fechaFinal, minutos, plan,  company, meses_mantenimiento', 'required'),
 			array('plazoForzoso, keySW, keyMA, registro, solicitud, minutos, keyP', 'numerical', 'integerOnly'=>true),
 			array('precioEquipo, cantidadAutorizada, costoRenta', 'length', 'max'=>6),
 			array('fechaContratacion, fecha, hora, fechaInicial, fechaFinal, plan', 'length', 'max'=>10),
@@ -75,6 +75,7 @@ class TelefoniaCelular extends CActiveRecord
 			array('usuarioCelular, almacen, usuario', 'length', 'max'=>30),
 			array('codigoEntidad, entidad, roaming', 'length', 'max'=>2),
 			array('ruta, internet', 'length', 'max'=>50),
+                        array('fecha, hora, meses_mantenimiento', 'length', 'max'=>10),
 			array('nTelefonico', 'length', 'max'=>15),
 			array('sms', 'length', 'max'=>4),
 			array('moduloAdicional', 'length', 'max'=>200),
@@ -82,7 +83,7 @@ class TelefoniaCelular extends CActiveRecord
 			array('codigo', 'length', 'max'=>12),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('keyCTC, precioEquipo, cantidadAutorizada, costoRenta, fechaContratacion, plazoForzoso, keySW, modelo, chip, imei, keyMA, usuarioCelular, descripcionUbicacion, almacen, codigoEntidad, usuario, fecha, hora, entidad, ruta, nTelefonico, registro, solicitud, fechaInicial, fechaFinal, minutos, red, sms, internet, roaming, plan, moduloAdicional, company, codigo', 'safe', 'on'=>'search'),
+			array('keyCTC, precioEquipo, cantidadAutorizada, costoRenta, fechaContratacion, plazoForzoso, keySW, modelo, chip, imei, keyMA, usuarioCelular, descripcionUbicacion, almacen, codigoEntidad, usuario, fecha, hora, entidad, ruta, nTelefonico, registro, solicitud, fechaInicial, fechaFinal, minutos, red, sms, internet, roaming, plan, moduloAdicional, company, codigo,meses_mantenimiento', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -138,6 +139,7 @@ class TelefoniaCelular extends CActiveRecord
 			'company' => 'Compañía',
 			'codigo' => 'Código de equipo',
 			'keyP' => 'Proveedor',
+                        'meses_mantenimiento' => 'Intervalo de mantenimiento'
 		);
 	}
 
@@ -186,6 +188,7 @@ class TelefoniaCelular extends CActiveRecord
 		$criteria->compare('moduloAdicional',$this->moduloAdicional,true);
 		$criteria->compare('company',$this->company,true);
 		$criteria->compare('codigo',$this->codigo,true);
+                $criteria->compare('meses_mantenimiento',$this->meses_mantenimiento,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
