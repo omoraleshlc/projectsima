@@ -123,15 +123,6 @@ $this->widget(
 
 			array('label'=>'Buscar','content' => $this->renderPartial('adminListBuscar',
 				array('model' => $model, 'pagination'=>Yii::app()->user->checkAccess('SistemasOperador'),),true),),//tab 1
-				array(
-				'label'=>'Tipos de soporte',
-				'content'=>$this->renderPartial(
-					'adminListCatTipoSoporte', array(
-						'model' => CatTipoSoporte::model(),
-					),true
-				),//render partial
-				
-			),//tab 1
 		),//tabs
 ));
 
