@@ -45,7 +45,7 @@ echo CHtml::image(Yii::app()->request->baseUrl.'/images/hlclogo2.png');
 	</div>
 	
 	<div  class="buttons hidden-print" >
-			Próximo mantenimiento el <?php  echo $model->meses_mantenimiento; ?>
+			Próximo mantenimiento el <?php  echo $model->next_mantenimiento; ?>
 			<br/>
 	</div>
 	
