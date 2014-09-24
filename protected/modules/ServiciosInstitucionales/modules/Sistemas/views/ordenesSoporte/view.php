@@ -118,4 +118,7 @@ Orden creada por 	<?php echo CHtml::encode($model->usuario); ?> de <?php echo $m
 
 
 <br/>
+<div class="row buttons hidden-print" style="clear:both">
+	<?php echo CHtml::button('Actualizar orden', array('submit' => array('ordenesSoporte/update','id'=>$model->keySOP), 'style' => "margin: 10px 2.5%;display:".(Yii::app()->user->checkAccess('tarea_ordenesSoporte_edicionAvanzada')?'block':'none') )); ?>
+</div>
 
