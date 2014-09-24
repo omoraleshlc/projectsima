@@ -219,7 +219,7 @@ class TelefoniaCelular extends CActiveRecord
 		$criteria = new CDbCriteria();
 		$count = TelefoniaCelular::model()->count($criteria);
 
-		$code="0".$this->entidad."-t".str_pad($this->keyCTC, 2, "0", STR_PAD_LEFT).str_pad(dechex($count), 4, "0", STR_PAD_LEFT);
+		$code="0".$this->entidad."-t".str_pad($this->keyMA, 2, "0", STR_PAD_LEFT).str_pad(dechex($count), 4, "0", STR_PAD_LEFT);
 		return $code;
 	}
 	
@@ -234,7 +234,7 @@ class TelefoniaCelular extends CActiveRecord
 		*/
 		$criteria = new CDbCriteria();
 		
-		$prefijoCode = "0".$model->entidad."-t".str_pad($model->keyTE, 2, "0", STR_PAD_LEFT);
+		$prefijoCode = "0".$model->entidad."-t".str_pad($model->keyMA, 2, "0", STR_PAD_LEFT);
 		$count=Yii::app()->db->createCommand()
 			->select('count(*)')
 			->from('sis_catTelefoniaCelular')
@@ -242,7 +242,7 @@ class TelefoniaCelular extends CActiveRecord
 			->queryRow();
 		$count = (int) $count['count(*)']+1;
 		
-		$code="0".$model->entidad."-c".str_pad($model->keyTE, 2, "0", STR_PAD_LEFT).str_pad(dechex($count), 4, "0", STR_PAD_LEFT);
+		$code="0".$model->entidad."-c".str_pad($model->keyMA, 2, "0", STR_PAD_LEFT).str_pad(dechex($count), 4, "0", STR_PAD_LEFT);
 		return $code;
 	}
 	
