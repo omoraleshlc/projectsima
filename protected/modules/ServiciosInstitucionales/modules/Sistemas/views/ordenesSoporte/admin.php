@@ -69,7 +69,7 @@ echo CHtml::endForm();
      
      
 <?php
-if(Yii::app()->user->checkAccess('SistemasOperador')) {
+if(Yii::app()->user->checkAccess('SoporteOperador')) {
 $this->widget(
 	'bootstrap.widgets.TbTabs', array(
 		"id" => "tabs",
@@ -85,7 +85,7 @@ $this->widget(
 			array('label'=>'Terminadas', 'content' => $this->renderPartial('adminListTerminadas',
 				array('model' => $modelTeminadas,),true), 'linkOptions'=>array('class'=>'cambio'),),//tab 3
 			array('label'=>'Buscar','content' => $this->renderPartial('adminListBuscar',
-				array('model' => $model, 'pagination'=>!Yii::app()->user->checkAccess('SistemaCapturista'),),true), 'linkOptions'=>array('class'=>'cambio'),),//tab 4
+				array('model' => $model, 'pagination'=>!Yii::app()->user->checkAccess('SoporteCapturista'),),true), 'linkOptions'=>array('class'=>'cambio'),),//tab 4
 			array('label'=>'Reportes','htmlOptions'=>array('overflow'=>'hidden'), 'content' => $this->renderPartial('reportes',
 				array('model' => $modelTeminadas,),true), 'linkOptions'=>array('class'=>'cambio'),),//tab 5
 				
@@ -122,7 +122,7 @@ $this->widget(
 			'active'=>true),//tab 2
 
 			array('label'=>'Buscar','content' => $this->renderPartial('adminListBuscar',
-				array('model' => $model, 'pagination'=>Yii::app()->user->checkAccess('SistemasOperador'),),true),),//tab 1
+				array('model' => $model, 'pagination'=>Yii::app()->user->checkAccess('SoporteOperador'),),true),),//tab 1
 		),//tabs
 ));
 

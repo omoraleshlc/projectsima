@@ -4,7 +4,7 @@
 	if(isset($_GET["id"]))
 		$idSoporte=$_GET["id"];
 		
-if(Yii::app()->user->checkAccess('SistemasOperador')) {		
+if(Yii::app()->user->checkAccess('SoporteOperador')) {		
 $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'observaciones-orden-soporte-grid',
 	'dataProvider'=>$model->search(),

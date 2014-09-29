@@ -258,7 +258,7 @@ class OrdenesSoporte extends CActiveRecord
 		$criteria->compare('fechaInicio',$this->fechaInicio,true);
 		$criteria->compare('fechaFinalEstimada',$this->fechaFinalEstimada,true);
 		
-		if(Yii::app()->user->checkAccess('SistemasOperador'))
+		if(Yii::app()->user->checkAccess('SoporteOperador'))
 			$paginacion = array('pageSize'=>20);
 		else
 			$paginacion = array('pageSize'=>1);
