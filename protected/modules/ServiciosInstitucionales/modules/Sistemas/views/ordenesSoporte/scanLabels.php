@@ -59,6 +59,29 @@
         */
         #no-more-tables td:before { content: attr(data-title); }
     }
+    
+        label input[type="file"] {
+            position: fixed;
+            top: -1000px;
+        }
+
+        /* Example custom styling */
+        .myLabel {
+            border: 1px solid #357ebd;
+            border-radius: 4px;
+            padding: 5px 12%;
+            margin: 2px;
+            background-color: #428bca ;
+            display: inline-block;
+            color: white;
+            font-size: 1.5em;
+        }
+        .myLabel:hover {
+            background: #06c;
+        }
+        .myLabel:active {
+            background: #06c;
+        }
 </style>
 
 <script type="text/javascript"
@@ -153,7 +176,11 @@ $this->breadcrumbs = array(
     ?>
 
     <form>
-        <input type="file" onchange="previewFile()" /><br/>
+        <label class="myLabel">
+                <input type="file" onchange="previewFile()" class="upload"/><br/>
+                Escanear qr
+                <br><br>
+        </label>
         <div style="height:200px">
             <img src="" id="preview" height="200" alt="Preview de imagen" />
         </div>  
