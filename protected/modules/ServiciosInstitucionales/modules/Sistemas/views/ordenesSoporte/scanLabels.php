@@ -181,8 +181,8 @@ $this->breadcrumbs = array(
                 Escanear qr
                 <br><br>
         </label>
-        <div style="height:200px">
-            <img src="" id="preview" height="200" alt="Preview de imagen" />
+        <div style="height:100%">
+            <img src="" id="preview" height="200" alt="" />
         </div>  
     </form>
 
