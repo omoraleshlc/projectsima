@@ -33,6 +33,23 @@ Yii::app()->clientScript->registerScript('menu', "
 			$('#warmachine').parent().parent().addClass('mostrar');
 		}
 	});
+        
+        $('.configitem').click(function(){
+		if ($('.btn-navbar').css('display') == 'block'){
+			$('#boatc').parent().parent().addClass('mostrar');
+			$('#boatc').parent().parent().addClass('mostrar');
+			$('#warmachinec').parent().parent().addClass('mostrar');
+		}
+	});
+        
+        $('.configiitem').click(function(){
+		if ($('.btn-navbar').css('display') == 'block'){
+			$('#boatci').parent().parent().addClass('mostrar');
+			$('#boatci').parent().parent().addClass('mostrar');
+			$('#warmachineci').parent().parent().addClass('mostrar');
+		}
+	});
+
 ");
 
 ?>
@@ -107,21 +124,26 @@ Yii::app()->clientScript->registerScript('menu', "
 				
 					array('label'=>'Configuracion', 'url'=>'#',
 		             	'visible'=>Yii::app()->user->isSuperAdmin,
+                                            
 		             	'items'=>array(
 		             		array('label'=>'Usuarios', 'url'=>'#',
 						       	'visible'=>Yii::app()->user->isSuperAdmin,
+                                                        'linkOptions'=>array('class'=>'configitem', 'id'=>'boatc'),
 						       	'items'=>array(
 		             	
 						      array('label'=>'Usuarios',
-									'url'=>Yii::app()->user->ui->userManagementAdminUrl),
+									'url'=>Yii::app()->user->ui->userManagementAdminUrl,
+                                                          'linkOptions'=>array('id'=>'warmachinec'),),
 							 	array('label'=>'Usuarios V2',
 		                 		'url'=>Yii::app()->createUrl('Configuracion/Usuarios/UsuariosSima/admin')),
 		                 		)),
 		                 	array('label'=>'Sistema', 'url'=>'#',
 						       	'visible'=>Yii::app()->user->isSuperAdmin,
+                                                        'linkOptions'=>array('class'=>'configiitem', 'id'=>'boatci'),
 						       	'items'=>array(	
 		                 	array('label'=>'Almacenes',
-		                 		'url'=>Yii::app()->createUrl('Configuracion/Sistema/CatAlmacen/admin')),
+		                 		'url'=>Yii::app()->createUrl('Configuracion/Sistema/CatAlmacen/admin'),
+                                                         'linkOptions'=>array('id'=>'warmachineci'),),
 	                 		array('label'=>'Entidades',
 		                 		'url'=>Yii::app()->createUrl('Configuracion/Sistema/CatEntidad/admin')),
 		                 		)),
