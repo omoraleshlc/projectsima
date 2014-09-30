@@ -25,6 +25,8 @@
  * @property string $almacenSoporte
  * @property string $codigo
  * @property string $fechaInicio
+ * @property string $fechaFinalEstimada
+ * @property string $idSOPAlmacen
  */
 class OrdenesSoporte extends CActiveRecord
 {
@@ -56,7 +58,7 @@ class OrdenesSoporte extends CActiveRecord
 		return array(
 			array('keyTS, registro, nombre, descripcionSoporte, usuario, fecha, hora, solicitud, descripcionTS, status, observaciones,  almacenSoporte, descripcionAlmacen', 'required'),
 			//array('entidadSolicitud, almacen, descripcionAlmacen, entidad, almacenSoporte', 'required'),
-			array('keyTS, registro', 'numerical', 'integerOnly'=>true),
+			array('keyTS, registro, idSOPAlmacen', 'numerical', 'integerOnly'=>true),
 			array('entidadSolicitud, entidad', 'length', 'max'=>2),
 			array('almacen, nombre, usuario, almacenSoporte', 'length', 'max'=>30),
 			array('descripcionSoporte, descripcionAlmacen', 'length', 'max'=>200),
@@ -112,7 +114,7 @@ class OrdenesSoporte extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'keySOP' => '#',
+			'idSOPAlmacen' => '#',
 			'entidadSolicitud' => 'Entidad',
 			'almacen' => 'Almacen',
 			'keyTS' => 'Tipo soporte',
@@ -148,7 +150,7 @@ class OrdenesSoporte extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('keySOP',$this->keySOP);
+		$criteria->compare('idSOPAlmacen',$this->idSOPAlmacen);
 		$criteria->compare('entidadSolicitud',$this->entidadSolicitud,true);
 		$criteria->compare('almacen',$this->almacen,true);
 		$criteria->compare('keyTS',$this->keyTS);
@@ -188,7 +190,7 @@ class OrdenesSoporte extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('keySOP',$this->keySOP);
+		$criteria->compare('idSOPAlmacen',$this->idSOPAlmacen);
 		$criteria->compare('entidadSolicitud',$this->entidadSolicitud,true);
 		$criteria->compare('almacen',$this->almacen,true);
 		$criteria->compare('keyTS',$this->keyTS);
@@ -235,7 +237,7 @@ class OrdenesSoporte extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('keySOP',$this->keySOP);
+		$criteria->compare('idSOPAlmacen',$this->idSOPAlmacen);
 		$criteria->compare('entidadSolicitud',$this->entidadSolicitud,true);
 		$criteria->compare('almacen',$this->almacen,true);
 		$criteria->compare('keyTS',$this->keyTS);

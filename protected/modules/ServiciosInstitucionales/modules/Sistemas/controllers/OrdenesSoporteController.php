@@ -84,6 +84,17 @@ class OrdenesSoporteController extends Controller {
             $model->hora = date('h:i a', time());
             $model->status = 'pending';
             $model->almacenSoporte = $model->almacenSoporte!="" ? $model->almacenSoporte : ($this->usuariosima->almacenSoporteDefault != "" ? $this->usuariosima->almacenSoporteDefault : 'HSIST');
+            
+            $count=Yii::app()->db->createCommand()
+			->select('count(*)')
+			->from('sis_ordenesSOP')
+			->where("almacenSoporte = '".$model->almacenSoporte."'")
+			->queryRow();
+		$count = (int) $count['count(*)']+1;
+            
+            $model->idSOPAlmacen = $count;
+            
+            
             $model->usuarioEjecutor = '';
             $model->fechaFinal = null;
             $model->fechaInicio = null;
