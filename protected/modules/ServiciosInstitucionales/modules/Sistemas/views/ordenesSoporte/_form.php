@@ -91,11 +91,14 @@ div.form .columna select, div.form .columna input[type='text'], div.form .column
 		<?php echo $form->labelEx($model,'keyTS'); ?>
 		<?php 
 		$lista=CHtml::listData(CatTipoSoporte::model()->findAll('almacen="'.UsuariosSima::model()->find("usuario='" . Yii::app()->user->name . "'")->almacenSoporteDefault.'"'), 'keyRSA', 'descripcion');
-		echo CHtml::activeDropDownList($model,'keyTS', $lista);
+		if(!empty($lista))
+                        echo CHtml::activeDropDownList($model,'keyTS', $lista);
+                else
+                        echo "<span style='color:red'>No tienes asignado un almacén de soporte, solicítalo en sistemas. <br> No podrás crear órdenes sin almacén de soporte.</span>";
 		?> 
 		<?php echo $form->error($model,'keyTS'); ?>
 	</div>
-	
+        
 	<div class="row">
 		<?php echo $form->labelEx($model,'observaciones'); ?>
 		<?php echo $form->textField($model,'observaciones',array('size'=>60,'maxlength'=>250)); ?>
