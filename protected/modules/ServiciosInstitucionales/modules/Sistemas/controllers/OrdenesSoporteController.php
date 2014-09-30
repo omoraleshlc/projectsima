@@ -140,14 +140,21 @@ class OrdenesSoporteController extends Controller {
             $model->status = 'pending';
             $model->almacenSoporte = $model->almacenSoporte!="" ? $model->almacenSoporte : ($this->usuariosima->almacenSoporteDefault != "" ? $this->usuariosima->almacenSoporteDefault : 'HSIST');
 
-
+                $count=Yii::app()->db->createCommand()
+                        ->select('count(*)')
+                        ->from('sis_ordenesSOP')
+                        ->where("almacenSoporte = '".$model->almacenSoporte."'")
+                        ->queryRow();
+                $count = (int) $count['count(*)']+1;
+            
+            $model->idSOPAlmacen = $count;
             $model->usuarioEjecutor = '';
             $model->fechaFinal = null;
             $model->fechaInicio = null;
             $model->fechaFinalEstimada = null;
 
             if ($model->save()) {
-                Yii::app()->user->setFlash('success', "Orden de soporte para: " . $model->nombre . " registrada con código " . $model->keySOP);
+                Yii::app()->user->setFlash('success', "Orden de soporte para: " . $model->nombre . " registrada con código " . $model->idSOPAlmacen);
             } else {
                 if (empty($model->nombre))
                     Yii::app()->user->setFlash('error', "Escriba el nombre de usuario");
