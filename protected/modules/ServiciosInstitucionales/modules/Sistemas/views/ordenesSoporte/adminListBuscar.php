@@ -17,10 +17,10 @@ $this->widget('zii.widgets.grid.CGridView', array(
 	'enablePagination' => $pagination,
 	'columns'=>array(
 		array(
-			'name' => 'keySOP',
+			'name' => 'idSOPAlmacen',
 			'headerHtmlOptions' => array('style' => 'width: 5%;'),
 			'htmlOptions' => array('style' => 'text-align: center;'),
-			'filter'=>"<i class='icon-search'></i>&nbsp;&nbsp;".CHtml::activeTextField($model, 'keySOP', 
+			'filter'=>"<i class='icon-search'></i>&nbsp;&nbsp;".CHtml::activeTextField($model, 'idSOPAlmacen', 
                  array('style'=>'width:55%')),
         	'filterHtmlOptions' => array('colspan' => '2'),
 		),

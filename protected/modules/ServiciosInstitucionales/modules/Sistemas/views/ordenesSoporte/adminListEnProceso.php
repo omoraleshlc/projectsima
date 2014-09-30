@@ -7,7 +7,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
     //'filter'=>$model,
     'columns' => array(
         array(
-            'name' => 'keySOP',
+            'name' => 'idSOPAlmacen',
             'htmlOptions' => array('style' => 'width: 5%; text-align: center;'),
         ),
         'codigo',
