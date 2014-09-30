@@ -79,9 +79,7 @@ div.form .columna select, div.form .columna input[type='text'], div.form .column
 		echo CHtml::dropDownList('almacen','almacen', $lista,
 			array(
 				'required'=>'true',
-				'ajax' => array(
-					'type'=>'POST', //request type
-				))
+                            )
 		);
 		?>
 		<?php echo $form->error($model,'almacen'); ?>
