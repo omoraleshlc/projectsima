@@ -149,6 +149,7 @@ return array(
 				'allowAutoLogin'=>true,
 				'class' => 'application.modules.cruge.components.CrugeWebUser',
 				'loginUrl' => array('/cruge/ui/login'),
+                                'authTimeout' => (10*60),
 			),
 			'authManager' => array(
 				//'class' => 'application.modules.cruge.components.CrugeAuthManager',
@@ -196,7 +197,7 @@ return array(
 
 
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=sima',
+			'connectionString' => 'mysql:host=127.0.0.1;port=3306;dbname=sima',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',
