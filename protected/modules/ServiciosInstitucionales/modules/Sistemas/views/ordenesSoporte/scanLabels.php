@@ -168,7 +168,7 @@ $this->breadcrumbs = array(
 
 
 <div style="text-align: center;">
-    <h1>Escanear código de barras</h1>
+    <br>
     <?php
     foreach (Yii::app()->user->getFlashes() as $key => $message) {
         echo '<div class="alert alert-warning" role="alert">' . $message . '</div>';
@@ -178,7 +178,7 @@ $this->breadcrumbs = array(
     <form>
         <label class="myLabel">
                 <input type="file" onchange="previewFile()" class="upload"/><br/>
-                Escanear qr
+                Escanear Qr con cámara
                 <br><br>
         </label>
         <div style="height:100%">
@@ -237,7 +237,7 @@ $this->breadcrumbs = array(
     </script>
 
 
-    <a href="http://zxing.appspot.com/scan" style="zoom: 1.5"> Escanear con App</a>
+    <a href="http://zxing.appspot.com/scan" style="zoom: 1.5"> Escanear Qr con App</a>
     <br><br>
 
     <?php
