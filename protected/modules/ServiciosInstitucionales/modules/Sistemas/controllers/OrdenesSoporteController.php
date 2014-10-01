@@ -435,6 +435,7 @@ class OrdenesSoporteController extends Controller {
                         if($model->codigo!=$codigo){
                                 Yii::app()->user->setFlash('notice', "El qr escaneado y el código de la orden no coinciden");
                                 $change=false;
+                                $this->redirect(array('ordenesSoporte/scan') );
                         }
                 }		
                 else{
