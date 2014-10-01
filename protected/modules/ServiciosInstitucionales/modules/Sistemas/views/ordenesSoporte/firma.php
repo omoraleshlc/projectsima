@@ -17,7 +17,10 @@ $cs->registerCssFile($baseUrl.'/css/jquery.signaturepad.css');
 
         background-color:red;
     }
-
+        /* grid.css */
+        @media (max-width: 500px) {
+        body {padding: 0;}
+        }
 </style>
 
 <?php
@@ -74,7 +77,7 @@ Yii::app()->clientScript->registerScript('comprimir', "
 </script>
 <h1>Firmar orden #<?php echo $model->keySOP; ?></h1>
 <?php echo $model->observaciones; ?>
-<div style="margin: auto; width: 80%">
+<div style="width: 80%">
 <form method="post" action="" class="sigPad" id="signature_form">
   <p class="drawItDesc">Dibuja tu firma</p>
   <ul class="sigNav">
