@@ -111,7 +111,7 @@ Orden creada por 	<?php echo CHtml::encode($model->usuario); ?> de <?php echo $m
 		<br/>
 	<h3>Firma de usuario:</h3>
 	<?php
-	$imgurl= 'protected/firmas/signature'.$model->keySOP.'.png';
+	$imgurl= 'firmas/signature'.$model->keySOP.'.png';
 	echo file_exists($imgurl)?CHtml::image($imgurl, 'Firma de aceptada'):"El usuario no ha firmado la orden";
 	?>	
 
