@@ -16,6 +16,7 @@ $this->menu=array(
 
 $model2 = new CatTipoSoporte;
 $model3 = new CatEntidad;
+$model4 = new Almacenes;
 
 ?>
 <div class="page-header" style="margin: 0">
@@ -23,9 +24,9 @@ $model3 = new CatEntidad;
 </div>
 
 <div>
-		En <?php  echo $model->entidadSolicitud?$model3->find('codigoEntidad="' . $model->entidadSolicitud . '"')->descripcionEntidad:'entidad no especificada'; ?>, departamento de <?php echo CHtml::encode($model->almacen); ?>.
+		En <?php  echo $model->entidadSolicitud?$model3->find('codigoEntidad="' . $model->entidadSolicitud . '"')->descripcionEntidad:'entidad no especificada'; ?>, departamento de <?php  echo $model->almacen?$model4->find('almacen="' . $model->almacen . '"')->descripcion:'no especificado'; ?>.
 		<br/>
-		<?php echo CHtml::encode($model->nombre); ?> solicita soporte tipo <?php echo $model->keyTS?$model2->find('keyRSA="' . $model->keyTS . '"')->descripcion:'no especificado'; ?> de <?php echo CHtml::encode($model->almacenSoporte); ?>.
+		<?php echo CHtml::encode($model->nombre); ?> solicita soporte tipo <?php echo $model->keyTS?$model2->find('keyRSA="' . $model->keyTS . '"')->descripcion:'no especificado'; ?> de <?php  echo $model->almacenSoporte?$model4->find('almacen="' . $model->almacenSoporte . '"')->descripcion:'no especificado'; ?>.
 </div>
 
 <h2><?php echo CHtml::encode($model->observaciones); ?></h2>
@@ -75,7 +76,7 @@ Orden creada por 	<?php echo CHtml::encode($model->usuario); ?> de <?php echo $m
 				$intervaloPendiente." meses, ":""
 		):"").(empty($model->fecha)?'-':date_diff(new DateTime($model->fecha.' '.$model->hora), new DateTime($model->fechaFinal))->format("%d días, %h horas, %i minutos."));
                 
-		//echo "Tiempo en total: ".$total;
+		echo "Tiempo en total: ".$total;
 	?>
 	
 	<?php
