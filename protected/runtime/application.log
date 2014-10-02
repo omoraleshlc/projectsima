@@ -5483,3 +5483,36 @@ in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php 
 in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
 in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
 >>>>>>> Stashed changes
+2014/10/02 11:22:03 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/view&id=263
+---
+2014/10/02 11:30:27 [error] [php] Object of class DateTime could not be converted to string (/var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/view.php:79)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): OrdenesSoporteController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): OrdenesSoporteController->renderPartial()
+#2 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php(33): OrdenesSoporteController->render()
+#3 unknown(0): OrdenesSoporteController->actionView()
+#4 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#5 /var/www/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /var/www/yii/framework/web/filters/CFilterChain.php(133): OrdenesSoporteController->runAction()
+#8 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#9 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#10 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#11 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/yii/framework/web/CController.php(265): OrdenesSoporteController->runActionWithFilters()
+#13 /var/www/yii/framework/web/CWebApplication.php(282): OrdenesSoporteController->run()
+#14 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#15 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/view&id=263
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/view.php (79)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php (33)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)

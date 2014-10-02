@@ -67,15 +67,15 @@ Orden creada por 	<?php echo CHtml::encode($model->usuario); ?> de <?php echo $m
 		$fechaInicial = new DateTime($model->fechaInicio);
 
 		$total = (isset($fechaFinal)?$fechaFinal->getTimestamp():$now->getTimestamp()) - $fechaCreacion->getTimestamp();
-		$intervaloPendiente = $fechaInicial->getTimeStamp() - $fechaCreacion->getTimeStamp();
+		$intervaloPendiente = (intval(date('m', $fechaInicial->getTimeStamp()))-1) - (intval(date('m', $fechaCreacion->getTimeStamp()))-1);
 		$intervaloProceso = $fechaFinal->getTimeStamp() - $fechaInicial->getTimeStamp();
 	
 		$labelPendiente = ($intervaloPendiente!=''?(
-				(intval(date('m', $intervaloPendiente))-1>0)?
-				(intval(date('m', $intervaloPendiente))-1)." meses, ":""
+				($intervaloPendiente-1>0)?
+				$intervaloPendiente." meses, ":""
 		):"").(empty($model->fecha)?'-':date_diff(new DateTime($model->fecha.' '.$model->hora), new DateTime($model->fechaFinal))->format("%d días, %h horas, %i minutos."));
-	
-		//echo "Tiempo en empezar: ".$labelPendiente;
+                
+		//echo "Tiempo en total: ".$total;
 	?>
 	
 	<?php
@@ -91,6 +91,8 @@ Orden creada por 	<?php echo CHtml::encode($model->usuario); ?> de <?php echo $m
 
 <div>			
 	<?php
+        
+                //$intervaloPendiente
 		Yii::import('application.extensions.Hzl.google.HzlVisualizationChart');
 		$porcentajePendiente = $intervaloPendiente*100/$total;
 		$porcentajeProceso = $intervaloProceso*100/$total;
