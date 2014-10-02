@@ -29,7 +29,7 @@ $cs->registerCssFile($baseUrl.'/css/jquery.signaturepad.css');
 if(isset($_POST['output']) && isset($model)){
 	$json = $_POST['output'];
 	$img = sigJsonToImage($json, array('imageSize'=>array(930, 100)));
-	$imgurl= 'protected/firmas/signature'.$model->keySOP.'.png';
+	$imgurl= 'firmas/signature'.$model->keySOP.'.png';
 	imagepng($img, $imgurl);
 	imagedestroy($img);/**/
 	Yii::app()->user->setFlash('success', "Firma guardada");
