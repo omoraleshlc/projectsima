@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Ordenes de Soporte'=>array('admin'),
-	$model->keySOP,
+	$model->idSOPAlmacen,
 );
 
 $this->menu=array(
@@ -19,7 +19,7 @@ $model3 = new CatEntidad;
 
 ?>
 <div class="page-header" style="margin: 0">
-	<h2>Orden de Soporte #<?php echo $model->keySOP; ?> <small>Código de equipo: <span style='color:black'><?php echo CHtml::encode($model->codigo); ?></span></small></h2>
+	<h2>Orden de Soporte #<?php echo $model->idSOPAlmacen; ?> <small>Código de equipo: <span style='color:black'><?php echo CHtml::encode($model->codigo); ?></span></small></h2>
 </div>
 
 <div>
