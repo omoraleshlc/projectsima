@@ -75,7 +75,7 @@ Yii::app()->clientScript->registerScript('comprimir', "
 <script>
 
 </script>
-<h1>Firmar orden #<?php echo $model->keySOP; ?></h1>
+<h1>Firmar orden #<?php echo $model->idSOPAlmacen; ?></h1>
 <?php echo $model->observaciones; ?>
 <div style="width: 80%">
 <form method="post" action="" class="sigPad" id="signature_form">
