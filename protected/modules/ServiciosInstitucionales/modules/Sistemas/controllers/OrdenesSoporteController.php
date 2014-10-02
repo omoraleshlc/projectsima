@@ -280,7 +280,7 @@ class OrdenesSoporteController extends Controller {
         $modelTeminadas = new CActiveDataProvider('OrdenesSoporte', array(
             'criteria' => array(
                 'condition' => 'status="done" and almacenSoporte like"%'.$this->almacenSoporte.'%"',
-                'order' => 'fechaFinal ASC',
+                'order' => 'fechaFinal DESC',
             ),
             'pagination' => array(
                 'pageSize' => 40,
