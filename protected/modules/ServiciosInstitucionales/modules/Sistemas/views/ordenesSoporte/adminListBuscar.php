@@ -41,7 +41,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
 			'name' => 'codigo',
 			'headerHtmlOptions' => array('style' => 'width: 8%;'),
 			'htmlOptions' => array('style' => 'text-align: center;'),
-			'filter'=>CHtml::activeTextField($model, 'observaciones', 
+			'filter'=>CHtml::activeTextField($model, 'codigo', 
                  array('style'=>'width:80%')),
 		),
 		array(
