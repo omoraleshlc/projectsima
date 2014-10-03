@@ -84,8 +84,8 @@ $this->widget('zii.widgets.grid.CGridView', array(
 		),
 		array(
 			'header'=>'Firma',
-			'cssClassExpression' => "file_exists('protected/firmas/signature'.\$data->keySOP.'.png')?'gresen':'red'",
-			'value' => "file_exists('protected/firmas/signature'.\$data->keySOP.'.png')?'Firmada':'No firmada'",
+			'cssClassExpression' => "file_exists('firmas/signature'.\$data->keySOP.'.png')?'gresen':'red'",
+			'value' => "file_exists('firmas/signature'.\$data->keySOP.'.png')?'Firmada':'No firmada'",
 			'headerHtmlOptions' => array('style' => 'width: 9%;'),
 			'htmlOptions' => array('style' => 'text-align: center;'),
 		),
