@@ -109,7 +109,7 @@ $this->widget('bootstrap.widgets.TbNavbar', array(
                             ),
                         ),
                         array('label' => 'Soporte',
-                            'url' => Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin')
+                            'url' => Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin&tab=Pendientes')
                         ),
                     )
                 ), //end dropdown

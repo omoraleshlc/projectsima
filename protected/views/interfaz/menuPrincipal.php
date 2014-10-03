@@ -439,7 +439,7 @@ $watermark_options  = array(
               
                 
                 
-                <a href="index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin">  
+                <a href="index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin&tab=Pendientes">  
               <li class="span2">
                   
                 <div id="1" class="thumbnail" onmouseover="javascript:cambiarBorde('1');" onmouseout="normal('1');">

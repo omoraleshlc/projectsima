@@ -77,9 +77,12 @@ $this->widget(
 		'htmlOptions'=>array('overflow'=>'hidden', 'class'=>'cambio'),
 		'tabs'=>array(
 			
+                    
+                       
+                    
 
 			array('label'=>'Pendientes', 'content' => $this->renderPartial('adminListPendientes',
-				array('model' => $modelPendientes,),true),'active'=>true, 'linkOptions'=>array('class'=>'cambio'),),//tab 1
+				array('model' => $modelPendientes,),true), 'linkOptions'=>array('class'=>'cambio'),),//tab 1
 			array('label'=>'En proceso', 'content' => $this->renderPartial('adminListEnProceso',
 				array('model' => $modelEnProceso,),true), 'linkOptions'=>array('class'=>'cambio'),),//tab 2
 			array('label'=>'Terminadas', 'content' => $this->renderPartial('adminListTerminadas',
@@ -88,6 +91,9 @@ $this->widget(
 				array('model' => $model, 'pagination'=>!Yii::app()->user->checkAccess('SoporteCapturista'),),true), 'linkOptions'=>array('class'=>'cambio'),),//tab 4
 			array('label'=>'Reportes','htmlOptions'=>array('overflow'=>'hidden'), 'content' => $this->renderPartial('reportes',
 				array('model' => $modelTeminadas,),true), 'linkOptions'=>array('class'=>'cambio'),),//tab 5
+                    
+                                 array('label'=>'', 'content' => $this->renderPartial('empty',
+				array('model' => $modelPendientes,),true),'active'=>true, 'linkOptions'=>array('class'=>'cambio'),),//tab 6
 				
 				/*array(
 				'label'=>'Crear nueva',
