@@ -59,7 +59,7 @@ $this->breadcrumbs=array(
 
 
 <?php
-if(Yii::app()->user->checkAccess('SistemaJefeDepartamento')) {
+if(Yii::app()->user->checkAccess('SoporteJefeDepartamento')) {
 
 echo CHtml::beginForm();
       echo CHtml::dropDownList('departamentoSoporte', $this->almacenSoporte,array(''=>'Todos','HMANT' => 'Mantenimiento', 'HSIST' => 'Sistemas'), array('style'=>'width:100%', 'submit'=>"" ));
@@ -69,7 +69,7 @@ echo CHtml::endForm();
      
      
 <?php
-if(Yii::app()->user->checkAccess('SoporteOperador')) {
+if(Yii::app()->user->checkAccess('tarea_ordenesSoporte_edicionBasica')) {
 $this->widget(
 	'bootstrap.widgets.TbTabs', array(
 		"id" => "tabs",
@@ -128,7 +128,7 @@ $this->widget(
 			'active'=>true),//tab 2
 
 			array('label'=>'Buscar','content' => $this->renderPartial('adminListBuscar',
-				array('model' => $model, 'pagination'=>Yii::app()->user->checkAccess('SoporteOperador'),),true),),//tab 1
+				array('model' => $model, 'pagination'=>Yii::app()->user->checkAccess('tarea_sistemasCatalogos_ver'),),true),),//tab 1
 		),//tabs
 ));
 

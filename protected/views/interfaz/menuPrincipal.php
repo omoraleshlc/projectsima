@@ -445,7 +445,7 @@ $watermark_options  = array(
                 <div id="1" class="thumbnail" onmouseover="javascript:cambiarBorde('1');" onmouseout="normal('1');">
                   <img height="40" src="./images/iadmin.jpeg" width="40" data-src="holder.js/160x120" alt="">
                   <div class="caption" align="center">
-                    <small> <?php echo (Yii::app()->user->checkAccess('SoporteOperador'))?'Soporte':'Call center' ?> </small>                
+                    <small> <?php echo (Yii::app()->user->checkAccess('tarea_ordenesSoporte_edicionBasica'))?'Soporte':'Call center' ?> </small>                
                     
                   </div>
                 </div>
