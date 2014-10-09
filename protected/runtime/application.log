@@ -5676,3 +5676,175 @@ CrugeUser->validate es false
 in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (158)
 in /var/www/projectsima/index.php (13)
 >>>>>>> Stashed changes
+2014/10/02 12:11:56 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>clave invalida</li>
+</ul></div>
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (158)
+in /var/www/projectsima/index.php (13)
+2014/10/02 12:15:56 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php
+---
+2014/10/02 12:18:45 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=site/index
+---
+2014/10/02 12:18:57 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=site/index
+---
+2014/10/02 12:18:59 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Terminadas
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/firma&model=ordenesSoporte&id=238
+---
+2014/10/02 15:20:14 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Reportes
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Pendientes
+---
+2014/10/02 15:20:14 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Reportes
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Pendientes
+---
+2014/10/02 15:20:14 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Terminadas
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Pendientes
+---
+2014/10/02 15:20:14 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Terminadas
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Pendientes
+---
+2014/10/02 15:20:15 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=En
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Pendientes
+---
+2014/10/02 15:20:15 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=En
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Pendientes
+---
+2014/10/02 15:20:15 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Terminadas
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Pendientes
+---
+2014/10/02 15:39:18 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin&tab=En
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin&tab=Terminadas
+---
+2014/10/02 15:39:18 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin&tab=En
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin&tab=Terminadas
+---
+2014/10/02 16:23:52 [error] [exception.CrugeException.401] action_catTipoEquipo_updateEditable<br/>401
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/CatTipoEquipo/updateEditable&model=CatTipoEquipo&field=descripcion
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/default/CatalogoEquipos
+---
+2014/10/03 14:44:34 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Terminadas
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/firma&model=ordenesSoporte&id=239
+---
+2014/10/06 10:52:46 [error] [php] include(CatEquipoController.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:421)
+Stack trace:
+#0 /var/www/projectsima/protected/extensions/x-editable/EditableSaver.php(111): spl_autoload_call()
+#1 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/CatTipoEquipoController.php(158): EditableSaver->update()
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(49): CatTipoEquipoController->actionUpdateEditable()
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(133): CatTipoEquipoController->runAction()
+#5 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#6 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#7 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#8 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#9 /var/www/yii/framework/web/CController.php(265): CatTipoEquipoController->runActionWithFilters()
+#10 /var/www/yii/framework/web/CWebApplication.php(282): CatTipoEquipoController->run()
+#11 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/CatTipoEquipo/updateEditable&model=CatTipoEquipo&field=descripcion
+in /var/www/projectsima/protected/extensions/x-editable/EditableSaver.php (111)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/CatTipoEquipoController.php (158)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
