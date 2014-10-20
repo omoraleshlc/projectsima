@@ -5848,3 +5848,122 @@ REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/CatTipoEq
 in /var/www/projectsima/protected/extensions/x-editable/EditableSaver.php (111)
 in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/CatTipoEquipoController.php (158)
 in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+2014/10/20 16:17:30 [warning] [application] Error al definir unsafe el atributo "regdate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:17:30 [warning] [application] Error al definir unsafe el atributo "actdate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:17:30 [warning] [application] Error al definir unsafe el atributo "logondate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:17:30 [warning] [application] Error al definir unsafe el atributo "nuevocampo" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:17:36 [warning] [application] Error al definir unsafe el atributo "regdate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:17:36 [warning] [application] Error al definir unsafe el atributo "actdate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:17:36 [warning] [application] Error al definir unsafe el atributo "logondate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:17:36 [warning] [application] Error al definir unsafe el atributo "nuevocampo" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:19:22 [error] [exception.CrugeException.401] action_ordenesSoporte_admin<br/>401
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php
+---
+2014/10/20 16:19:24 [error] [exception.CrugeException.401] action_equipoComputo_admin<br/>401
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/equipoComputo/admin
+---
+2014/10/20 16:20:35 [error] [exception.CrugeException.401] action_ordenesSoporte_admin<br/>401
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php
+---
+2014/10/20 16:22:03 [error] [exception.CrugeException.401] action_ordenesSoporte_admin<br/>401
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php
+---
+2014/10/20 16:26:19 [error] [exception.CrugeException.401] action_equipoComputo_update<br/>401
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/equipoComputo/update&id=40
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/equipoComputo/admin
+---
+2014/10/20 16:26:26 [error] [exception.CrugeException.401] action_equipoComputo_create<br/>401
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/EquipoComputo/create&model=EquipoComputo
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/equipoComputo/admin
+---
+2014/10/20 16:36:50 [warning] [application] Error al definir unsafe el atributo "regdate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:36:50 [warning] [application] Error al definir unsafe el atributo "actdate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:36:50 [warning] [application] Error al definir unsafe el atributo "logondate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:36:50 [warning] [application] Error al definir unsafe el atributo "nuevocampo" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:36:58 [warning] [application] Error al definir unsafe el atributo "regdate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:36:58 [warning] [application] Error al definir unsafe el atributo "actdate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:36:58 [warning] [application] Error al definir unsafe el atributo "logondate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:36:58 [warning] [application] Error al definir unsafe el atributo "nuevocampo" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:37:08 [warning] [application] Error al definir unsafe el atributo "regdate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:37:08 [warning] [application] Error al definir unsafe el atributo "actdate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:37:08 [warning] [application] Error al definir unsafe el atributo "logondate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:37:08 [warning] [application] Error al definir unsafe el atributo "nuevocampo" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:37:16 [warning] [application] Error al definir unsafe el atributo "regdate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:37:16 [warning] [application] Error al definir unsafe el atributo "actdate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:37:16 [warning] [application] Error al definir unsafe el atributo "logondate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:37:16 [warning] [application] Error al definir unsafe el atributo "nuevocampo" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)

@@ -41,7 +41,7 @@ CREATE TABLE `cruge_authassignment` (
 
 LOCK TABLES `cruge_authassignment` WRITE;
 /*!40000 ALTER TABLE `cruge_authassignment` DISABLE KEYS */;
-INSERT INTO `cruge_authassignment` VALUES (11,NULL,'N;','SoporteCapturista'),(27,NULL,'N;','SoporteOperador'),(28,NULL,'N;','SoporteCapturista'),(28,NULL,'N;','SoporteOperador'),(29,NULL,'N;','SoporteOperador'),(30,NULL,'N;','SoporteOperador'),(31,NULL,'N;','SoporteCapturista');
+INSERT INTO `cruge_authassignment` VALUES (11,NULL,'N;','TIOperador'),(28,NULL,'N;','SoporteCapturista'),(28,NULL,'N;','SoporteOperador'),(29,NULL,'N;','TICapturista'),(30,NULL,'N;','SoporteOperador'),(31,NULL,'N;','SoporteCapturista');
 /*!40000 ALTER TABLE `cruge_authassignment` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-10-09 10:15:50
+-- Dump completed on 2014-10-20 16:39:43
