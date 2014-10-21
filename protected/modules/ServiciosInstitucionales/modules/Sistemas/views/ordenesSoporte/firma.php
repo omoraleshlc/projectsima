@@ -25,12 +25,35 @@ $cs->registerCssFile($baseUrl.'/css/jquery.signaturepad.css');
 
 <?php
 /* @var $this DefaultController */
+	//echo "<img src='firmas/watermarkfirma.png'/>";
 
 if(isset($_POST['output']) && isset($model)){
 	$json = $_POST['output'];
-	$img = sigJsonToImage($json, array('imageSize'=>array(930, 100)));
+	$img = sigJsonToImage($json, array('imageSize'=>array(330, 100)));
 	$imgurl= 'firmas/signature'.$model->keySOP.'.png';
 	imagepng($img, $imgurl);
+	$im = imagecreatefrompng($imgurl);
+	
+	$estampa = imagecreatefrompng('firmas/watermarkfirma.png');
+	
+	// Establecer los márgenes para la estampa y obtener el alto/ancho de la imagen de la estampa
+	$margen_dcho = 2;
+	$margen_inf = 0;
+	$sx = imagesx($estampa);
+	$sy = imagesy($estampa);
+
+	// Copiar la imagen de la estampa sobre nuestra foto usando los índices de márgen y el
+	// ancho de la foto para calcular la posición de la estampa. 
+	imagecopy($im, $estampa, imagesx($im) - $sx - $margen_dcho, imagesy($im) - $sy - $margen_inf, 0, 0, imagesx($estampa), imagesy($estampa));
+
+	// Imprimir y liberar memoria
+	header('Content-type: image/png');
+	imagepng($im,$imgurl);
+	imagedestroy($im);
+	
+	
+	
+	
 	imagedestroy($img);/**/
 	Yii::app()->user->setFlash('success', "Firma guardada");
 	$this->redirect(array('ordenesSoporte/FinalizarOrden', 'id'=>$model->keySOP ));
