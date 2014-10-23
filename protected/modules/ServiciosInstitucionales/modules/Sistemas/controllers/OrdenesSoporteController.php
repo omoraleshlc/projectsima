@@ -168,9 +168,12 @@ class OrdenesSoporteController extends Controller {
                 else if (empty($almacen))
                     Yii::app()->user->setFlash('error', "No se ha seleccionado el departamento");
 
-                else if (!empty($model->codigo))
-                    if ($model->entidad != substr($model->codigo, 1, 2))
+                else if (!empty($model->codigo)){
+                	  if(!preg_match("/0[0-9]{2}-[A-Za-z][0-9]{2}([A-Fa-f|0-9]){4}/", $model->codigo))
+								Yii::app()->user->setFlash('error', "El codigo no tiene el formato apropiado");
+                    else if ($model->entidad != substr($model->codigo, 1, 2))
                         Yii::app()->user->setFlash('error', "El codigo no pertenece a esta entidad");
+                        }
             }
             $this->redirect('index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin&tab=Crear');
         }

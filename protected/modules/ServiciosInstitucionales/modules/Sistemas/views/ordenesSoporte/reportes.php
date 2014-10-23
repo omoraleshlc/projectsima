@@ -57,7 +57,7 @@ a
 		}
 		
 		$duplicateData=Yii::app()->db->createCommand(
-		'Select almacen, COUNT(*) as num from  sima.sis_ordenesSOP where almacenSoporte like '.$depto.' '.$fechas.' group by almacen order by num'
+		'Select a.descripcion as almacen, COUNT(*) as num from sima.sis_ordenesSOP sop inner join sima.almacenes a on a.almacen=sop.almacen where almacenSoporte like '.$depto.' '.$fechas.' group by sop.almacen order by num'
 		)->queryAll();
 	}
 	else if(isset($_GET['OrdenesSoporte'])){
@@ -77,12 +77,12 @@ a
 		}
 		
 		$duplicateData=Yii::app()->db->createCommand(
-		'Select almacen, COUNT(*) as num from  sima.sis_ordenesSOP where almacenSoporte like '.$depto.' '.$fechas.' group by almacen order by num'
+		'Select a.descripcion as almacen, COUNT(*) as num from sima.sis_ordenesSOP sop inner join sima.almacenes a on a.almacen=sop.almacen where almacenSoporte like '.$depto.' '.$fechas.' group by sop.almacen order by num'
 		)->queryAll();
 	}
 	else{
 		$duplicateData=Yii::app()->db->createCommand('
-			 Select almacen, COUNT(*) as num from  sima.sis_ordenesSOP group by almacen order by num
+			 Select a.descripcion as almacen, COUNT(*) as num from sima.sis_ordenesSOP sop inner join sima.almacenes a on a.almacen=sop.almacen group by sop.almacen order by num
 		')->queryAll();
 		
 		$labelFecha='de todos los tiempos de todos los departamentos de soporte.';
@@ -106,19 +106,23 @@ a
 	
 
 
-
 	$stack = array(array("", "Almacen"));	
 		foreach($duplicateData as $arrrr){
-			array_push($stack, array($arrrr['almacen'], intval($arrrr['num'])));
+			array_push($stack, array(ucfirst(strtolower($arrrr['almacen'])), intval($arrrr['num'])));
 	  }
+	  
+	  $heigth=600;
+		if (count($stack)>5){
+			$heigth=900;
+		}
   
 	$this->widget('ext.Hzl.google.HzlVisualizationChart', array(
 		'visualization' => 'BarChart',
 		'data'=>$stack,
 		'options' => array(
 			'title' => 'Incidencias por departamento',
-			'width' => 800,
-			'height' => 600,
+			'width' => 900,
+			'height' => $heigth,
 	)));
 	}
 	else

@@ -16,6 +16,7 @@ $this->menu=array(
 
 $model2 = new CatTipoSoporte;
 $model3 = new CatEntidad;
+$model4 = new Almacenes;
 
 ?>
 <div class="page-header" style="margin: 0">
@@ -23,9 +24,9 @@ $model3 = new CatEntidad;
 </div>
 
 <div>
-		En <?php  echo $model->entidadSolicitud?$model3->find('codigoEntidad="' . $model->entidadSolicitud . '"')->descripcionEntidad:'entidad no especificada'; ?>, departamento de <?php echo CHtml::encode($model->almacen); ?>.
+		En <?php  echo $model->entidadSolicitud?$model3->find('codigoEntidad="' . $model->entidadSolicitud . '"')->descripcionEntidad:'entidad no especificada'; ?>, departamento de <?php  echo $model->almacen?$model4->find('almacen="' . $model->almacen . '"')->descripcion:'no especificado'; ?>.
 		<br/>
-		<?php echo CHtml::encode($model->nombre); ?> solicita soporte tipo <?php echo $model->keyTS?$model2->find('keyRSA="' . $model->keyTS . '"')->descripcion:'no especificado'; ?> de <?php echo CHtml::encode($model->almacenSoporte); ?>.
+		<?php echo CHtml::encode($model->nombre); ?> solicita soporte tipo <?php echo $model->keyTS?$model2->find('keyRSA="' . $model->keyTS . '"')->descripcion:'no especificado'; ?> de <?php  echo $model->almacenSoporte?$model4->find('almacen="' . $model->almacenSoporte . '"')->descripcion:'no especificado'; ?>.
 </div>
 
 <h2><?php echo CHtml::encode($model->observaciones); ?></h2>
@@ -55,9 +56,9 @@ Orden creada por 	<?php echo CHtml::encode($model->usuario); ?> de <?php echo $m
 	<?php $fechaCreacion = date_create_from_format('Y-m-d h:i a', $model->fecha.' '.$model->hora); ?>
 	Se creó el <?php echo CHtml::encode($fechaCreacion->format('Y-m-d H:i:s')); ?>
 	<br/>
-	Se inició el <?php echo CHtml::encode($model->fechaFinal); ?>
+	Se inició el <?php echo CHtml::encode($model->fechaInicio); ?>
 	<br/>
-	Se terminó el <?php echo CHtml::encode($model->fechaInicio); ?>
+	Se terminó el <?php echo CHtml::encode($model->fechaFinal); ?>
 	<br/>
 	<?php 
 		//$fechaCreacion = date_create_from_format('Y-m-d h:i:s', $model->fecha.' '.$model->hora);
@@ -67,21 +68,23 @@ Orden creada por 	<?php echo CHtml::encode($model->usuario); ?> de <?php echo $m
 		$fechaInicial = new DateTime($model->fechaInicio);
 
 		$total = (isset($fechaFinal)?$fechaFinal->getTimestamp():$now->getTimestamp()) - $fechaCreacion->getTimestamp();
-		$intervaloPendiente = (intval(date('m', $fechaInicial->getTimeStamp()))-1) - (intval(date('m', $fechaCreacion->getTimeStamp()))-1);
+		$intervaloPendiente = $fechaInicial->getTimeStamp() - $fechaCreacion->getTimeStamp();
+                $labelintervaloPendiente = (intval(date('m', $fechaInicial->getTimeStamp()))-1) - (intval(date('m', $fechaCreacion->getTimeStamp()))-1);
 		$intervaloProceso = $fechaFinal->getTimeStamp() - $fechaInicial->getTimeStamp();
+                $labelintervaloProceso = (intval(date('m', $fechaFinal->getTimeStamp()))-1) - (intval(date('m', $fechaInicial->getTimeStamp()))-1);
 	
-		$labelPendiente = ($intervaloPendiente!=''?(
-				($intervaloPendiente-1>0)?
-				$intervaloPendiente." meses, ":""
+		$labelPendiente = ($labelintervaloPendiente!=''?(
+				($labelintervaloPendiente-1>0)?
+				$labelintervaloPendiente." meses, ":""
 		):"").(empty($model->fecha)?'-':date_diff(new DateTime($model->fecha.' '.$model->hora), new DateTime($model->fechaFinal))->format("%d días, %h horas, %i minutos."));
                 
 		//echo "Tiempo en total: ".$total;
 	?>
 	
 	<?php
-		$labelProceso =($intervaloProceso!=''?(
-				(intval(date('m', $intervaloProceso))-1>0)?
-				(intval(date('m', $intervaloProceso))-1)." meses, ":""
+		$labelProceso =($labelintervaloProceso!=''?(
+				($labelintervaloProceso-1>0)?
+				$labelintervaloProceso." meses, ":""
 		):"").(empty($model->fechaInicio)?'-':date_diff(new DateTime($model->fechaInicio), new DateTime($model->fechaFinal))->format("%d días, %h horas, %i minutos."));
 		//echo "<br/>Tiempo de proceso: ".$labelProceso;
 	?>

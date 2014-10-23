@@ -5848,6 +5848,7 @@ REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/CatTipoEq
 in /var/www/projectsima/protected/extensions/x-editable/EditableSaver.php (111)
 in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/CatTipoEquipoController.php (158)
 in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+<<<<<<< HEAD
 2014/10/20 16:17:30 [warning] [application] Error al definir unsafe el atributo "regdate" de "CrugeStoredUser".
 in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
 in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
@@ -5967,3 +5968,247 @@ in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (23
 in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
 in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
 in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+=======
+2014/10/21 16:52:55 [error] [php] imagecreatefrompng(firmas/watermarkfirma.png): failed to open stream: Permission denied (/var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/firma.php:35)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): OrdenesSoporteController->renderInternal()
+#1 /var/www/yii/framework/web/CController.php(869): OrdenesSoporteController->renderFile()
+#2 /var/www/yii/framework/web/CController.php(782): OrdenesSoporteController->renderPartial()
+#3 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php(608): OrdenesSoporteController->render()
+#4 unknown(0): OrdenesSoporteController->actionFirma()
+#5 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(133): OrdenesSoporteController->runAction()
+#9 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#10 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#11 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#12 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/yii/framework/web/CController.php(265): OrdenesSoporteController->runActionWithFilters()
+#14 /var/www/yii/framework/web/CWebApplication.php(282): OrdenesSoporteController->run()
+#15 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#17 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/firma&model=ordenesSoporte&id=49
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/firma.php (35)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php (608)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+2014/10/21 16:53:34 [error] [php] imagesx() expects parameter 1 to be resource, boolean given (/var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/firma.php:45)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): OrdenesSoporteController->renderInternal()
+#1 /var/www/yii/framework/web/CController.php(869): OrdenesSoporteController->renderFile()
+#2 /var/www/yii/framework/web/CController.php(782): OrdenesSoporteController->renderPartial()
+#3 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php(608): OrdenesSoporteController->render()
+#4 unknown(0): OrdenesSoporteController->actionFirma()
+#5 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(133): OrdenesSoporteController->runAction()
+#9 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#10 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#11 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#12 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/yii/framework/web/CController.php(265): OrdenesSoporteController->runActionWithFilters()
+#14 /var/www/yii/framework/web/CWebApplication.php(282): OrdenesSoporteController->run()
+#15 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#17 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/firma&model=ordenesSoporte&id=49
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/firma.php (45)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php (608)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+2014/10/21 17:02:18 [error] [php] imagesx() expects parameter 1 to be resource, boolean given (/var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/firma.php:47)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): OrdenesSoporteController->renderInternal()
+#1 /var/www/yii/framework/web/CController.php(869): OrdenesSoporteController->renderFile()
+#2 /var/www/yii/framework/web/CController.php(782): OrdenesSoporteController->renderPartial()
+#3 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php(608): OrdenesSoporteController->render()
+#4 unknown(0): OrdenesSoporteController->actionFirma()
+#5 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(133): OrdenesSoporteController->runAction()
+#9 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#10 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#11 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#12 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/yii/framework/web/CController.php(265): OrdenesSoporteController->runActionWithFilters()
+#14 /var/www/yii/framework/web/CWebApplication.php(282): OrdenesSoporteController->run()
+#15 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#17 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/firma&model=ordenesSoporte&id=49
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/firma.php (47)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php (608)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+2014/10/21 17:05:14 [error] [php] imagesx() expects parameter 1 to be resource, boolean given (/var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/firma.php:47)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): OrdenesSoporteController->renderInternal()
+#1 /var/www/yii/framework/web/CController.php(869): OrdenesSoporteController->renderFile()
+#2 /var/www/yii/framework/web/CController.php(782): OrdenesSoporteController->renderPartial()
+#3 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php(608): OrdenesSoporteController->render()
+#4 unknown(0): OrdenesSoporteController->actionFirma()
+#5 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(133): OrdenesSoporteController->runAction()
+#9 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#10 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#11 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#12 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/yii/framework/web/CController.php(265): OrdenesSoporteController->runActionWithFilters()
+#14 /var/www/yii/framework/web/CWebApplication.php(282): OrdenesSoporteController->run()
+#15 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#17 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/firma&model=ordenesSoporte&id=49
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/firma.php (47)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php (608)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+2014/10/21 17:05:36 [error] [php] imagesx() expects parameter 1 to be resource, boolean given (/var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/firma.php:47)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): OrdenesSoporteController->renderInternal()
+#1 /var/www/yii/framework/web/CController.php(869): OrdenesSoporteController->renderFile()
+#2 /var/www/yii/framework/web/CController.php(782): OrdenesSoporteController->renderPartial()
+#3 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php(608): OrdenesSoporteController->render()
+#4 unknown(0): OrdenesSoporteController->actionFirma()
+#5 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(133): OrdenesSoporteController->runAction()
+#9 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#10 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#11 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#12 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/yii/framework/web/CController.php(265): OrdenesSoporteController->runActionWithFilters()
+#14 /var/www/yii/framework/web/CWebApplication.php(282): OrdenesSoporteController->run()
+#15 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#17 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/firma&model=ordenesSoporte&id=49
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/firma.php (47)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php (608)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+2014/10/21 17:19:43 [error] [php] imagecreatefrompng(firmas/watermarkfirma.png): failed to open stream: Permission denied (/var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/firma.php:37)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): OrdenesSoporteController->renderInternal()
+#1 /var/www/yii/framework/web/CController.php(869): OrdenesSoporteController->renderFile()
+#2 /var/www/yii/framework/web/CController.php(782): OrdenesSoporteController->renderPartial()
+#3 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php(608): OrdenesSoporteController->render()
+#4 unknown(0): OrdenesSoporteController->actionFirma()
+#5 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(133): OrdenesSoporteController->runAction()
+#9 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#10 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#11 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#12 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/yii/framework/web/CController.php(265): OrdenesSoporteController->runActionWithFilters()
+#14 /var/www/yii/framework/web/CWebApplication.php(282): OrdenesSoporteController->run()
+#15 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#17 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/firma&model=ordenesSoporte&id=50
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/firma.php (37)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php (608)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+2014/10/21 17:23:25 [error] [php] imagecreatefrompng(firmas/watermarkfirma.png): failed to open stream: Permission denied (/var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/firma.php:37)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): OrdenesSoporteController->renderInternal()
+#1 /var/www/yii/framework/web/CController.php(869): OrdenesSoporteController->renderFile()
+#2 /var/www/yii/framework/web/CController.php(782): OrdenesSoporteController->renderPartial()
+#3 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php(608): OrdenesSoporteController->render()
+#4 unknown(0): OrdenesSoporteController->actionFirma()
+#5 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(133): OrdenesSoporteController->runAction()
+#9 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#10 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#11 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#12 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/yii/framework/web/CController.php(265): OrdenesSoporteController->runActionWithFilters()
+#14 /var/www/yii/framework/web/CWebApplication.php(282): OrdenesSoporteController->run()
+#15 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#17 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/firma&model=ordenesSoporte&id=53
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/firma.php (37)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php (608)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+2014/10/21 17:31:35 [error] [php] imagecreatefrompng(firmas/watermarkfirma.png): failed to open stream: Permission denied (/var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/firma.php:37)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): OrdenesSoporteController->renderInternal()
+#1 /var/www/yii/framework/web/CController.php(869): OrdenesSoporteController->renderFile()
+#2 /var/www/yii/framework/web/CController.php(782): OrdenesSoporteController->renderPartial()
+#3 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php(608): OrdenesSoporteController->render()
+#4 unknown(0): OrdenesSoporteController->actionFirma()
+#5 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(133): OrdenesSoporteController->runAction()
+#9 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#10 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#11 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#12 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/yii/framework/web/CController.php(265): OrdenesSoporteController->runActionWithFilters()
+#14 /var/www/yii/framework/web/CWebApplication.php(282): OrdenesSoporteController->run()
+#15 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#17 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/firma&model=ordenesSoporte&id=55
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/firma.php (37)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php (608)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+2014/10/21 17:53:51 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Pendientes
+HTTP_REFERER=http://localhost/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Terminadas
+---
+2014/10/21 17:53:53 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=En
+HTTP_REFERER=http://localhost/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Terminadas
+---
+2014/10/21 17:53:54 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=En
+HTTP_REFERER=http://localhost/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Terminadas
+---
+2014/10/21 17:53:55 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/firma&model=ordenesSoporte&id=56
+HTTP_REFERER=http://localhost/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Terminadas
+---
+2014/10/21 17:53:59 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/firma&model=ordenesSoporte&id=56
+HTTP_REFERER=http://localhost/projectsima/index.php?r=cruge/ui/login&param=%2Fprojectsima%2Findex.php%3Fr%3DServiciosInstitucionales%2FSistemas%2FordenesSoporte%2Ffirma%26model%3DordenesSoporte%26id%3D56
+---
+>>>>>>> 12098d8db81d76de352cb4a0e8f9fefa1758f9bd
