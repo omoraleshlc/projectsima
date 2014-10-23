@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.5.38, for debian-linux-gnu (i686)
+-- MySQL dump 10.13  Distrib 5.5.40, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: sima
 -- ------------------------------------------------------
--- Server version	5.5.38-0ubuntu0.14.04.1
+-- Server version	5.5.40-0ubuntu0.14.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -41,7 +41,7 @@ CREATE TABLE `cruge_authassignment` (
 
 LOCK TABLES `cruge_authassignment` WRITE;
 /*!40000 ALTER TABLE `cruge_authassignment` DISABLE KEYS */;
-INSERT INTO `cruge_authassignment` VALUES (11,NULL,'N;','TIOperador'),(28,NULL,'N;','SoporteCapturista'),(28,NULL,'N;','SoporteOperador'),(29,NULL,'N;','TICapturista'),(30,NULL,'N;','SoporteOperador'),(31,NULL,'N;','SoporteCapturista');
+INSERT INTO `cruge_authassignment` VALUES (11,NULL,'N;','TIOperador'),(28,NULL,'N;','SoporteCapturista'),(28,NULL,'N;','SoporteOperador'),(29,NULL,'N;','TICapturista'),(30,NULL,'N;','TIJefeDepartamento'),(31,NULL,'N;','SoporteCapturista');
 /*!40000 ALTER TABLE `cruge_authassignment` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-10-20 16:39:43
+-- Dump completed on 2014-10-23 18:16:09
