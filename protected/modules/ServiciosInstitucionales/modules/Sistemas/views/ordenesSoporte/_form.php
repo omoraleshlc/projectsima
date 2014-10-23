@@ -57,7 +57,7 @@ div.form .columna select, div.form .columna input[type='text'], div.form .column
 				'required'=>'true',
 				'ajax' => array(
 					'type'=>'POST', //request type
-					'url'=>CController::createUrl('ordenesSoporte/almacenesPorEntidad'), //url to call.
+					'url'=>CController::createUrl('equipoComputo/almacenesPorEntidad'), //url to call.
 					//Style: CController::createUrl('currentController/methodToCall')
 					'update'=>'#almacen', //selector to update
 					//'data'=>'js:javascript statement' 
