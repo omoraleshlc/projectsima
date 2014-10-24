@@ -59,7 +59,7 @@ $this->breadcrumbs=array(
 
 
 <?php
-if(Yii::app()->user->checkAccess('SistemaJefeDepartamento')) {
+if(Yii::app()->user->checkAccess('SoporteJefeDepartamento')) {
 
 echo CHtml::beginForm();
       echo CHtml::dropDownList('departamentoSoporte', $this->almacenSoporte,array(''=>'Todos','HMANT' => 'Mantenimiento', 'HSIST' => 'Sistemas'), array('style'=>'width:100%', 'submit'=>"" ));
@@ -69,7 +69,7 @@ echo CHtml::endForm();
      
      
 <?php
-if(Yii::app()->user->checkAccess('SistemasOperador')) {
+if(Yii::app()->user->checkAccess('tarea_ordenesSoporte_edicionBasica')) {
 $this->widget(
 	'bootstrap.widgets.TbTabs', array(
 		"id" => "tabs",
@@ -77,17 +77,23 @@ $this->widget(
 		'htmlOptions'=>array('overflow'=>'hidden', 'class'=>'cambio'),
 		'tabs'=>array(
 			
+                    
+                       
+                    
 
 			array('label'=>'Pendientes', 'content' => $this->renderPartial('adminListPendientes',
-				array('model' => $modelPendientes,),true),'active'=>true, 'linkOptions'=>array('class'=>'cambio'),),//tab 1
+				array('model' => $modelPendientes,),true), 'linkOptions'=>array('class'=>'cambio'),),//tab 1
 			array('label'=>'En proceso', 'content' => $this->renderPartial('adminListEnProceso',
 				array('model' => $modelEnProceso,),true), 'linkOptions'=>array('class'=>'cambio'),),//tab 2
 			array('label'=>'Terminadas', 'content' => $this->renderPartial('adminListTerminadas',
 				array('model' => $modelTeminadas,),true), 'linkOptions'=>array('class'=>'cambio'),),//tab 3
 			array('label'=>'Buscar','content' => $this->renderPartial('adminListBuscar',
-				array('model' => $model, 'pagination'=>!Yii::app()->user->checkAccess('SistemaCapturista'),),true), 'linkOptions'=>array('class'=>'cambio'),),//tab 4
+				array('model' => $model, 'pagination'=>!Yii::app()->user->checkAccess('SoporteCapturista'),),true), 'linkOptions'=>array('class'=>'cambio'),),//tab 4
 			array('label'=>'Reportes','htmlOptions'=>array('overflow'=>'hidden'), 'content' => $this->renderPartial('reportes',
 				array('model' => $modelTeminadas,),true), 'linkOptions'=>array('class'=>'cambio'),),//tab 5
+                    
+                                 array('label'=>'', 'content' => $this->renderPartial('empty',
+				array('model' => $modelPendientes,),true),'active'=>true, 'linkOptions'=>array('class'=>'cambio'),),//tab 6
 				
 				/*array(
 				'label'=>'Crear nueva',
@@ -99,14 +105,7 @@ $this->widget(
 				),//render partial
 				'linkOptions'=>array('class'=>'cambio'),
 			),*///tab 6
-			array(
-				'label'=>'Tipos de soporte',
-				'content'=>$this->renderPartial(
-					'adminListCatTipoSoporte', array(
-						'model' => CatTipoSoporte::model(),
-					),true
-				),//render partial
-			'linkOptions'=>array('class'=>'cambio'),),//tab 1
+			
 			/**/
 		),//tabs
 ));
@@ -129,16 +128,7 @@ $this->widget(
 			'active'=>true),//tab 2
 
 			array('label'=>'Buscar','content' => $this->renderPartial('adminListBuscar',
-				array('model' => $model, 'pagination'=>Yii::app()->user->checkAccess('SistemasOperador'),),true),),//tab 1
-				array(
-				'label'=>'Tipos de soporte',
-				'content'=>$this->renderPartial(
-					'adminListCatTipoSoporte', array(
-						'model' => CatTipoSoporte::model(),
-					),true
-				),//render partial
-				
-			),//tab 1
+				array('model' => $model, 'pagination'=>Yii::app()->user->checkAccess('tarea_sistemasCatalogos_ver'),),true),),//tab 1
 		),//tabs
 ));
 

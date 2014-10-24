@@ -33,7 +33,7 @@ echo CHtml::image(Yii::app()->request->baseUrl.'/images/hlclogo2.png');
 		<?php echo CHtml::link(CHtml::encode($model->codigo), array('view', 'id'=>$model->keyIE)); ?></h2>
 	<h3>Equipo <?php  echo $model->status='A'?'activo':'inactivo'; ?> dado de alta por <?php  echo $model->usuario; ?></h3>
 	<div>
-			<?php  echo $model->keyTE?$model2->find('keyTE="' . $model->keyTE . '"')->descripcion:'tipo no especificado'; ?> marca <?php echo $model->keyMA?$model3->find('keyMA="' . $model->keyMA . '"')->descripcion:'marca no especificada'; ?><?php  echo $model->keyP?' proveido por '.$model5->find('keyP="' . $model->keyP . '"')->razonSocial:'.'; ?>
+			<?php  echo $model->keyTE?$model2->find('keyTE="' . $model->keyTE . '"')->descripcion:'tipo no especificado'; ?> marca <?php echo $model->keyMA?$model3->find('keyMA="' . $model->keyMA . '"')->descripcion:' no especificada'; ?><?php  echo $model->keyP?' proveido por '.$model5->find('keyP="' . $model->keyP . '"')->razonSocial:'.'; ?>
 			<br/>
 			<?php  echo $model->keyMAM?'Monitor marca '.$model4->find('keyMAM="' . $model->keyMAM . '"')->descripcion:'Monitor no especificado'; ?>
 	</div>
@@ -43,13 +43,17 @@ echo CHtml::image(Yii::app()->request->baseUrl.'/images/hlclogo2.png');
 			<br/>
 			<?php  echo $model->descripcionUbicacion; ?>
 	</div>
+	
+	<div  class="buttons hidden-print" >
+			Próximo mantenimiento el <?php  echo $model->next_mantenimiento; ?>
+			<br/>
+	</div>
+	
 
 		<br />
 	<?php $this->widget('zii.widgets.CDetailView', array(
 		'data'=>$model,
 		'attributes'=>array(
-			'motherboard',
-			'drives',
 			'harddisk',
 			'memoriaRam',
 			'monitor',
@@ -57,6 +61,10 @@ echo CHtml::image(Yii::app()->request->baseUrl.'/images/hlclogo2.png');
 			'velocidadProcesador',
 			'fecha',
 			'hora',
+			array(
+            'name'=>'meses_mantenimiento',
+            'value'=>(($model->meses_mantenimiento===1)?"Cada mes":"Cada ".$model->meses_mantenimiento." meses"),
+        ),
 		),
 	)); ?>
 </div>

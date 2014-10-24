@@ -17,10 +17,10 @@ $this->widget('zii.widgets.grid.CGridView', array(
 	'enablePagination' => $pagination,
 	'columns'=>array(
 		array(
-			'name' => 'keySOP',
+			'name' => 'idSOPAlmacen',
 			'headerHtmlOptions' => array('style' => 'width: 5%;'),
 			'htmlOptions' => array('style' => 'text-align: center;'),
-			'filter'=>"<i class='icon-search'></i>&nbsp;&nbsp;".CHtml::activeTextField($model, 'keySOP', 
+			'filter'=>"<i class='icon-search'></i>&nbsp;&nbsp;".CHtml::activeTextField($model, 'idSOPAlmacen', 
                  array('style'=>'width:55%')),
         	'filterHtmlOptions' => array('colspan' => '2'),
 		),
@@ -41,7 +41,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
 			'name' => 'codigo',
 			'headerHtmlOptions' => array('style' => 'width: 8%;'),
 			'htmlOptions' => array('style' => 'text-align: center;'),
-			'filter'=>CHtml::activeTextField($model, 'observaciones', 
+			'filter'=>CHtml::activeTextField($model, 'codigo', 
                  array('style'=>'width:80%')),
 		),
 		array(
@@ -83,9 +83,16 @@ $this->widget('zii.widgets.grid.CGridView', array(
 			'htmlOptions' => array('style' => 'text-align: center;'),
 		),
 		array(
+			'header'=>'Firma',
+			'cssClassExpression' => "file_exists('firmas/signature'.\$data->keySOP.'.png')?'gresen':'red'",
+			'value' => "file_exists('firmas/signature'.\$data->keySOP.'.png')?'Firmada':'No firmada'",
+			'headerHtmlOptions' => array('style' => 'width: 9%;'),
+			'htmlOptions' => array('style' => 'text-align: center;'),
+		),
+		array(
 			'class'=>'bootstrap.widgets.TbButtonColumn',
 			'template' => '{obser}{verobser}',
-			'header' => 'Obsevaciones',
+			'header' => 'Observaciones',
 			'buttons' => array(
 				'obser' => array( //the name {reply} must be same
 					'label' => 'Agregar', // text label of the button

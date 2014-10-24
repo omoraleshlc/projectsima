@@ -66,6 +66,7 @@ class CatTipoSoporte extends CActiveRecord
 			'descripcion' => 'Descripcion',
 			'almacen' => 'Almacen',
 			'entidad' => 'Entidad',
+                        'descripcionAlmacen'=>'Descripción almacen',
 		);
 	}
 
@@ -83,6 +84,7 @@ class CatTipoSoporte extends CActiveRecord
 		$criteria->compare('keyRSA',$this->keyRSA);
 		$criteria->compare('descripcion',$this->descripcion,true);
 		$criteria->compare('almacen',$this->almacen,true);
+		$criteria->compare('descripcionAlmacen',$this->descripcionAlmacen,true);
 		$criteria->compare('entidad',$this->entidad,true);
 
 		return new CActiveDataProvider($this, array(

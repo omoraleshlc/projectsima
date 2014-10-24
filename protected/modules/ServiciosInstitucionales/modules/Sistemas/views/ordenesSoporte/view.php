@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Ordenes de Soporte'=>array('admin'),
-	$model->keySOP,
+	$model->idSOPAlmacen,
 );
 
 $this->menu=array(
@@ -16,16 +16,17 @@ $this->menu=array(
 
 $model2 = new CatTipoSoporte;
 $model3 = new CatEntidad;
+$model4 = new Almacenes;
 
 ?>
 <div class="page-header" style="margin: 0">
-	<h2>Orden de Soporte #<?php echo $model->keySOP; ?> <small>Código de equipo: <span style='color:black'><?php echo CHtml::encode($model->codigo); ?></span></small></h2>
+	<h2>Orden de Soporte #<?php echo $model->idSOPAlmacen; ?> <small>Código de equipo: <span style='color:black'><?php echo CHtml::encode($model->codigo); ?></span></small></h2>
 </div>
 
 <div>
-		En <?php  echo $model->entidadSolicitud?$model3->find('codigoEntidad="' . $model->entidadSolicitud . '"')->descripcionEntidad:'entidad no especificada'; ?>, departamento de <?php echo CHtml::encode($model->almacen); ?>.
+		En <?php  echo $model->entidadSolicitud?$model3->find('codigoEntidad="' . $model->entidadSolicitud . '"')->descripcionEntidad:'entidad no especificada'; ?>, departamento de <?php  echo $model->almacen?$model4->find('almacen="' . $model->almacen . '"')->descripcion:'no especificado'; ?>.
 		<br/>
-		<?php echo CHtml::encode($model->nombre); ?> solicita soporte tipo <?php echo $model->keyTS?$model2->find('keyRSA="' . $model->keyTS . '"')->descripcion:'no especificado'; ?> de <?php echo CHtml::encode($model->almacenSoporte); ?>.
+		<?php echo CHtml::encode($model->nombre); ?> solicita soporte tipo <?php echo $model->keyTS?$model2->find('keyRSA="' . $model->keyTS . '"')->descripcion:'no especificado'; ?> de <?php  echo $model->almacenSoporte?$model4->find('almacen="' . $model->almacenSoporte . '"')->descripcion:'no especificado'; ?>.
 </div>
 
 <h2><?php echo CHtml::encode($model->observaciones); ?></h2>
@@ -43,16 +44,21 @@ Orden creada por 	<?php echo CHtml::encode($model->usuario); ?> de <?php echo $m
 </div>
 	
 <div>
-			<h4>Orden <span style='color:DodgerBlue'><?php echo $model->status=='pending'?'pendiente':($model->status=='ontransit'?'en proceso':'terminada') ?></span> atendida por <?php echo CHtml::encode($model->usuarioEjecutor); ?>.</h4>
+			<h4>Orden <span style='color:DodgerBlue'><?php echo $model->status=='pending'?'pendiente':($model->status=='ontransit'?'en proceso':'terminada') ?></span> atendida por <?php
+			if(isset($model->usuarioEjecutor) && $model->usuarioEjecutor!=""){
+			$simauser= UsuariosSima::model()->find('usuario=:usuario',array(':usuario'=>$model->usuarioEjecutor,));
+			echo CHtml::encode(
+			 ucwords(strtolower($simauser->nombre.' '.$simauser->aPaterno))
+			);} ?>.</h4>
 </div>	
 		
 <div>
 	<?php $fechaCreacion = date_create_from_format('Y-m-d h:i a', $model->fecha.' '.$model->hora); ?>
 	Se creó el <?php echo CHtml::encode($fechaCreacion->format('Y-m-d H:i:s')); ?>
 	<br/>
-	Se inició el <?php echo CHtml::encode($model->fechaFinal); ?>
+	Se inició el <?php echo CHtml::encode($model->fechaInicio); ?>
 	<br/>
-	Se terminó el <?php echo CHtml::encode($model->fechaInicio); ?>
+	Se terminó el <?php echo CHtml::encode($model->fechaFinal); ?>
 	<br/>
 	<?php 
 		//$fechaCreacion = date_create_from_format('Y-m-d h:i:s', $model->fecha.' '.$model->hora);
@@ -63,20 +69,22 @@ Orden creada por 	<?php echo CHtml::encode($model->usuario); ?> de <?php echo $m
 
 		$total = (isset($fechaFinal)?$fechaFinal->getTimestamp():$now->getTimestamp()) - $fechaCreacion->getTimestamp();
 		$intervaloPendiente = $fechaInicial->getTimeStamp() - $fechaCreacion->getTimeStamp();
+                $labelintervaloPendiente = (intval(date('m', $fechaInicial->getTimeStamp()))-1) - (intval(date('m', $fechaCreacion->getTimeStamp()))-1);
 		$intervaloProceso = $fechaFinal->getTimeStamp() - $fechaInicial->getTimeStamp();
+                $labelintervaloProceso = (intval(date('m', $fechaFinal->getTimeStamp()))-1) - (intval(date('m', $fechaInicial->getTimeStamp()))-1);
 	
-		$labelPendiente = ($intervaloPendiente!=''?(
-				(intval(date('m', $intervaloPendiente))-1>0)?
-				(intval(date('m', $intervaloPendiente))-1)." meses, ":""
+		$labelPendiente = ($labelintervaloPendiente!=''?(
+				($labelintervaloPendiente-1>0)?
+				$labelintervaloPendiente." meses, ":""
 		):"").(empty($model->fecha)?'-':date_diff(new DateTime($model->fecha.' '.$model->hora), new DateTime($model->fechaFinal))->format("%d días, %h horas, %i minutos."));
-	
-		//echo "Tiempo en empezar: ".$labelPendiente;
+                
+		//echo "Tiempo en total: ".$total;
 	?>
 	
 	<?php
-		$labelProceso =($intervaloProceso!=''?(
-				(intval(date('m', $intervaloProceso))-1>0)?
-				(intval(date('m', $intervaloProceso))-1)." meses, ":""
+		$labelProceso =($labelintervaloProceso!=''?(
+				($labelintervaloProceso-1>0)?
+				$labelintervaloProceso." meses, ":""
 		):"").(empty($model->fechaInicio)?'-':date_diff(new DateTime($model->fechaInicio), new DateTime($model->fechaFinal))->format("%d días, %h horas, %i minutos."));
 		//echo "<br/>Tiempo de proceso: ".$labelProceso;
 	?>
@@ -86,6 +94,8 @@ Orden creada por 	<?php echo CHtml::encode($model->usuario); ?> de <?php echo $m
 
 <div>			
 	<?php
+        
+                //$intervaloPendiente
 		Yii::import('application.extensions.Hzl.google.HzlVisualizationChart');
 		$porcentajePendiente = $intervaloPendiente*100/$total;
 		$porcentajeProceso = $intervaloProceso*100/$total;
@@ -95,9 +105,9 @@ Orden creada por 	<?php echo CHtml::encode($model->usuario); ?> de <?php echo $m
 			'visualization' => 'ColumnChart',
 			'data'=>$stack3,
 			'options' => array(
-				'title' => 'Incidencias por departamento',
-				'width' => 800,
-				'height' => 600,
+				'title' => 'Porcentaje de tiempos',
+				'width' => 500,
+				'height' => 400,
 				'colors' => array('#F08080', '#008080'),
 				'isStacked'=>'true',
 		)));
@@ -106,11 +116,14 @@ Orden creada por 	<?php echo CHtml::encode($model->usuario); ?> de <?php echo $m
 		<br/>
 	<h3>Firma de usuario:</h3>
 	<?php
-	$imgurl= 'protected/firmas/signature'.$model->keySOP.'.png';
+	$imgurl= 'firmas/signature'.$model->keySOP.'.png';
 	echo file_exists($imgurl)?CHtml::image($imgurl, 'Firma de aceptada'):"El usuario no ha firmado la orden";
 	?>	
 
 
 
 <br/>
+<div class="row buttons hidden-print" style="clear:both">
+	<?php echo CHtml::button('Actualizar orden', array('submit' => array('ordenesSoporte/update','id'=>$model->keySOP), 'style' => "margin: 10px 2.5%;display:".(Yii::app()->user->checkAccess('tarea_ordenesSoporte_edicionAvanzada')?'block':'none') )); ?>
+</div>
 

@@ -53,7 +53,7 @@ class CatTipoSoporteController extends Controller
 			$model->almacen=$_POST['almacen'];
 			$model->descripcionAlmacen = $model3->find('almacen="' . $_POST['almacen'] . '"')->descripcion;
 			if($model->save())
-				$this->redirect(array('OrdenesSoporte/admin'));
+				$this->redirect(array('default/CatalogoSoporte'));
 				//$this->redirect(array('view','id'=>$model->keyTS));
 		}
 

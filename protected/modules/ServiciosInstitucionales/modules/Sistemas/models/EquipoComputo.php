@@ -57,7 +57,7 @@ class EquipoComputo extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('registro, departamento, keyTE, keyMA, motherboard, drives, harddisk, memoriaRam, keyMAM, descripcionUbicacion, monitor, usuario, fecha, hora, entidad, status, solicitud, descripcionEntidad, descripcionAlmacen, tipoProcesador, velocidadProcesador', 'required'),
+			array('departamento, keyTE, keyMA, motherboard, drives, harddisk, memoriaRam, keyMAM, descripcionUbicacion, monitor, usuario, fecha, hora, entidad, status, solicitud, descripcionEntidad, descripcionAlmacen, tipoProcesador, velocidadProcesador,meses_mantenimiento', 'required'),
 			array('keyTE, keyMA, keyMAM, keyP', 'numerical', 'integerOnly'=>true),
 			array('registro, solicitud, velocidadProcesador', 'length', 'max'=>20),
 			array('departamento, tipoProcesador', 'length', 'max'=>50),
@@ -65,14 +65,14 @@ class EquipoComputo extends CActiveRecord
 			array('drives, monitor', 'length', 'max'=>100),
 			array('usuario', 'length', 'max'=>30),
 			array('memoriaRam, harddisk, monitor', 'length', 'max'=>20),
-			array('fecha, hora', 'length', 'max'=>10),
+			array('fecha, hora, meses_mantenimiento', 'length', 'max'=>10),
 			array('entidad', 'length', 'max'=>2),
 			array('status', 'length', 'max'=>1),
 			array('codigo', 'length', 'max'=>12),
 			array('codigo', 'unique', 'message'=>'Este código ya está asignado'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('keyIE, registro, departamento, keyTE, keyMA, motherboard, drives, harddisk, memoriaRam, keyMAM, descripcionUbicacion, monitor, usuario, fecha, hora, entidad, status, solicitud, descripcionEntidad, descripcionAlmacen, tipoProcesador, velocidadProcesador, codigo, keyP', 'safe', 'on'=>'search'),
+			array('keyIE, registro, departamento, keyTE, keyMA, motherboard, drives, harddisk, memoriaRam, keyMAM, descripcionUbicacion, monitor, usuario, fecha, hora, entidad, status, solicitud, descripcionEntidad, descripcionAlmacen, tipoProcesador, velocidadProcesador, codigo, keyP,meses_mantenimiento', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -116,7 +116,8 @@ class EquipoComputo extends CActiveRecord
 			'tipoProcesador' => 'Tipo Procesador',
 			'velocidadProcesador' => 'Velocidad Procesador',
 			'codigo' => 'Código de equipo',
-			'keyP' => 'Proveedor'
+			'keyP' => 'Proveedor',
+			'meses_mantenimiento' => 'Intervalo de mantenimiento'
 		);
 	}
 
@@ -155,6 +156,7 @@ class EquipoComputo extends CActiveRecord
 		$criteria->compare('velocidadProcesador',$this->velocidadProcesador,true);
 		$criteria->compare('codigo',$this->codigo,true);
 		$criteria->compare('keyP',$this->keyP,true);
+		$criteria->compare('meses_mantenimiento',$this->meses_mantenimiento,true);
 		
 
 		return new CActiveDataProvider($this, array(
@@ -192,6 +194,7 @@ class EquipoComputo extends CActiveRecord
 			->from('sis_inventarioEqComputo')
 			->where("codigo like '".$prefijoCode."%'")
 			->queryRow();
+		$count = (int) $count['count(*)']+1;
 		
 		$code="0".$model->entidad."-c".str_pad($model->keyTE, 2, "0", STR_PAD_LEFT).str_pad(dechex($count), 4, "0", STR_PAD_LEFT);
 		return $code;
@@ -215,6 +218,7 @@ class EquipoComputo extends CActiveRecord
 			->from('sis_inventarioEqComputo')
 			->where("codigo like '".$prefijoCode."%'")
 			->queryRow();
+			$count = (int) $count['count(*)']+1;
 
 		$code="0".$this->entidad."-c".str_pad($this->keyTE, 2, "0", STR_PAD_LEFT).str_pad(dechex($count['total']), 4, "0", STR_PAD_LEFT);
 		return $code;

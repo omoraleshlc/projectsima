@@ -84,6 +84,17 @@ class OrdenesSoporteController extends Controller {
             $model->hora = date('h:i a', time());
             $model->status = 'pending';
             $model->almacenSoporte = $model->almacenSoporte!="" ? $model->almacenSoporte : ($this->usuariosima->almacenSoporteDefault != "" ? $this->usuariosima->almacenSoporteDefault : 'HSIST');
+            
+            $count=Yii::app()->db->createCommand()
+			->select('count(*)')
+			->from('sis_ordenesSOP')
+			->where("almacenSoporte = '".$model->almacenSoporte."'")
+			->queryRow();
+		$count = (int) $count['count(*)']+1;
+            
+            $model->idSOPAlmacen = $count;
+            
+            
             $model->usuarioEjecutor = '';
             $model->fechaFinal = null;
             $model->fechaInicio = null;
@@ -129,14 +140,21 @@ class OrdenesSoporteController extends Controller {
             $model->status = 'pending';
             $model->almacenSoporte = $model->almacenSoporte!="" ? $model->almacenSoporte : ($this->usuariosima->almacenSoporteDefault != "" ? $this->usuariosima->almacenSoporteDefault : 'HSIST');
 
-
+                $count=Yii::app()->db->createCommand()
+                        ->select('count(*)')
+                        ->from('sis_ordenesSOP')
+                        ->where("almacenSoporte = '".$model->almacenSoporte."'")
+                        ->queryRow();
+                $count = (int) $count['count(*)']+1;
+            
+            $model->idSOPAlmacen = $count;
             $model->usuarioEjecutor = '';
             $model->fechaFinal = null;
             $model->fechaInicio = null;
             $model->fechaFinalEstimada = null;
 
             if ($model->save()) {
-                Yii::app()->user->setFlash('success', "Orden de soporte para: " . $model->nombre . " registrada con código " . $model->keySOP);
+                Yii::app()->user->setFlash('success', "Orden de soporte para: " . $model->nombre . " registrada con código " . $model->idSOPAlmacen);
             } else {
                 if (empty($model->nombre))
                     Yii::app()->user->setFlash('error', "Escriba el nombre de usuario");
@@ -150,9 +168,12 @@ class OrdenesSoporteController extends Controller {
                 else if (empty($almacen))
                     Yii::app()->user->setFlash('error', "No se ha seleccionado el departamento");
 
-                else if (!empty($model->codigo))
-                    if ($model->entidad != substr($model->codigo, 1, 2))
+                else if (!empty($model->codigo)){
+                	  if(!preg_match("/0[0-9]{2}-[A-Za-z][0-9]{2}([A-Fa-f|0-9]){4}/", $model->codigo))
+								Yii::app()->user->setFlash('error', "El codigo no tiene el formato apropiado");
+                    else if ($model->entidad != substr($model->codigo, 1, 2))
                         Yii::app()->user->setFlash('error', "El codigo no pertenece a esta entidad");
+                        }
             }
             $this->redirect('index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin&tab=Crear');
         }
@@ -262,7 +283,7 @@ class OrdenesSoporteController extends Controller {
         $modelTeminadas = new CActiveDataProvider('OrdenesSoporte', array(
             'criteria' => array(
                 'condition' => 'status="done" and almacenSoporte like"%'.$this->almacenSoporte.'%"',
-                'order' => 'fechaFinal ASC',
+                'order' => 'fechaFinal DESC',
             ),
             'pagination' => array(
                 'pageSize' => 40,
@@ -318,10 +339,13 @@ class OrdenesSoporteController extends Controller {
      */
 
     public function actionGetTipoSoporteList() {
-        echo CJSON::encode(Editable::source(CatTipoSoporte::model()->findAll(), 'keyTS', 'descripcion'));
+        //echo CJSON::encode(Editable::source(CatTipoSoporte::model()->findAll(), 'keyTS', 'descripcion'));
+        
+        return CHtml::listData(CatTipoSoporte::model()->findAll('almacen="'.UsuariosSima::model()->find("usuario='" . Yii::app()->user->name . "'")->almacenSoporteDefault.'"'), 'keyRSA', 'descripcion');
+        
     }
     
-	 /*
+    /*
      * Renderiza lista de ordenes pendientes o iniciadas con el mismo código de equipo
      */
     public function actionOrdenesByCodigo($codigo) {
@@ -345,55 +369,155 @@ class OrdenesSoporteController extends Controller {
      * Puede recibir el id de la tabla de ordenes (GET) o de la activación móvil (POST)
      */
 
-	public function actionActivarOrden() {
-		$model = new OrdenesSoporte();
-		$page = 'admin';
-		
-		if (isset($_POST['codigo']) and $_POST['codigo'] != "") {
-			$page= 'scan';
-			$codigo=$_POST['codigo'];
-			if (OrdenesSoporte::model()->count("codigo='" . $codigo . "' and (status='ontransit' or status='pending')")>1)
-				$this->actionOrdenesByCodigo($codigo);
-			else
-				$model = $this->actionGetKeySOP($codigo);
-		}
-		
-		else
-			if (isset($_GET['field'])) {
-				$model = $model->findByPK($_GET['field']);
-			} else if (isset($_POST['id']) and $_POST['id'] != "") {
-				$model = $model->findByPK($_POST['id']);
-			}
-		
-		//$firma=false;
-		if($model){
-			if ($model->status == "pending") {
-				$model->status = "ontransit";
-				$model->usuarioEjecutor = Yii::app()->user->name;
-				$model->fechaInicio = date("Y-m-d H:i:s");
-				//$model->fechaFinal=date("");
-				$model->save();
-			} else if ($model->status == "ontransit") {
-				$model->status = "done";
-				$model->usuarioEjecutor = Yii::app()->user->name;
-				$model->fechaFinal = date("Y-m-d H:i:s");
-				$model->save();
-				//$firma=true;
-				//$this->actionFirma($model);
-				$this->redirect(array('firma', 'id' => $model->keySOP));
-			}
-		}
-		else {
-			Yii::app()->user->setFlash('notice', "No se encontró la órden");
-		}
-		//$model = $model->findByPK($_GET['field']);
-		//$this->actionScan();
-		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		/*if (!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array($page)); /**/
-		$this->redirect(array('scan'));
-		
+    public function actionActivarOrden() {
+            $model = new OrdenesSoporte();
+            $page = 'admin';
+
+            if (isset($_POST['codigo']) and $_POST['codigo'] != "") {
+                    $page= 'scan';
+                    $codigo=$_POST['codigo'];
+                    if (OrdenesSoporte::model()->count("codigo='" . $codigo . "' and (status='ontransit' or status='pending')")>1)
+                            $this->actionOrdenesByCodigo($codigo);
+                    else
+                            $model = $this->actionGetKeySOP($codigo);
+            }
+
+
+            else
+                    if (isset($_GET['field'])) {
+                            $model = $model->findByPK($_GET['field']);
+                    } else if (isset($_POST['id']) and $_POST['id'] != "") {
+                            $model = $model->findByPK($_POST['id']);
+                    }
+
+            if($model){
+                    if ($model->status == "pending") {
+                            $model->status = "ontransit";
+                            $model->usuarioEjecutor = Yii::app()->user->name;
+                            $model->fechaInicio = date("Y-m-d H:i:s");
+                            $model->fechaFinal = null;
+                            //$model->fechaFinal=date("");
+                            $model->save();
+                    } else if ($model->status == "ontransit") {
+                            $model->status = "done";
+                            $model->usuarioEjecutor = Yii::app()->user->name;
+                            $model->fechaFinal = date("Y-m-d H:i:s");
+                            $model->save();
+                            //$this->actionFirma($model);
+                            //$this->redirect(array('firma', 'id' => $model->keySOP));
+                    }
+            }
+            else {
+                    Yii::app()->user->setFlash('notice', "No se encontró la órden");
+            }
+
+            // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+            if (!isset($_GET['ajax']))
+                    $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array($page)); /**/
+
+    }
+
+
+    /*
+    * Cambia el status de la orden de pending a ontransit
+    * debe recibir los parametros GET del scan de qr
+    */
+
+    public function actionIniciarOrden() {
+        $model = new OrdenesSoporte();
+        //$page = array($page);
+        $page=array('admin', "tab"=>"En");
+        
+        $change=true;
+
+        if (isset($_POST['codigo']) and $_POST['codigo'] != "") {
+                $codigo=$_POST['codigo'];
+
+                if (isset($_POST['id']) and $_POST['id'] != "") {
+                        $model = $model->findByPK($_POST['id']);
+                        if($model->codigo!=$codigo){
+                                Yii::app()->user->setFlash('notice', "El qr escaneado y el código de la orden no coinciden");
+                                $change=false;
+                                $this->redirect(array('ordenesSoporte/scan') );
+                        }
+                }		
+                else{
+                        if (OrdenesSoporte::model()->count("codigo='" . $codigo . "' and (status='ontransit' or status='pending')")>1)
+                                $this->redirect(array('OrdenesSoporte/ordenesByCodigo', 'codigo'=>$codigo));
+                        else
+                                $model = $this->actionGetKeySOP($codigo);
+                }
+        }
+        else{
+                if (isset($_POST['id']) and $_POST['id'] != "") {
+                        //lanzar alert de comentario
+                        //set flag para guardar comentario
+                        //Yii::app()->user->setFlash('notice', "No escaneaste un qr");
+                        $model = $model->findByPK($_POST['id']);
+                }	
+        }
+
+        if($model && $change){
+                if ($model->status == "pending") {
+                        $model->status = "ontransit";
+                        $model->usuarioEjecutor = Yii::app()->user->name;
+                        $model->fechaInicio = date("Y-m-d H:i:s");
+                        $model->fechaFinal = null;
+                        //$model->fechaFinal=date("");
+                        $model->save();
+                        //Yii::app()->user->setFlash('notice', serialize($model->getErrors()));
+                } else{
+                        Yii::app()->user->setFlash('notice', "La orden que quieres iniciar no está pendiente");
+                }
+        }
+        else if($change){
+                Yii::app()->user->setFlash('notice', "No se encontró la órden");
+        }
+
+        // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+        if (!isset($_GET['ajax']))
+                $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : $page ); /**/
+
+    }
+
+
+    /*
+     * Cambia el status de la orden al siguiente.
+     * Puede recibir el id de la tabla de ordenes (GET) o de la activación móvil (POST)
+     */
+
+    public function actionFinalizarOrden() {
+            $model = new OrdenesSoporte();
+            $page=array('admin', "tab"=>"Terminadas");
+
+            if (isset($_GET['id'])) {
+                    $model = $model->findByPK($_GET['id']);
+            }
+
+            if($model){
+                if ($model->status == "ontransit") {
+                    $model->status = "done";
+                    $model->usuarioEjecutor = Yii::app()->user->name;
+                    $model->fechaFinal = date("Y-m-d H:i:s");
+                    $model->save();
+                }
+            }
+            else {
+                Yii::app()->user->setFlash('notice', "No se encontró la órden");
+            }
+
+            // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+            if (!isset($_GET['ajax']))
+                    $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : $page); /**/
+
+    }
+    
+    
+
+    public function statusPendingToOntransit(){
+	
 	}
+	
 
     /*
      * Actualiza el dropdown de almacenes con los que pernecen a la entidad seleccionada
@@ -484,5 +608,4 @@ class OrdenesSoporteController extends Controller {
         ));
     }
     
-
 }

@@ -35,6 +35,14 @@ class DefaultController extends Controller
 		$this->render('catalogoTelefonia');
 	}
 	
+	/**
+	 * Muestra los catálogos de soporte
+	 */
+	public function actionCatalogoSoporte()
+	{
+		$this->render('catalogoSoporte');
+	}
+	
 	
 	/**
 	 * Muestra la pantalla donde se imprimen las etiquetas.

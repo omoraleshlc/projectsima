@@ -4628,3 +4628,1587 @@ REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSo
 in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php (395)
 in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
 in /var/www/projectsima/index.php (13)
+2014/08/27 16:11:51 [error] [php] Trying to get property of non-object (/var/www/yii/framework/base/CComponent.php(606) : eval()'d code:1)
+Stack trace:
+#0 /var/www/yii/framework/zii/widgets/grid/CGridColumn.php(144): CDataColumn->renderDataCellContent()
+#1 /var/www/yii/framework/zii/widgets/grid/CGridView.php(589): CDataColumn->renderDataCell()
+#2 /var/www/yii/framework/zii/widgets/grid/CGridView.php(545): CGridView->renderTableRow()
+#3 /var/www/yii/framework/zii/widgets/grid/CGridView.php(455): CGridView->renderTableBody()
+#4 /var/www/yii/framework/zii/widgets/CBaseListView.php(160): CGridView->renderItems()
+#5 unknown(0): CGridView->renderSection()
+#6 /var/www/yii/framework/zii/widgets/CBaseListView.php(143): preg_replace_callback()
+#7 /var/www/yii/framework/zii/widgets/CBaseListView.php(128): CGridView->renderContent()
+#8 /var/www/yii/framework/web/CBaseController.php(173): CGridView->run()
+#9 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/equipoComputo/admin.php(190): EquipoComputoController->widget()
+#10 /var/www/yii/framework/web/CBaseController.php(126): require()
+#11 /var/www/yii/framework/web/CBaseController.php(95): EquipoComputoController->renderInternal()
+#12 /var/www/yii/framework/web/CController.php(869): EquipoComputoController->renderFile()
+#13 /var/www/yii/framework/web/CController.php(782): EquipoComputoController->renderPartial()
+#14 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/EquipoComputoController.php(143): EquipoComputoController->render()
+#15 /var/www/yii/framework/web/actions/CInlineAction.php(49): EquipoComputoController->actionAdmin()
+#16 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#17 /var/www/yii/framework/web/filters/CFilterChain.php(133): EquipoComputoController->runAction()
+#18 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#19 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#20 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#21 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#22 /var/www/yii/framework/web/CController.php(265): EquipoComputoController->runActionWithFilters()
+#23 /var/www/yii/framework/web/CWebApplication.php(282): EquipoComputoController->run()
+#24 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#25 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#26 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/equipoComputo/admin
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/equipoComputo/admin.php (190)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/EquipoComputoController.php (143)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+2014/08/27 16:14:26 [error] [php] Trying to get property of non-object (/var/www/yii/framework/base/CComponent.php(606) : eval()'d code:1)
+Stack trace:
+#0 /var/www/yii/framework/zii/widgets/grid/CGridColumn.php(144): CDataColumn->renderDataCellContent()
+#1 /var/www/yii/framework/zii/widgets/grid/CGridView.php(589): CDataColumn->renderDataCell()
+#2 /var/www/yii/framework/zii/widgets/grid/CGridView.php(545): CGridView->renderTableRow()
+#3 /var/www/yii/framework/zii/widgets/grid/CGridView.php(455): CGridView->renderTableBody()
+#4 /var/www/yii/framework/zii/widgets/CBaseListView.php(160): CGridView->renderItems()
+#5 unknown(0): CGridView->renderSection()
+#6 /var/www/yii/framework/zii/widgets/CBaseListView.php(143): preg_replace_callback()
+#7 /var/www/yii/framework/zii/widgets/CBaseListView.php(128): CGridView->renderContent()
+#8 /var/www/yii/framework/web/CBaseController.php(173): CGridView->run()
+#9 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/equipoComputo/admin.php(190): EquipoComputoController->widget()
+#10 /var/www/yii/framework/web/CBaseController.php(126): require()
+#11 /var/www/yii/framework/web/CBaseController.php(95): EquipoComputoController->renderInternal()
+#12 /var/www/yii/framework/web/CController.php(869): EquipoComputoController->renderFile()
+#13 /var/www/yii/framework/web/CController.php(782): EquipoComputoController->renderPartial()
+#14 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/EquipoComputoController.php(143): EquipoComputoController->render()
+#15 /var/www/yii/framework/web/actions/CInlineAction.php(49): EquipoComputoController->actionAdmin()
+#16 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#17 /var/www/yii/framework/web/filters/CFilterChain.php(133): EquipoComputoController->runAction()
+#18 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#19 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#20 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#21 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#22 /var/www/yii/framework/web/CController.php(265): EquipoComputoController->runActionWithFilters()
+#23 /var/www/yii/framework/web/CWebApplication.php(282): EquipoComputoController->run()
+#24 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#25 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#26 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/equipoComputo/admin
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/equipoComputo/admin.php (190)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/EquipoComputoController.php (143)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+2014/08/27 16:20:03 [error] [php] Trying to get property of non-object (/var/www/yii/framework/base/CComponent.php(606) : eval()'d code:1)
+Stack trace:
+#0 /var/www/yii/framework/zii/widgets/grid/CGridColumn.php(144): CDataColumn->renderDataCellContent()
+#1 /var/www/yii/framework/zii/widgets/grid/CGridView.php(589): CDataColumn->renderDataCell()
+#2 /var/www/yii/framework/zii/widgets/grid/CGridView.php(545): CGridView->renderTableRow()
+#3 /var/www/yii/framework/zii/widgets/grid/CGridView.php(455): CGridView->renderTableBody()
+#4 /var/www/yii/framework/zii/widgets/CBaseListView.php(160): CGridView->renderItems()
+#5 unknown(0): CGridView->renderSection()
+#6 /var/www/yii/framework/zii/widgets/CBaseListView.php(143): preg_replace_callback()
+#7 /var/www/yii/framework/zii/widgets/CBaseListView.php(128): CGridView->renderContent()
+#8 /var/www/yii/framework/web/CBaseController.php(173): CGridView->run()
+#9 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/equipoComputo/admin.php(190): EquipoComputoController->widget()
+#10 /var/www/yii/framework/web/CBaseController.php(126): require()
+#11 /var/www/yii/framework/web/CBaseController.php(95): EquipoComputoController->renderInternal()
+#12 /var/www/yii/framework/web/CController.php(869): EquipoComputoController->renderFile()
+#13 /var/www/yii/framework/web/CController.php(782): EquipoComputoController->renderPartial()
+#14 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/EquipoComputoController.php(143): EquipoComputoController->render()
+#15 /var/www/yii/framework/web/actions/CInlineAction.php(49): EquipoComputoController->actionAdmin()
+#16 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#17 /var/www/yii/framework/web/filters/CFilterChain.php(133): EquipoComputoController->runAction()
+#18 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#19 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#20 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#21 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#22 /var/www/yii/framework/web/CController.php(265): EquipoComputoController->runActionWithFilters()
+#23 /var/www/yii/framework/web/CWebApplication.php(282): EquipoComputoController->run()
+#24 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#25 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#26 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/equipoComputo/admin
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/equipoComputo/admin.php (190)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/EquipoComputoController.php (143)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+2014/08/27 16:29:52 [error] [exception.CrugeException.401] action_equipoComputo_create<br/>401
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/equipoComputo/create
+---
+2014/08/27 17:36:03 [error] [exception.CrugeException.401] action_equipoComputo_admin<br/>401
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/equipoComputo/admin
+---
+2014/08/28 17:04:12 [error] [exception.CrugeException.401] action_equipoComputo_admin<br/>401
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/equipoComputo/admin
+---
+2014/09/01 10:46:14 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** ncastillo
+in /var/www/projectsima/protected/modules/cruge/components/CrugeFactory.php (322)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeUserManager.php (252)
+in /var/www/projectsima/protected/modules/cruge/models/ui/CrugeLogon.php (58)
+2014/09/01 10:46:14 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** ncastillo
+in /var/www/projectsima/protected/modules/cruge/components/CrugeFactory.php (322)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeUserManager.php (252)
+in /var/www/projectsima/protected/modules/cruge/models/auth/CrugeAuthDefault.php (68)
+2014/09/01 10:46:14 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>User not found</li>
+<li>usuario o correo invalido</li>
+</ul></div>
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (158)
+in /var/www/projectsima/index.php (13)
+2014/09/02 08:32:25 [error] [system.db.CDbCommand] CDbCommand::fetchAll() falló: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sima.sis_inventarioEqComputo' doesn't exist. La sentencia SQL ejecutada fue: SHOW FULL COLUMNS FROM `sis_inventarioEqComputo`.
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/EquipoComputoController.php (136)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+in /var/www/projectsima/index.php (13)
+2014/09/02 08:32:25 [error] [exception.CDbException] exception 'CDbException' with message 'La tabla "sis_inventarioEqComputo" definida en la clase active record "EquipoComputo" no se ha podido encontrar en la base de datos.' in /var/www/yii/framework/db/ar/CActiveRecord.php:2310
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(EquipoComputo))
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(402): CActiveRecord::model('EquipoComputo')
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(77): CActiveRecord->getMetaData()
+#3 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/EquipoComputoController.php(136): CActiveRecord->__construct('search')
+#4 /var/www/yii/framework/web/actions/CInlineAction.php(49): EquipoComputoController->actionAdmin()
+#5 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#8 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/projectsima/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/equipoComputo/admin
+---
+2014/09/02 09:21:36 [error] [php] Trying to get property of non-object (/var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/EquipoComputoController.php:47)
+Stack trace:
+#0 /var/www/yii/framework/web/filters/CFilterChain.php(133): EquipoComputoController->runAction()
+#1 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#2 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#3 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#4 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#5 /var/www/yii/framework/web/CController.php(265): EquipoComputoController->runActionWithFilters()
+#6 /var/www/yii/framework/web/CWebApplication.php(282): EquipoComputoController->run()
+#7 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/EquipoComputo/create&model=EquipoComputo
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/EquipoComputoController.php (47)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+in /var/www/projectsima/index.php (13)
+2014/09/02 09:21:53 [error] [php] Trying to get property of non-object (/var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/EquipoComputoController.php:47)
+Stack trace:
+#0 /var/www/yii/framework/web/filters/CFilterChain.php(133): EquipoComputoController->runAction()
+#1 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#2 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#3 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#4 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#5 /var/www/yii/framework/web/CController.php(265): EquipoComputoController->runActionWithFilters()
+#6 /var/www/yii/framework/web/CWebApplication.php(282): EquipoComputoController->run()
+#7 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/EquipoComputo/create&model=EquipoComputo
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/EquipoComputoController.php (47)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+in /var/www/projectsima/index.php (13)
+2014/09/02 09:57:16 [error] [php] Trying to get property of non-object (/var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/EquipoComputoController.php:47)
+Stack trace:
+#0 /var/www/yii/framework/web/filters/CFilterChain.php(133): EquipoComputoController->runAction()
+#1 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#2 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#3 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#4 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#5 /var/www/yii/framework/web/CController.php(265): EquipoComputoController->runActionWithFilters()
+#6 /var/www/yii/framework/web/CWebApplication.php(282): EquipoComputoController->run()
+#7 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/EquipoComputo/create&model=EquipoComputo
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/EquipoComputoController.php (47)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+in /var/www/projectsima/index.php (13)
+2014/09/02 09:57:17 [error] [php] Trying to get property of non-object (/var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/EquipoComputoController.php:47)
+Stack trace:
+#0 /var/www/yii/framework/web/filters/CFilterChain.php(133): EquipoComputoController->runAction()
+#1 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#2 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#3 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#4 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#5 /var/www/yii/framework/web/CController.php(265): EquipoComputoController->runActionWithFilters()
+#6 /var/www/yii/framework/web/CWebApplication.php(282): EquipoComputoController->run()
+#7 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/EquipoComputo/create&model=EquipoComputo
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/EquipoComputoController.php (47)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+in /var/www/projectsima/index.php (13)
+2014/09/02 10:35:09 [error] [exception.CrugeException.401] action_equipoComputo_create<br/>401
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/EquipoComputo/create&model=EquipoComputo
+---
+2014/09/02 10:35:50 [error] [php] Trying to get property of non-object (/var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/EquipoComputoController.php:47)
+Stack trace:
+#0 /var/www/yii/framework/web/filters/CFilterChain.php(133): EquipoComputoController->runAction()
+#1 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#2 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#3 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#4 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#5 /var/www/yii/framework/web/CController.php(265): EquipoComputoController->runActionWithFilters()
+#6 /var/www/yii/framework/web/CWebApplication.php(282): EquipoComputoController->run()
+#7 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/EquipoComputo/create&model=EquipoComputo
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/EquipoComputoController.php (47)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+in /var/www/projectsima/index.php (13)
+2014/09/02 10:36:15 [error] [php] Trying to get property of non-object (/var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/EquipoComputoController.php:47)
+Stack trace:
+#0 /var/www/yii/framework/web/filters/CFilterChain.php(133): EquipoComputoController->runAction()
+#1 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#2 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#3 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#4 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#5 /var/www/yii/framework/web/CController.php(265): EquipoComputoController->runActionWithFilters()
+#6 /var/www/yii/framework/web/CWebApplication.php(282): EquipoComputoController->run()
+#7 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/EquipoComputo/create&model=EquipoComputo
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/EquipoComputoController.php (47)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+in /var/www/projectsima/index.php (13)
+2014/09/02 11:46:59 [error] [exception.CrugeException.401] action_proveedor_create<br/>401
+REQUEST_URI=/projectsima/index.php?r=Compras/Proveedor/create&model=Proveedor
+---
+2014/09/02 11:48:40 [error] [php] imagepng(): Unable to open '/var/www/projectsima/protected/uploads/001-c020001.png' for writing: Permission denied (/var/www/projectsima/protected/extensions/qrcode/phpqrcode/qrimage.php:43)
+Stack trace:
+#0 /var/www/projectsima/protected/extensions/qrcode/phpqrcode/qrencode.php(286): QRencode->encodePNG()
+#1 /var/www/projectsima/protected/extensions/qrcode/QRCodeGenerator.php(105): png()
+#2 /var/www/yii/framework/web/CBaseController.php(173): QRCodeGenerator->run()
+#3 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/equipoComputo/view.php(64): EquipoComputoController->widget()
+#4 /var/www/yii/framework/web/CBaseController.php(126): require()
+#5 /var/www/yii/framework/web/CBaseController.php(95): EquipoComputoController->renderInternal()
+#6 /var/www/yii/framework/web/CController.php(869): EquipoComputoController->renderFile()
+#7 /var/www/yii/framework/web/CController.php(782): EquipoComputoController->renderPartial()
+#8 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/EquipoComputoController.php(27): EquipoComputoController->render()
+#9 unknown(0): EquipoComputoController->actionView()
+#10 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(133): EquipoComputoController->runAction()
+#14 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#15 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#16 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#17 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#18 /var/www/yii/framework/web/CController.php(265): EquipoComputoController->runActionWithFilters()
+#19 /var/www/yii/framework/web/CWebApplication.php(282): EquipoComputoController->run()
+#20 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#21 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#22 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/equipoComputo/view&id=40
+in /var/www/projectsima/protected/extensions/qrcode/phpqrcode/qrimage.php (43)
+in /var/www/projectsima/protected/extensions/qrcode/phpqrcode/qrencode.php (494)
+in /var/www/projectsima/protected/extensions/qrcode/phpqrcode/qrencode.php (286)
+2014/09/02 12:24:45 [error] [php] Undefined index: OrdenesSoporte (/var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:432)
+Stack trace:
+#0 /var/www/yii/framework/web/filters/CFilterChain.php(133): OrdenesSoporteController->runAction()
+#1 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#2 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#3 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#4 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#5 /var/www/yii/framework/web/CController.php(265): OrdenesSoporteController->runActionWithFilters()
+#6 /var/www/yii/framework/web/CWebApplication.php(282): OrdenesSoporteController->run()
+#7 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/listadoParaImprimir&fecha=2014-08-01&fechafinal=2014-09-01&depto=HSIST
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php (432)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+in /var/www/projectsima/index.php (13)
+2014/09/03 14:29:10 [error] [exception.CrugeException.401] action_equipoComputo_view<br/>401
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/equipoComputo/view&id=40
+---
+2014/09/04 17:38:05 [error] [php] Undefined index: OrdenesSoporte (/var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:432)
+Stack trace:
+#0 /var/www/yii/framework/web/filters/CFilterChain.php(133): OrdenesSoporteController->runAction()
+#1 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#2 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#3 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#4 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#5 /var/www/yii/framework/web/CController.php(265): OrdenesSoporteController->runActionWithFilters()
+#6 /var/www/yii/framework/web/CWebApplication.php(282): OrdenesSoporteController->run()
+#7 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/listadoParaImprimir&fecha=2014-06-01&fechafinal=2014-09-01&depto=HSIST
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php (432)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+in /var/www/projectsima/index.php (13)
+2014/09/08 08:46:58 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** acarballo
+in /var/www/projectsima/protected/modules/cruge/components/CrugeFactory.php (322)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeUserManager.php (252)
+in /var/www/projectsima/protected/modules/cruge/models/ui/CrugeLogon.php (58)
+2014/09/08 08:46:58 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** acarballo
+in /var/www/projectsima/protected/modules/cruge/components/CrugeFactory.php (322)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeUserManager.php (252)
+in /var/www/projectsima/protected/modules/cruge/models/auth/CrugeAuthDefault.php (68)
+2014/09/08 08:46:58 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>User not found</li>
+<li>usuario o correo invalido</li>
+</ul></div>
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (158)
+in /var/www/projectsima/index.php (13)
+2014/09/08 08:47:04 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** acarballo
+in /var/www/projectsima/protected/modules/cruge/components/CrugeFactory.php (322)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeUserManager.php (252)
+in /var/www/projectsima/protected/modules/cruge/models/ui/CrugeLogon.php (58)
+2014/09/08 08:47:04 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** acarballo
+in /var/www/projectsima/protected/modules/cruge/components/CrugeFactory.php (322)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeUserManager.php (252)
+in /var/www/projectsima/protected/modules/cruge/models/auth/CrugeAuthDefault.php (68)
+2014/09/08 08:47:04 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>User not found</li>
+<li>usuario o correo invalido</li>
+</ul></div>
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (158)
+in /var/www/projectsima/index.php (13)
+2014/09/08 08:47:12 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** acarballo
+in /var/www/projectsima/protected/modules/cruge/components/CrugeFactory.php (322)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeUserManager.php (252)
+in /var/www/projectsima/protected/modules/cruge/models/ui/CrugeLogon.php (58)
+2014/09/08 08:47:12 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** acarballo
+in /var/www/projectsima/protected/modules/cruge/components/CrugeFactory.php (322)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeUserManager.php (252)
+in /var/www/projectsima/protected/modules/cruge/models/auth/CrugeAuthDefault.php (68)
+2014/09/08 08:47:12 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>User not found</li>
+<li>usuario o correo invalido</li>
+</ul></div>
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (158)
+in /var/www/projectsima/index.php (13)
+2014/09/08 08:47:20 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** acarballo
+in /var/www/projectsima/protected/modules/cruge/components/CrugeFactory.php (322)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeUserManager.php (252)
+in /var/www/projectsima/protected/modules/cruge/models/ui/CrugeLogon.php (58)
+2014/09/08 08:47:20 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** acarballo
+in /var/www/projectsima/protected/modules/cruge/components/CrugeFactory.php (322)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeUserManager.php (252)
+in /var/www/projectsima/protected/modules/cruge/models/auth/CrugeAuthDefault.php (68)
+2014/09/08 08:47:20 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>User not found</li>
+<li>usuario o correo invalido</li>
+</ul></div>
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (158)
+in /var/www/projectsima/index.php (13)
+2014/09/08 08:47:25 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** acarballo
+in /var/www/projectsima/protected/modules/cruge/components/CrugeFactory.php (322)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeUserManager.php (252)
+in /var/www/projectsima/protected/modules/cruge/models/ui/CrugeLogon.php (58)
+2014/09/08 08:47:25 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** acarballo
+in /var/www/projectsima/protected/modules/cruge/components/CrugeFactory.php (322)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeUserManager.php (252)
+in /var/www/projectsima/protected/modules/cruge/models/auth/CrugeAuthDefault.php (68)
+2014/09/08 08:47:25 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>User not found</li>
+<li>Password: no puede ser nulo.</li>
+<li>usuario o correo invalido</li>
+</ul></div>
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (158)
+in /var/www/projectsima/index.php (13)
+2014/09/08 12:12:37 [error] [exception.CrugeException.401] action_equipoComputo_admin<br/>401
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/equipoComputo/admin
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/equipoComputo/view&id=41
+---
+2014/09/08 15:58:28 [error] [exception.CrugeException.401] action_equipoComputo_admin<br/>401
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/equipoComputo/admin
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/equipoComputo/view&id=41
+---
+2014/09/08 15:58:56 [warning] [application] Error al definir unsafe el atributo "regdate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/09/08 15:58:56 [warning] [application] Error al definir unsafe el atributo "actdate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/09/08 15:58:56 [warning] [application] Error al definir unsafe el atributo "logondate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/09/08 15:58:56 [warning] [application] Error al definir unsafe el atributo "nuevocampo" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/09/08 16:54:13 [error] [exception.CrugeException.401] action_equipoComputo_almacenesPorEntidad<br/>401
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/equipoComputo/almacenesPorEntidad
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/EquipoComputo/create&model=EquipoComputo
+---
+2014/09/08 16:54:19 [error] [exception.CrugeException.401] action_equipoComputo_almacenesPorEntidad<br/>401
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/equipoComputo/almacenesPorEntidad
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/EquipoComputo/create&model=EquipoComputo
+---
+2014/09/08 16:54:27 [error] [exception.CrugeException.401] action_equipoComputo_almacenesPorEntidad<br/>401
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/equipoComputo/almacenesPorEntidad
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/EquipoComputo/create&model=EquipoComputo
+---
+2014/09/08 16:54:30 [error] [exception.CrugeException.401] action_equipoComputo_almacenesPorEntidad<br/>401
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/equipoComputo/almacenesPorEntidad
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/EquipoComputo/create&model=EquipoComputo
+---
+2014/09/08 16:54:39 [error] [exception.CrugeException.401] action_equipoComputo_almacenesPorEntidad<br/>401
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/equipoComputo/almacenesPorEntidad
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/EquipoComputo/create&model=EquipoComputo
+---
+2014/09/08 16:54:50 [error] [exception.CrugeException.401] action_equipoComputo_almacenesPorEntidad<br/>401
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/equipoComputo/almacenesPorEntidad
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/equipoComputo/update&id=41
+---
+2014/09/08 16:54:52 [error] [exception.CrugeException.401] action_equipoComputo_almacenesPorEntidad<br/>401
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/equipoComputo/almacenesPorEntidad
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/equipoComputo/update&id=41
+---
+2014/09/08 16:59:25 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>clave invalida</li>
+</ul></div>
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (158)
+in /var/www/projectsima/index.php (13)
+2014/09/08 17:14:56 [error] [exception.CrugeException.401] action_proveedor_admin<br/>401
+REQUEST_URI=/projectsima/index.php?r=Compras/proveedor/admin
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=site/index
+---
+2014/09/08 17:19:59 [error] [exception.CrugeException.401] action_proveedor_admin<br/>401
+REQUEST_URI=/projectsima/index.php?r=Compras/proveedor/admin
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/equipoComputo/view&id=41
+---
+2014/09/08 17:20:08 [error] [exception.CrugeException.401] action_proveedor_admin<br/>401
+REQUEST_URI=/projectsima/index.php?r=Compras/proveedor/admin
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=cruge/ui/login&param=%2Fprojectsima%2Findex.php%3Fr%3DCompras%2Fproveedor%2Fadmin
+---
+2014/09/08 17:20:10 [error] [exception.CrugeException.401] action_proveedor_admin<br/>401
+REQUEST_URI=/projectsima/index.php?r=Compras/proveedor/admin
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=Compras/proveedor/admin
+---
+2014/09/09 08:47:35 [error] [exception.CrugeException.401] action_proveedor_create<br/>401
+REQUEST_URI=/projectsima/index.php?r=Compras/Proveedor/create&model=Proveedor
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=Compras/proveedor/admin
+---
+<<<<<<< Updated upstream
+2014/09/11 10:43:16 [error] [exception.CrugeException.401] action_telefoniaCelular_admin<br/>401
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/telefoniaCelular/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/equipoComputo/update&id=1
+---
+2014/09/11 10:43:20 [error] [exception.CException] exception 'CException' with message 'Propiedad "TelefoniaCelular"."codigo" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('codigo')
+#1 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/models/TelefoniaCelular.php(188): CActiveRecord->__get('codigo')
+#2 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/telefoniaCelular/admin.php(13): TelefoniaCelular->search()
+#3 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#4 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#5 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#6 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#7 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/TelefoniaCelularController.php(129): CController->render('admin', Array)
+#8 /var/www/yii/framework/web/actions/CInlineAction.php(49): TelefoniaCelularController->actionAdmin()
+#9 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#12 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#14 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#17 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#18 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#19 /var/www/projectsima/index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/telefoniaCelular/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=cruge/ui/login&param=%2Fprojectsima%2Findex.php%3Fr%3DServiciosInstitucionales%2FSistemas%2FtelefoniaCelular%2Fadmin
+---
+2014/09/12 09:55:56 [error] [php] Trying to get property of non-object (/var/www/yii/framework/base/CComponent.php(606) : eval()'d code:1)
+Stack trace:
+#0 /var/www/yii/framework/zii/widgets/grid/CGridColumn.php(144): CDataColumn->renderDataCellContent()
+#1 /var/www/yii/framework/zii/widgets/grid/CGridView.php(589): CDataColumn->renderDataCell()
+#2 /var/www/yii/framework/zii/widgets/grid/CGridView.php(545): CGridView->renderTableRow()
+#3 /var/www/yii/framework/zii/widgets/grid/CGridView.php(455): CGridView->renderTableBody()
+#4 /var/www/yii/framework/zii/widgets/CBaseListView.php(160): CGridView->renderItems()
+#5 unknown(0): CGridView->renderSection()
+#6 /var/www/yii/framework/zii/widgets/CBaseListView.php(143): preg_replace_callback()
+#7 /var/www/yii/framework/zii/widgets/CBaseListView.php(128): CGridView->renderContent()
+#8 /var/www/yii/framework/web/CBaseController.php(173): CGridView->run()
+#9 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/adminListPendientes.php(91): OrdenesSoporteController->widget()
+#10 /var/www/yii/framework/web/CBaseController.php(126): require()
+#11 /var/www/yii/framework/web/CBaseController.php(95): OrdenesSoporteController->renderInternal()
+#12 /var/www/yii/framework/web/CController.php(869): OrdenesSoporteController->renderFile()
+#13 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/admin.php(82): OrdenesSoporteController->renderPartial()
+#14 /var/www/yii/framework/web/CBaseController.php(126): require()
+#15 /var/www/yii/framework/web/CBaseController.php(95): OrdenesSoporteController->renderInternal()
+#16 /var/www/yii/framework/web/CController.php(869): OrdenesSoporteController->renderFile()
+#17 /var/www/yii/framework/web/CController.php(782): OrdenesSoporteController->renderPartial()
+#18 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php(277): OrdenesSoporteController->render()
+#19 /var/www/yii/framework/web/actions/CInlineAction.php(49): OrdenesSoporteController->actionAdmin()
+#20 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#21 /var/www/yii/framework/web/filters/CFilterChain.php(133): OrdenesSoporteController->runAction()
+#22 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#23 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#24 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#25 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#26 /var/www/yii/framework/web/CController.php(265): OrdenesSoporteController->runActionWithFilters()
+#27 /var/www/yii/framework/web/CWebApplication.php(282): OrdenesSoporteController->run()
+#28 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#29 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#30 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/adminListPendientes.php (91)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/admin.php (82)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php (277)
+2014/09/12 09:56:09 [error] [php] Trying to get property of non-object (/var/www/yii/framework/base/CComponent.php(606) : eval()'d code:1)
+Stack trace:
+#0 /var/www/yii/framework/zii/widgets/grid/CGridColumn.php(144): CDataColumn->renderDataCellContent()
+#1 /var/www/yii/framework/zii/widgets/grid/CGridView.php(589): CDataColumn->renderDataCell()
+#2 /var/www/yii/framework/zii/widgets/grid/CGridView.php(545): CGridView->renderTableRow()
+#3 /var/www/yii/framework/zii/widgets/grid/CGridView.php(455): CGridView->renderTableBody()
+#4 /var/www/yii/framework/zii/widgets/CBaseListView.php(160): CGridView->renderItems()
+#5 unknown(0): CGridView->renderSection()
+#6 /var/www/yii/framework/zii/widgets/CBaseListView.php(143): preg_replace_callback()
+#7 /var/www/yii/framework/zii/widgets/CBaseListView.php(128): CGridView->renderContent()
+#8 /var/www/yii/framework/web/CBaseController.php(173): CGridView->run()
+#9 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/adminListPendientes.php(91): OrdenesSoporteController->widget()
+#10 /var/www/yii/framework/web/CBaseController.php(126): require()
+#11 /var/www/yii/framework/web/CBaseController.php(95): OrdenesSoporteController->renderInternal()
+#12 /var/www/yii/framework/web/CController.php(869): OrdenesSoporteController->renderFile()
+#13 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/admin.php(82): OrdenesSoporteController->renderPartial()
+#14 /var/www/yii/framework/web/CBaseController.php(126): require()
+#15 /var/www/yii/framework/web/CBaseController.php(95): OrdenesSoporteController->renderInternal()
+#16 /var/www/yii/framework/web/CController.php(869): OrdenesSoporteController->renderFile()
+#17 /var/www/yii/framework/web/CController.php(782): OrdenesSoporteController->renderPartial()
+#18 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php(277): OrdenesSoporteController->render()
+#19 /var/www/yii/framework/web/actions/CInlineAction.php(49): OrdenesSoporteController->actionAdmin()
+#20 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#21 /var/www/yii/framework/web/filters/CFilterChain.php(133): OrdenesSoporteController->runAction()
+#22 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#23 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#24 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#25 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#26 /var/www/yii/framework/web/CController.php(265): OrdenesSoporteController->runActionWithFilters()
+#27 /var/www/yii/framework/web/CWebApplication.php(282): OrdenesSoporteController->run()
+#28 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#29 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#30 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/adminListPendientes.php (91)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/admin.php (82)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php (277)
+2014/09/12 09:57:49 [error] [php] Trying to get property of non-object (/var/www/yii/framework/base/CComponent.php(606) : eval()'d code:1)
+Stack trace:
+#0 /var/www/yii/framework/zii/widgets/grid/CGridColumn.php(144): CDataColumn->renderDataCellContent()
+#1 /var/www/yii/framework/zii/widgets/grid/CGridView.php(589): CDataColumn->renderDataCell()
+#2 /var/www/yii/framework/zii/widgets/grid/CGridView.php(545): CGridView->renderTableRow()
+#3 /var/www/yii/framework/zii/widgets/grid/CGridView.php(455): CGridView->renderTableBody()
+#4 /var/www/yii/framework/zii/widgets/CBaseListView.php(160): CGridView->renderItems()
+#5 unknown(0): CGridView->renderSection()
+#6 /var/www/yii/framework/zii/widgets/CBaseListView.php(143): preg_replace_callback()
+#7 /var/www/yii/framework/zii/widgets/CBaseListView.php(128): CGridView->renderContent()
+#8 /var/www/yii/framework/web/CBaseController.php(173): CGridView->run()
+#9 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/adminListPendientes.php(91): OrdenesSoporteController->widget()
+#10 /var/www/yii/framework/web/CBaseController.php(126): require()
+#11 /var/www/yii/framework/web/CBaseController.php(95): OrdenesSoporteController->renderInternal()
+#12 /var/www/yii/framework/web/CController.php(869): OrdenesSoporteController->renderFile()
+#13 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/admin.php(82): OrdenesSoporteController->renderPartial()
+#14 /var/www/yii/framework/web/CBaseController.php(126): require()
+#15 /var/www/yii/framework/web/CBaseController.php(95): OrdenesSoporteController->renderInternal()
+#16 /var/www/yii/framework/web/CController.php(869): OrdenesSoporteController->renderFile()
+#17 /var/www/yii/framework/web/CController.php(782): OrdenesSoporteController->renderPartial()
+#18 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php(277): OrdenesSoporteController->render()
+#19 /var/www/yii/framework/web/actions/CInlineAction.php(49): OrdenesSoporteController->actionAdmin()
+#20 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#21 /var/www/yii/framework/web/filters/CFilterChain.php(133): OrdenesSoporteController->runAction()
+#22 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#23 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#24 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#25 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#26 /var/www/yii/framework/web/CController.php(265): OrdenesSoporteController->runActionWithFilters()
+#27 /var/www/yii/framework/web/CWebApplication.php(282): OrdenesSoporteController->run()
+#28 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#29 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#30 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/adminListPendientes.php (91)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/admin.php (82)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php (277)
+2014/09/12 09:58:34 [error] [php] Trying to get property of non-object (/var/www/yii/framework/base/CComponent.php(606) : eval()'d code:1)
+Stack trace:
+#0 /var/www/yii/framework/zii/widgets/grid/CGridColumn.php(144): CDataColumn->renderDataCellContent()
+#1 /var/www/yii/framework/zii/widgets/grid/CGridView.php(589): CDataColumn->renderDataCell()
+#2 /var/www/yii/framework/zii/widgets/grid/CGridView.php(545): CGridView->renderTableRow()
+#3 /var/www/yii/framework/zii/widgets/grid/CGridView.php(455): CGridView->renderTableBody()
+#4 /var/www/yii/framework/zii/widgets/CBaseListView.php(160): CGridView->renderItems()
+#5 unknown(0): CGridView->renderSection()
+#6 /var/www/yii/framework/zii/widgets/CBaseListView.php(143): preg_replace_callback()
+#7 /var/www/yii/framework/zii/widgets/CBaseListView.php(128): CGridView->renderContent()
+#8 /var/www/yii/framework/web/CBaseController.php(173): CGridView->run()
+#9 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/adminListPendientes.php(91): OrdenesSoporteController->widget()
+#10 /var/www/yii/framework/web/CBaseController.php(126): require()
+#11 /var/www/yii/framework/web/CBaseController.php(95): OrdenesSoporteController->renderInternal()
+#12 /var/www/yii/framework/web/CController.php(869): OrdenesSoporteController->renderFile()
+#13 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/admin.php(82): OrdenesSoporteController->renderPartial()
+#14 /var/www/yii/framework/web/CBaseController.php(126): require()
+#15 /var/www/yii/framework/web/CBaseController.php(95): OrdenesSoporteController->renderInternal()
+#16 /var/www/yii/framework/web/CController.php(869): OrdenesSoporteController->renderFile()
+#17 /var/www/yii/framework/web/CController.php(782): OrdenesSoporteController->renderPartial()
+#18 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php(277): OrdenesSoporteController->render()
+#19 /var/www/yii/framework/web/actions/CInlineAction.php(49): OrdenesSoporteController->actionAdmin()
+#20 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#21 /var/www/yii/framework/web/filters/CFilterChain.php(133): OrdenesSoporteController->runAction()
+#22 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#23 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#24 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#25 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#26 /var/www/yii/framework/web/CController.php(265): OrdenesSoporteController->runActionWithFilters()
+#27 /var/www/yii/framework/web/CWebApplication.php(282): OrdenesSoporteController->run()
+#28 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#29 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#30 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/adminListPendientes.php (91)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/admin.php (82)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php (277)
+2014/09/12 10:01:55 [error] [php] Trying to get property of non-object (/var/www/yii/framework/base/CComponent.php(606) : eval()'d code:1)
+Stack trace:
+#0 /var/www/yii/framework/zii/widgets/grid/CGridColumn.php(144): CDataColumn->renderDataCellContent()
+#1 /var/www/yii/framework/zii/widgets/grid/CGridView.php(589): CDataColumn->renderDataCell()
+#2 /var/www/yii/framework/zii/widgets/grid/CGridView.php(545): CGridView->renderTableRow()
+#3 /var/www/yii/framework/zii/widgets/grid/CGridView.php(455): CGridView->renderTableBody()
+#4 /var/www/yii/framework/zii/widgets/CBaseListView.php(160): CGridView->renderItems()
+#5 unknown(0): CGridView->renderSection()
+#6 /var/www/yii/framework/zii/widgets/CBaseListView.php(143): preg_replace_callback()
+#7 /var/www/yii/framework/zii/widgets/CBaseListView.php(128): CGridView->renderContent()
+#8 /var/www/yii/framework/web/CBaseController.php(173): CGridView->run()
+#9 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/adminListPendientes.php(91): OrdenesSoporteController->widget()
+#10 /var/www/yii/framework/web/CBaseController.php(126): require()
+#11 /var/www/yii/framework/web/CBaseController.php(95): OrdenesSoporteController->renderInternal()
+#12 /var/www/yii/framework/web/CController.php(869): OrdenesSoporteController->renderFile()
+#13 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/admin.php(82): OrdenesSoporteController->renderPartial()
+#14 /var/www/yii/framework/web/CBaseController.php(126): require()
+#15 /var/www/yii/framework/web/CBaseController.php(95): OrdenesSoporteController->renderInternal()
+#16 /var/www/yii/framework/web/CController.php(869): OrdenesSoporteController->renderFile()
+#17 /var/www/yii/framework/web/CController.php(782): OrdenesSoporteController->renderPartial()
+#18 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php(277): OrdenesSoporteController->render()
+#19 /var/www/yii/framework/web/actions/CInlineAction.php(49): OrdenesSoporteController->actionAdmin()
+#20 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#21 /var/www/yii/framework/web/filters/CFilterChain.php(133): OrdenesSoporteController->runAction()
+#22 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#23 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#24 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#25 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#26 /var/www/yii/framework/web/CController.php(265): OrdenesSoporteController->runActionWithFilters()
+#27 /var/www/yii/framework/web/CWebApplication.php(282): OrdenesSoporteController->run()
+#28 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#29 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#30 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/adminListPendientes.php (91)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/admin.php (82)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php (277)
+2014/09/12 10:04:34 [error] [php] Trying to get property of non-object (/var/www/yii/framework/base/CComponent.php(606) : eval()'d code:1)
+Stack trace:
+#0 /var/www/yii/framework/zii/widgets/grid/CGridColumn.php(144): CDataColumn->renderDataCellContent()
+#1 /var/www/yii/framework/zii/widgets/grid/CGridView.php(589): CDataColumn->renderDataCell()
+#2 /var/www/yii/framework/zii/widgets/grid/CGridView.php(545): CGridView->renderTableRow()
+#3 /var/www/yii/framework/zii/widgets/grid/CGridView.php(455): CGridView->renderTableBody()
+#4 /var/www/yii/framework/zii/widgets/CBaseListView.php(160): CGridView->renderItems()
+#5 unknown(0): CGridView->renderSection()
+#6 /var/www/yii/framework/zii/widgets/CBaseListView.php(143): preg_replace_callback()
+#7 /var/www/yii/framework/zii/widgets/CBaseListView.php(128): CGridView->renderContent()
+#8 /var/www/yii/framework/web/CBaseController.php(173): CGridView->run()
+#9 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/adminListPendientes.php(91): OrdenesSoporteController->widget()
+#10 /var/www/yii/framework/web/CBaseController.php(126): require()
+#11 /var/www/yii/framework/web/CBaseController.php(95): OrdenesSoporteController->renderInternal()
+#12 /var/www/yii/framework/web/CController.php(869): OrdenesSoporteController->renderFile()
+#13 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/admin.php(82): OrdenesSoporteController->renderPartial()
+#14 /var/www/yii/framework/web/CBaseController.php(126): require()
+#15 /var/www/yii/framework/web/CBaseController.php(95): OrdenesSoporteController->renderInternal()
+#16 /var/www/yii/framework/web/CController.php(869): OrdenesSoporteController->renderFile()
+#17 /var/www/yii/framework/web/CController.php(782): OrdenesSoporteController->renderPartial()
+#18 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php(277): OrdenesSoporteController->render()
+#19 /var/www/yii/framework/web/actions/CInlineAction.php(49): OrdenesSoporteController->actionAdmin()
+#20 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#21 /var/www/yii/framework/web/filters/CFilterChain.php(133): OrdenesSoporteController->runAction()
+#22 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#23 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#24 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#25 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#26 /var/www/yii/framework/web/CController.php(265): OrdenesSoporteController->runActionWithFilters()
+#27 /var/www/yii/framework/web/CWebApplication.php(282): OrdenesSoporteController->run()
+#28 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#29 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#30 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/adminListPendientes.php (91)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/admin.php (82)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php (277)
+2014/09/12 10:08:21 [error] [php] Trying to get property of non-object (/var/www/yii/framework/base/CComponent.php(606) : eval()'d code:1)
+Stack trace:
+#0 /var/www/yii/framework/zii/widgets/grid/CGridColumn.php(144): CDataColumn->renderDataCellContent()
+#1 /var/www/yii/framework/zii/widgets/grid/CGridView.php(589): CDataColumn->renderDataCell()
+#2 /var/www/yii/framework/zii/widgets/grid/CGridView.php(545): CGridView->renderTableRow()
+#3 /var/www/yii/framework/zii/widgets/grid/CGridView.php(455): CGridView->renderTableBody()
+#4 /var/www/yii/framework/zii/widgets/CBaseListView.php(160): CGridView->renderItems()
+#5 unknown(0): CGridView->renderSection()
+#6 /var/www/yii/framework/zii/widgets/CBaseListView.php(143): preg_replace_callback()
+#7 /var/www/yii/framework/zii/widgets/CBaseListView.php(128): CGridView->renderContent()
+#8 /var/www/yii/framework/web/CBaseController.php(173): CGridView->run()
+#9 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/adminListPendientes.php(91): OrdenesSoporteController->widget()
+#10 /var/www/yii/framework/web/CBaseController.php(126): require()
+#11 /var/www/yii/framework/web/CBaseController.php(95): OrdenesSoporteController->renderInternal()
+#12 /var/www/yii/framework/web/CController.php(869): OrdenesSoporteController->renderFile()
+#13 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/admin.php(82): OrdenesSoporteController->renderPartial()
+#14 /var/www/yii/framework/web/CBaseController.php(126): require()
+#15 /var/www/yii/framework/web/CBaseController.php(95): OrdenesSoporteController->renderInternal()
+#16 /var/www/yii/framework/web/CController.php(869): OrdenesSoporteController->renderFile()
+#17 /var/www/yii/framework/web/CController.php(782): OrdenesSoporteController->renderPartial()
+#18 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php(277): OrdenesSoporteController->render()
+#19 /var/www/yii/framework/web/actions/CInlineAction.php(49): OrdenesSoporteController->actionAdmin()
+#20 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#21 /var/www/yii/framework/web/filters/CFilterChain.php(133): OrdenesSoporteController->runAction()
+#22 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#23 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#24 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#25 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#26 /var/www/yii/framework/web/CController.php(265): OrdenesSoporteController->runActionWithFilters()
+#27 /var/www/yii/framework/web/CWebApplication.php(282): OrdenesSoporteController->run()
+#28 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#29 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#30 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/adminListPendientes.php (91)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/admin.php (82)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php (277)
+=======
+2014/09/10 09:23:23 [error] [exception.CException] exception 'CException' with message 'Propiedad "TelefoniaCelular"."keyP" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('keyP')
+#1 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/telefoniaCelular/view.php(41): CActiveRecord->__get('keyP')
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#5 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/TelefoniaCelularController.php(33): CController->render('view', Array)
+#7 [internal function]: TelefoniaCelularController->actionView('1')
+#8 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(TelefoniaCelularController), Array)
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(TelefoniaCelularController), Object(ReflectionMethod), Array)
+#10 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#13 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#14 /var/www/yii/framework/web/filters/CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#15 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#16 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#18 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#19 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#20 /var/www/projectsima/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/telefoniaCelular/view&id=1
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/telefoniaCelular/admin
+---
+2014/09/11 10:49:37 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/equipoComputo/printLabel&id=40
+---
+2014/09/12 09:57:26 [warning] [application] Error al definir unsafe el atributo "regdate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/09/12 09:57:26 [warning] [application] Error al definir unsafe el atributo "actdate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/09/12 09:57:26 [warning] [application] Error al definir unsafe el atributo "logondate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/09/12 09:57:26 [warning] [application] Error al definir unsafe el atributo "nuevocampo" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/09/12 09:57:35 [warning] [application] Error al definir unsafe el atributo "regdate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/09/12 09:57:35 [warning] [application] Error al definir unsafe el atributo "actdate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/09/12 09:57:35 [warning] [application] Error al definir unsafe el atributo "logondate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/09/12 09:57:35 [warning] [application] Error al definir unsafe el atributo "nuevocampo" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
+2014/10/02 11:22:03 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin
+HTTP_REFERER=http://localhost/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/view&id=263
+---
+2014/10/02 11:30:27 [error] [php] Object of class DateTime could not be converted to string (/var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/view.php:79)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): OrdenesSoporteController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): OrdenesSoporteController->renderPartial()
+#2 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php(33): OrdenesSoporteController->render()
+#3 unknown(0): OrdenesSoporteController->actionView()
+#4 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#5 /var/www/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /var/www/yii/framework/web/filters/CFilterChain.php(133): OrdenesSoporteController->runAction()
+#8 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#9 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#10 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#11 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/yii/framework/web/CController.php(265): OrdenesSoporteController->runActionWithFilters()
+#13 /var/www/yii/framework/web/CWebApplication.php(282): OrdenesSoporteController->run()
+#14 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#15 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/view&id=263
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/view.php (79)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php (33)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+2014/10/02 11:37:39 [error] [php] imagepng(): Unable to open 'firmas/signature263.png' for writing: Permission denied (/var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/firma.php:33)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): OrdenesSoporteController->renderInternal()
+#1 /var/www/yii/framework/web/CController.php(869): OrdenesSoporteController->renderFile()
+#2 /var/www/yii/framework/web/CController.php(782): OrdenesSoporteController->renderPartial()
+#3 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php(605): OrdenesSoporteController->render()
+#4 unknown(0): OrdenesSoporteController->actionFirma()
+#5 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(133): OrdenesSoporteController->runAction()
+#9 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#10 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#11 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#12 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/yii/framework/web/CController.php(265): OrdenesSoporteController->runActionWithFilters()
+#14 /var/www/yii/framework/web/CWebApplication.php(282): OrdenesSoporteController->run()
+#15 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#17 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/firma&model=ordenesSoporte&id=263
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/firma.php (33)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php (605)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+2014/10/02 11:37:57 [error] [php] imagepng(): Unable to open 'firmas/signature263.png' for writing: Permission denied (/var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/firma.php:33)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): OrdenesSoporteController->renderInternal()
+#1 /var/www/yii/framework/web/CController.php(869): OrdenesSoporteController->renderFile()
+#2 /var/www/yii/framework/web/CController.php(782): OrdenesSoporteController->renderPartial()
+#3 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php(605): OrdenesSoporteController->render()
+#4 unknown(0): OrdenesSoporteController->actionFirma()
+#5 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(133): OrdenesSoporteController->runAction()
+#9 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#10 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#11 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#12 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/yii/framework/web/CController.php(265): OrdenesSoporteController->runActionWithFilters()
+#14 /var/www/yii/framework/web/CWebApplication.php(282): OrdenesSoporteController->run()
+#15 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#17 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/firma&model=ordenesSoporte&id=263
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/firma.php (33)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php (605)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+=======
+2014/10/02 11:08:54 [error] [exception.Exception] exception 'Exception' with message 'DateTime::__construct(): Failed to parse time string (2014-10-01 00:00 am) at position 17 (a): The timezone could not be found in the database' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/view.php:76
+Stack trace:
+#0 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/view.php(76): DateTime->__construct('2014-10-01 00:0...')
+#1 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#2 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#3 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#5 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php(33): CController->render('view', Array)
+#6 [internal function]: OrdenesSoporteController->actionView('228')
+#7 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(OrdenesSoporteController), Array)
+#8 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(OrdenesSoporteController), Object(ReflectionMethod), Array)
+#9 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#12 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#14 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#17 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#18 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#19 /var/www/projectsima/index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/view&id=228
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin&tab=Pendientes
+---
+2014/10/02 11:11:44 [error] [exception.CrugeException.401] action_observacionesOrdenSoporte_update<br/>401
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ObservacionesOrdenSoporte/update&id=18&OrdenSoporteId=235
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/view&id=235
+---
+2014/10/02 11:11:54 [error] [exception.CrugeException.401] action_observacionesOrdenSoporte_delete<br/>401
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales%2FSistemas%2FObservacionesOrdenSoporte%2Fdelete&id=19&ajax=observaciones-orden-soporte-grid
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/view&id=235
+---
+2014/10/02 11:12:31 [error] [exception.Exception] exception 'Exception' with message 'DateTime::__construct(): Failed to parse time string (2014-10-01 00:00 am) at position 17 (a): The timezone could not be found in the database' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/view.php:76
+Stack trace:
+#0 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/view.php(76): DateTime->__construct('2014-10-01 00:0...')
+#1 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#2 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#3 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#5 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php(33): CController->render('view', Array)
+#6 [internal function]: OrdenesSoporteController->actionView('228')
+#7 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(OrdenesSoporteController), Array)
+#8 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(OrdenesSoporteController), Object(ReflectionMethod), Array)
+#9 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#12 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#14 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#17 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#18 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#19 /var/www/projectsima/index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/view&id=228
+---
+2014/10/02 11:12:42 [error] [exception.Exception] exception 'Exception' with message 'DateTime::__construct(): Failed to parse time string (2014-10-01 00:00 am) at position 17 (a): The timezone could not be found in the database' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/view.php:76
+Stack trace:
+#0 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/view.php(76): DateTime->__construct('2014-10-01 00:0...')
+#1 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/projec...')
+#2 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/projec...', Array, true)
+#3 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/projec...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#5 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php(33): CController->render('view', Array)
+#6 [internal function]: OrdenesSoporteController->actionView('228')
+#7 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(OrdenesSoporteController), Array)
+#8 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(OrdenesSoporteController), Object(ReflectionMethod), Array)
+#9 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#12 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#14 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#17 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#18 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#19 /var/www/projectsima/index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/view&id=228
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin&tab=Pendientes
+---
+2014/10/02 11:37:15 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>clave invalida</li>
+</ul></div>
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (158)
+in /var/www/projectsima/index.php (13)
+2014/10/02 11:37:15 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>clave invalida</li>
+</ul></div>
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (158)
+in /var/www/projectsima/index.php (13)
+2014/10/02 11:37:38 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>clave invalida</li>
+</ul></div>
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (158)
+in /var/www/projectsima/index.php (13)
+>>>>>>> Stashed changes
+2014/10/02 12:11:56 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>clave invalida</li>
+</ul></div>
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (158)
+in /var/www/projectsima/index.php (13)
+2014/10/02 12:15:56 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php
+---
+2014/10/02 12:18:45 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=site/index
+---
+2014/10/02 12:18:57 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=site/index
+---
+2014/10/02 12:18:59 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Terminadas
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/firma&model=ordenesSoporte&id=238
+---
+2014/10/02 15:20:14 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Reportes
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Pendientes
+---
+2014/10/02 15:20:14 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Reportes
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Pendientes
+---
+2014/10/02 15:20:14 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Terminadas
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Pendientes
+---
+2014/10/02 15:20:14 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Terminadas
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Pendientes
+---
+2014/10/02 15:20:15 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=En
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Pendientes
+---
+2014/10/02 15:20:15 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=En
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Pendientes
+---
+2014/10/02 15:20:15 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Terminadas
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Pendientes
+---
+2014/10/02 15:39:18 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin&tab=En
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin&tab=Terminadas
+---
+2014/10/02 15:39:18 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin&tab=En
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin&tab=Terminadas
+---
+2014/10/02 16:23:52 [error] [exception.CrugeException.401] action_catTipoEquipo_updateEditable<br/>401
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/CatTipoEquipo/updateEditable&model=CatTipoEquipo&field=descripcion
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/default/CatalogoEquipos
+---
+2014/10/03 14:44:34 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Terminadas
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/firma&model=ordenesSoporte&id=239
+---
+2014/10/06 10:52:46 [error] [php] include(CatEquipoController.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:421)
+Stack trace:
+#0 /var/www/projectsima/protected/extensions/x-editable/EditableSaver.php(111): spl_autoload_call()
+#1 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/CatTipoEquipoController.php(158): EditableSaver->update()
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(49): CatTipoEquipoController->actionUpdateEditable()
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(133): CatTipoEquipoController->runAction()
+#5 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#6 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#7 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#8 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#9 /var/www/yii/framework/web/CController.php(265): CatTipoEquipoController->runActionWithFilters()
+#10 /var/www/yii/framework/web/CWebApplication.php(282): CatTipoEquipoController->run()
+#11 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/CatTipoEquipo/updateEditable&model=CatTipoEquipo&field=descripcion
+in /var/www/projectsima/protected/extensions/x-editable/EditableSaver.php (111)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/CatTipoEquipoController.php (158)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+<<<<<<< HEAD
+2014/10/20 16:17:30 [warning] [application] Error al definir unsafe el atributo "regdate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:17:30 [warning] [application] Error al definir unsafe el atributo "actdate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:17:30 [warning] [application] Error al definir unsafe el atributo "logondate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:17:30 [warning] [application] Error al definir unsafe el atributo "nuevocampo" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:17:36 [warning] [application] Error al definir unsafe el atributo "regdate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:17:36 [warning] [application] Error al definir unsafe el atributo "actdate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:17:36 [warning] [application] Error al definir unsafe el atributo "logondate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:17:36 [warning] [application] Error al definir unsafe el atributo "nuevocampo" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:19:22 [error] [exception.CrugeException.401] action_ordenesSoporte_admin<br/>401
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php
+---
+2014/10/20 16:19:24 [error] [exception.CrugeException.401] action_equipoComputo_admin<br/>401
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/equipoComputo/admin
+---
+2014/10/20 16:20:35 [error] [exception.CrugeException.401] action_ordenesSoporte_admin<br/>401
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php
+---
+2014/10/20 16:22:03 [error] [exception.CrugeException.401] action_ordenesSoporte_admin<br/>401
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/OrdenesSoporte/admin
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php
+---
+2014/10/20 16:26:19 [error] [exception.CrugeException.401] action_equipoComputo_update<br/>401
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/equipoComputo/update&id=40
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/equipoComputo/admin
+---
+2014/10/20 16:26:26 [error] [exception.CrugeException.401] action_equipoComputo_create<br/>401
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/EquipoComputo/create&model=EquipoComputo
+HTTP_REFERER=http://192.168.1.16/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/equipoComputo/admin
+---
+2014/10/20 16:36:50 [warning] [application] Error al definir unsafe el atributo "regdate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:36:50 [warning] [application] Error al definir unsafe el atributo "actdate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:36:50 [warning] [application] Error al definir unsafe el atributo "logondate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:36:50 [warning] [application] Error al definir unsafe el atributo "nuevocampo" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:36:58 [warning] [application] Error al definir unsafe el atributo "regdate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:36:58 [warning] [application] Error al definir unsafe el atributo "actdate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:36:58 [warning] [application] Error al definir unsafe el atributo "logondate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:36:58 [warning] [application] Error al definir unsafe el atributo "nuevocampo" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:37:08 [warning] [application] Error al definir unsafe el atributo "regdate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:37:08 [warning] [application] Error al definir unsafe el atributo "actdate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:37:08 [warning] [application] Error al definir unsafe el atributo "logondate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:37:08 [warning] [application] Error al definir unsafe el atributo "nuevocampo" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:37:16 [warning] [application] Error al definir unsafe el atributo "regdate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:37:16 [warning] [application] Error al definir unsafe el atributo "actdate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:37:16 [warning] [application] Error al definir unsafe el atributo "logondate" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+2014/10/20 16:37:16 [warning] [application] Error al definir unsafe el atributo "nuevocampo" de "CrugeStoredUser".
+in /var/www/projectsima/protected/modules/cruge/models/data/CrugeStoredUser.php (134)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (240)
+in /var/www/projectsima/protected/modules/cruge/controllers/UiController.php (230)
+=======
+2014/10/21 16:52:55 [error] [php] imagecreatefrompng(firmas/watermarkfirma.png): failed to open stream: Permission denied (/var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/firma.php:35)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): OrdenesSoporteController->renderInternal()
+#1 /var/www/yii/framework/web/CController.php(869): OrdenesSoporteController->renderFile()
+#2 /var/www/yii/framework/web/CController.php(782): OrdenesSoporteController->renderPartial()
+#3 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php(608): OrdenesSoporteController->render()
+#4 unknown(0): OrdenesSoporteController->actionFirma()
+#5 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(133): OrdenesSoporteController->runAction()
+#9 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#10 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#11 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#12 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/yii/framework/web/CController.php(265): OrdenesSoporteController->runActionWithFilters()
+#14 /var/www/yii/framework/web/CWebApplication.php(282): OrdenesSoporteController->run()
+#15 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#17 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/firma&model=ordenesSoporte&id=49
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/firma.php (35)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php (608)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+2014/10/21 16:53:34 [error] [php] imagesx() expects parameter 1 to be resource, boolean given (/var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/firma.php:45)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): OrdenesSoporteController->renderInternal()
+#1 /var/www/yii/framework/web/CController.php(869): OrdenesSoporteController->renderFile()
+#2 /var/www/yii/framework/web/CController.php(782): OrdenesSoporteController->renderPartial()
+#3 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php(608): OrdenesSoporteController->render()
+#4 unknown(0): OrdenesSoporteController->actionFirma()
+#5 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(133): OrdenesSoporteController->runAction()
+#9 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#10 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#11 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#12 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/yii/framework/web/CController.php(265): OrdenesSoporteController->runActionWithFilters()
+#14 /var/www/yii/framework/web/CWebApplication.php(282): OrdenesSoporteController->run()
+#15 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#17 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/firma&model=ordenesSoporte&id=49
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/firma.php (45)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php (608)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+2014/10/21 17:02:18 [error] [php] imagesx() expects parameter 1 to be resource, boolean given (/var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/firma.php:47)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): OrdenesSoporteController->renderInternal()
+#1 /var/www/yii/framework/web/CController.php(869): OrdenesSoporteController->renderFile()
+#2 /var/www/yii/framework/web/CController.php(782): OrdenesSoporteController->renderPartial()
+#3 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php(608): OrdenesSoporteController->render()
+#4 unknown(0): OrdenesSoporteController->actionFirma()
+#5 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(133): OrdenesSoporteController->runAction()
+#9 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#10 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#11 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#12 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/yii/framework/web/CController.php(265): OrdenesSoporteController->runActionWithFilters()
+#14 /var/www/yii/framework/web/CWebApplication.php(282): OrdenesSoporteController->run()
+#15 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#17 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/firma&model=ordenesSoporte&id=49
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/firma.php (47)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php (608)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+2014/10/21 17:05:14 [error] [php] imagesx() expects parameter 1 to be resource, boolean given (/var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/firma.php:47)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): OrdenesSoporteController->renderInternal()
+#1 /var/www/yii/framework/web/CController.php(869): OrdenesSoporteController->renderFile()
+#2 /var/www/yii/framework/web/CController.php(782): OrdenesSoporteController->renderPartial()
+#3 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php(608): OrdenesSoporteController->render()
+#4 unknown(0): OrdenesSoporteController->actionFirma()
+#5 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(133): OrdenesSoporteController->runAction()
+#9 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#10 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#11 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#12 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/yii/framework/web/CController.php(265): OrdenesSoporteController->runActionWithFilters()
+#14 /var/www/yii/framework/web/CWebApplication.php(282): OrdenesSoporteController->run()
+#15 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#17 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/firma&model=ordenesSoporte&id=49
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/firma.php (47)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php (608)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+2014/10/21 17:05:36 [error] [php] imagesx() expects parameter 1 to be resource, boolean given (/var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/firma.php:47)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): OrdenesSoporteController->renderInternal()
+#1 /var/www/yii/framework/web/CController.php(869): OrdenesSoporteController->renderFile()
+#2 /var/www/yii/framework/web/CController.php(782): OrdenesSoporteController->renderPartial()
+#3 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php(608): OrdenesSoporteController->render()
+#4 unknown(0): OrdenesSoporteController->actionFirma()
+#5 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(133): OrdenesSoporteController->runAction()
+#9 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#10 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#11 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#12 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/yii/framework/web/CController.php(265): OrdenesSoporteController->runActionWithFilters()
+#14 /var/www/yii/framework/web/CWebApplication.php(282): OrdenesSoporteController->run()
+#15 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#17 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/firma&model=ordenesSoporte&id=49
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/firma.php (47)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php (608)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+2014/10/21 17:19:43 [error] [php] imagecreatefrompng(firmas/watermarkfirma.png): failed to open stream: Permission denied (/var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/firma.php:37)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): OrdenesSoporteController->renderInternal()
+#1 /var/www/yii/framework/web/CController.php(869): OrdenesSoporteController->renderFile()
+#2 /var/www/yii/framework/web/CController.php(782): OrdenesSoporteController->renderPartial()
+#3 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php(608): OrdenesSoporteController->render()
+#4 unknown(0): OrdenesSoporteController->actionFirma()
+#5 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(133): OrdenesSoporteController->runAction()
+#9 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#10 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#11 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#12 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/yii/framework/web/CController.php(265): OrdenesSoporteController->runActionWithFilters()
+#14 /var/www/yii/framework/web/CWebApplication.php(282): OrdenesSoporteController->run()
+#15 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#17 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/firma&model=ordenesSoporte&id=50
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/firma.php (37)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php (608)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+2014/10/21 17:23:25 [error] [php] imagecreatefrompng(firmas/watermarkfirma.png): failed to open stream: Permission denied (/var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/firma.php:37)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): OrdenesSoporteController->renderInternal()
+#1 /var/www/yii/framework/web/CController.php(869): OrdenesSoporteController->renderFile()
+#2 /var/www/yii/framework/web/CController.php(782): OrdenesSoporteController->renderPartial()
+#3 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php(608): OrdenesSoporteController->render()
+#4 unknown(0): OrdenesSoporteController->actionFirma()
+#5 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(133): OrdenesSoporteController->runAction()
+#9 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#10 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#11 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#12 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/yii/framework/web/CController.php(265): OrdenesSoporteController->runActionWithFilters()
+#14 /var/www/yii/framework/web/CWebApplication.php(282): OrdenesSoporteController->run()
+#15 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#17 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/firma&model=ordenesSoporte&id=53
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/firma.php (37)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php (608)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+2014/10/21 17:31:35 [error] [php] imagecreatefrompng(firmas/watermarkfirma.png): failed to open stream: Permission denied (/var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/firma.php:37)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): OrdenesSoporteController->renderInternal()
+#1 /var/www/yii/framework/web/CController.php(869): OrdenesSoporteController->renderFile()
+#2 /var/www/yii/framework/web/CController.php(782): OrdenesSoporteController->renderPartial()
+#3 /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php(608): OrdenesSoporteController->render()
+#4 unknown(0): OrdenesSoporteController->actionFirma()
+#5 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(133): OrdenesSoporteController->runAction()
+#9 /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php(90): CFilterChain->run()
+#10 /var/www/yii/framework/web/filters/CFilter.php(38): CrugeAccessControlFilter->preFilter()
+#11 /var/www/yii/framework/web/filters/CFilterChain.php(130): CrugeAccessControlFilter->filter()
+#12 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/yii/framework/web/CController.php(265): OrdenesSoporteController->runActionWithFilters()
+#14 /var/www/yii/framework/web/CWebApplication.php(282): OrdenesSoporteController->run()
+#15 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#17 /var/www/projectsima/index.php(13): CWebApplication->run()
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/firma&model=ordenesSoporte&id=55
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/views/ordenesSoporte/firma.php (37)
+in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php (608)
+in /var/www/projectsima/protected/modules/cruge/components/CrugeAccessControlFilter.php (90)
+2014/10/21 17:53:51 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Pendientes
+HTTP_REFERER=http://localhost/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Terminadas
+---
+2014/10/21 17:53:53 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=En
+HTTP_REFERER=http://localhost/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Terminadas
+---
+2014/10/21 17:53:54 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=En
+HTTP_REFERER=http://localhost/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Terminadas
+---
+2014/10/21 17:53:55 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/firma&model=ordenesSoporte&id=56
+HTTP_REFERER=http://localhost/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/admin&tab=Terminadas
+---
+2014/10/21 17:53:59 [error] [exception.CHttpException.401] exception 'CHttpException' with message 'Necesitas iniciar sesión para ver esta página' in /var/www/projectsima/protected/modules/ServiciosInstitucionales/modules/Sistemas/controllers/OrdenesSoporteController.php:15
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(281): OrdenesSoporteController->init()
+#1 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ServiciosInstit...')
+#2 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#3 /var/www/projectsima/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/projectsima/index.php?r=ServiciosInstitucionales/Sistemas/ordenesSoporte/firma&model=ordenesSoporte&id=56
+HTTP_REFERER=http://localhost/projectsima/index.php?r=cruge/ui/login&param=%2Fprojectsima%2Findex.php%3Fr%3DServiciosInstitucionales%2FSistemas%2FordenesSoporte%2Ffirma%26model%3DordenesSoporte%26id%3D56
+---
+>>>>>>> 12098d8db81d76de352cb4a0e8f9fefa1758f9bd

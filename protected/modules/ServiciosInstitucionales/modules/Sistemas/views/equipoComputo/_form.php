@@ -26,7 +26,7 @@
 		'pattern'=> '0[0-9]{2}-[A-Za-z][0-9]{2}([A-Fa-f|0-9]){4}'
 		)); ?>
 		<?php 
-			echo CHtml::button('Generar nuevo código', array('onclick'=>'document.getElementById("EquipoComputo_codigo").value = \''.$model->generarCodigo().'\';',));
+			echo CHtml::button('Generar nuevo código', array('onclick'=>'document.getElementById("EquipoComputo_codigo").value = \''.$model->generarCodigoDisponible($model).'\';',));
 		?>
 		<?php echo $form->error($model,'codigo'); ?>
 	</div>
@@ -44,7 +44,7 @@
 		<?php echo $form->labelEx($model,'keyP'); ?>
 		<?php 
 		$lista=CHtml::listData(Proveedor::model()->findAll('tipoProveedor="sistemas" order by razonSocial'), 'keyP', 'razonSocial');
-		echo CHtml::activeDropDownList($model,'keyP', $lista);
+		echo CHtml::activeDropDownList($model,'keyP', $lista, array('empty'=>'Seleccionar Proveedor',));
 		?> 
 		<?php echo $form->error($model,'keyP'); ?>
 	</div>
@@ -151,6 +151,20 @@
 </div>
 <div class="columna">
 <br/><br/><br/>
+		<div class="row">
+		<?php echo $form->labelEx($model,'meses_mantenimiento'); ?>
+		<?php echo CHtml::activeDropDownList($model, 'meses_mantenimiento', array(
+            '1'=>'Cada mes',
+            '2'=>'Cada 2 meses',
+            '3'=>'Cada 3 meses',
+            '4'=>'Cada 4 meses',
+            '6'=>'Cada 6 meses',
+            '12'=>'Cada 12 meses',
+		 )); ?>
+			<?php echo $form->error($model,'meses_mantenimiento'); ?>
+		</div>
+
+
 	<div class="row">
 		<?php echo $form->labelEx($model,'tipoProcesador'); ?>
 		<?php echo $form->textField($model,'tipoProcesador'); ?>
@@ -161,12 +175,6 @@
 		<?php echo $form->labelEx($model,'motherboard'); ?>
 		<?php echo $form->textField($model,'motherboard',array('size'=>60,'maxlength'=>200)); ?>
 		<?php echo $form->error($model,'motherboard'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'registro'); ?>
-		<?php echo $form->textField($model,'registro',array('size'=>20,'maxlength'=>20)); ?>
-		<?php echo $form->error($model,'registro'); ?>
 	</div>
 
 	<div class="row">

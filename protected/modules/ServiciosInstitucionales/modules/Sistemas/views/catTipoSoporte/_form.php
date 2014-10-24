@@ -14,12 +14,6 @@
 	<p class="note">Campos con <span class="required">*</span> son requeridos.</p>
 
 	<?php echo $form->errorSummary($model); ?>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'descripcion'); ?>
-		<?php echo $form->textField($model,'descripcion',array('size'=>60,'maxlength'=>200)); ?>
-		<?php echo $form->error($model,'descripcion'); ?>
-	</div>
 	
 	<div class="row">
 		<?php echo $form->labelEx($model,'entidad'); ?>
@@ -50,12 +44,16 @@
 		echo CHtml::dropDownList('almacen','almacen', $lista,
 			array(
 				//'required'=>'true',
-				'ajax' => array(
-					'type'=>'POST', //request type
-				))
+				)
 		);
 		?>
 		<?php echo $form->error($model,'almacen'); ?>
+	</div>
+        
+	<div class="row">
+		<?php echo $form->labelEx($model,'descripcion'); ?>
+		<?php echo $form->textField($model,'descripcion',array('size'=>60,'maxlength'=>200)); ?>
+		<?php echo $form->error($model,'descripcion'); ?>
 	</div>
 
 	<div class="row buttons">
