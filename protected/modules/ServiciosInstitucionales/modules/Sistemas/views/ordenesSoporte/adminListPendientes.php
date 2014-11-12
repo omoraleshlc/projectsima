@@ -56,7 +56,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
                     ),
                 ),
                 'verobser' => array(//the name {reply} must be same
-                    'label' => 'Agregar', // text label of the button
+                    'label' => 'Ver', // text label of the button
                     'icon' => 'list',
                     'url' => '$data->keySOP',
                     'options' => array(
