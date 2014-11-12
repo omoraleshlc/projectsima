@@ -44,7 +44,7 @@ CREATE TABLE `cruge_user` (
 
 LOCK TABLES `cruge_user` WRITE;
 /*!40000 ALTER TABLE `cruge_user` DISABLE KEYS */;
-INSERT INTO `cruge_user` VALUES (1,NULL,NULL,1413840405,'admin','admin@tucorreo.com','907b9970bdcf5afb6e0f5d4b71227e8f',NULL,1,0,0),(2,NULL,NULL,NULL,'invitado','invitado','nopassword',NULL,1,0,0),(11,NULL,NULL,1413840032,'emartinez','emartinez@lacarlota.um.edu.mx','c28742692e4ac2ddf3bad0f08deae6bb',NULL,1,0,0),(28,NULL,NULL,1412270368,'wake','dake@lacarlota.um.edu.mx','78ce4c2cd8e412c7692901e9f0a3e216',NULL,1,0,0),(29,NULL,NULL,1413840120,'cmoncada','cmoncada@lacarlota.um.edu.mx','c28742692e4ac2ddf3bad0f08deae6bb',NULL,1,0,0),(30,NULL,NULL,1412281226,'acarballo','acarballo@lacarlota.um.edu.mx','c28742692e4ac2ddf3bad0f08deae6bb',NULL,1,0,0),(31,NULL,NULL,1412270166,'omorales','omorales@lacarlota.um.edu.mx','50d296cdd865ac8a12b99417c4519608',NULL,1,0,0);
+INSERT INTO `cruge_user` VALUES (1,NULL,NULL,1415750142,'admin','admin@tucorreo.com','907b9970bdcf5afb6e0f5d4b71227e8f',NULL,1,0,0),(2,NULL,NULL,NULL,'invitado','invitado','nopassword',NULL,1,0,0),(11,NULL,NULL,1413840032,'emartinez','emartinez@lacarlota.um.edu.mx','c28742692e4ac2ddf3bad0f08deae6bb',NULL,1,0,0),(28,NULL,NULL,1412270368,'wake','dake@lacarlota.um.edu.mx','78ce4c2cd8e412c7692901e9f0a3e216',NULL,1,0,0),(29,NULL,NULL,1415727754,'cmoncada','cmoncada@lacarlota.um.edu.mx','c28742692e4ac2ddf3bad0f08deae6bb',NULL,1,0,0),(30,NULL,NULL,1415642348,'acarballo','acarballo@lacarlota.um.edu.mx','c28742692e4ac2ddf3bad0f08deae6bb',NULL,1,0,0),(31,NULL,NULL,1415727546,'omorales','omorales@lacarlota.um.edu.mx','50d296cdd865ac8a12b99417c4519608',NULL,1,0,0);
 /*!40000 ALTER TABLE `cruge_user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -57,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-10-20 16:39:43
+-- Dump completed on 2014-11-12  9:59:25
