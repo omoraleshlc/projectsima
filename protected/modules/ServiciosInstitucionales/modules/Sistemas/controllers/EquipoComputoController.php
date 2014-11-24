@@ -164,7 +164,7 @@ class EquipoComputoController extends Controller
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['EquipoComputo']))
 			$model->attributes=$_GET['EquipoComputo'];
-
+        
 		$this->render('admin',array(
 			'model'=>$model,
 		));
@@ -258,4 +258,27 @@ class EquipoComputoController extends Controller
         }
     }
 	
+    /**
+	 * Manages all models.
+	 */
+	public function actionListLabels()
+	{
+		$model=new EquipoComputo('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['EquipoComputo']))
+			$model->attributes=$_GET['EquipoComputo'];
+        
+        $modelPendientes = new CActiveDataProvider('EquipoComputo', array(
+            'criteria' => array(
+                'order' => 'keyIE ASC',
+            ),
+            'pagination' => array(
+                'pageSize' => 200,
+            ),
+        ));
+
+		$this->render('listLabels',array(
+			'model'=>$modelPendientes,
+		));
+	}
 }
