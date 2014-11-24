@@ -31,7 +31,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'header' => 'Terminar',
             'buttons' => array(
                 'begin' => array(//the name {reply} must be same
-                    'label' => 'Iniciar', // text label of the button
+                    'label' => 'Terminar', // text label of the button
                     'url' => 'Yii::app()->controller->createUrl("ordenesSoporte/firma", array("model"=>"ordenesSoporte", "id"=>"$data->keySOP"))',
                     'icon' => 'play',
                     'htmlOptions' => array('href' => 'dfsf'),
