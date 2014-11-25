@@ -273,7 +273,7 @@ class EquipoComputoController extends Controller
                 'order' => 'keyIE ASC',
             ),
             'pagination' => array(
-                'pageSize' => 200,
+                'pageSize' => 20,
             ),
         ));
 

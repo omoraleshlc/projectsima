@@ -12,21 +12,21 @@
 $model2 = new CatTipoEquipo;
 
 function thirdbestdog($data, $blergh){
-	/*$imgurl= 'protected/uploads/lbl'.$data->codigo.'.png';
+	/**/$imgurl= 'protected/uploads/lbl'.$data->codigo.'.png';
     
     $im=imagecreatefrompng('images/lbl.png');
     
     //qrcode
 	$qrimg = imagecreatefrompng('protected/uploads/'.$data->codigo.'.png');
 	
-	$estampa = imagecreatefrompng('images/hlclogo2.png');
+	$estampa = imagecreatefrompng('images/hlclogo1.png');
 	
 	// Establecer los márgenes para la estampa y obtener el alto/ancho de la imagen de la estampa
-	$margen_dcho = -10;
-	$margen_inf = -10;
+	$margen_dcho = 165;//centered
+	$margen_inf = 13;
 	$sx = imagesx($estampa);
 	$sy = imagesy($estampa);
-    $ratio=2.7;
+    $ratio=1.6;
     $dw = imagesx($estampa)/$ratio;
     $dh = imagesy($estampa)/$ratio;
     
@@ -51,7 +51,9 @@ function thirdbestdog($data, $blergh){
 
     //write text
     $black = imagecolorallocate($im, 0, 0, 0);
-    imagettftext($im, 13, 0, 8, $dh-20, $black, "images/Ubuntu-M.ttf",$data->codigo);
+    imagettftext($im, 15, 0, 40, $dh-11, $black, "images/Ubuntu-M.ttf",substr($data->codigo,0, 4)); //centered +27
+    imagettftext($im, 15, 0, 20, $dh+10, $black, "images/Ubuntu-M.ttf",substr($data->codigo,4));
+    imagettftext($im, 11, 0, 40, $dh-100, $black, "images/Ubuntu-M.ttf","H L C");
     
 	// Imprimir y liberar memoria
 	header('Content-type: image/png');
