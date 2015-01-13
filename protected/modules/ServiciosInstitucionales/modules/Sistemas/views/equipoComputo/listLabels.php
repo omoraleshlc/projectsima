@@ -11,7 +11,8 @@
 <?php
 $model2 = new CatTipoEquipo;
 
-function thirdbestdog($data, $blergh){
+function thirdbestdog($data, $blergh, $generate){
+    if ($generate){
 	/**/$imgurl= 'protected/uploads/lbl'.$data->codigo.'.png';
     
     $im=imagecreatefrompng('images/lbl.png');
@@ -62,7 +63,7 @@ function thirdbestdog($data, $blergh){
 	
     /**/
     
-    
+    }
     
 return
     '<div class="graybox" style="border: solid 1px LightGray; width: 260px; padding: 5px; background:white;">'.
@@ -85,7 +86,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
         array(
 			'name' => 'QR Code',
 			'type'=>'raw',
-            'value'=>"thirdbestdog(\$data, \$this->grid->controller)
+            'value'=>"thirdbestdog(\$data, \$this->grid->controller, 0)
 	",
 		),
 		array(
