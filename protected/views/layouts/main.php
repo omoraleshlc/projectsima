@@ -102,6 +102,11 @@ $this->widget('bootstrap.widgets.TbNavbar', array(
                                     'url' => Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/default/printLabels'),
                                     'visible' => (Yii::app()->user->checkAccess('tarea_sistemasCatalogos_ver')),
                                 ),
+                                array('label' => 'Generar etiquetas png',
+                                    'url' => Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/equipoComputo/listLabels'),
+                                    'visible' => (Yii::app()->user->checkAccess('admin')),
+                                ),
+                                
                                 array('label' => 'Escaneo de etiquetas',
                                     'url' => Yii::app()->createUrl('ServiciosInstitucionales/Sistemas/ordenesSoporte/scan'),
                                     'visible' => (Yii::app()->user->checkAccess('tarea_ordenesSoporte_edicionBasica')),
