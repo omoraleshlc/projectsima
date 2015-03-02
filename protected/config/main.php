@@ -122,7 +122,7 @@ return array(
             'allowAutoLogin' => true,
             'class' => 'application.modules.cruge.components.CrugeWebUser',
             'loginUrl' => array('/cruge/ui/login'),
-            'authTimeout' => (10 * 60),
+            'authTimeout' => (100 * 60),
         ),
         'authManager' => array(
             //'class' => 'application.modules.cruge.components.CrugeAuthManager',
